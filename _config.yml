@@ -13,10 +13,9 @@ author: Jon-Paul Boyd
 
 navbar-links:
   About Me: "aboutme"
-  Projects: "projects"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+  Research Projects:
+    - Applied Computational Intelligence: "aci"
+    - Computational Intelligence Optimization: "cio"
   Author's home: "https://deanattali.com"
 
 # --- Logo --- #
