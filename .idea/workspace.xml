@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="" />
+    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/aci.md" beforeDir="false" afterPath="$PROJECT_DIR$/aci.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +64,8 @@
         <entry file="file://$PROJECT_DIR$/aci.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="170">
-                <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+              <first_editor relative-caret-position="51">
+                <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
               </first_editor>
               <second_editor />
             </state>
@@ -73,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+            <state relative-caret-position="408">
+              <caret line="24" column="163" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="163" />
             </state>
           </provider>
         </entry>
@@ -169,6 +171,12 @@
               <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="aci" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="cv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -219,12 +227,12 @@
       <option name="presentableId" value="Default" />
       <updated>1591261320306</updated>
       <workItem from="1591261321448" duration="11694000" />
-      <workItem from="1591293084167" duration="8693000" />
+      <workItem from="1591293084167" duration="9349000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20387000" />
+    <option name="totallyTimeSpent" value="21043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -401,13 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -418,11 +419,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="163" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="163" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aci.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="170">
-            <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <first_editor relative-caret-position="51">
+            <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
           </first_editor>
           <second_editor />
         </state>
