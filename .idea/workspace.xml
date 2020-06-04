@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aci.md" beforeDir="false" afterPath="$PROJECT_DIR$/aci.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/applied-ai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/applied-ai.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="24" column="163" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="163" />
+              <caret line="24" column="163" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="163" />
             </state>
           </provider>
         </entry>
@@ -227,12 +227,12 @@
       <option name="presentableId" value="Default" />
       <updated>1591261320306</updated>
       <workItem from="1591261321448" duration="11694000" />
-      <workItem from="1591293084167" duration="9349000" />
+      <workItem from="1591293084167" duration="9947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21043000" />
+    <option name="totallyTimeSpent" value="21641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -422,7 +422,7 @@
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="24" column="163" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="163" />
+          <caret line="24" column="163" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="163" />
         </state>
       </provider>
     </entry>
