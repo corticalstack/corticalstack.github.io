@@ -10,7 +10,7 @@ of well-known single and multiple particle metaheuristic methods. A hyper-heuris
 low-level metaheuristics to deterministically use the most appropriate according to current problem state, or select one 
 stochastically. [Read more...](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Heuristic Optimization Platform.pdf)
 
-# Testbed Ptroblem Optimization
+# Testbed Problem Optimization
 4 popular testbed problems are optimized with a single solution simulated annealing (SA) algorithm. [Read more...](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Testbed Problem Optimisation.pdf)
 
 # Exact Optimization
