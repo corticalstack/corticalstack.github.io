@@ -1,10 +1,11 @@
-## Portfolio
+# Portfolio
 
 ---
 
-### Applied Computational Intelligence 
+## Applied Computational Intelligence 
 
 [Predicting Customer Behaviour With A Variety Of Classifiers](/pdf/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf)
+Looking at customer behaviour using Orange Telecoms dataset. Came 39th
 <img src="images/aci/customer_behaviour/fig3.jpg?raw=true"/>
 
 ---
@@ -31,5 +32,3 @@
 
 
 ---
-<p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
-<!-- Remove above link if you don't want to attibute -->
