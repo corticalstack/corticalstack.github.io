@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Applied Computational Intelligence
-subtitle: Mainly Uni Stuff
 ---
 ## Predicting Customer Behaviour With A Variety Of Classifiers
-
-[Predicting Customer Behaviour With A Variety Of Classifiers](/pdf/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf)
-
+Addressing the challenges of the KDD Cup 2009 (“small” dataset) on classifying the probability of churn, appetency and 
+upselling of mobile phone customers.  evaluated our classifier performance and compare results against the KDD Cup 2009 
+entries. Our gradient boosting classifier outperformed other tested models, with a final AUC average of 0.8118, placing 
+it 34th overall [READ MORE](/pdf/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf)
 <img src="/images/aci/customer_behaviour/fig11.jpg?raw=true"/>
