@@ -1,11 +1,19 @@
 ---
 layout: page
 title: Computational Intelligence Optimization
-cover-img: /assets/img/fish-school.png
-tags: [machine learning, ml, ai, classifiers, random forest, neural networks, decision tree]
+cover-img: /assets/img/fish_school.png
+tags: [optimization, metaheuristics, hyper-heuristics, Python, flow shop, combinatorial, continuous]
 ---
-# Predicting Customer Behaviours
-Addressing the challenges of the KDD Cup 2009 (“small” dataset) on classifying the probability of churn, appetency and 
-upselling of mobile phone customers.  evaluated our classifier performance and compare results against the KDD Cup 2009 
-entries. Our gradient boosting classifier outperformed other tested models, with a final AUC average of 0.8118, placing 
-it 34th overall. [Read more...](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf)
+# Heuristic Optimization Platform
+A platform developed to generalize the optimization of both combinatorial and continuous search problems using a variety 
+of well-known single and multiple particle metaheuristic methods. A hyper-heuristic feature dynamically switches between 
+low-level metaheuristics to deterministically use the most appropriate according to current problem state, or select one 
+stochastically. [Read more...](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Heuristic Optimization Platform.pdf)
+---
+# Testbed Ptroblem Optimization
+4 popular testbed problems are optimized with a single solution simulated annealing (SA) algorithm. [Read more...](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Testbed Problem Optimization.pdf)
+---
+# Exact Optimization
+Using calculus to find global minimum in single and multivariate functions. [Read more...](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Exact Optimization.pdf)
+
+
