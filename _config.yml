@@ -13,9 +13,15 @@ author: Jon-Paul Boyd
 
 navbar-links:
   About Me: "aboutme"
-  Research Projects:
+  Research:
     - Applied Computational Intelligence: "aci"
     - Computational Intelligence Optimization: "cio"
+    - Artificial Beural Networks: "ann"
+    - Artificial Intelligence Programming: "aip"
+    - Data Mining: "dm"
+    - Fuzzy Logic: "fl"
+    - Mobile Robots: "mr"
+    - Research Methods: "rm"
   Author's home: "https://deanattali.com"
 
 # --- Logo --- #

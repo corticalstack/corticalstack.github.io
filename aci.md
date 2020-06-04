@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Projects
+title: Applied Computational Intelligence
 subtitle: Mainly Uni Stuff
 ---
-## Applied Computational Intelligence
+## Predicting Customer Behaviour With A Variety Of Classifiers
 
 [Predicting Customer Behaviour With A Variety Of Classifiers](/pdf/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf)
 
