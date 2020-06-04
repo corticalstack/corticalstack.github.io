@@ -9,19 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="136">
-                <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -75,13 +63,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1831">
-              <caret line="43" column="76" lean-forward="true" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+            <state relative-caret-position="425">
+              <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -104,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2020-02-01-jp test.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -134,9 +127,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/portfolio.md" />
         <option value="$PROJECT_DIR$/projects.md" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2020-02-01-jp test.md" />
         <option value="$PROJECT_DIR$/aci.md" />
+        <option value="$PROJECT_DIR$/_config.yml" />
       </list>
     </option>
   </component>
@@ -151,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,6 +161,28 @@
               <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="cv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -206,7 +222,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,6 +232,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\cv" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\images" />
@@ -246,25 +262,20 @@
       <option name="presentableId" value="Default" />
       <updated>1591261320306</updated>
       <workItem from="1591261321448" duration="11694000" />
+      <workItem from="1591293084167" duration="529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11694000" />
+    <option name="totallyTimeSpent" value="12223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25147232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936507" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -272,12 +283,41 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25147232" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936507" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -296,9 +336,7 @@
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/aci/customer_behaviour/fig3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/aci/customer_behaviour/fig3.jpg" />
     <entry file="file://$PROJECT_DIR$/images/dummy_thumbnail.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -312,31 +350,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/feed.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1156">
-            <caret line="68" selection-start-line="68" selection-end-line="68" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aboutme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolio.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -356,10 +369,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1831">
-          <caret line="43" column="76" lean-forward="true" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1156">
+            <caret line="68" selection-start-line="68" selection-end-line="68" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aboutme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aci.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="68">
+            <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -379,16 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aci.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2020-02-01-jp test.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -396,6 +427,16 @@
             <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
         </state>
       </provider>
     </entry>
