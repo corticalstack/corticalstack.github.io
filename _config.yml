@@ -22,6 +22,9 @@ navbar-links:
     - Fuzzy Logic: "fl"
     - Mobile Robots: "mr"
     - Research Methods: "rm"
+  Resume:
+    - One Pager: "https://docs.google.com/viewer?url=https://github.com/EderSantana/edersantana.github.io/raw/master/eder_cv.pdf"
+    - Traditional: "https://docs.google.com/viewer?url=https://github.com/EderSantana/edersantana.github.io/raw/master/eder_cv.pdf"
   Author's home: "https://deanattali.com"
 
 # --- Logo --- #
