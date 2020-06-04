@@ -1,6 +1,6 @@
 ---
-layout: post
-title: JP Test
+layout: minimal
+title: Applied Computational Intelligence
 subtitle: Completed MSc Modules
 cover-img: /assets/img/fish_school.png
 tags: [books, test]
