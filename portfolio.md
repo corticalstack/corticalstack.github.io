@@ -5,8 +5,8 @@
 ## Applied Computational Intelligence 
 
 [Predicting Customer Behaviour With A Variety Of Classifiers](/pdf/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf)
-Looking at customer behaviour using Orange Telecoms dataset. Came 39th
-<img src="images/aci/customer_behaviour/fig3.jpg?raw=true"/>
+<p>Looking at customer behaviour using Orange Telecoms dataset. Came 39th</p>
+<img src="images/aci/customer_behaviour/fig11.jpg?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
