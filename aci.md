@@ -10,3 +10,4 @@ upselling of mobile phone customers.  evaluated our classifier performance and c
 entries. Our gradient boosting classifier outperformed other tested models, with a final AUC average of 0.8118, placing 
 it 34th overall [READ MORE](/docs/aci/Predicting%20Customer%20Behaviour%20With%20A%20Variety%20Of%20Classifiers.pdf)
 <img src="/assets/img/fig11.jpg?raw=true"/>
+github: https://github.com/reconhub/earlyR
