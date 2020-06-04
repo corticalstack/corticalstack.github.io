@@ -7,7 +7,7 @@ title: My website
 description: A virtual proof that I'm awesome
 
 # Your name to show in the footer
-author: Some Person
+author: Jon-Paul Boyd
 
 # --- List of links in the navigation bar --- #
 
@@ -38,13 +38,13 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 # If you don't want to show a link to an RSS feed, set rss to "false".
 social-network-links:
-  email: "someone@example.com"
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
+  email: "jp@corticalstack.ai"
+# facebook: deanattali
+  github: corticalstack
+#  twitter: daattali
   rss: true
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: jonpaulboyd
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -62,8 +62,8 @@ social-network-links:
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
+  #twitter: true
+  #facebook: true
   linkedin: true
 
 # How to display the link to your website in the footer
