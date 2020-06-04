@@ -5,7 +5,7 @@
 ### Applied Computational Intelligence 
 
 [Predicting Customer Behaviour With A Variety Of Classifiers](/pdf/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/aci/customer_behaviour/fig3.jpg?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
