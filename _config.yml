@@ -13,7 +13,7 @@ author: Jon-Paul Boyd
 
 navbar-links:
   About Me: "aboutme"
-  Research:
+  Academic Research:
     - Applied Computational Intelligence: "aci"
     - Computational Intelligence Optimization: "cio"
     - Artificial Beural Networks: "ann"
