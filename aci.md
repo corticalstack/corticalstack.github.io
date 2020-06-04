@@ -11,3 +11,5 @@ entries. Our gradient boosting classifier outperformed other tested models, with
 it 34th overall [READ MORE](/docs/aci/Predicting%20Customer%20Behaviour%20With%20A%20Variety%20Of%20Classifiers.pdf)
 <img src="/assets/img/fig11.jpg?raw=true"/>
 github: https://github.com/reconhub/earlyR
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
