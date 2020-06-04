@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: page
 title: Applied Computational Intelligence
 subtitle: Completed MSc Modules
 cover-img: /assets/img/fish_school.png
