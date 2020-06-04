@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Artificial Intelligence Programming
-cover-img: /assets/img/aip.jpeg
+cover-img: /assets/img/aip.jpg
 tags: [neural networks, ai]
 ---
 # Neural Networks For Network Attack
