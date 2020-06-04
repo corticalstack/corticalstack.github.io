@@ -1,8 +1,11 @@
 ---
-layout: page
-title: Applied Computational Intelligence
+layout: post
+title: JP Test
+subtitle: Completed MSc Modules
+cover-img: /assets/img/fish_school.png
+tags: [books, test]
 ---
-## Predicting Customer Behaviour With A Variety Of Classifiers
+
 Addressing the challenges of the KDD Cup 2009 (“small” dataset) on classifying the probability of churn, appetency and 
 upselling of mobile phone customers.  evaluated our classifier performance and compare results against the KDD Cup 2009 
 entries. Our gradient boosting classifier outperformed other tested models, with a final AUC average of 0.8118, placing 
