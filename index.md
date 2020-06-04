@@ -2,9 +2,9 @@
 
 ---
 
-### Category Name 1 
+### Applied Computational Intelligence 
 
-[Project 1 Title](/sample_page)
+[Predicting Customer Behaviour With A Variety Of Classifiers](/pdf/Predicting Customer Behaviour With A Variety Of Classifiers.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
