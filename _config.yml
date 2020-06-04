@@ -15,7 +15,7 @@ navbar-links:
   Academic Research:
     - Applied Computational Intelligence: "aci"
     - Computational Intelligence Optimization: "cio"
-    - Artificial Neural Networks: "ann"
+    - Artificial Neural Networks: "cio"
     - Artificial Intelligence Programming: "aip"
     - Data Mining: "dm"
     - Fuzzy Logic: "fl"
