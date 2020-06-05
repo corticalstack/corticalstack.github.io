@@ -13,5 +13,5 @@ buy new products or services (appetency), or buy upgrades or add-ons proposed to
 (up-selling). Comparing results against other competition entries, the gradient boosting classifier outperformed other 
 tested models, placing it 34th of 89 overall. 
 
-MSc [paper] graded 88%.(https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf)
+MSc [paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf) graded 88%.
  [Source code](https://github.com/corticalstack/KDDCup2009)
