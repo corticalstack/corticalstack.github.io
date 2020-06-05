@@ -2,9 +2,9 @@
 layout: page
 title: Artificial Intelligence Programming
 cover-img: /assets/img/aip.jpg
-tags: [neural networks, ai]
+tags: [natural language processing, NLP, Python, NLTK, SQL, WordNet, Prolog]
 ---
-# Implementation Of Natural Language Processing Using Python
+### Implementation Of Movie Database Query Using Natural Language Processing & Python
 Implementation of an application which transforms human natural language commands into the formal, “artificial” SQL 
 language for querying of a movie database which negates the need for end-user technical database expertise. It combines 
 the simplicity and flexibility of Python with the easily accessible language processing features of the open source Natural 
