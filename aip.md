@@ -15,7 +15,7 @@ verbs with a WordNet corpus of synonyms, it shows how a larger number of meaning
 code generation from a compact set of grammar rules, facilitating rapid development and simplifying rule management whilst 
 improving the overall robustness, usability and success of the application.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aip/Implementation of NLP using Python.pdf)
+[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aip/Implementation of NLP using Python.pdf) graded 81%
  | [Source code](https://github.com/corticalstack/NLPPythonToSQL)
 
 ### A Review Of State Of The Art Using Prolog For NLP
