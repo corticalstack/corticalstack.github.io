@@ -18,5 +18,4 @@ MSc paper graded 88%. [Read more...](https://docs.google.com/viewer?url=https://
 Reference-style: 
 ![alt text][logo]
 
-[logo]: /assets/img/github_icon.jpg "GitHub Repo"
- github: https://github.com/reconhub/nomad
+[logo]: /assets/img/GitHub-Mark-32px.png "GitHub Repo"
