@@ -26,13 +26,6 @@ This study implements Neural Networks for classification of computer network act
 and good for normal connections. A dataset originally prepared by MIT Lincoln labs for the 1998 Defence Advanced Research 
 Projects Agency (DARPA) Intrusion Detection Evaluation Program, simulating air force base LAN activity, is used.
 
-Data discovery first looks to understand the nature of the dataset and prepare it for optimal supervised machine learning. 
-Single Layer Perceptron (SLP) and Multi-Layer Perceptron (MLP) neural network (NN) architectures are modelled to make 
-binary (good, bad) and multiclass (specific attack category) predictions. 
-
-Each proposed model is hyperparameter tuned to extract maximum performance, then evaluated with criteria including 
-detection rate, false alarm rate, accuracy, complexity of topology and training runtime cost.
-
 [MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/ann/Neural network model detecting intrusions or attacks on a computer network.pdf) graded 80%
  | [Source code](https://github.com/corticalstack/KDDCup1999)
  
