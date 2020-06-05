@@ -11,7 +11,7 @@ the simplicity and flexibility of Python with the easily accessible language pro
 Language Tool Kit (NLTK) library. 
 
 By representing a sample of movie database queries in human form with NLTK grammar rules, and matching of rule nouns and 
-verbs with a WordNet corpus of synonyms, it shows how a larger number of meanings can be derived and transformed into SQL 
+verbs with a WordNet corpus of synonyms, the design shows how a larger number of meanings can be derived and transformed into SQL 
 code generation from a compact set of grammar rules, facilitating rapid development and simplifying rule management whilst 
 improving the overall robustness, usability and success of the application.
 
@@ -23,7 +23,9 @@ Prolog is a declarative general-purpose logic programming language first conceiv
 scientist Alain Colmerauer. Its roots are in first order predicate calculus, and based on facts and rules. It has been 
 widely used in artificial intelligence, especially within the interdisciplinary field of Natural Language Processing (NLP), 
 providing applications with the ability to process human language due to its suitability in assembling human linguistics 
-models for language search, determination and generation. This report presents a review of the state of the art using 
-Prolog with emphasis on practical application within NLP over the last 5 years.
+models for language search, determination and generation. 
+
+This report presents a review of the state of the art using  Prolog with emphasis on practical application within NLP 
+over the last 5 years.
 
 [MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aip/State of the Art using Prolog.pdf) graded 74%
