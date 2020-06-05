@@ -22,9 +22,10 @@ security layer by actively classifying internal and external traffic in real tim
 of the network data packets, and can respond appropriately by closing ports, blacklisting I.P. addresses or sending TCP 
 reset packets to break connections.
 
-This study implements Neural Networks for classification of computer network activity as bad, covering intrusions and attacks, 
-and good for normal connections. A dataset originally prepared by MIT Lincoln labs for the 1998 Defence Advanced Research 
-Projects Agency (DARPA) Intrusion Detection Evaluation Program, simulating air force base LAN activity, is used.
+This study implements Neural Networks as the basis of an IDS that classifies computer network activity as bad, covering 
+intrusions and attacks, and good for normal connections. A dataset originally prepared by MIT Lincoln labs for the 1998 
+Defence Advanced Research Projects Agency (DARPA) Intrusion Detection Evaluation Program, simulating air force base LAN 
+activity, is used.
 
 [MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/ann/Neural network model detecting intrusions or attacks on a computer network.pdf) graded 80%
  | [Source code](https://github.com/corticalstack/KDDCup1999)
