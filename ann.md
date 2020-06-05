@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Artificial Neural Networks
-cover-img: /assets/img/ann.jpeg
+cover-img: /assets/img/ann.jpg
 tags: [neural networks, ai]
 ---
 # Neural Networks For Network Attack
