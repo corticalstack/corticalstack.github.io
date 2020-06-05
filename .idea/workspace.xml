@@ -28,8 +28,8 @@
         <entry file="file://$PROJECT_DIR$/aci.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="323">
-                <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <first_editor relative-caret-position="289">
+                <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -284,12 +284,12 @@
       <updated>1591261320306</updated>
       <workItem from="1591261321448" duration="11694000" />
       <workItem from="1591293084167" duration="16876000" />
-      <workItem from="1591346028198" duration="8719000" />
+      <workItem from="1591346028198" duration="9071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37289000" />
+    <option name="totallyTimeSpent" value="37641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -550,8 +550,8 @@
     <entry file="file://$PROJECT_DIR$/aci.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="323">
-            <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <first_editor relative-caret-position="289">
+            <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
