@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aip.md" beforeDir="false" afterPath="$PROJECT_DIR$/aip.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dm.md" beforeDir="false" afterPath="$PROJECT_DIR$/dm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fl.md" beforeDir="false" afterPath="$PROJECT_DIR$/fl.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +40,8 @@
         <entry file="file://$PROJECT_DIR$/cio.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="680">
-                <caret line="40" column="159" selection-start-line="40" selection-start-column="159" selection-end-line="40" selection-end-column="159" />
+              <first_editor relative-caret-position="459">
+                <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="82" />
               </first_editor>
               <second_editor />
             </state>
@@ -76,22 +75,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/now.md">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fl.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="340">
+                <caret line="20" column="192" selection-start-line="20" selection-start-column="192" selection-end-line="20" selection-end-column="192" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dm.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="340">
-                <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <first_editor relative-caret-position="408">
+                <caret line="24" column="187" selection-start-line="24" selection-start-column="187" selection-end-line="24" selection-end-column="187" />
               </first_editor>
               <second_editor />
             </state>
@@ -148,7 +149,6 @@
         <option value="$PROJECT_DIR$/projects.md" />
         <option value="$PROJECT_DIR$/_posts/2020-02-01-jp test.md" />
         <option value="$PROJECT_DIR$/aboutme.md" />
-        <option value="$PROJECT_DIR$/fl.md" />
         <option value="$PROJECT_DIR$/mr.md" />
         <option value="$PROJECT_DIR$/rm.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
@@ -159,6 +159,7 @@
         <option value="$PROJECT_DIR$/ann.md" />
         <option value="$PROJECT_DIR$/aip.md" />
         <option value="$PROJECT_DIR$/dm.md" />
+        <option value="$PROJECT_DIR$/fl.md" />
       </list>
     </option>
   </component>
@@ -241,6 +242,18 @@
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="cv" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="fl" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -256,11 +269,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\fl" />
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\dm" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\aip" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\aci" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\ann" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\cio" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\assets\img" />
@@ -291,12 +304,12 @@
       <updated>1591261320306</updated>
       <workItem from="1591261321448" duration="11694000" />
       <workItem from="1591293084167" duration="16876000" />
-      <workItem from="1591346028198" duration="14623000" />
+      <workItem from="1591346028198" duration="15168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43193000" />
+    <option name="totallyTimeSpent" value="43738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -455,16 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fl.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -534,16 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cio.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="680">
-            <caret line="40" column="159" selection-start-line="40" selection-start-column="159" selection-end-line="40" selection-end-column="159" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aip.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -557,8 +550,28 @@
     <entry file="file://$PROJECT_DIR$/dm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
+          <first_editor relative-caret-position="408">
+            <caret line="24" column="187" selection-start-line="24" selection-start-column="187" selection-end-line="24" selection-end-column="187" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cio.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="459">
+            <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="82" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fl.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
           <first_editor relative-caret-position="340">
-            <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <caret line="20" column="192" selection-start-line="20" selection-start-column="192" selection-end-line="20" selection-end-column="192" />
           </first_editor>
           <second_editor />
         </state>
