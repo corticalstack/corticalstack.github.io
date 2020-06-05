@@ -2,9 +2,9 @@
 layout: page
 title: Fuzzy Logic
 cover-img: /assets/img/fl.jpg
-tags: [neural networks, ai]
+tags: [fuzzy logic, fuzzy inference system, Python, Wisconsin, breast cancer, decision support, Skfuzzy, classification ]
 ---
-### Breast Cancer Tumour Classification With Fuzzy Information System (FIS)
+### Breast Cancer Tumour Classification With Fuzzy Inference System (FIS)
 Of all cancers occurring in women, breast cancer is the most common, with 2 million new cases and over 0.5 million deaths 
 globally each year. Many doctors are overwhelmed, having to deal with up to 70 patients a day. Mistakes in diagnosis can 
 have deadly consequences. 
