@@ -5,13 +5,12 @@ cover-img: /assets/img/ann.jpg
 tags: [artificial neural networks, convolutional neural networks, recurrent neural networks, spiking neural networks, normalized difference vegetation index, nvdi, ann, ai]
 ---
 # Neural Networks Detecting Intrusions And Attacks On Computer Networks
-Intrusion Detection Systems (IDS) were first proposed in 1980 by James P. Anderson to “improve the computer security 
-auditing and surveillance capability of the customer’s systems”, and can be defined as “software or hardware systems that 
-automate the process of monitoring the events occurring in a computer system or network, analysing them for signs of security 
-problems”. Today, they are an especially important component of computer network security architecture, given the increased 
-exposure of business critical process, product, financial, customer and employee internal systems and data to the internet 
-including via Cloud deployment, IoT (Internet of Things), mobile self-service applications, B2B (Business to Business) and 
-B2C (Business to Consumer) integration. 
+Intrusion Detection Systems (IDS) can be defined as software or hardware systems that  automate the process of monitoring 
+the events occurring in a computer system or network, analysing them for signs of security  problems. Today, they are an 
+especially important component of computer network security architecture, given the increased  exposure of business 
+critical process, product, financial, customer and employee internal systems and data to the internet including via 
+Cloud deployment, IoT (Internet of Things), mobile self-service applications, B2B (Business to Business) and B2C 
+(Business to Consumer) integration. 
 
 With network firewalls, inbound network traffic is filtered according to a set of predefined rules, meaning malicious traffic 
 can reach systems if no rules exist that match and flag such traffic. Similarly, signature based detection systems rely 
