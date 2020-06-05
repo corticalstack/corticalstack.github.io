@@ -19,3 +19,4 @@ Reference-style:
 ![alt text][logo]
 
 [logo]: /assets/img/github_icon.jpg "GitHub Repo"
+ github: https://github.com/reconhub/nomad
