@@ -13,7 +13,9 @@ and interfacing with VREP via API, manages environment perception and navigation
 
 A final evaluation is made, comparing single and multi-sensor approaches. The final optimized multi-sensor solution 
 offered best performance, especially at high speed, completing one loop in 155s with a navigation distance error rate of 
-420.85cm. Recommendations include more refined sensor calibration and further research into proven control methods.
+420.85cm. 
+
+Recommendations include more refined sensor calibration and further research into proven control methods.
 
 [MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/mr/Wall Follower.pdf) graded 92%
  | [Source code](https://github.com/corticalstack/vrep-wall-follower)
@@ -23,8 +25,9 @@ Implemented as a plugin to the control layer of the first Wall Follower solution
 and Derivative (PID) controller tasked with setting motor control velocities. Several variants of PID controller were 
 tested. Using a fixed baseline speed, the PI controller performed best, reducing navigation error by 12% over best efforts 
 from previous research. The PD controller delivers optimum performance when dynamically adjusting baseline speed with 
-proportional error, reducing navigation error by 55.8% over previous best. Recommendations include refined sensor noise 
-filtering to improve integral and derivative control
+proportional error, reducing navigation error by 55.8% over previous best. 
+
+Recommendations include refined sensor noise filtering to improve integral and derivative control
 
 [MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/mr/Wall Follower PID Controller.pdf) graded 92%
  | [Source code](https://github.com/corticalstack/vrep-wall-follower-pid)
