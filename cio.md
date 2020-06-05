@@ -38,6 +38,6 @@ simulated annealing (SA) algorithm.
 ### Exact Optimization
 Using calculus to find the global minimum in single and multivariate functions. 
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Exact Optimisation.pdf)
+[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Exact Optimisation.pdf) graded 100%
 
 
