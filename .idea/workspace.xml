@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ann.md" beforeDir="false" afterPath="$PROJECT_DIR$/ann.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aip.md" beforeDir="false" afterPath="$PROJECT_DIR$/aip.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,12 +85,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ann.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="459">
                 <caret line="27" selection-start-line="27" selection-end-line="27" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aip.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="272">
+                <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               </first_editor>
               <second_editor />
             </state>
@@ -123,7 +135,6 @@
         <option value="$PROJECT_DIR$/projects.md" />
         <option value="$PROJECT_DIR$/_posts/2020-02-01-jp test.md" />
         <option value="$PROJECT_DIR$/aboutme.md" />
-        <option value="$PROJECT_DIR$/aip.md" />
         <option value="$PROJECT_DIR$/dm.md" />
         <option value="$PROJECT_DIR$/fl.md" />
         <option value="$PROJECT_DIR$/mr.md" />
@@ -134,6 +145,7 @@
         <option value="$PROJECT_DIR$/aci.md" />
         <option value="$PROJECT_DIR$/cio.md" />
         <option value="$PROJECT_DIR$/ann.md" />
+        <option value="$PROJECT_DIR$/aip.md" />
       </list>
     </option>
   </component>
@@ -196,6 +208,12 @@
               <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="aip" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="ann" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -225,11 +243,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\aip" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\aci" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\ann" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\cio" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\cv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\assets\img" />
@@ -260,12 +278,12 @@
       <updated>1591261320306</updated>
       <workItem from="1591261321448" duration="11694000" />
       <workItem from="1591293084167" duration="16876000" />
-      <workItem from="1591346028198" duration="12523000" />
+      <workItem from="1591346028198" duration="13102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41093000" />
+    <option name="totallyTimeSpent" value="41672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -444,16 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aip.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="51">
-            <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -528,6 +536,16 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="459">
             <caret line="27" selection-start-line="27" selection-end-line="27" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aip.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="272">
+            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           </first_editor>
           <second_editor />
         </state>

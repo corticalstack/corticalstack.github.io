@@ -4,13 +4,26 @@ title: Artificial Intelligence Programming
 cover-img: /assets/img/aip.jpg
 tags: [neural networks, ai]
 ---
-# Neural Networks For Network Attack
-Neural Networks for classification of computer network activity as bad, covering intrusions and attacks, and good for 
-normal connections. Data discovery first looks to understand the nature of the dataset and prepare it for optimal 
-supervised machine learning. Single Layer Perceptron (SLP) and Multi-Layer Perceptron (MLP) neural network (NN) 
-architectures are modelled to make binary (good, bad) and multiclass (specific attack category) predictions. 
-Each proposed model is hyperparameter tuned to extract maximum performance, then evaluated with criteria including 
-detection rate, false alarm rate, accuracy, complexity of topology and training runtime cost. [Read more...](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/ann/Neural network model detecting intrusions or attacks on a computer network.pdf)
+# Implementation Of Natural Language Processing Using Python
+Implementation of an application which transforms human natural language commands into the formal, “artificial” SQL 
+language for querying of a movie database which negates the need for end-user technical database expertise. It combines 
+the simplicity and flexibility of Python with the easily accessible language processing features of the open source Natural 
+Language Tool Kit (NLTK) library. 
 
-# Neural Networks For Crop Prediction
-Reviews recent application of ANNs for crop prediction and classification using NDVI. [Read more...](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/ann/State art current trends neural networks normalized difference vegetation index.pdf)
+By representing a sample of movie database queries in human form with NLTK grammar rules, and matching of rule nouns and 
+verbs with a WordNet corpus of synonyms, it shows how a larger number of meanings can be derived and transformed into SQL 
+code generation from a compact set of grammar rules, facilitating rapid development and simplifying rule management whilst 
+improving the overall robustness, usability and success of the application.
+
+[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aip/Implementation of NLP using Python.pdf)
+ | [Source code](https://github.com/corticalstack/NLPPythonToSQL)
+
+### A Review Of State Of The Art Using Prolog For NLP
+Prolog is a declarative general-purpose logic programming language first conceived in the early 1970’s by French computer 
+scientist Alain Colmerauer. Its roots are in first order predicate calculus, and based on facts and rules. It has been 
+widely used in artificial intelligence, especially within the interdisciplinary field of Natural Language Processing (NLP), 
+providing applications with the ability to process human language due to its suitability in assembling human linguistics 
+models for language search, determination and generation. This report presents a review of the state of the art using 
+Prolog with emphasis on practical application within NLP over the last 5 years.
+
+[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aip/State of the Art using Prolog.pdf) graded 74%
