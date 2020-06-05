@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Computational Intelligence Optimization
-cover-img: /assets/img/fish_school.png
+cover-img: /assets/img/fish_school.jpg
 tags: [optimization, metaheuristics, hyper-heuristics, Python, flow shop, combinatorial, continuous]
 ---
 # Heuristic Optimization Platform
