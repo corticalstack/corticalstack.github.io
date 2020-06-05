@@ -31,11 +31,13 @@ appropriate according to current problem state, or select one stochastically.
 ### Testbed Problem Optimization
 4 popular testbed problems (De Jong's Sphere, Schwefel, Rastrigin, Michalewicz) are optimized with a single solution 
 simulated annealing (SA) algorithm.
+
 [MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Testbed Problem Optimisation.pdf) graded 100%
  | [Source code](https://github.com/corticalstack/problem-optimisation-benchmarking)
 
 ### Exact Optimization
 Using calculus to find the global minimum in single and multivariate functions. 
+
 [MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Exact Optimisation.pdf)
 
 
