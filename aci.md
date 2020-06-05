@@ -12,4 +12,5 @@ This work addresses the challenges of the KDD Cup 2009, predicting the propensit
 buy new products or services (appetency), or buy upgrades or add-ons proposed to them to make the sale more profitable 
 (up-selling). Comparing results against other competition entries, the gradient boosting classifier outperformed other 
 tested models, placing it 34th of 89 overall. 
+
 [Read more...](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf)
