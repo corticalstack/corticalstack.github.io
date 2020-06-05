@@ -12,7 +12,8 @@ have deadly consequences.
 This study presents a Python-based fuzzy logic knowledge-based inference system for the binary classification of breast 
 cancer tumours, taking an extensive data-driven, supervised learning approach in defining linguistic terms, implication 
 rule sets and membership functions, with the Wisconsin Diagnostic Breast Cancer dataset used as the empirical, impartial 
-problem domain expert. 
+problem domain expert. As a Python-based FIS can be deployed on cost-effective, mobile hardware including raspberry Pi’s 
+it is extremely affordable, portable and readily located in any clinical environment.
 
 A large set of configuration variants that includes 5 defuzzification methods are tested, prioritising the classification 
 accuracy of malignant tumours. The best FIS model classified all test set malignant tumors correctly with an overall 
