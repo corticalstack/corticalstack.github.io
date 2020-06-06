@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aci.md" beforeDir="false" afterPath="$PROJECT_DIR$/aci.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aip.md" beforeDir="false" afterPath="$PROJECT_DIR$/aip.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ann.md" beforeDir="false" afterPath="$PROJECT_DIR$/ann.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cio.md" beforeDir="false" afterPath="$PROJECT_DIR$/cio.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dm.md" beforeDir="false" afterPath="$PROJECT_DIR$/dm.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fl.md" beforeDir="false" afterPath="$PROJECT_DIR$/fl.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr.md" beforeDir="false" afterPath="$PROJECT_DIR$/mr.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rm.md" beforeDir="false" afterPath="$PROJECT_DIR$/rm.md" afterDir="false" />
-    </list>
+    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +59,8 @@
         <entry file="file://$PROJECT_DIR$/rm.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="255">
-                <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <first_editor relative-caret-position="425">
+                <caret line="25" column="151" selection-start-line="25" selection-start-column="151" selection-end-line="25" selection-end-column="151" />
               </first_editor>
               <second_editor />
             </state>
@@ -328,12 +318,12 @@
       <workItem from="1591261321448" duration="11694000" />
       <workItem from="1591293084167" duration="16876000" />
       <workItem from="1591346028198" duration="17349000" />
-      <workItem from="1591435382777" duration="1327000" />
+      <workItem from="1591435382777" duration="1657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47246000" />
+    <option name="totallyTimeSpent" value="47576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -594,8 +584,8 @@
     <entry file="file://$PROJECT_DIR$/rm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <first_editor relative-caret-position="425">
+            <caret line="25" column="151" selection-start-line="25" selection-start-column="151" selection-end-line="25" selection-end-column="151" />
           </first_editor>
           <second_editor />
         </state>
