@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Me
+cover-img: /assets/img/kite.jpg
 subtitle: The Essentials
 ---
 
@@ -9,7 +10,7 @@ years of professional software and technical architecting experience, providing 
 
 **Education**: Completed all modules of [MSc Intelligent Systems][mscis], with distinction, at [De Montfort University, Leicester, UK][dmu] in summer 2020. Currently working on thesis around COVID-19.
 
-**Hobbies**: Kiteboarding, snowboarding, photography, prolific Reader 
+**Hobbies**: Kiteboarding, snowboarding, photography, prolific reader. 
 
 [Nestle]: https://www.nestle.com/
 [mscis]: http://www.tech.dmu.ac.uk/~chiclana/mscis.html
