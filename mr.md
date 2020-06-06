@@ -17,7 +17,7 @@ offered best performance, especially at high speed, completing one loop in 155s 
 
 Recommendations include more refined sensor calibration and further research into proven control methods.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/mr/Wall Follower.pdf) graded 92%
+[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/mr/Wall Follower.pdf) grade 92%
  | [Source code](https://github.com/corticalstack/vrep-wall-follower)
  
 ### Wall Follower With PID Controller
@@ -29,7 +29,7 @@ proportional error, reducing navigation error by 55.8% over previous best.
 
 Recommendations include refined sensor noise filtering to improve integral and derivative control
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/mr/Wall Follower PID Controller.pdf) graded 92%
+[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/mr/Wall Follower PID Controller.pdf) grade 92%
  | [Source code](https://github.com/corticalstack/vrep-wall-follower-pid)
  
 ### Search And Rescue Robot
@@ -44,7 +44,7 @@ optimal path from victim to home point. All task solutions are successful.
 Recommendations include performance optimization of grid mapping and resolving identified environment feature 
 missing/overexposure issues affecting route planning.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/mr/Search and Rescue Robot.pdf) graded 100%
+[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/mr/Search and Rescue Robot.pdf) grade 100%
  | [Source code](https://github.com/corticalstack/vrep-search-rescue)
 
  

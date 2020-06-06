@@ -22,5 +22,5 @@ Dataset split by gender and classified with neural network models deliver best p
 cardiovascular disease. Recommendations include lifetime observation of participants, improving quality of data collection, 
 targeting healthcare guidance and treatment, and a two-stage approach to operationalising the classifiers.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/dm/An analysis of the Framingham heart study dataset.pdf) graded 94%
+[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/dm/An analysis of the Framingham heart study dataset.pdf) grade 94%
 

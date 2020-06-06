@@ -27,7 +27,7 @@ intrusions and attacks, and good for normal connections. A dataset originally pr
 Defence Advanced Research Projects Agency (DARPA) Intrusion Detection Evaluation Program, simulating air force base LAN 
 activity, is used.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/ann/Neural network model detecting intrusions or attacks on a computer network.pdf) graded 80%
+[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/ann/Neural network model detecting intrusions or attacks on a computer network.pdf) grade 80%
  | [Source code](https://github.com/corticalstack/KDDCup1999)
  
 # Neural Networks For Crop Prediction And Monitoring Ecosystems
@@ -45,4 +45,4 @@ of ecosystems. It focuses on the use of NDVI (Normalized Difference Vegetation I
 between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs), sourced from satellites 
 and UAVs.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/ann/State art current trends neural networks normalized difference vegetation index.pdf) graded 75%
+[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/ann/State art current trends neural networks normalized difference vegetation index.pdf) grade 75%
