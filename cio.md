@@ -13,7 +13,7 @@ using calculus to find the global minimum in single and multivariate functions i
 
 ### Testbed Problem Optimization
 4 popular testbed problems (De Jong's Sphere, Schwefel, Rastrigin, Michalewicz) are optimized with a single solution, metaheuristic 
-simulated annealing (SA) algorithm.
+simulated annealing algorithm.
 
 [MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Testbed Problem Optimisation.pdf) grade 100%
  | [Source code](https://github.com/corticalstack/problem-optimisation-benchmarking)

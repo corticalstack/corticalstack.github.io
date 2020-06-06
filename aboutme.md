@@ -1,24 +1,16 @@
 ---
 layout: page
-title: About me
-subtitle: The essentials
+title: About Me
+subtitle: The Essentials
 ---
 
-**Work**: Since October 2017, I have been working as a data scientist at [Nightingale Health]. Prior to that, I have worked as a data scientist at [Reaktor] (2014-2017), and as a researcher in Aalto Universty and its predecessor, the Helsinki University of Technology.
+**Work**: Between November 2014 and December 2017 I worked as a SAP HANA Technical architect at [Nestle]. I have over 24 
+years of professional software and technical architecting experience, providing expertise to over 36 international companies.
 
-**Education**: I finished my PhD in the [Statistical Machine Learning and Bioinformatics][smlb] group at Aalto University in 2014. In my thesis I developed and applied probabilistic machine learning methods to biomedical applications. See more about my research in the [Projects][proj-research] page.
+**Education**: Completed all modules of [MSc Intelligent Systems][mscis], with distinction, at [De Montfort University, Leicester, UK][dmu] in summer 2020. Currently working on thesis around COVID-19.
 
-**Open knowledge**: On my spare time I have been creating open source tools for handling open data in the [Louhos][] and [rOpenGov][] projects. See more at the [Projects][proj-opentools] page.
+**Hobbies**: Kiteboarding, snowboarding, photography, prolific Reader 
 
-**Hobbies**: Ultimate frisbee, freeskiing, kiteskiing, photography, cycling. 
-
-
-[Nightingale Health]: https://nightingalehealth.com/
-[Reaktor]: http://reaktor.fi/
-[smlb]: http://research.ics.aalto.fi/mi/
-[Projects]: /projects.html
-[proj-research]: /projects.html#research
-[Louhos]: http://louhos.github.io/
-[rOpenGov]: http://ropengov.github.io/
-[proj-opentools]: /projects.html#opentools
-[proj-openknow]: /projects.html#openknow
+[Nestle]: https://www.nestle.com/
+[mscis]: http://www.tech.dmu.ac.uk/~chiclana/mscis.html
+[dmu]: https://www.dmu.ac.uk/
