@@ -61,11 +61,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mr.md">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="668">
+              <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-14-09-back-to-school.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="782">
-                <caret line="46" column="157" selection-start-line="46" selection-start-column="157" selection-end-line="46" selection-end-column="157" />
+              <first_editor relative-caret-position="153">
+                <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
               </first_editor>
               <second_editor />
             </state>
@@ -73,44 +82,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rm.md">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="170">
-                <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <first_editor relative-caret-position="136">
+                <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
               </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2020-02-28-test-markdown.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-232" />
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1059">
-              <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fl.md">
+        <entry file="file://$PROJECT_DIR$/_posts/2020-03-17-covid19.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="459">
-                <caret line="27" column="156" selection-start-line="27" selection-start-column="156" selection-end-line="27" selection-end-column="156" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dm.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="408">
-                <caret line="24" column="183" selection-start-line="24" selection-start-column="183" selection-end-line="24" selection-end-column="183" />
+              <first_editor relative-caret-position="136">
+                <caret line="8" column="140" selection-start-line="8" selection-start-column="140" selection-end-line="8" selection-end-column="140" />
               </first_editor>
               <second_editor />
             </state>
@@ -167,12 +165,15 @@
         <option value="$PROJECT_DIR$/_posts/2020-02-01-jp test.md" />
         <option value="$PROJECT_DIR$/_posts/2020-05-21-hop.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_posts/2017-14-09-back-to-school.md" />
+        <option value="$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md" />
+        <option value="$PROJECT_DIR$/_posts/2020-03-17-covid19.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="47" />
+    <option name="x" value="3432" />
+    <option name="y" value="-8" />
     <option name="width" value="2576" />
     <option name="height" value="1416" />
   </component>
@@ -287,16 +288,16 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\assets\img" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\aci" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\rm" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\mr" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\fl" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\dm" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\aip" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\assets\img" />
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\aci" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -325,18 +326,17 @@
       <workItem from="1591293084167" duration="16876000" />
       <workItem from="1591346028198" duration="17349000" />
       <workItem from="1591435382777" duration="5581000" />
-      <workItem from="1591616673048" duration="2830000" />
+      <workItem from="1591616673048" duration="4279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54330000" />
+    <option name="totallyTimeSpent" value="55779000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
-    <editor active="true" />
+    <frame x="3432" y="-8" width="2576" height="1416" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25647822" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34618443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -397,14 +397,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolio.md" />
     <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2020-02-28-test-markdown.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
@@ -593,8 +585,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1059">
-          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+        <state relative-caret-position="668">
+          <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-14-09-back-to-school.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="136">
+            <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2020-02-28-test-markdown.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-232" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2020-03-17-covid19.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="136">
+            <caret line="8" column="140" selection-start-line="8" selection-start-column="140" selection-end-line="8" selection-end-column="140" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
