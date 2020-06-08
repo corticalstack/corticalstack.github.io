@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2020-02-01-jp test.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-05-21-hop.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-05-21-hop.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-05-21-hop.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +28,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2020-05-21-hop.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="136">
-                <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+              <first_editor relative-caret-position="153">
+                <caret line="9" column="155" selection-start-line="9" selection-start-column="155" selection-end-line="9" selection-end-column="155" />
               </first_editor>
               <second_editor />
             </state>
@@ -40,8 +40,8 @@
         <entry file="file://$PROJECT_DIR$/cio.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="425">
-                <caret line="25" column="113" selection-start-line="25" selection-start-column="113" selection-end-line="25" selection-end-column="113" />
+              <first_editor relative-caret-position="697">
+                <caret line="41" column="159" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="159" />
               </first_editor>
               <second_editor />
             </state>
@@ -325,12 +325,12 @@
       <workItem from="1591293084167" duration="16876000" />
       <workItem from="1591346028198" duration="17349000" />
       <workItem from="1591435382777" duration="5581000" />
-      <workItem from="1591616673048" duration="919000" />
+      <workItem from="1591616673048" duration="1455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52419000" />
+    <option name="totallyTimeSpent" value="52955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -501,16 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cio.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="425">
-            <caret line="25" column="113" selection-start-line="25" selection-start-column="113" selection-end-line="25" selection-end-column="113" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mr.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -588,11 +578,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cio.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="697">
+            <caret line="41" column="159" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="159" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2020-05-21-hop.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="136">
-            <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="155" selection-start-line="9" selection-start-column="155" selection-end-line="9" selection-end-column="155" />
           </first_editor>
           <second_editor />
         </state>
