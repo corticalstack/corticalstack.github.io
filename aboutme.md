@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Me
-cover-img: /assets/img/kite.jpg
+cover-img: /assets/img/beach1.jpg
 subtitle: The Essentials
 ---
 
