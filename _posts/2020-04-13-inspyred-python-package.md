@@ -124,5 +124,5 @@ class InspyredWrapper:
                 args['slf'].hj.imp_count[args['slf'].hj.run] += 1
 ````
 
-![hopgit](https://github.com/corticalstack/heuristic-optimization-platform)  
-![inspyred](https://pythonhosted.org/inspyred/)
+![hopgit]: https://github.com/corticalstack/heuristic-optimization-platform  
+![inspyred]: https://pythonhosted.org/inspyred/

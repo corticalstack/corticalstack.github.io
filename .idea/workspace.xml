@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts_draft/2020-04-13-inspyred-python-package.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts_draft/2020-04-13-inspyred-python-package.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts_draft/2020-06-09-master-project-begins.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts_draft/2020-06-09-thoughts-on-masters-project.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/kite.jpg" beforeDir="false" />
-    </list>
+    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +35,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts_draft/2020-04-13-inspyred-python-package.md">
+        <entry file="file://$PROJECT_DIR$/_posts/2020-04-13-inspyred-python-package.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="374">
-                <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+              <first_editor relative-caret-position="1176">
+                <caret line="123" column="65" selection-start-line="123" selection-start-column="65" selection-end-line="123" selection-end-column="65" />
               </first_editor>
               <second_editor />
             </state>
@@ -359,16 +354,15 @@
       <workItem from="1591616673048" duration="4399000" />
       <workItem from="1591638037928" duration="7241000" />
       <workItem from="1591689217770" duration="15217000" />
-      <workItem from="1591724761915" duration="2411000" />
+      <workItem from="1591724761915" duration="2669000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80768000" />
+    <option name="totallyTimeSpent" value="81026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2614841" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -769,11 +763,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts_draft/2020-04-13-inspyred-python-package.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2020-04-13-inspyred-python-package.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="374">
-            <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <first_editor relative-caret-position="1176">
+            <caret line="123" column="65" selection-start-line="123" selection-start-column="65" selection-end-line="123" selection-end-column="65" />
           </first_editor>
           <second_editor />
         </state>
