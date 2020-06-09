@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Creche Reopens
-subtitle: Creche Reopens
+title: Masters Project Begins
+subtitle: The Big One
 cover-img: /assets/img/forest_path.jpg
 tags: [hyper-heuristics, metaheuristics, optimization, university, masters, ]
 ---
-It's been exhausting fitting teh remaining moduel work into time, mopstly from just after 9 when kids have gone to bed 
-and dinner has been had, until the early hours. It has been exhausting. Couldnt have done ti without supoorty from my partner.
+
 What a strange, strange time. Been only just over 2 months, but has felt like a year. So covid, closing creche, not quite sure how going to manage remaineder of my very demanding uni course byt of course teh family comes first
 Streesful for what the remainder oif the year holds. Information overload for me, consuming too much media. Wondering how long it will take to 
 find a vaccine and whether it will be safe for my children. ON a positive note, hoping that working from home will become more widely accepted 
