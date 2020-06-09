@@ -85,7 +85,7 @@ share-links-active:
 link-tags: true
 
 # Excerpt Word Length - Truncates the excerpt to the specified number of words on the index page
-excerpt_length: 50
+excerpt_length: 30
 
 # --- Colours / background image --- #
 
@@ -122,13 +122,13 @@ footer-link-col: "#404040"
 # --- Web Statistics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+gtag: "UA-169000645-1"
 
 # Fill in your Google Analytics ID to track your website using GA
-#google_analytics: ""
+google_analytics: "UA-169000645-1"
 
 # Google Tag Manager ID
-#gtm: ""
+gtm: "GTM-MFP87S6"
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
