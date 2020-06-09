@@ -11,7 +11,8 @@ lot can be learned from such deep dive. HOP also has a hyper-heuristic feature, 
 to select other algorithms from a low-level metaheuristic pool. I wanted a way of rapidly expanding the catalogue of 
 metaheuristics available to the hyperfeature, and the [Inspyred][inspyred] python package gives me just that capability.
 
-Consider the following stand-alone [Inspyred example][inspyredes] implementing an Evolutionary Strategy (ES) algorithm.
+Consider the following stand-alone, compact [Inspyred example][inspyredes] implementing an Evolutionary Strategy (ES) 
+algorithm. 
 ````python
 from random import Random
 from time import time
