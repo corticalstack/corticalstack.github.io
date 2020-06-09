@@ -34,3 +34,5 @@ be found [here][fisgit], along with the [supporting paper][fispaper].
 [Skfuzzyeg]: https://pythonhosted.org/scikit-fuzzy/auto_examples/index.html
 [matlabfltb]: https://www.mathworks.com/products/fuzzy-logic.html
 [wisconsin]: https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)
+
+![flbc1](/assets/img/fl_breast_cancer1.jpg)
