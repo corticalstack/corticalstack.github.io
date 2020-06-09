@@ -3,7 +3,7 @@ layout: post
 title: AWS Certified Cloud Practitioner
 subtitle: Passed Today, WHoop Whoop!
 cover-img: /assets/img/forest_path.jpg
-tags: [aws, cloud, certification]
+tags: [Amazon aws, cloud, certification]
 ---
 
 Sat and passed the AWS Certified Cloud Practitioner exam, yeah!
@@ -13,7 +13,7 @@ provider of them all, AWS.  I wanted to better understand their huge service por
 and build cloud solutions I could make well-informed decisions. I'm super happy to share the outcome of this prep is AWS 
 Cloud Practitioner certification.
 
-Beyond "standard" stuff like auto-scaling & load balancing compute resources, some other services really stood out for me. 
+Beyond "**standard**" stuff like auto-scaling & load balancing compute resources, some other services really stood out for me. 
 AWS Lambda for FaaS (Functions as a Service) serverless, stateless compute. AWS CloudFormation for infrastructure as code, 
 for reliable, repeatable and self-documenting resource provisioning. AWS API Gateway to publish and log API calls. AWS SQS 
 allowing those decoupled microservices to communicate with each other.
@@ -37,7 +37,7 @@ All the learning resources (online course, whitepapers) studied for the certific
 [aws5]: https://aws.amazon.com/premiumsupport/plans/
 
 
-![AWS Cloud Practitioner Certification](/assets/img/aws_cert.jpg)
+![AWS Cloud Practitioner Certification](/assets/img/aws_cloud_practitioner_cert.jpg)
 
 
 

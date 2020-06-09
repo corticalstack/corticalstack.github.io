@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/aws_cert.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,12 +50,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="136">
-                <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+              <first_editor relative-caret-position="85">
+                <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
               </first_editor>
               <second_editor />
             </state>
@@ -82,6 +84,23 @@
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="391">
+                <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="28" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/img/aws_cloud_practitioner_cert.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -123,7 +142,6 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2017-14-09-back-to-school.md" />
         <option value="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-funadamentals-cert" />
-        <option value="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md" />
         <option value="$PROJECT_DIR$/_posts/2020-02-07-fuzzy-logic-to-be-published.md" />
         <option value="$PROJECT_DIR$/_posts/2020-03-17-covid19.md" />
         <option value="$PROJECT_DIR$/_posts/2020-05-17-charting-with-excel-is-amazing.md" />
@@ -136,6 +154,7 @@
         <option value="$PROJECT_DIR$/_posts/2017-09-14-back-to-school.md" />
         <option value="$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md" />
         <option value="$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md" />
+        <option value="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md" />
       </list>
     </option>
   </component>
@@ -296,12 +315,12 @@
       <workItem from="1591435382777" duration="5581000" />
       <workItem from="1591616673048" duration="4399000" />
       <workItem from="1591638037928" duration="7241000" />
-      <workItem from="1591689217770" duration="4916000" />
+      <workItem from="1591689217770" duration="5969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68056000" />
+    <option name="totallyTimeSpent" value="69109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -583,16 +602,6 @@
     <entry file="file://$PROJECT_DIR$/assets/img/path.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="136">
-            <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2020-05-17-charting-with-excel-is-amazing.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -631,16 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2020-06-09-master-project-begins.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="136">
-            <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2020-06-02-covid-creche-reopens.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -661,16 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" selection-start-line="9" selection-end-line="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2017-09-14-back-to-school.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -681,11 +670,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="9" selection-start-line="9" selection-end-line="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/aws_cloud_practitioner_cert.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2020-06-09-master-project-begins.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="136">
-            <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+            <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="85">
+            <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="391">
+            <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="28" />
           </first_editor>
           <second_editor />
         </state>
