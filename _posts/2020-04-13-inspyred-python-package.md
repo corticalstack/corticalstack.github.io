@@ -5,7 +5,7 @@ subtitle: Python Package For Bio-Inspired Computation
 cover-img: /assets/img/forest_path.jpg
 tags: [optimization, metaheuristics, algorithm]
 ---
-In developing the [Heuristic Optimisation Platform][hopgit] I hand-coded various metaheuristics (algorithms) including 
+In developing the [Heuristic Optimisation Platform][hopgit] (paper [here][hoppaper])I hand-coded various metaheuristics (algorithms) including 
 Particle Swarm Optimisation and Genetic Evolution. These can get quite involved, but of course a lot can be learned from 
 such deep dive. HOP also has a hyper-heuristic feature, which can be thought of as a metaheuristic to select other algorithms 
 from a low-level metaheuristic pool. I wanted a way to rapidly expand the catalogue of metaheuristics available to the hyper
@@ -126,4 +126,5 @@ class InspyredWrapper:
 ````
 
 [hopgit]: https://github.com/corticalstack/heuristic-optimization-platform  
+[hoppaper]: https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Heuristic Optimization Platform.pdf
 [inspyred]: https://pythonhosted.org/inspyred/
