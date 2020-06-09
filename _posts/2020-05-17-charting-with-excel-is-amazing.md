@@ -1,15 +1,19 @@
 ---
 layout: post
 title: Charting With Excel Is Amazing
-subtitle: Super easy
+subtitle: Focus On The End Result, Not The Tool
 cover-img: /assets/img/forest_path.jpg
-tags: [Excel, visualization]
+tags: [Excel, results, visualization]
 ---
+Working on a Python-based platform that made available a number of different optimizers (Particle Swarm, Genetic Evolution etc) 
+at solving problems, I wanted to generate a clear, good looking and informative fitness trend chart.  Spend a few hour messing 
+about with Python packages [Matplotlib][matplotlib] and [Seaborn[seaborn] but wasn't satisfied with the results.
 
-Just goes to show the maturity of Excel that I was able to chart fitness trend in 20 seconds with data with much nicer 
-result than with using Matplotlib. Such a powerful tool. So much more efficient and time ctritical for me exporting teh data
-and visualising it with Excel. It does charting great. Wanted a clear, good looking and informative fitness trend chart 
-for several different optimizers and got this with Excel, focusing on thge end result and not the tool being used, not 
-sticking and fiddling around with Python.
+Exported the trend data out of Python in .csv format and imported into Excel. 20 seconds later I had something I was really 
+happy with. A powerful reminder to focus on the end result and not on the tool. Excel, well, excels at stuff like this, and
+I have so much more to learn about it.
 
-I have so much more to learn with Excel.
+![HOP fitness trend](/assets/img/hop_fitness_trend.jpg)
+
+[matplotlib]: https://matplotlib.org/
+[seaborn]: https://seaborn.pydata.org/
