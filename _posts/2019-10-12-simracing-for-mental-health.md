@@ -11,7 +11,8 @@ mental health by participating in a multi-class 24 hour team race around Zolder 
 health. Organised by Jimmy Broadbent, popular Youtuber and simracer who sadly lost his father to depression. 
 
 799 laps were turned, and we brought the car over the line 7th in class. And the best part? Charity target was £1000. Well 
-exceeded, with £36178 raised for #Mind. I guess that about pays for a counsellor for a year. Incredible what happens when 
-a community comes together.
+exceeded, with £34457 raised for [Mind][MindUKJimmy]. I guess that about pays for a counsellor for a year. Incredible what 
+happens when a community comes together.
 
 ![BoosTED TCR](/assets/img/BoosTED_tcr.jpg)
+![MindUKJimmy](https://www.justgiving.com/fundraising/race-for-mental-health)
