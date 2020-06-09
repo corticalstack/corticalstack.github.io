@@ -13,7 +13,7 @@ provider of them all, AWS.  I wanted to better understand their huge service por
 and build cloud solutions I could make well-informed decisions. I'm super happy to share the outcome of this prep is AWS 
 Cloud Practitioner certification.
 
-Beyond "**standard**" stuff like auto-scaling & load balancing compute resources, some other services really stood out for me. 
+Beyond "*standard**" stuff like auto-scaling & load balancing compute resources, some other services really stood out for me. 
 AWS Lambda for FaaS (Functions as a Service) serverless, stateless compute. AWS CloudFormation for infrastructure as code, 
 for reliable, repeatable and self-documenting resource provisioning. AWS API Gateway to publish and log API calls. AWS SQS 
 allowing those decoupled microservices to communicate with each other.
