@@ -24,6 +24,9 @@ navbar-links:
   Resume:
     - One Pager: "https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cv/Jon-Paul Boyd One-Pager Resume.pdf"
     - Traditional: "https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cv/Jon-Paul Boyd One-Pager Resume.pdf"
+  Online:
+    - LinkedIn: "https://www.linkedin.com/in/jonpaulboyd/"
+    - Github: "https://github.com/corticalstack"
   About Me: "aboutme"
   Now: "now"
 
