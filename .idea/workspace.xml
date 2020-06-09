@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts_draft/2019-12-10-skfuzzy-python-package.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +28,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="425">
-                <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+              <first_editor relative-caret-position="374">
+                <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
               </first_editor>
               <second_editor />
             </state>
@@ -177,13 +177,13 @@
         <option value="$PROJECT_DIR$/_posts/2020-02-07-fuzzy-logic-to-be-published.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2020-05-21-hop.md" />
-        <option value="$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md" />
         <option value="$PROJECT_DIR$/_posts/2019-09-01-udemy-docker-mastery-cert.md" />
         <option value="$PROJECT_DIR$/_posts/2019-06-09-deep-learning-with-Python.md" />
         <option value="$PROJECT_DIR$/_posts_draft/2020-04-13-inspyred-python-package.md" />
         <option value="$PROJECT_DIR$/_posts/2020-04-13-inspyred-python-package.md" />
         <option value="$PROJECT_DIR$/_posts/2019-10-12-simracing-for-mental-health.md" />
         <option value="$PROJECT_DIR$/_posts_draft/2019-12-10-skfuzzy-python-package.md" />
+        <option value="$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md" />
       </list>
     </option>
   </component>
@@ -352,12 +352,12 @@
       <workItem from="1591616673048" duration="4399000" />
       <workItem from="1591638037928" duration="7241000" />
       <workItem from="1591689217770" duration="15217000" />
-      <workItem from="1591724761915" duration="7408000" />
+      <workItem from="1591724761915" duration="8122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85765000" />
+    <option name="totallyTimeSpent" value="86479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -765,8 +765,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="425">
-            <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+          <first_editor relative-caret-position="374">
+            <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           </first_editor>
           <second_editor />
         </state>
