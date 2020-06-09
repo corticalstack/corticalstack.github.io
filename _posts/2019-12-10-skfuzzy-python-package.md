@@ -13,4 +13,7 @@ This piece was the culmination of a long journey that began with a fearful revis
 It was a great learning experience understanding two types of problems; continuous and combinatorial, and how to achieve "**good enough**" results using a variety of optimisation algorithms including particle swarm and genetic evolution.
 For me, the significance of this work was taking it further to develop a hyper-heuristic, or "heuristic for meta-heuristics", that is able to select from a pool of algorithms in real time according to the state of the problem being solved. 
 
-It proved invaluable, adding an additional repertoire of solutions on top of traditional machine learning approaches.  
+It proved invaluable, adding an additional repertoire of solutions on top of traditional machine learning approaches. 
+````python
+
+```` 
