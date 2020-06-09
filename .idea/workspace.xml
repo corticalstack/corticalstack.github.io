@@ -52,8 +52,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="510">
-                <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <first_editor relative-caret-position="136">
+                <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
               </first_editor>
               <second_editor />
             </state>
@@ -296,12 +296,12 @@
       <workItem from="1591435382777" duration="5581000" />
       <workItem from="1591616673048" duration="4399000" />
       <workItem from="1591638037928" duration="7241000" />
-      <workItem from="1591689217770" duration="4294000" />
+      <workItem from="1591689217770" duration="4916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67434000" />
+    <option name="totallyTimeSpent" value="68056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -684,8 +684,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="510">
-            <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <first_editor relative-caret-position="136">
+            <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
           </first_editor>
           <second_editor />
         </state>
