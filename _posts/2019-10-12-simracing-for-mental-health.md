@@ -14,7 +14,6 @@ health. Organised by Jimmy Broadbent, popular Youtuber and simracer who sadly lo
 exceeded, with £34457 raised for [Mind][MindUKJimmy]. I guess that about pays for a counsellor for a year. Incredible what 
 happens when a community comes together.
 
-
 ![BoosTED TCR](/assets/img/BoosTED_tcr.jpg)
 [MindUKJimmy]: https://www.justgiving.com/fundraising/race-for-mental-health
 [BoosTED]: https://www.facebook.com/BoosTEDmsport/
