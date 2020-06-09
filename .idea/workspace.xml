@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2019-10-12-simracing-for-mental-health.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-10-12-simracing-for-mental-health.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-02-28-test-markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts_draft/2020-02-28-test-markdown.md" afterDir="false" />
-    </list>
+    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +23,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md">
+        <entry file="file://$PROJECT_DIR$/_posts_draft/2019-12-10-skfuzzy-python-package.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="238">
-                <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <first_editor relative-caret-position="306">
+                <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               </first_editor>
               <second_editor />
             </state>
@@ -38,11 +35,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md">
+        <entry file="file://$PROJECT_DIR$/_posts/2019-06-09-deep-learning-with-Python.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="289">
-                <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <first_editor relative-caret-position="340">
+                <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               </first_editor>
               <second_editor />
             </state>
@@ -188,6 +185,7 @@
         <option value="$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md" />
         <option value="$PROJECT_DIR$/_posts/2019-09-01-udemy-docker-mastery-cert.md" />
         <option value="$PROJECT_DIR$/_posts/2019-10-12-simracing-for-mental-health.md" />
+        <option value="$PROJECT_DIR$/_posts/2019-06-09-deep-learning-with-Python.md" />
       </list>
     </option>
   </component>
@@ -354,15 +352,16 @@
       <workItem from="1591435382777" duration="5581000" />
       <workItem from="1591616673048" duration="4399000" />
       <workItem from="1591638037928" duration="7241000" />
-      <workItem from="1591689217770" duration="13972000" />
+      <workItem from="1591689217770" duration="14510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77112000" />
+    <option name="totallyTimeSpent" value="77650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2600118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -414,7 +413,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/main.js" />
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -572,7 +570,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2019-10-02-ms-azure-funadamentals-cert.md" />
-    <entry file="file://$PROJECT_DIR$/_posts/2020-04-13-inspyred-python-package.md">
+    <entry file="file://$PROJECT_DIR$/_posts_draft/2020-04-13-inspyred-python-package.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="238">
@@ -605,7 +603,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2020-06-09-master-project-begins.md">
+    <entry file="file://$PROJECT_DIR$/_posts_draft/2020-06-09-master-project-begins.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="136">
@@ -763,11 +761,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md">
+    <entry file="file://$PROJECT_DIR$/_posts_draft/2019-12-10-skfuzzy-python-package.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="289">
-            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <first_editor relative-caret-position="306">
+            <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-06-09-deep-learning-with-Python.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="340">
+            <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           </first_editor>
           <second_editor />
         </state>
