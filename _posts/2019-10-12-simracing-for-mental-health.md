@@ -15,4 +15,4 @@ exceeded, with £34457 raised for [Mind][MindUKJimmy]. I guess that about pays f
 happens when a community comes together.
 
 ![BoosTED TCR](/assets/img/BoosTED_tcr.jpg)
-![MindUKJimmy](https://www.justgiving.com/fundraising/race-for-mental-health)
+[MindUKJimmy]: https://www.justgiving.com/fundraising/race-for-mental-health

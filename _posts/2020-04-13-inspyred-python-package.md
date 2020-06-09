@@ -5,13 +5,13 @@ subtitle: Python Package For Bio-Inspired Computation
 cover-img: /assets/img/forest_path.jpg
 tags: [optimization, metaheuristics, algorithm]
 ---
-In developing the [Heuristic Optimisation Platform][hopgit] (paper [here][hoppaper])I hand-coded various metaheuristics (algorithms) including 
-Particle Swarm Optimisation and Genetic Evolution. These can get quite involved, but of course a lot can be learned from 
-such deep dive. HOP also has a hyper-heuristic feature, which can be thought of as a metaheuristic to select other algorithms 
-from a low-level metaheuristic pool. I wanted a way to rapidly expand the catalogue of metaheuristics available to the hyper
-feature, and the [Inspyred][inspyred] python package gives me just that capability.
+In developing the [Heuristic Optimisation Platform][hopgit] (paper [here][hoppaper]), I hand-coded various metaheuristics 
+(algorithms) including Particle Swarm Optimisation and Genetic Evolution. These can get quite involved, but of course a 
+lot can be learned from such deep dive. HOP also has a hyper-heuristic feature, which can be thought of as a metaheuristic 
+to select other algorithms from a low-level metaheuristic pool. I wanted a way of rapidly expanding the catalogue of 
+metaheuristics available to the hyperfeature, and the [Inspyred][inspyred] python package gives me just that capability.
 
-
+Consider the following stand-alone [Inspyred example][inspyredes] implementing an Evolutionary Strategy (ES) algorithm.
 ````python
 from random import Random
 from time import time
@@ -42,6 +42,10 @@ if __name__ == '__main__':
     main(display=True)
 ````      
 
+
+Now with the Inspyred ES implemented in HOP below. Note that for the parameters **observor** (monitoring the evolution), 
+**generator** (creates random problem solution) and **evaluator** (the fitness function evaluating a problem solution), 
+Inspyred will use my own custom methods written in a wrapper class.
 ````python
 from optimizers.optimizer import Optimizer
 import inspyred
@@ -78,6 +82,8 @@ class ES(Optimizer):
 ````
 
 
+The custom wrapper class is shown below, and is common for all Inspyred algorithms I want to include in HOP, allowing for 
+very rapid integration and expansion of the low-level heuristic pool of available metaheuristics. 
 ````python
 import copy
 
@@ -128,3 +134,4 @@ class InspyredWrapper:
 [hopgit]: https://github.com/corticalstack/heuristic-optimization-platform  
 [hoppaper]: https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Heuristic Optimization Platform.pdf
 [inspyred]: https://pythonhosted.org/inspyred/
+[inspyredes]: https://pythonhosted.org/inspyred/examples.html#evolution-strategy
