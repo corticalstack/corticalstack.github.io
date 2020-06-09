@@ -12,6 +12,8 @@ years of professional software and technical architecting experience, providing 
 
 **Hobbies**: Kiteboarding, snowboarding, photography, prolific reader. 
 
+**Now**: Right now Im....
+
 [Nestle]: https://www.nestle.com/
 [mscis]: http://www.tech.dmu.ac.uk/~chiclana/mscis.html
 [dmu]: https://www.dmu.ac.uk/
