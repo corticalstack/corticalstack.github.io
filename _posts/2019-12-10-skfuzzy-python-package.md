@@ -20,9 +20,9 @@ blurriness.
   
 [Matlab's fuzzy logic toolbox][matlabfltb] is the most popular fuzzy logic library I'm aware of, with a large user 
 community and many documented example use cases. However, I'm a Python developer at heart, so was happy to discover the 
-[Skfuzzy] Python library. Some simple implementation examples can be found [here][Skfuzzyeg]. The FIS developed to classify 
-breast cancer tumours, which outperformed tuned Keras neural networks and other classifiers including decision trees and 
-random forest is [here][fisgit], along with the [supporting paper][fispaper].   
+[Skfuzzy] Python library. Some simple implementation examples can be found [here][Skfuzzyeg]. The Python-based FIS I 
+developed to classify breast cancer tumours, which incidentally outperformed tuned Keras neural networks and other 
+classifiers including decision trees and random forest is [here][fisgit], along with the [supporting paper][fispaper].   
    
 
 [fisgit]: https://github.com/corticalstack/fuzzy-system-breast-cancer-wisconsin
