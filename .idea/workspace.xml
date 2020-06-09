@@ -28,8 +28,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="408">
-                <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+              <first_editor relative-caret-position="442">
+                <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
               </first_editor>
               <second_editor />
             </state>
@@ -352,12 +352,12 @@
       <workItem from="1591616673048" duration="4399000" />
       <workItem from="1591638037928" duration="7241000" />
       <workItem from="1591689217770" duration="15217000" />
-      <workItem from="1591724761915" duration="8466000" />
+      <workItem from="1591724761915" duration="8708000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86823000" />
+    <option name="totallyTimeSpent" value="87065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -765,8 +765,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="408">
-            <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+          <first_editor relative-caret-position="442">
+            <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
           </first_editor>
           <second_editor />
         </state>
