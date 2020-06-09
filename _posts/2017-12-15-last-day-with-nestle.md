@@ -1,9 +1,14 @@
 ---
 layout: post
 title: Last Day With Nestle
-subtitle: Leaving Nestle
+subtitle: What A Wonderful Experience, Excited For Next Path
 cover-img: /assets/img/forest_path.jpg
-tags: [work, onwards, learning]
+tags: [work, learning]
 ---
+The loose ends are tied, the desk has been cleaned and the goodbyes have been said.  So many fantastic learning opportunities 
+have been thrown my way at Nestle and I've worked with a broad variety of folks so passionate about their work. I hope I 
+made positive contributions. I can honestly say it's the best work experience I've had to date, both in developing my technical 
+and soft skills. I shall miss my direct team the most, and never forget how supportive they were, especially during times 
+of personal family bereavement. I hope that these relationships will endure long after life at Nestle. 
 
-My last day with Nestle today. wanting to progress MSc. Great colleagues, learnt so much, best work experience ever, onwards to new 
+Onwards to devote some time to focus on academia.  

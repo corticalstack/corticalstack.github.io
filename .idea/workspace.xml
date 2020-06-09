@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2017-09-14-back-to-school.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-09-14-back-to-school.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-06-02-covid-creche-reopens.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-06-02-covid-creche-reopens.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +25,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2017-09-14-back-to-school.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="153">
-                <caret line="9" column="126" selection-start-line="9" selection-start-column="126" selection-end-line="9" selection-end-column="126" />
+              <first_editor relative-caret-position="255">
+                <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="221">
+                <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               </first_editor>
               <second_editor />
             </state>
@@ -100,7 +111,6 @@
         <option value="$PROJECT_DIR$/_posts/2020-05-21-hop.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2017-14-09-back-to-school.md" />
-        <option value="$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md" />
         <option value="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-funadamentals-cert" />
         <option value="$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md" />
         <option value="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md" />
@@ -114,6 +124,7 @@
         <option value="$PROJECT_DIR$/_posts/2020-06-09-master-project-begins.md" />
         <option value="$PROJECT_DIR$/_posts/2020-06-02-covid-creche-reopens.md" />
         <option value="$PROJECT_DIR$/_posts/2017-09-14-back-to-school.md" />
+        <option value="$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md" />
       </list>
     </option>
   </component>
@@ -274,12 +285,12 @@
       <workItem from="1591435382777" duration="5581000" />
       <workItem from="1591616673048" duration="4399000" />
       <workItem from="1591638037928" duration="7241000" />
-      <workItem from="1591689217770" duration="1400000" />
+      <workItem from="1591689217770" duration="3037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64540000" />
+    <option name="totallyTimeSpent" value="66177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -509,16 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="136">
-            <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ann.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -662,8 +663,18 @@
     <entry file="file://$PROJECT_DIR$/_posts/2017-09-14-back-to-school.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" column="126" selection-start-line="9" selection-start-column="126" selection-end-line="9" selection-end-column="126" />
+          <first_editor relative-caret-position="255">
+            <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="221">
+            <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           </first_editor>
           <second_editor />
         </state>

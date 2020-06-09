@@ -7,7 +7,7 @@ tags: [learning, artificial intelligence]
 ---
 Today my application to enrol as a distance learning student on [MSc Intelligent Systems][mscis] at [De Montfort University, Leicester, UK][dmu] 
 has been accepted. So so happy about this! Although I've always been a continual learner, it's been several decades since last
-in a more formal academic setting, and at that time never achieved both what I and my family had hoped for. Now is the chance 
+in a more formal academic setting. At that time I never achieved both what I and my family had hoped for. Now is the chance 
 to fix that, I'm super motivated!
 
 It's going to take a huge amount of effort to read extensively on a specific topic and soak up all that information, then 
