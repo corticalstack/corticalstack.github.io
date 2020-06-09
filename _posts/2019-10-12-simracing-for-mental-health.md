@@ -3,7 +3,7 @@ layout: post
 title: Simracing For Mental Health
 subtitle: Mind.Org.UK
 cover-img: /assets/img/forest_path.jpg
-tags: [mental health]
+tags: [mental health, BoosTED, Motorsports, simracing]
 ---
 We all need to rest, even when there is still so much to do, right? This weekend I took some downtime this weekend, driving 
 the #Audi RS3 LMS TCR for #BoosTED #Motorsports. The sim racing community came together to support and raise awareness of 
@@ -15,4 +15,3 @@ exceeded, with £36178 raised for #Mind. I guess that about pays for a counsello
 a community comes together.
 
 ![BoosTED TCR](/assets/img/BoosTED_tcr.jpg)
-
