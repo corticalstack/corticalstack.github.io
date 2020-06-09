@@ -11,6 +11,7 @@ such deep dive. HOP also has a hyper-heuristic feature, which can be thought of 
 from a low-level metaheuristic pool. I wanted a way to rapidly expand the catalogue of metaheuristics available to the hyper
 feature, and the [Inspyred][inspyred] python package gives me just that capability.
 
+
 ````python
 from random import Random
 from time import time
@@ -124,5 +125,5 @@ class InspyredWrapper:
                 args['slf'].hj.imp_count[args['slf'].hj.run] += 1
 ````
 
-![hopgit]: https://github.com/corticalstack/heuristic-optimization-platform  
-![inspyred]: https://pythonhosted.org/inspyred/
+[hopgit]: https://github.com/corticalstack/heuristic-optimization-platform  
+[inspyred]: https://pythonhosted.org/inspyred/
