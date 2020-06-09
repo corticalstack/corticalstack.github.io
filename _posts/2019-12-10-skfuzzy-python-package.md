@@ -3,7 +3,7 @@ layout: post
 title: Inspyred Python Package
 subtitle: Inspyred
 cover-img: /assets/img/forest_path.jpg
-tags: [optimization, metaheuristics, algorithm]
+tags: [fuzzy logic, skfuzzy, Python]
 ---
 
 I've just submitted a paper titled "[Heuristic Optimization Platform For Meta And Hyper-Heuristic Solving Of Combinatorial And Continuous Problems](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Heuristic Optimization Platform.pdf)". 
