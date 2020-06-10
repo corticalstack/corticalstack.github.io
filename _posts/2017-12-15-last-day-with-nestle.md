@@ -3,7 +3,7 @@ layout: post
 title: Last Day With Nestle
 subtitle: A Wonderful Experience But Excited For What's Next
 cover-img: /assets/img/forest_path.jpg
-tags: [work, learning]
+tags: [work, learning, one team, empathy]
 ---
 The loose ends are tied, the desk has been cleaned and the goodbyes have been said.  
 

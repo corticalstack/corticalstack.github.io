@@ -3,7 +3,7 @@ layout: post
 title: AWS Certified Cloud Practitioner
 subtitle: Passed Today, WHoop Whoop!
 cover-img: /assets/img/forest_path.jpg
-tags: [Amazon aws, cloud, certification]
+tags: [Amazon AWS, cloud, certification, learning]
 ---
 
 Sat and passed the AWS Certified Cloud Practitioner exam, yeah!

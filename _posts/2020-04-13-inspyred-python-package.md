@@ -3,10 +3,10 @@ layout: post
 title: Inspyred 
 subtitle: Python Package For Bio-Inspired Computation
 cover-img: /assets/img/forest_path.jpg
-tags: [optimization, metaheuristics, algorithm]
+tags: [optimization, metaheuristics, hyper-heuristics, algorithm]
 ---
-In developing the [Heuristic Optimisation Platform][hopgit] (paper [here][hoppaper]), I hand-coded various metaheuristics 
-(algorithms) including Particle Swarm Optimisation and Genetic Evolution. These can get quite involved, but of course a 
+In developing the [Heuristic Optimisation Platform][hopgit] (HOP, paper [here][hoppaper]), I hand-coded various metaheuristics 
+(algorithms) including *Particle Swarm Optimisation* and *Genetic Evolution*. These can get quite involved, but of course a 
 lot can be learned from such deep dive. HOP also has a hyper-heuristic feature, which can be thought of as a metaheuristic 
 to select other algorithms from a low-level metaheuristic pool. I wanted a way of rapidly expanding the catalogue of 
 metaheuristics available to the hyperfeature, and the [Inspyred][inspyred] python package gives me just that capability.
@@ -83,8 +83,8 @@ class ES(Optimizer):
 ````
 
 
-The custom wrapper class is shown below, and is common for all Inspyred algorithms I want to include in HOP, allowing for 
-very rapid integration and expansion of the low-level heuristic pool of available metaheuristics. 
+The custom wrapper class is shown below, and is common for all Inspyred algorithms I want to include in HOP. This allows 
+for very rapid integration and expansion of the low-level heuristic pool of available metaheuristics. 
 ````python
 import copy
 

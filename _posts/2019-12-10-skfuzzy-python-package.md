@@ -3,14 +3,14 @@ layout: post
 title: Skfuzzy
 subtitle: Python Package For Fuzzy Logic
 cover-img: /assets/img/forest_path.jpg
-tags: [fuzzy logic, skfuzzy, Python]
+tags: [fuzzy logic, Skfuzzy, Python, breast cancer, classification]
 ---
 Fuzzy logic is a concept first introduced by Zadeh in 1965 to model logical reasoning with a level of vagueness. I wanted 
 to develop a Fuzzy Inference System (FIS) to classify breast cancer tumours. 
 
-Why use fuzzy logic and not some trendy, state-of-the-art approach like neural networks? Because conclusions reached through 
+Why use fuzzy logic and not some trendy, "*state-of-the-art*" approach like neural networks? Because conclusions reached through 
 use of fuzzy logic can be easily understood and interpreted by a medical practitioner, which provides a far more "**explainable A.I.**" 
-solution. 
+solution than black box neural nets for example.
 
 Furthermore, the problem domain of determining any presence of a single disease may manifest itself quite differently 
 depending on the patient, and with different intensities. A single symptom may correspond to different diseases. On the 

@@ -3,7 +3,7 @@ layout: post
 title: MS Azure Fundamentals Certified!
 subtitle: The Start Of An Azure Journey
 cover-img: /assets/img/forest_path.jpg
-tags: [Microsoft azure, cloud, certification]
+tags: [Microsoft azure, cloud, certification, learning, AWS]
 ---
 
 Following AWS Cloud Practitioner certification, I jumped over to Microsoft Azure to gain some context and comparison. Core 
@@ -19,6 +19,6 @@ Will it come down to the value-added, growth services around A.I. and I.o.T. tha
 whether startups naturally favour AWS? Heard first-hand from a startup their concerns in adopting Azure due to perceived 
 premiums to hire/retain Azure skillsets.
 
-Another certification as reward for the #continuouslearning
+Another certification as reward for the continuous learning
 
 ![MS Azure Fundamentals Certification](/assets/img/ms_azure_fundamentals_cert.jpg)
