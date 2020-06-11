@@ -37,4 +37,3 @@ subtitle: The Essentials
             Kiteboarding is my passion, I feel so alive and at one with nature when skimming over the water with the 
             power of wind at my fingertips.  
     </p>
-    
