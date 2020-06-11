@@ -5,10 +5,12 @@ cover-img: /assets/img/aip.jpg
 tags: [natural language processing, NLP, Python, NLTK, SQL, WordNet, Prolog]
 ---
 ### Implementation Of Movie Database Query Using Natural Language Processing & Python
-Implementation of an application which transforms human natural language commands into the formal, “artificial” SQL 
-language for querying of a movie database which negates the need for end-user technical database expertise. It combines 
-the simplicity and flexibility of Python with the easily accessible language processing features of the open source Natural 
-Language Tool Kit (NLTK) library. 
+Understanding natural language is hard. Even in human-to-human interaction there are miscommunications.  Learning the SQL 
+database query language and constructing a well-formed SELECT statement to retrieve data can also be challenging. The goal 
+of this work is the connecting of a natural language query in human form relating to movies and actors to a database that 
+persists the corpus and provide the user with information relevant to the question they asked.  This negates the need for 
+end-user technical database expertise. It combines the simplicity and flexibility of Python with the easily accessible 
+language processing features of the open source Natural Language Tool Kit (NLTK) library. 
 
 By representing a sample of movie database queries in human form with NLTK grammar rules, and matching of rule nouns and 
 verbs with a WordNet corpus of synonyms, the design shows how a larger number of meanings can be derived and transformed into SQL 
