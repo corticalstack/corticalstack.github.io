@@ -13,12 +13,17 @@ subtitle: The Essentials
     </p>
     <p class="about-text">
         <span class="fa fa-graduation-cap about-icon"></span>
-            I havcompleted all modules of <strong>MSc Intelligent Systems</strong>, with distinction, at De Montfort 
-            University, Leicester, UK, in summer 2020. Currently working on thesis around COVID-19.        
+            I have completed all modules of <strong>MSc Intelligent Systems</strong>, with distinction, at <strong>De Montfort 
+            University, Leicester, UK</strong>, in summer 2020. <br><br>Currently working on thesis around AI-based literature analysis 
+            using the COVID-19 Open Research Dataset (CORD-19) of scholarly literature about COVID-19, SARS-CoV-2, and the 
+            Coronavirus group compiled by the Allen Institute for AI, Chan Zuckerberg Initiative (CZI), Georgetown University’s 
+            Center for Security and Emerging Technology (CSET), Microsoft, and the National Library of Medicine (NLM). With 
+            AI analysis I look to answer such questions as "<i>What is known about adaptations (mutations) of the virus?</i>" and 
+            "<i>What do we know about vaccines and therapeutics?</i>".     
     </p>
     <p class="about-text">
         <span class="fa fa-code about-icon"></span>
-        I am a software developer and a seasoned ethical hacker who loves to participate in various local & global hackathons. Also, I have been organizing and mentoring a few of them.
+            I am a software developer and a seasoned ethical hacker who loves to participate in various local & global hackathons. Also, I have been organizing and mentoring a few of them.
     </p>
     <p class="about-text">
         <span class="fa fa-book about-icon"></span>
