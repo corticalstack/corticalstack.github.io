@@ -16,20 +16,24 @@ subtitle: The Essentials
             I have completed all modules of <strong>MSc Intelligent Systems</strong>, with distinction, at <strong>De Montfort 
             University, Leicester, UK</strong>, in summer 2020. <br><br>Currently working on thesis around AI-based literature analysis 
             using the COVID-19 Open Research Dataset (CORD-19) of scholarly literature about COVID-19, SARS-CoV-2, and the 
-            Coronavirus group compiled by the Allen Institute for AI, Chan Zuckerberg Initiative (CZI), Georgetown University’s 
-            Center for Security and Emerging Technology (CSET), Microsoft, and the National Library of Medicine (NLM). With 
-            AI analysis I look to answer such questions as "<i>What is known about adaptations (mutations) of the virus?</i>" and 
-            "<i>What do we know about vaccines and therapeutics?</i>".     
+            Coronavirus group. This extensive dataset of 138,000 academic articles was compiled by the Allen Institute for 
+            AI, Chan Zuckerberg Initiative (CZI), Georgetown University’s Center for Security and Emerging Technology (CSET), 
+            Microsoft, and the National Library of Medicine (NLM). With AI analysis I look to answer such questions as 
+            "<i>What is known about adaptations (mutations) of the virus?</i>" and "<i>What do we know about vaccines and 
+            therapeutics?</i>".     
     </p>
     <p class="about-text">
         <span class="fa fa-code about-icon"></span>
-            I am a software developer and a seasoned ethical hacker who loves to participate in various local & global hackathons. Also, I have been organizing and mentoring a few of them.
+            At heart I am a sofwtare developer, having started coding as a teenager in the 80's and never stopped. I still 
+            get a kick from building something magical that delights clients. 
     </p>
     <p class="about-text">
         <span class="fa fa-book about-icon"></span>
-          prolific reader. I enjoy reading <a target="_blank" href="https://www.anudit.in/books/">books</a>. In 2018, with an average of 1 book per week, I completed a Reading Challenge for reading 51 books. A list of those amazing books can be found <a target="_blank" href="https://www.goodreads.com/user/year_in_books/2018/82771249">here</a>. Make sure to add some of them in your future reading list.
+          I am a prolific reader, averaging 1 book per week.
     </p>
     <p class="about-text">
         <span class="fa fa-heart about-icon"></span>
-    Also, I am very fond of video games, I love to create digital art and play around with my Photoshop skills, apart from these I love listening to music and occasional cooking. I am eager to meet and connect with new people at hackathons, developers’ conferences, dev-fests, and gaming meet-ups.
+            My 2 children are my world, I love being a Dad, it's the most rewarding and difficult job I've ever had! 
+            Kiteboarding is my passion, I feel so alive and at one with nature whilst skimming over the water with the 
+            power of wind at my fingertips.  
     </p>
