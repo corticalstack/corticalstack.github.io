@@ -3,7 +3,7 @@ layout: post
 title: Charting With Excel Is Amazingly Simple
 subtitle: Focus On The End Result, Not The Tool
 cover-img: /assets/img/forest_path.jpg
-tags: [Excel, results, visualization]
+tags: [learning, Excel, results, visualization]
 ---
 Working on a Python-based platform that made available a number of different optimizers (Particle Swarm, Genetic Evolution etc) 
 at solving problems, I wanted to generate a clear, good looking and informative fitness trend chart I could embed in an 

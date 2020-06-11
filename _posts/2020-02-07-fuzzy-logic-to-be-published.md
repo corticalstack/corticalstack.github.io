@@ -3,7 +3,7 @@ layout: post
 title: Fuzzy Logic Assignment Result In...
 subtitle: And My Profs Say "Publish It!"
 cover-img: /assets/img/forest_path.jpg
-tags: [fuzzy logic, breast cancer, classification, journal]
+tags: [learning, fuzzy logic, breast cancer, classification, journal]
 ---
 
 Today I received my result for my Uni fuzzy logic practical assignment. I chose to developing a fuzzy logic inference system 

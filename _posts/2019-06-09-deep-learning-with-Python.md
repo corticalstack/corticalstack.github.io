@@ -3,7 +3,7 @@ layout: post
 title: Deep Learning With Python
 subtitle: Fabulous Book!
 cover-img: /assets/img/forest_path.jpg
-tags: [Python, neural networks, deep learning, machine learning, keras, books, Manning]
+tags: [learning, Python, neural networks, deep learning, machine learning, keras, books, Manning]
 ---
 Having completed several online courses recently, it was so pleasurable going back to hardcopy and work through [François 
 Chollet's][francois] book [Deep Learning With Python][dlwp] and published by Manning (which, imo do the best range of 

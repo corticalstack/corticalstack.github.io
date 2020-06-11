@@ -3,7 +3,7 @@ layout: post
 title: Rejected From Dream Job Today
 subtitle: Timing Is Everything
 cover-img: /assets/img/forest_path.jpg
-tags: [positivity, action, work, learning, goals]
+tags: [work, learning, positivity, action, goals]
 ---
 Today I went for an interview for my dream job as cloud solution architect at a major software vendor. Despite having a 
 good, positive connection with the interviewers I didn't get it. Feels rather bad. 

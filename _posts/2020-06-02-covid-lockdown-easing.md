@@ -3,7 +3,7 @@ layout: post
 title: Covid Lockdown Easing
 subtitle: Has It Only Been Just 2 Months?
 cover-img: /assets/img/forest_path.jpg
-tags: [Covid-19, childcare, learning]
+tags: [personal, Covid-19, childcare]
 ---
 What a completely surreal, strange and stressful time these last 2 months have been during Covid lockdown. Has it really 
 only been 2 months, sometimes it feels like 10. There's been a lot of sad, depressing news about lives lost. I've been 

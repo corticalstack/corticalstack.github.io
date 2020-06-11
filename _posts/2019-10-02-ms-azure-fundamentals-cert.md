@@ -3,7 +3,7 @@ layout: post
 title: MS Azure Fundamentals Certified!
 subtitle: The Start Of An Azure Journey
 cover-img: /assets/img/forest_path.jpg
-tags: [Microsoft azure, cloud, certification, learning, AWS]
+tags: [learning, Microsoft azure, cloud, certification, AWS]
 ---
 
 Following AWS Cloud Practitioner certification, I jumped over to Microsoft Azure to gain some context and comparison. Core 

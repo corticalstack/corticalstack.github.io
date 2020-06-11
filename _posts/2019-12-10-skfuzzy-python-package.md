@@ -3,7 +3,7 @@ layout: post
 title: Skfuzzy
 subtitle: Python Package For Fuzzy Logic
 cover-img: /assets/img/forest_path.jpg
-tags: [fuzzy logic, Skfuzzy, Python, breast cancer, classification]
+tags: [learning, fuzzy logic, Skfuzzy, Python, breast cancer, classification]
 ---
 Fuzzy logic is a concept first introduced by Zadeh in 1965 to model logical reasoning with a level of vagueness. I wanted 
 to develop a Fuzzy Inference System (FIS) to classify breast cancer tumours. 

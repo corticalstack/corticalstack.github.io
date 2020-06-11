@@ -3,7 +3,7 @@ layout: post
 title: Completed Udemy Docker Mastery Course
 subtitle: An Incredible Piece Of Software
 cover-img: /assets/img/forest_path.jpg
-tags: [Docker, Udemy, learning, continuous delivery, continuous integration]
+tags: [learning, Docker, Udemy, continuous delivery, continuous integration]
 ---
 Weekend coming to a close but happy having just completed the excellent Udemy Docker Mastery course. Super engaging 
 docker captain Bret Fisher shares a wealth of knowledge and best practice. Really high standard of teaching that will 

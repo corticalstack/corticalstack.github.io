@@ -3,7 +3,7 @@ layout: post
 title: Covid Lockdown
 subtitle: Today Everything Changes
 cover-img: /assets/img/forest_path.jpg
-tags: [Covid-19, childcare, learning, empathy, flexible working]
+tags: [personal, Covid-19, childcare, empathy, flexible working]
 ---
 Covid-19 is raging across Europe. How long will it take to find a vaccine? Will a vaccine be safe for my children? Does my 
 age or the age of my children make us more vulnerable? Yes, I've been consuming far too much information on the pandemic 

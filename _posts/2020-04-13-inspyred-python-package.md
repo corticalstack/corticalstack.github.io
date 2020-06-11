@@ -3,7 +3,7 @@ layout: post
 title: Inspyred 
 subtitle: Python Package For Bio-Inspired Computation
 cover-img: /assets/img/forest_path.jpg
-tags: [optimization, metaheuristics, hyper-heuristics, algorithm]
+tags: [learning, optimization, metaheuristics, hyper-heuristics, algorithm]
 ---
 In developing the [Heuristic Optimisation Platform][hopgit] (HOP, paper [here][hoppaper]), I hand-coded various metaheuristics 
 (algorithms) including *Particle Swarm Optimisation* and *Genetic Evolution*. These can get quite involved, but of course a 
