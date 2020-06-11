@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="" />
+    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="454" column="24" lean-forward="true" selection-start-line="454" selection-start-column="24" selection-end-line="454" selection-end-column="24" />
+            <state relative-caret-position="818">
+              <caret line="498" column="1" lean-forward="true" selection-start-line="498" selection-start-column="1" selection-end-line="498" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -375,12 +377,12 @@
       <workItem from="1591814100044" duration="787000" />
       <workItem from="1591860927117" duration="5188000" />
       <workItem from="1591875343510" duration="8892000" />
-      <workItem from="1591898037037" duration="553000" />
+      <workItem from="1591898037037" duration="1018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107613000" />
+    <option name="totallyTimeSpent" value="108078000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -801,8 +803,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="454" column="24" lean-forward="true" selection-start-line="454" selection-start-column="24" selection-end-line="454" selection-end-column="24" />
+        <state relative-caret-position="818">
+          <caret line="498" column="1" lean-forward="true" selection-start-line="498" selection-start-column="1" selection-end-line="498" selection-end-column="1" />
         </state>
       </provider>
     </entry>
