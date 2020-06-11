@@ -19,10 +19,10 @@ A large set of configuration variants that includes 5 defuzzification methods ar
 accuracy of malignant tumours. The best FIS model classified all test set malignant tumors correctly with an overall 
 accuracy of 93.6%, outperforming the logistical regression, decision tree and random forest machine learning methods.
 
-[Master Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With Fuzzy Information System.pdf) grade 98%
+[Master's Degree Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With Fuzzy Information System.pdf) grade 98%
  | [Source code](https://github.com/corticalstack/fuzzy-system-breast-cancer-wisconsin)
  
 ### Fuzzy Logic Theory
 Theoretical assignment.
 
-[Master Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Theoretical assignment.pdf) grade 90%
+[Master's Degree Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Theoretical assignment.pdf) grade 90%
