@@ -15,7 +15,7 @@ verbs with a WordNet corpus of synonyms, the design shows how a larger number of
 code generation from a compact set of grammar rules, facilitating rapid development and simplifying rule management whilst 
 improving the overall robustness, usability and success of the application.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aip/Implementation of NLP using Python.pdf) grade 81%
+[Master Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aip/Implementation of NLP using Python.pdf) grade 81%
  | [Source code](https://github.com/corticalstack/NLPPythonToSQL)
 
 ### A Review Of State Of The Art Using Prolog For NLP
@@ -28,4 +28,4 @@ models for language search, determination and generation.
 This report presents a review of the state of the art using  Prolog with emphasis on practical application within NLP 
 over the last 5 years.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aip/State of the Art using Prolog.pdf) grade 74%
+[Master Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aip/State of the Art using Prolog.pdf) grade 74%

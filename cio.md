@@ -9,13 +9,13 @@ Often when we make a choice we face an optimisation problem, such as looking to 
 city B, or **maximise** a profit.  Before looking at metaheuristics for approximate, "*good enough*" solutions, exact methods 
 using calculus to find the global minimum in single and multivariate functions is explored.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Exact Optimisation.pdf) grade 100%
+[Master Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Exact Optimisation.pdf) grade 100%
 
 ### Testbed Problem Optimization
 4 popular testbed problems (De Jong's Sphere, Schwefel, Rastrigin, Michalewicz) are optimized with a single solution, metaheuristic 
 simulated annealing algorithm.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Testbed Problem Optimisation.pdf) grade 100%
+[Master Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Testbed Problem Optimisation.pdf) grade 100%
  | [Source code](https://github.com/corticalstack/problem-optimisation-benchmarking)
 
 ### Hyper And Meta-Heuristic Optimization Platform
@@ -39,5 +39,5 @@ the same general metaheuristic pool without code change, tested using Rastriginâ
 A hyper-heuristic feature dynamically switches between low-level metaheuristics to deterministically use the most 
 appropriate according to current problem state, or select one stochastically.
 
-[MSc paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Heuristic Optimization Platform.pdf) grade 100%
+[Master Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cio/Heuristic Optimization Platform.pdf) grade 100%
  | [Source code](https://github.com/corticalstack/heuristic-optimization-platform)
