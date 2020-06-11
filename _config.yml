@@ -27,6 +27,7 @@ navbar-links:
   Online:
     - LinkedIn: "https://www.linkedin.com/in/jonpaulboyd/"
     - Github: "https://github.com/corticalstack"
+  Books: "books"
   About Me: "aboutme"
 
 # --- Logo --- #
