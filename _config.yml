@@ -12,7 +12,7 @@ author: Jon-Paul Boyd
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Academic Research:
+  Academic Projects:
     - Applied Computational Intelligence: "aci"
     - Computational Intelligence Optimization: "cio"
     - Artificial Neural Networks: "ann"
