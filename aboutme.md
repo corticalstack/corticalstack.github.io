@@ -24,7 +24,7 @@ subtitle: The Essentials
     </p>
     <p class="about-text">
         <span class="fa fa-code about-icon"></span>
-            At heart I am a sofwtare developer, having started coding as a teenager in the 80's and never stopped. I still 
+            At heart I am a software developer, having started coding as a teenager in the 80's and never stopped. I still 
             get a kick from building something magical that delights clients. 
     </p>
     <p class="about-text">
@@ -34,6 +34,6 @@ subtitle: The Essentials
     <p class="about-text">
         <span class="fa fa-heart about-icon"></span>
             My 2 children are my world, I love being a Dad, it's the most rewarding and difficult job I've ever had! 
-            Kiteboarding is my passion, I feel so alive and at one with nature whilst skimming over the water with the 
+            Kiteboarding is my passion, I feel so alive and at one with nature when skimming over the water with the 
             power of wind at my fingertips.  
     </p>
