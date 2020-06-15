@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-12-15-last-day-with-nestle.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-09-deep-learning-with-Python.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-06-09-deep-learning-with-Python.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-09-01-udemy-docker-mastery-cert.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-09-01-udemy-docker-mastery-cert.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-09-25-aws-certified-cloud-practitioner.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-10-12-simracing-for-mental-health.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-10-12-simracing-for-mental-health.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-10-17-rejected-from-dream-job-today.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-10-17-rejected-from-dream-job-today.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-12-10-skfuzzy-python-package.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-02-07-fuzzy-logic-to-be-published.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-02-07-fuzzy-logic-to-be-published.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-03-17-covid-lockdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-03-17-covid-lockdown.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-04-13-inspyred-python-package.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-04-13-inspyred-python-package.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-05-17-charting-with-excel-is-amazing.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-05-17-charting-with-excel-is-amazing.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-05-21-hop.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-05-21-hop.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-06-02-covid-lockdown-easing.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-06-02-covid-lockdown-easing.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,8 +124,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2020-06-02-covid-lockdown-easing.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="85">
-                <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+              <first_editor relative-caret-position="374">
+                <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
               </first_editor>
               <second_editor />
             </state>
@@ -219,9 +206,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="782" />
-    <option name="y" value="15" />
-    <option name="width" value="2576" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="3456" />
     <option name="height" value="1416" />
   </component>
   <component name="ProjectView">
@@ -229,6 +216,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,14 +335,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../download-creche-menu" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -407,18 +395,18 @@
       <workItem from="1591860927117" duration="5188000" />
       <workItem from="1591875343510" duration="8892000" />
       <workItem from="1591898037037" duration="2249000" />
-      <workItem from="1591906852715" duration="1471000" />
+      <workItem from="1591906852715" duration="2502000" />
+      <workItem from="1591953650252" duration="1807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110780000" />
+    <option name="totallyTimeSpent" value="113618000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27179036" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27326265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -831,8 +819,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2020-06-02-covid-lockdown-easing.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <first_editor relative-caret-position="374">
+            <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
           </first_editor>
           <second_editor />
         </state>
