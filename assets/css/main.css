@@ -251,7 +251,6 @@ img {
 @media (min-width: 768px) {
   .navbar-custom .nav-item.dropdown:hover {
     background: rgba(0, 0, 0, 0.1);
-    font-weight:700;
   }
 }
 
@@ -271,6 +270,7 @@ img {
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
   white-space: normal;
   padding: 0.625rem;
+  font-weight:700;
   background-color: {{ site.navbar-col | default: "#F5F5F5" }};
   text-decoration: none !important;
   border-width: 0 1px 1px 1px;
