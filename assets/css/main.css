@@ -283,6 +283,7 @@ img {
 
   .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
     padding-left: 0.625rem;
+    color: #ffffff;
     border: 1px solid {{ site.navbar-border-col | default: "#EAEAEA" }};
     border-width: 0 1px 1px;
   }
