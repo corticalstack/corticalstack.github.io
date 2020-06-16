@@ -276,6 +276,10 @@ img {
   border-width: 0 1px 1px 1px;
 }
 
+.dropdown-item {
+  background-color: #ffffff;
+
+
 @media (min-width: 768px) {
   .navbar-custom .nav-item.dropdown .dropdown-menu {
     text-align: center;
@@ -283,7 +287,6 @@ img {
 
   .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
     padding-left: 0.625rem;
-    color: #ffffff;
     border: 1px solid {{ site.navbar-border-col | default: "#EAEAEA" }};
     border-width: 0 1px 1px;
   }
