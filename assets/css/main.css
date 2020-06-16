@@ -276,9 +276,6 @@ img {
   border-width: 0 1px 1px 1px;
 }
 
-.dropdown-item {
-  background-color: #ffffff;
-
 
 @media (min-width: 768px) {
   .navbar-custom .nav-item.dropdown .dropdown-menu {
