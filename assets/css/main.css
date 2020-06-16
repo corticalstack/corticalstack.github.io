@@ -94,7 +94,6 @@ hr.small {
   color: white;
   text-shadow: none;
   background-color: {{ site.hover-col | default: "#0085A1" }};
-  transition: transform .2s cubic-bezier(.86,0,.07,1);
 }
 img::selection {
   color: white;
@@ -191,6 +190,7 @@ img {
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.0625rem;
+  transition: transform .2s cubic-bezier(.86,0,.07,1);
 }
 
 .navbar-custom .navbar-nav .nav-link {
