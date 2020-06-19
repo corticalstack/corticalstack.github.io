@@ -36,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="920">
-              <caret line="418" column="16" selection-start-line="418" selection-start-column="16" selection-end-line="418" selection-end-column="16" />
+            <state relative-caret-position="889">
+              <caret line="928" column="1" lean-forward="true" selection-start-line="928" selection-start-column="1" selection-end-line="928" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -116,6 +116,7 @@
       <find>please</find>
       <find>dropdown-item</find>
       <find>footer</find>
+      <find>buttons</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\JP\Documents\My Developments\corticalstack.github.io</dir>
@@ -315,12 +316,12 @@
       <workItem from="1591906852715" duration="2502000" />
       <workItem from="1591953650252" duration="1807000" />
       <workItem from="1592239467017" duration="1778000" />
-      <workItem from="1592295760070" duration="9213000" />
+      <workItem from="1592295760070" duration="9944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124609000" />
+    <option name="totallyTimeSpent" value="125340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -729,17 +730,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="418" column="16" selection-start-line="418" selection-start-column="16" selection-end-line="418" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="109" column="19" lean-forward="true" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="889">
+          <caret line="928" column="1" lean-forward="true" selection-start-line="928" selection-start-column="1" selection-end-line="928" selection-end-column="1" />
         </state>
       </provider>
     </entry>
