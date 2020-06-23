@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +43,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="408">
-                <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <first_editor relative-caret-position="85">
+                <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
               </first_editor>
               <second_editor />
             </state>
@@ -187,6 +187,7 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/assets/css/main.css" />
         <option value="$PROJECT_DIR$/_posts/2020-06-23-optimization.md" />
+        <option value="$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md" />
       </list>
     </option>
   </component>
@@ -332,12 +333,12 @@
       <workItem from="1592295760070" duration="9944000" />
       <workItem from="1592551901328" duration="1242000" />
       <workItem from="1592566684222" duration="1239000" />
-      <workItem from="1592899025742" duration="6370000" />
+      <workItem from="1592899025742" duration="6644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134191000" />
+    <option name="totallyTimeSpent" value="134465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -760,8 +761,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="408">
-            <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <first_editor relative-caret-position="85">
+            <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           </first_editor>
           <second_editor />
         </state>
