@@ -25,7 +25,7 @@ empirical, impartial problem domain expert.
 The best FIS model classified all test set malignant tumors correctly with an overall accuracy of 93.6%, outperforming 
 the logistical regression, decision tree, random forest machine and neural network learning methods. Fuzzy logic systems 
 are transparent, simple and interpretable. They can provide a far more “*explainable A.I.*” solution than machine 
-learning (ML) alternatives such as neural networks.
+learning alternatives such as neural networks.
 
 [Master's Degree Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With FIS.pdf) grade 98%
  | [Source code](https://github.com/corticalstack/fuzzy-system-breast-cancer-wisconsin)
