@@ -3,7 +3,7 @@ layout: post
 title: Breast Cancer Tumour Classification
 subtitle: Fuzzy Logic Outperforms Neural Networks
 cover-img: /assets/img/forest_path.jpg
-tags: [learning, dailycoding, breast cancer, health, fuzzy logic, classification, machine learning, datascience]
+tags: [learning, dailycoding, breast cancer, fuzzy logic, classification, machine learning, data science]
 ---
 Of all cancers occurring in women, breast cancer is the most common. 2 million new cases and over 0.5 million 
 deaths globally each year. In the UK alone, between 2015 and 2017, 11,400 deaths each year, or 31 per day. Globally, many 
@@ -17,12 +17,15 @@ diseases. On the other hand, several diseases present in a patient may interact 
 of any one disease.
 
 The report and source code linked below presents a Python-based fuzzy logic knowledge-based inference system for the binary 
-classification of breast cancer tumours, taking an extensive data-driven, supervised learning approach in defining linguistic 
+classification of breast cancer tumours. Fuzzy logic lends itself to modelling domains where vagueness and blurriness are 
+present. The solution takes an extensive data-driven, supervised learning approach in defining linguistic 
 terms, implication rule sets and membership functions, with the Wisconsin Diagnostic Breast Cancer dataset used as the 
-empirical, impartial problem domain expert. The best FIS model classified all test set malignant tumors correctly with an overall 
-accuracy of 93.6%, outperforming the logistical regression, decision tree, random forest machine and neural network learning 
-methods. Fuzzly logic systems are transparent, simple and interpretable. They can provide a far more “*explainable A.I.*” 
-solution than machine learning (ML) alternatives such as neural networks.
+empirical, impartial problem domain expert. 
+
+The best FIS model classified all test set malignant tumors correctly with an overall accuracy of 93.6%, outperforming 
+the logistical regression, decision tree, random forest machine and neural network learning methods. Fuzzy logic systems 
+are transparent, simple and interpretable. They can provide a far more “*explainable A.I.*” solution than machine 
+learning (ML) alternatives such as neural networks.
 
 [Master's Degree Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With FIS.pdf) grade 98%
  | [Source code](https://github.com/corticalstack/fuzzy-system-breast-cancer-wisconsin)
