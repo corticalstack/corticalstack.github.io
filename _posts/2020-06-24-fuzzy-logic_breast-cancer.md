@@ -3,7 +3,7 @@ layout: post
 title: Breast Cancer Tumour Classification
 subtitle: Fuzzy Logic Outperforms Neural Networks
 cover-img: /assets/img/forest_path.jpg
-tags: [learning, dailycoding, breast cancer, fuzzy logic, classification, machinelearning, datascience]
+tags: [learning, dailycoding, breastcancer, fuzzylogic, classification, machinelearning, datascience]
 ---
 Of all cancers occurring in women, breast cancer is the most common. 2 million new cases and over 0.5 million 
 deaths globally each year. In the UK alone, between 2015 and 2017, 11,400 deaths each year, or 31 per day. Globally, many 
