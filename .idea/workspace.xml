@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fl.md" beforeDir="false" afterPath="$PROJECT_DIR$/fl.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,38 +15,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
+            <state relative-caret-position="4063">
               <caret line="239" selection-start-line="239" selection-end-line="239" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="85">
-                <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <first_editor relative-caret-position="153">
+                <caret line="9" column="124" selection-start-line="9" selection-start-column="124" selection-end-line="9" selection-end-column="124" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="459">
+                <caret line="27" column="87" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fl.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="374">
+                <caret line="22" selection-start-line="22" selection-end-line="23" selection-end-column="87" />
               </first_editor>
               <second_editor />
             </state>
@@ -160,7 +168,6 @@
         <option value="$PROJECT_DIR$/ann.md" />
         <option value="$PROJECT_DIR$/cio.md" />
         <option value="$PROJECT_DIR$/dm.md" />
-        <option value="$PROJECT_DIR$/fl.md" />
         <option value="$PROJECT_DIR$/mr.md" />
         <option value="$PROJECT_DIR$/rm.md" />
         <option value="$PROJECT_DIR$/books.md" />
@@ -188,6 +195,8 @@
         <option value="$PROJECT_DIR$/assets/css/main.css" />
         <option value="$PROJECT_DIR$/_posts/2020-06-23-optimization.md" />
         <option value="$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md" />
+        <option value="$PROJECT_DIR$/fl.md" />
+        <option value="$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md" />
       </list>
     </option>
   </component>
@@ -263,6 +272,12 @@
               <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="corticalstack.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corticalstack.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="fl" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -277,18 +292,18 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\rm" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\mr" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\fl" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts_draft" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\assets\img" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\aci" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts" />
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io" />
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\rm" />
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\mr" />
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\fl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -333,18 +348,18 @@
       <workItem from="1592295760070" duration="9944000" />
       <workItem from="1592551901328" duration="1242000" />
       <workItem from="1592566684222" duration="1239000" />
-      <workItem from="1592899025742" duration="6644000" />
+      <workItem from="1592899025742" duration="7715000" />
+      <workItem from="1593001295565" duration="1236000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134465000" />
+    <option name="totallyTimeSpent" value="136772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2820966" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28386337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -394,9 +409,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/img/avatar-icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/bgimage.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -453,16 +465,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="408">
             <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fl.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="459">
-            <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>
@@ -707,6 +709,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4063">
+          <caret line="239" selection-start-line="239" selection-end-line="239" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cio.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="357">
+            <caret line="21" selection-start-line="21" selection-end-line="42" selection-end-column="82" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -734,35 +760,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="239" selection-start-line="239" selection-end-line="239" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cio.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="357">
-            <caret line="21" selection-start-line="21" selection-end-line="42" selection-end-column="82" />
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="124" selection-start-line="9" selection-start-column="124" selection-end-line="9" selection-end-column="124" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md">
+    <entry file="file://$PROJECT_DIR$/fl.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <first_editor relative-caret-position="374">
+            <caret line="22" selection-start-line="22" selection-end-line="23" selection-end-column="87" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="459">
+            <caret line="27" column="87" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
           </first_editor>
           <second_editor />
         </state>
