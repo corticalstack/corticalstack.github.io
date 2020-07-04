@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md" afterDir="false" />
-    </list>
+    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +35,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="476">
-                <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <first_editor relative-caret-position="170">
+                <caret line="10" column="121" lean-forward="true" selection-start-line="10" selection-start-column="121" selection-end-line="10" selection-end-column="121" />
               </first_editor>
               <second_editor />
             </state>
@@ -347,16 +345,15 @@
       <workItem from="1592551901328" duration="1242000" />
       <workItem from="1592566684222" duration="1239000" />
       <workItem from="1592899025742" duration="7715000" />
-      <workItem from="1593001295565" duration="1598000" />
+      <workItem from="1593001295565" duration="2469000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137134000" />
+    <option name="totallyTimeSpent" value="138005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28386337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -782,8 +779,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="476">
-            <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <first_editor relative-caret-position="170">
+            <caret line="10" column="121" lean-forward="true" selection-start-line="10" selection-start-column="121" selection-end-line="10" selection-end-column="121" />
           </first_editor>
           <second_editor />
         </state>
