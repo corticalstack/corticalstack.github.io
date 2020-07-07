@@ -10,13 +10,16 @@ my comfort zone, so many late nights, but so much learned and gained.
 
 On now to the final piece - the project! I've decided to base it on an important problem of our times, the COVID-19 pandemic 
 and the plethora of academic literature around it, which continues to grow exponentially and where much of it is poor 
-quality. 
+quality. Hundreds of hours can easily be spent manually working through Covid papers of potential interest. 
 
-To combat this an interactive question-answering, exploration and data mining tool will be developed to enable the medical 
-community to explore COVID-19 academic literature and other relevant data sources. Its purpose is to help them find the most 
-relevant information they need quickly, identify patterns and gain insight from it by way of a user-friendly interface comprising 
-ranked lists of search results, tagged documents, graphical visualisation of literature analytics and interactive exploration, 
-all in a one-page research cockpit. 
+To support medical researchers consuming and evaluating this wealth of information an interactive question-answering, 
+exploration and data mining tool will be developed. Its purpose is to help them find the most relevant information they 
+need quickly, and to identify patterns and emerging trends, increasing the value of their research time and enabling better 
+next-step research decisions.
+
+Elements of A.I. including natural language processing and machine learning will facilitate intelligent search and result 
+aggregation, summarisation, clustering, association, classification and exploration. All this within a user-friendly, 
+one-page research cockpit. 
 
 The tool will be architected as a cloud-hosted application on the Microsoft Azure platform.
 
