@@ -1,6 +1,6 @@
 ---
 layout: post
-title: An Interactive Q&A, Exploration And Data Mining Tool For The Medical Research Community
+title: Covid-19 Research Tool For The Medical Community
 subtitle: Masters Thesis Terms Of Reference
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, dailycoding,  Covid-19, natural language processing, machinelearning, datascience]
