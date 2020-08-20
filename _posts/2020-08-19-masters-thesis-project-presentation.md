@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Covid-19 Research Cockpit Overview
+title: AI-Powered Covid-19 Research Cockpit Overview
 subtitle: Masters Thesis Project Presentation
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, dailycoding,  Covid-19, natural language processing, machinelearning, datascience]
