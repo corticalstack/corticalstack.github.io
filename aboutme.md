@@ -8,8 +8,8 @@ subtitle: The Essentials
     <img src="/assets/img/me.png" style="width: 50%; height: 50%; margin-left: auto; margin-right: auto; display: block">
     <p class="about-text">
         <span class="fa fa-briefcase about-icon"></span>
-            My name is <strong>Jon-Paul Boyd</strong>. I am an experienced lead software developer and technical architect 
-            with a successful track record providing expertise and delivering complex solutions for large enterprise. Between 
+            My name is <strong>Jon-Paul Boyd. I am an experienced lead software developer and technical architect 
+            with a successful track record</strong> providing expertise and delivering complex solutions for large enterprise. Between 
             November 2014 and December 2017 I worked as a SAP HANA technical architect for Nestle.
             <br><br>
     </p>
