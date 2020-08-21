@@ -10,7 +10,9 @@ subtitle: The Essentials
         <span class="fa fa-briefcase about-icon"></span>
             My name is <strong>Jon-Paul Boyd. I am an experienced lead software developer and technical architect 
             with a successful track record</strong> providing expertise and delivering complex solutions for large enterprise. Between 
-            November 2014 and December 2017 I worked as a SAP HANA technical architect for Nestle.
+            November 2014 and December 2017 I worked as a SAP HANA technical architect for Nestle. Please check my 
+            <a href=""https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cv/Jon-Paul Boyd One-Pager Resume.pdf"">resume</a> 
+            for more.
             <br><br>
     </p>
     <p class="about-text">
