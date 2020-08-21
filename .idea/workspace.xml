@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/project/Jon-Paul Boyd Masters Thesis Project Presentation COVID19 Research Cockpit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/project/Jon-Paul Boyd Masters Thesis Project Presentation COVID19 Research Cockpit.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/project/Jon-Paul Boyd Masters Thesis Project Presentation COVID19 Research Cockpit.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/project/Jon-Paul Boyd Masters Thesis Project Presentation COVID19 Research Cockpit.pptx" afterDir="false" />
-    </list>
+    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +13,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
+            <state relative-caret-position="1768">
               <caret line="104" column="20" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="20" />
             </state>
           </provider>
@@ -39,8 +35,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="187">
-                <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+              <first_editor relative-caret-position="153">
+                <caret line="9" column="180" lean-forward="true" selection-start-line="9" selection-start-column="180" selection-end-line="9" selection-end-column="180" />
               </first_editor>
               <second_editor />
             </state>
@@ -369,17 +365,17 @@
       <workItem from="1597236500060" duration="599000" />
       <workItem from="1597742615380" duration="1385000" />
       <workItem from="1597840768197" duration="1106000" />
+      <workItem from="1597910005955" duration="766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145123000" />
+    <option name="totallyTimeSpent" value="145889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29269728" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29446408" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -752,6 +748,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" column="20" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2020-07-07-masters-thesis-tor.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="425">
+            <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="158" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2020-06-02-covid-lockdown-easing.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -799,28 +812,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="104" column="20" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2020-07-07-masters-thesis-tor.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="425">
-            <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="158" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="187">
-            <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="180" lean-forward="true" selection-start-line="9" selection-start-column="180" selection-end-line="9" selection-end-column="180" />
           </first_editor>
           <second_editor />
         </state>
