@@ -22,8 +22,8 @@ subtitle: The Essentials
             being submitted to the journal <em>Applied Soft Computing</em> for publication.<br><br>
             Living in a changed world with COVID-19, I want to be part of the fight, using my skills and time for something 
             good, worthy and helpful. Hence, for my Masters thesis project I'm currently working to architect, develop and 
-            evaluate an COVID-19 unified research cockpit in which subfields of artificial intelligence, including natural 
-            language processing (NLP) and deep learning (DL), are leveraged to search, mine and explore COVID-19 related 
+            evaluate a COVID-19 unified research cockpit. Subfields of artificial intelligence, including natural 
+            language processing (NLP) and deep learning (DL), will be leveraged to search, mine and explore COVID-19 related 
             unstructured academic literature. Features including Q&A based knowledge discovery, automated literature 
             summarization, topic classification and clustering, entity graph analysis and time series visualisation will 
             provide decision-making support to medical researchers so the best-informed next stage research actions can 
