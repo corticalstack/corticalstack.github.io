@@ -43,7 +43,8 @@ subtitle: The Essentials
     </p>
     <p class="about-text">
         <span class="fa fa-heart about-icon"></span>
-            <strong>My 2 children are my world</strong>, I love being a Dad, it's the most rewarding and difficult job I've ever had! 
+            <strong>My 2 children are my world</strong>, I love being a Dad, it's the most rewarding and difficult job 
+            I've ever had!<br><br>
             <strong>Kiteboarding is my passion</strong>, I feel so alive and at one with nature when skimming over the water with the 
             power of wind at my fingertips.<br><br>
             I also very much enjoy being an <strong>active driver of an eSports sim racing team</strong>, 
