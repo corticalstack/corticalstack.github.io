@@ -20,7 +20,7 @@ subtitle: The Essentials
             in health sciences</strong>, with a <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With FIS.pdf">paper</a> 
             classifying breast cancer tumours using fuzzy logic (outperforming neural networks and other ML approaches) 
             being submitted to the journal <em>Applied Soft Computing</em> for publication.<br><br>
-            Living in a changed world with COVID-19, I <strong>want to be part of the fight</strong>, using my skills and time for something 
+            As a father living in a changed world with COVID-19, I <strong>want to be part of the fight</strong>, using my skills and time for something 
             good, worthy and helpful. Hence, for my <strong>Masters thesis project I'm currently working to architect, develop and 
             evaluate a COVID-19 unified research cockpit</strong>. Subfields of artificial intelligence, including natural 
             language processing (NLP) and deep learning (DL), will be leveraged to search, mine and explore COVID-19 related 
