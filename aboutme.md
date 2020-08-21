@@ -16,7 +16,7 @@ subtitle: The Essentials
         <span class="fa fa-graduation-cap about-icon"></span>
             I successfully completed all 8 <strong>MSc Intelligent Systems</strong> modules, all graded distinction, 
             at <strong>De Montfort University, Leicester, UK</strong>, in summer 2020. <br><br>I have a passion for A.I. 
-            in health sciences, with a [paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With FIS.pdf) 
+            in health sciences, with a <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With FIS.pdf">paper</a>[paper] 
             classifying breast cancer tumours using fuzzy logic (outperforming neural networks and other ML approaches) 
             being submitted to the journal <em>Applied Soft Computing</em> for publication.<br><br>
             Living in a changed world with COVID-19, I want to be part of the fight, using my skills and time for something 
