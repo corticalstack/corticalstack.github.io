@@ -11,12 +11,13 @@ subtitle: The Essentials
             My name is <strong>Jon-Paul Boyd</strong>. I am an experienced lead software developer and technical architect 
             with a successful track record providing expertise and delivering complex solutions for large enterprise. Between 
             November 2014 and December 2017 I worked as a SAP HANA technical architect for Nestle.
+            <br><br>
     </p>
     <p class="about-text">
         <span class="fa fa-graduation-cap about-icon"></span>
             I successfully completed all 8 <strong>MSc Intelligent Systems</strong> modules, all graded distinction, 
             at <strong>De Montfort University, Leicester, UK</strong>, in summer 2020. <br><br>I have a passion for A.I. 
-            in health sciences, with a <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With FIS.pdf">paper</a>[paper] 
+            in health sciences, with a <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With FIS.pdf">paper</a> 
             classifying breast cancer tumours using fuzzy logic (outperforming neural networks and other ML approaches) 
             being submitted to the journal <em>Applied Soft Computing</em> for publication.<br><br>
             Living in a changed world with COVID-19, I want to be part of the fight, using my skills and time for something 
@@ -26,16 +27,19 @@ subtitle: The Essentials
             to search, mine and explore COVID-19 related unstructured academic literature. Features including Q&A based 
             knowledge discovery, automated literature summarization, topic classification and clustering, entity graph 
             analysis and time series visualisation will provide decision-making support to medical researchers so the 
-            best-informed next stage research actions can be taken.     
+            best-informed next stage research actions can be taken.
+            <br><br>
     </p>
     <p class="about-text">
         <span class="fa fa-code about-icon"></span>
             At heart I am a software developer, having started coding as a teenager in the 80's and never stopped. I still 
             get a kick from building something magical that delights clients. 
+            <br><br>
     </p>
     <p class="about-text">
         <span class="fa fa-book about-icon"></span>
           I am a prolific reader, averaging 1 book per week.
+          <br><br>
     </p>
     <p class="about-text">
         <span class="fa fa-heart about-icon"></span>
