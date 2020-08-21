@@ -10,22 +10,23 @@ subtitle: The Essentials
         <span class="fa fa-briefcase about-icon"></span>
             My name is <strong>Jon-Paul Boyd</strong>. I am an experienced lead software developer and technical architect 
             with a successful track record providing expertise and delivering complex solutions for large enterprise. Between 
-            November 2014 and December 2017 I worked as a SAP HANA Technical architect for Nestle.
+            November 2014 and December 2017 I worked as a SAP HANA technical architect for Nestle.
     </p>
     <p class="about-text">
         <span class="fa fa-graduation-cap about-icon"></span>
-            I have successfully completed all 8 <strong>MSc Intelligent Systems</strong> modules, all graded distinction, 
+            I successfully completed all 8 <strong>MSc Intelligent Systems</strong> modules, all graded distinction, 
             at <strong>De Montfort University, Leicester, UK</strong>, in summer 2020. <br><br>I have a passion for A.I. 
-            in health sciences, with a paper classifying breast cancer tumours using fuzzy logic (outperforming neural 
-            networks and other ML approaches) being submitted to journal <em>Applied Soft Computing</em> for publication.<br><br>
+            in health sciences, with a [paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With FIS.pdf) 
+            classifying breast cancer tumours using fuzzy logic (outperforming neural networks and other ML approaches) 
+            being submitted to the journal <em>Applied Soft Computing</em> for publication.<br><br>
             Living in a changed world with COVID-19, I want to be part of the fight, using my skills and time for something 
             good, worthy and helpful by choosing a meaningful problem domain for my Masters thesis project. Hence, I'm 
-            currently working to architect, develop and evaluate an COVID-19 research cockpit in which subfields of artificial 
-            intelligence, including natural language processing (NLP) and deep learning (DL), are leveraged to search, mine 
-            and explore COVID-19 related unstructured academic literature. Features including Q&A based knowledge discovery, 
-            automated literature summarization, topic classification and clustering, entity graph analysis and time series 
-            visualisation will provide decision-making support to medical researchers so the best-informed next stage 
-            research actions can be taken.     
+            currently working to architect, develop and evaluate an COVID-19 unified research cockpit in which subfields 
+            of artificial intelligence, including natural language processing (NLP) and deep learning (DL), are leveraged 
+            to search, mine and explore COVID-19 related unstructured academic literature. Features including Q&A based 
+            knowledge discovery, automated literature summarization, topic classification and clustering, entity graph 
+            analysis and time series visualisation will provide decision-making support to medical researchers so the 
+            best-informed next stage research actions can be taken.     
     </p>
     <p class="about-text">
         <span class="fa fa-code about-icon"></span>
