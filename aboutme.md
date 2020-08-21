@@ -5,7 +5,7 @@ cover-img: /assets/img/beach1.jpg
 subtitle: The Essentials
 ---
 <div id="aboutme-section">
-    <img src="/assets/img/me.jpg" style="width: 75%; height: 75%"; margin-left: auto; margin-right: auto; display: block>
+    <img src="/assets/img/me.jpg" style="width: 75%; height: 75%; margin-left: auto; margin-right: auto; display: block">
     <p class="about-text">
         <span class="fa fa-briefcase about-icon"></span>
             My name is <strong>Jon-Paul Boyd</strong>. Between November 2014 and December 2017 I worked as a SAP HANA Technical 
