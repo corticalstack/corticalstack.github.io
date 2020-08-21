@@ -20,7 +20,7 @@ subtitle: The Essentials
             in health sciences</strong>, with a <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/fl/Breast Cancer Tumour Classification With FIS.pdf">paper</a> 
             classifying breast cancer tumours using fuzzy logic (outperforming neural networks and other ML approaches) 
             being submitted to the journal <em>Applied Soft Computing</em> for publication.<br><br>
-            Living in a changed world with COVID-19, I want to be part of the fight, using my skills and time for something 
+            Living in a changed world with COVID-19, I <strong>want to be part of the fight</strong>, using my skills and time for something 
             good, worthy and helpful. Hence, for my <strong>Masters thesis project I'm currently working to architect, develop and 
             evaluate a COVID-19 unified research cockpit</strong>. Subfields of artificial intelligence, including natural 
             language processing (NLP) and deep learning (DL), will be leveraged to search, mine and explore COVID-19 related 
@@ -33,18 +33,18 @@ subtitle: The Essentials
     <p class="about-text">
         <span class="fa fa-code about-icon"></span>
             At heart I am a software developer, having started coding as a teenager in the 80's and never stopped. I still 
-            get a kick from building something magical that delights clients. 
+            <strong>get a kick from building something magical that delights clients</strong>. 
             <br><br>
     </p>
     <p class="about-text">
         <span class="fa fa-book about-icon"></span>
-          I am a prolific reader, averaging 1 book per week.
+          I am a <strong>prolific reader</strong>, averaging 1 book per week.
           <br><br>
     </p>
     <p class="about-text">
         <span class="fa fa-heart about-icon"></span>
             <strong>My 2 children are my world</strong>, I love being a Dad, it's the most rewarding and difficult job I've ever had! 
-            <strong>Kiteboarding</strong> is my passion, I feel so alive and at one with nature when skimming over the water with the 
+            <strong>Kiteboarding is my passion</strong>, I feel so alive and at one with nature when skimming over the water with the 
             power of wind at my fingertips.<br><br>
             I also very much enjoy being an <strong>active driver of an eSports sim racing team</strong>, 
             taking part in endurance races including the Le Mans 24H and Spa. Being individually fast is great, however the 
