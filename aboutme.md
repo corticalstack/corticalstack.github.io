@@ -21,13 +21,13 @@ subtitle: The Essentials
             classifying breast cancer tumours using fuzzy logic (outperforming neural networks and other ML approaches) 
             being submitted to the journal <em>Applied Soft Computing</em> for publication.<br><br>
             Living in a changed world with COVID-19, I want to be part of the fight, using my skills and time for something 
-            good, worthy and helpful by choosing a meaningful problem domain for my Masters thesis project. Hence, I'm 
-            currently working to architect, develop and evaluate an COVID-19 unified research cockpit in which subfields 
-            of artificial intelligence, including natural language processing (NLP) and deep learning (DL), are leveraged 
-            to search, mine and explore COVID-19 related unstructured academic literature. Features including Q&A based 
-            knowledge discovery, automated literature summarization, topic classification and clustering, entity graph 
-            analysis and time series visualisation will provide decision-making support to medical researchers so the 
-            best-informed next stage research actions can be taken.
+            good, worthy and helpful. Hence, for my Masters thesis project I'm currently working to architect, develop and 
+            evaluate an COVID-19 unified research cockpit in which subfields of artificial intelligence, including natural 
+            language processing (NLP) and deep learning (DL), are leveraged to search, mine and explore COVID-19 related 
+            unstructured academic literature. Features including Q&A based knowledge discovery, automated literature 
+            summarization, topic classification and clustering, entity graph analysis and time series visualisation will 
+            provide decision-making support to medical researchers so the best-informed next stage research actions can 
+            be taken.
             <br><br>
     </p>
     <p class="about-text">
@@ -45,6 +45,8 @@ subtitle: The Essentials
         <span class="fa fa-heart about-icon"></span>
             My 2 children are my world, I love being a Dad, it's the most rewarding and difficult job I've ever had! 
             Kiteboarding is my passion, I feel so alive and at one with nature when skimming over the water with the 
-            power of wind at my fingertips.  
+            power of wind at my fingertips.  I also very much enjoy being an active driver of an eSports sim racing team, 
+            taking part in endurance races including the Le Mans 24H and Spa. Being individually fast is great, however the 
+            success of the team really depends on being consistent and reliable. 
     </p>
     
