@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="" />
+    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="164" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="164" />
+            <state relative-caret-position="544">
+              <caret line="32" column="70" lean-forward="true" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -31,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aboutme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -185,7 +188,6 @@
         <option value="$PROJECT_DIR$/_posts/2020-06-02-covid-lockdown-easing.md" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_includes/footer.html" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/assets/css/main.css" />
         <option value="$PROJECT_DIR$/_posts/2020-06-23-optimization.md" />
         <option value="$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md" />
@@ -195,6 +197,7 @@
         <option value="$PROJECT_DIR$/_posts/2020-07-07-masters-thesis-tor.md" />
         <option value="$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md" />
         <option value="$PROJECT_DIR$/aboutme.md" />
+        <option value="$PROJECT_DIR$/_config.yml" />
       </list>
     </option>
   </component>
@@ -367,16 +370,18 @@
       <workItem from="1597840768197" duration="1106000" />
       <workItem from="1597910005955" duration="766000" />
       <workItem from="1598001165135" duration="8247000" />
+      <workItem from="1598363687200" duration="276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154136000" />
+    <option name="totallyTimeSpent" value="154412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29623085" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29799765" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -749,6 +754,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="180" selection-start-line="9" selection-start-column="180" selection-end-line="9" selection-end-column="180" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="493">
+            <caret line="29" selection-start-line="29" selection-end-line="29" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cio.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -786,33 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" column="180" selection-start-line="9" selection-start-column="180" selection-end-line="9" selection-end-column="180" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="493">
-            <caret line="29" selection-start-line="29" selection-end-line="29" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="164" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aboutme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -820,6 +818,13 @@
             <caret line="13" column="166" selection-start-line="13" selection-start-column="166" selection-end-line="13" selection-end-column="166" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="70" lean-forward="true" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
         </state>
       </provider>
     </entry>
