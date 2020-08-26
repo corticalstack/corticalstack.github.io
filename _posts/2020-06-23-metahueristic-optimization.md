@@ -3,7 +3,7 @@ layout: post
 title: Metaheuristic Optimization
 subtitle: Good Enough
 cover-img: /assets/img/forest_path.jpg
-tags: [learning, dailycoding, optimization, operationsresearch, datascience]
+tags: [learning, optimization, operations research, data science]
 ---
 Often when we make a choice we face an optimisation problem. 
 

@@ -3,7 +3,7 @@ layout: post
 title: Covid-19 Research Tool For The Medical Community
 subtitle: Masters Thesis Terms Of Reference
 cover-img: /assets/img/forest_path.jpg
-tags: [learning, dailycoding,  Covid-19, natural language processing, machinelearning, datascience]
+tags: [learning, Covid-19, natural language processing, machine learning, data science]
 ---
 After 3 years hard work I have all 8 Masters Intelligent Systems modules behind me, phew and wow!  So much work out of 
 my comfort zone, so many late nights, but so much learned and gained. 
