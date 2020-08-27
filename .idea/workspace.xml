@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-10-02-ms-azure-fundamentals-cert.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-06-23-metahueristic-optimization.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-07-07-masters-thesis-tor.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-07-07-masters-thesis-tor.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts_draft/2020-06-09-thoughts-on-masters-project.md" beforeDir="false" />
-    </list>
+    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +14,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="85">
-                <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
+              <first_editor relative-caret-position="153">
+                <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
               </first_editor>
               <second_editor />
             </state>
@@ -231,11 +224,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="3456" />
-    <option name="height" value="1416" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1099" />
+    <option name="y" value="88" />
+    <option name="width" value="1456" />
+    <option name="height" value="1415" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -408,17 +401,17 @@
       <workItem from="1598001165135" duration="8247000" />
       <workItem from="1598363687200" duration="976000" />
       <workItem from="1598373348974" duration="442000" />
-      <workItem from="1598443785692" duration="488000" />
+      <workItem from="1598443785692" duration="1095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156052000" />
+    <option name="totallyTimeSpent" value="156649000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
+    <frame x="1099" y="88" width="1456" height="1415" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30153123" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.7335244" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -858,8 +851,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
           </first_editor>
           <second_editor />
         </state>
