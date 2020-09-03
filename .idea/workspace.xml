@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="" />
+    <list default="true" id="563a282a-1ce1-4cd2-b926-f34e4e3fb3ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +12,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -22,12 +24,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2020-09-03-masters-thesis-project-presentation-supplement.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="85">
-                <caret line="5" column="84" selection-start-line="5" selection-start-column="84" selection-end-line="5" selection-end-column="84" />
+              <first_editor relative-caret-position="119">
+                <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
               </first_editor>
               <second_editor />
             </state>
@@ -170,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.md" />
         <option value="$PROJECT_DIR$/main_index.css" />
         <option value="$PROJECT_DIR$/portfolio.md" />
         <option value="$PROJECT_DIR$/projects.md" />
@@ -221,6 +222,7 @@
         <option value="$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md" />
         <option value="$PROJECT_DIR$/_posts/2020-07-07-masters-thesis-tor.md" />
         <option value="$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md" />
+        <option value="$PROJECT_DIR$/_posts/2020-09-03-masters-thesis-project-presentation-supplement.md" />
       </list>
     </option>
   </component>
@@ -235,6 +237,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -323,7 +326,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -334,18 +336,18 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts_draft" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\assets\img" />
-      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\aci" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\project" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\fl" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io" />
       <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\rm" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts" />
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\_posts_draft" />
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\assets\img" />
+      <recent name="C:\Users\JP\Documents\My Developments\corticalstack.github.io\docs\aci" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -403,17 +405,18 @@
       <workItem from="1598373348974" duration="442000" />
       <workItem from="1598443785692" duration="1095000" />
       <workItem from="1598620664599" duration="11000" />
+      <workItem from="1599125385783" duration="906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156660000" />
+    <option name="totallyTimeSpent" value="157566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30624264" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30800942" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -463,14 +466,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts_draft/2020-02-28-test-markdown.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2019-10-02-ms-azure-funadamentals-cert.md" />
     <entry file="file://$PROJECT_DIR$/assets/img/path.jpg" />
     <entry file="file://$PROJECT_DIR$/_posts_draft/2020-06-09-thoughts-on-masters-project.md" />
@@ -751,16 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2020-06-24-fuzzy-logic_breast-cancer.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -846,6 +831,26 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="85">
             <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2020-08-19-masters-thesis-project-presentation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2020-09-03-masters-thesis-project-presentation-supplement.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           </first_editor>
           <second_editor />
         </state>
