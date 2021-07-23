@@ -13,6 +13,7 @@ author: Jon-Paul Boyd
 
 navbar-links:
   Academic Projects:
+    - Masters Thesis: "mt"
     - Applied Computational Intelligence: "aci"
     - Computational Intelligence Optimization: "cio"
     - Artificial Neural Networks: "ann"
