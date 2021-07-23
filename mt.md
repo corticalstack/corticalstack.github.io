@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Applied Computational Intelligence
-cover-img: /assets/img/applied-ai.jpg
-tags: [machine learning, ml, ai, crm, classification, data mining, gradient boosting, classifiers, random forest, neural networks, decision trees]
+title: Masters Thesis Project
+cover-img: /assets/img/mt.jpg
+tags: [learning, Covid-19, natural language processing, information retreival, machine learning, BERT, transformers, neural networks, data engineering]
 ---
-### Predicting Customer Behaviour With Classifiers
+### Masters Thesis Project
 Customer Relationship Management (CRM) is a key element of modern marketing approaches. A 2017 poll found it to be the 
 most popular field for the application of analytics, data science and machine learning. 
 
@@ -13,6 +13,5 @@ buy new products or services (appetency), or buy upgrades or add-ons proposed to
 (up-selling). Comparing results against other competition entries, the gradient boosting classifier outperformed other 
 tested models, placing it 34th of 89 overall. 
 
-[Master's Degree Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aci/Predicting Customer Behaviour With A Variety Of Classifiers.pdf) grade 88%
- | [Viva presentation](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/aci/Viva Predicting Customer Behaviour.pptx)
- | [Source code](https://github.com/corticalstack/KDDCup2009)
+[Master's Degree Intelligent Systems paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/project/Jon-Paul Boyd Masters Thesis Report COVID-LEAP state-of-the-art information retrieval.pdf) grade 90%
+
