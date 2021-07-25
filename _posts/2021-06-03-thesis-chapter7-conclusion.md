@@ -7,7 +7,7 @@ tags: [Covid-19, learning, machine learning, information retrieval]
 ---
 A summary of the LEAP solution:
 
-* __Benchmarked nine IR strategies__ including lexical models (BM25) and dense models based on BERT transformer architecture. with synthetic benchmarking allowed automated, iterative evaluation and optimisation. Showed semantic models benefitted from domain and longer passage fine-tuning. BM25 does well. Reranking ensembles capitalise on strong BM25 & fine-grain the lexical model results with semantic capture for even better performance.
+* __Benchmarked nine IR strategies__ including lexical models (BM25) and dense models based on BERT transformer architecture. with synthetic benchmarking allowed automated, iterative evaluation and optimisation. Showed semantic models benefitted from domain and longer passage fine-tuning. BM25 does well. Reranking ensembles capitalise on strong BM25 & fine-grain the lexical model results with semantic capture for even better performance
 
 * __Base models responding positively to calibration__ to capture the semantics of specialised domains
 
