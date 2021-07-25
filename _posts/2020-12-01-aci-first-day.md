@@ -11,4 +11,4 @@ We will use [my thesis project building a COVID-19 research framework](https://c
 
 With direct access to biomedical experts, I'm really excited to leverage this opportunity to better understand their research workflow and the COVID-19 landscape overall. 
 
-I have no doubt their feedback on my thesis solution will be invaluable.
+As I build and optimise my thesis solution I have no doubt their feedback will be invaluable.
