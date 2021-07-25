@@ -15,4 +15,4 @@ This could be a really useful source for insight into the vaccine development la
 * who is making the largest research investments
 
 
-If only it was published as an easily machine readable .json format. Currently in .pdf, there's some wrangling to be done!
+If only it was published as an easily machine readable .json format. Currently in .pdf, there's some wrangling to be done! It does beg the question though - with such a highly evolving pandemic, organisations such as the WHO really need to understand their audience better and when releasing publications like this, make consumption easier and more robust - release in .json please!
