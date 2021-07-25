@@ -16,4 +16,4 @@ I then mapped out the problems to a solution process flow:
 Finally, I translate the problems into a cohesive solution, with developer tooling alongside selected hardware, software, and cloud infrastructure
 ![](../assets/img/leap solution architecture.jpg)
 
-For much more, including details of the NLP pipeline, please see Chapter 4 of the [Thesis paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/project/Jon-Paul Boyd Masters Thesis Report COVID-LEAP state-of-the-art information retrieval.pdf)
+For much more detail, please see Chapter 4 of the [Thesis paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/project/Jon-Paul Boyd Masters Thesis Report COVID-LEAP state-of-the-art information retrieval.pdf)
