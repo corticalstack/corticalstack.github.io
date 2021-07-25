@@ -5,7 +5,7 @@ subtitle: Detailed information on vaccine candidates in development
 cover-img: /assets/img/forest_path.jpg
 tags: [Covid-19, data science, data, WHO]
 ---
-Today I discovered the World Health Organisation (WHO) publish detailed information on COVID-19 vaccine candidates, including developer, vaccine platform, and clinical trial phase.
+Today I discovered the World Health Organisation (WHO) publish detailed information on [COVID-19 vaccine candidates](https://www.who.int/publications/m/item/draft-landscape-of-covid-19-candidate-vaccines), including developer, vaccine platform, and clinical trial phase.
 
 This could be a really useful source for insight into the vaccine development landscape that might include:
 
