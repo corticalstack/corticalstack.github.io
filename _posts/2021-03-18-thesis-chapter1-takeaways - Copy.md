@@ -5,7 +5,7 @@ subtitle: Chapter 1 Introduction
 cover-img: /assets/img/forest_path.jpg
 tags: [Covid-19, learning, mental health]
 ---
-I'm now writing up my Masters thesis project in parallel with technically optimising the research platform I've built. To spur me on through what seems like a trial of endurance, T I thought I'd share some brief takeaways as I complete each chapter. First up, the introduction.
+I'm now writing up my Masters thesis project in parallel with technically optimising the research platform I've built. To spur me on through what seems like a trial of endurance, I thought I'd share some brief takeaways as I complete each chapter. First up, the introduction.
 
 * I learned the phrase *coronavirus* was first coined by a Scottish woman, June Almeida, in 1966, when she discovered a group of viruses looked like a solar corona under an electron microscope.
 
