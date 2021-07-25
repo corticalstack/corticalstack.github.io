@@ -1,7 +1,7 @@
 ---
 layout: post
-title: COVID-LEAP thesis takeaways
-subtitle: Chapter 1 Introduction
+title: Chapter 1 Introduction
+subtitle: COVID-LEAP thesis takeaways
 cover-img: /assets/img/forest_path.jpg
 tags: [Covid-19, learning, mental health]
 ---
