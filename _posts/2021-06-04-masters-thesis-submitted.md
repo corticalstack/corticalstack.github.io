@@ -1,7 +1,7 @@
 ---
 layout: post
-title: And done!
-subtitle: Masters Thesis submitted
+title: And done
+subtitle: Masters Thesis submitted!
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, Covid-19, natural language processing, machine learning, BERT, transformers, data engineering]
 ---
