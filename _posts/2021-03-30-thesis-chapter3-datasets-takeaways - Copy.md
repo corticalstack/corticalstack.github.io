@@ -3,7 +3,7 @@ layout: post
 title: Chapter 3 Datasets
 subtitle: COVID-LEAP thesis takeaways
 cover-img: /assets/img/forest_path.jpg
-tags: [Covid-19, learning, database, data, data engineering, mental health]
+tags: [Covid-19, learning, database, data, data engineering]
 ---
 I rely on a collection of open-source datasets to provide foundational knowledge for answering questions related to the highly dynamic COVID-19 pandemic research domain and vaccine landscape. These are as follows:
 

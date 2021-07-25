@@ -3,7 +3,7 @@ layout: post
 title: Chapter 2 Literature Review
 subtitle: COVID-LEAP thesis takeaways
 cover-img: /assets/img/forest_path.jpg
-tags: [Covid-19, learning, mental health]
+tags: [Covid-19, learning]
 ---
 Consistently the section I despise writing up but in hindsight so valuable from learnings gained from all the amazing work done.
 
