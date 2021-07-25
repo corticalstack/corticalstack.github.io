@@ -20,3 +20,7 @@ A summary of the LEAP solution:
 * __Disambiguation of authors__ needs improvement
 
 * __Future work__ would include a custom tokenizer to prevent the splitting of hyphenated entities such as *T-cell*, which affects search, and experiment with other transformer models such as *Big Bird*, by Google, which is designed to capture longer text sequences
+
+In closing, I share a medical expert’s view of the vaccine landscape tracking element of LEAP:
+
+*The COVID-19 vaccine dashboard provides an overview of the global COVID-19 vaccine development landscape. It presents an impressive amount of vaccine development and related knowledge via an intuitive user-interface. Automatically generated visualizations of the preclinical and clinical development pipelines empower end-users to quickly and efficiently navigate and understand the landscape and how it is changing over time. Linked tabulations of knowledge allow users to quickly drill-down to more deeply understand the development and related details of any given vaccine or class of vaccines. The Dashboard is an invaluable resource for anyone working in the field of COVID-19 vaccine development.*
