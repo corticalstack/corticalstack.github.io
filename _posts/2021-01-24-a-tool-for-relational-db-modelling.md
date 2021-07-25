@@ -9,5 +9,4 @@ I found [sqldbm](https://sqldbm.com/Home/) a very useful tool to design and docu
 
 With a free version available to explore one project, additional features include generating SQL for a variety of databases.
 
-![](assets/img/relational data model.PNG)
-
+![](assets/img/relational data model.jpg)
