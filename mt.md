@@ -21,4 +21,4 @@ State-of-the-art search with BERT-based strategies locates highly relevant acade
 Here's my [Master's Degree Thesis paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/project/Jon-Paul Boyd Masters Thesis Report COVID-LEAP state-of-the-art information retrieval.pdf) grade 90%
 
 
-[test](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/assets/img/leap solution.png)
+![](assets/img/leap solution.png)
