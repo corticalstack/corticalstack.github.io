@@ -3,7 +3,7 @@ layout: post
 title: Chapter 7 Conclusion
 subtitle: COVID-LEAP thesis takeaways
 cover-img: /assets/img/forest_path.jpg
-tags: [Covid-19, learning, machine learning, information retrieval]
+tags: [Covid-19, learning, machine learning, BERT, transformers, information retrieval]
 ---
 A summary of the LEAP solution:
 

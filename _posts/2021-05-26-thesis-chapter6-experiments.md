@@ -3,7 +3,7 @@ layout: post
 title: Chapter 6 Experiment Design & Results
 subtitle: COVID-LEAP thesis takeaways
 cover-img: /assets/img/forest_path.jpg
-tags: [Covid-19, learning, machine learning]
+tags: [Covid-19, learning, machine learning, BERT, transformers, information retrieval]
 ---
 With COVID-LEAP, I developed and evaluated several IR strategies that included lexical (e.g., BM25), dense (e.g., msmarco-distilbert-base-v3), and re-ranking models (e.g., lexical first stage BM25 reranked by second stage dense c19gq-ance-msmarco-passage), with and without applied paper quality metrics, for the location and ranking of relevant candidate paragraphs from searching a large corpus of academic articles.
 
