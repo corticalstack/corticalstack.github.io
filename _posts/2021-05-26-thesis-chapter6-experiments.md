@@ -5,7 +5,9 @@ subtitle: COVID-LEAP thesis takeaways
 cover-img: /assets/img/forest_path.jpg
 tags: [Covid-19, learning, machine learning]
 ---
-With COVID-LEAP, I developed and evaluated several IR strategies that included lexical (e.g., BM25), dense (e.g., msmarco-distilbert-base-v3), and re-ranking models (e.g., lexical first stage BM25 reranked by second stage dense c19gq-ance-msmarco-passage), with and without applied paper quality metrics, for the location and ranking of relevant candidate paragraphs from searching a large corpus of academic articles. A summary of the extensive testing:
+With COVID-LEAP, I developed and evaluated several IR strategies that included lexical (e.g., BM25), dense (e.g., msmarco-distilbert-base-v3), and re-ranking models (e.g., lexical first stage BM25 reranked by second stage dense c19gq-ance-msmarco-passage), with and without applied paper quality metrics, for the location and ranking of relevant candidate paragraphs from searching a large corpus of academic articles.
+
+A summary of the extensive testing:
 
 * __Intrinsic evaluation__ with synthetic benchmarking allowed automated, iterative evaluation and optimisation. Showed semantic models benefitted from domain and longer passage fine-tuning. BM25 does well. Reranking ensembles capitalise on strong BM25 & fine-grain the lexical model results with semantic capture for even better performance.
 
