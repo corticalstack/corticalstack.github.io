@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chapter 6 Experiment Design & ResultsNatural Language Processing
+title: Chapter 6 Experiment Design & Results
 subtitle: COVID-LEAP thesis takeaways
 cover-img: /assets/img/forest_path.jpg
 tags: [Covid-19, learning, machine learning]
