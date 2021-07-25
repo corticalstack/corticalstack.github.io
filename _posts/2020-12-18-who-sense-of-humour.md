@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The WHO has a sense of humour!
-subtitle: COVID-19 draft landscape oublication change of format
+subtitle: COVID-19 draft landscape publication change of format
 cover-img: /assets/img/forest_path.jpg
 tags: [Covid-19, data science, data, WHO]
 ---
