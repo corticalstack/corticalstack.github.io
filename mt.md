@@ -18,6 +18,6 @@ Vaccine trials information from multiple sources is automatically aggregated and
 
 State-of-the-art search with BERT-based strategies locates highly relevant academic papers to a biomedical question. The best strategy outperforms the "*go to*" PubMedCentral search engine as evaluated by a medical expert.
 
-For more, please read my [Master's Degree Thesis paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/project/Jon-Paul Boyd Masters Thesis Report COVID-LEAP state-of-the-art information retrieval.pdf) grade 90%
+Here's my [Master's Degree Thesis paper](https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/project/Jon-Paul Boyd Masters Thesis Report COVID-LEAP state-of-the-art information retrieval.pdf) grade 90%
 
 [](/assets/img/leap solution.png)

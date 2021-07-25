@@ -9,4 +9,4 @@ Several hundred hours and many late nights. Tears from fatigue and frustration. 
 
 But now I'm done! My thesis project building a cloud-hosted framework for tracking the COVID-19 vaccine landscape and improving search over the vast colelction of related academic literature is done!
 
-[For more please read on](https://corticalstack.ai/mt/). Now time for beers and rest!
+[For more please read on.](https://corticalstack.ai/mt/) Now time for beers and rest!
