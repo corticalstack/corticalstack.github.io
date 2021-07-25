@@ -7,7 +7,7 @@ tags: [Covid-19, learning, database, data, data engineering, mental health]
 ---
 I rely on a collection of open-source datasets to provide foundational knowledge for answering questions related to the highly dynamic COVID-19 pandemic research domain and vaccine landscape. These are as follows:
 
-* __CORD-19__ - Compiled by Microsoft Research and partners, this dataset is a collection of 400K unstructured academic articles related to coronavirus research. After cleansing to remove duplicates and articles with missing titles/abstracts, non-English etc, 127K articles remain for indexing and search.
+* [__CORD-19__](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) - Compiled by Microsoft Research and partners, this dataset is a collection of 400K unstructured academic articles related to coronavirus research. After cleansing to remove duplicates and articles with missing titles/abstracts, non-English etc, 127K articles remain for indexing and search.
 
 * __WHO candidate vaccine landscape database__ - First published on 11th April 2020, it tracks the progress of pre-clinical and clinical vaccine trials, with updates published bi-weekly. In .pdf format, uugh! 
 I will use it to answer questions such as: _Which private companies and government institutions are funding research?_ _Where are their vaccines being registered?_ _What are the characteristics of their clinical study?_
