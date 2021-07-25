@@ -2,7 +2,7 @@
 layout: page
 title: Masters Thesis Project
 cover-img: /assets/img/mt.jpg
-tags: [learning, Covid-19, natural language processing, information retreival, machine learning, BERT, transformers, neural networks, data engineering]
+tags: [learning, Covid-19, natural language processing, information retrieval, machine learning, BERT, transformers, neural networks, data engineering]
 ---
 ### COVID-LEAP (Literature Exploration Analysis Platform)
 I wanted to be part of the COVID-19 fight. To use my skills and time for something good. I set two objectives for my project:
