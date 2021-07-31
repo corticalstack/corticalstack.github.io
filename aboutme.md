@@ -11,11 +11,12 @@ subtitle: The Essentials
             My name is <strong>Jon-Paul Boyd. I am an experienced lead software engineer and technical architect 
             with a successful track record</strong> providing expertise and delivering complex solutions for large enterprise. 
 			<br><br>Between November 2014 and December 2017 I worked as a SAP HANA technical architect for Nestle. 
-			<br><br>More recently I led AC Immune's first exploration of cloud-hosted machine and deep learning technologies, developing an app to track the highly dynamic COVID-19 vaccine landscape
+			<br><br>More recently, I led AC Immune's first exploration of cloud-hosted machine and deep learning technologies, developing an app to track the highly dynamic COVID-19 vaccine landscape
 			and retrieve highly relevant answers to complex biomedical questions from 4.7M research paper paragraphs using state-of-the-art BERT-based search strategies.
 			
 			<br><br>Please check my 
-            <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cv/Jon-Paul Boyd Resume.pdf">resume</a> 
+            <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cv/Jon-Paul Boyd Resume.pdf">resume</a> and 
+			<a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/project/Jon-Paul Boyd Masters Thesis Report COVID-LEAP state-of-the-art information retrieval.pdf">Master's Degree Thesis paper</a> 
             for more.
             <br><br>
     </p>
@@ -28,7 +29,7 @@ subtitle: The Essentials
             classifying breast cancer tumours using fuzzy logic (outperforming neural networks and other ML approaches) 
             being submitted to the journal <em>Applied Soft Computing</em> for publication.<br><br>
             As a father living in a changed world with COVID-19, I <strong>wanted to be part of the fight</strong>, using my skills and time for something 
-            good, worthy and helpful. Hence, for thesis project I chose to address 2 objectives:
+            good, worthy and helpful. Hence, for my thesis project I chose to address 2 objectives:
 			<br><br>* <strong>Support decision-making with timely & highly visual summarisation of the COVID-19 vaccine development landscape.</strong>
 			<br><br><br>* <strong>Support time-pressured researchers with more effective information retrieval</strong>.
 			<br><br>I designed, developed & deployed a cloud-hosted knowledge base of coronavirus research & vaccine clinical trial information for analytics and search. 
