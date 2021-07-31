@@ -29,8 +29,8 @@ subtitle: The Essentials
             being submitted to the journal <em>Applied Soft Computing</em> for publication.<br><br>
             As a father living in a changed world with COVID-19, I <strong>wanted to be part of the fight</strong>, using my skills and time for something 
             good, worthy and helpful. Hence, for thesis project I chose to address 2 objectives:
-			<br>* <strong>Support decision-making with timely & highly visual summarisation of the COVID-19 vaccine development landscape.</strong>
-			<br>* <strong>Support time-pressured researchers with more effective information retrieval</strong>.
+			<br><br>* <strong>Support decision-making with timely & highly visual summarisation of the COVID-19 vaccine development landscape.</strong>
+			<br><br><br>* <strong>Support time-pressured researchers with more effective information retrieval</strong>.
 			<br><br>I designed, developed & deployed a cloud-hosted knowledge base of coronavirus research & vaccine clinical trial information for analytics and search. 
 			For much more, here's my <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/project/Jon-Paul Boyd Masters Thesis Report COVID-LEAP state-of-the-art information retrieval.pdf">Master's Degree Thesis paper</a> 
             <br><br>
