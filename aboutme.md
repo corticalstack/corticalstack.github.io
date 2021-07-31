@@ -11,7 +11,7 @@ subtitle: The Essentials
             My name is <strong>Jon-Paul Boyd. I am an experienced lead software engineer and technical architect 
             with a successful track record</strong> providing expertise and delivering complex solutions for large enterprise. 
 			<br><br>Between November 2014 and December 2017 I worked as a SAP HANA technical architect for Nestle. 
-			<br><br>More recently, I led AC Immune's first exploration of cloud-hosted machine and deep learning technologies, developing an app to track the highly dynamic COVID-19 vaccine landscape
+			<br><br>More recently, I led AC Immune's first exploration of cloud-hosted machine and deep learning technologies. I developed an app to track the highly dynamic COVID-19 vaccine landscape
 			and retrieve highly relevant answers to complex biomedical questions from 4.7M research paper paragraphs using state-of-the-art BERT-based search strategies.
 			
 			<br><br>Please check my 
