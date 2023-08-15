@@ -102,12 +102,12 @@ excerpt_length: 30
 #footer-link-col: "#404040"
 
 navbar-col: "#ffffff"
-navbar-text-col: "#ffffff"
+navbar-text-col: "#111111"
 navbar-border-col: "#EAEAEA"
 page-col: "#111111"
 link-col: "#ff0066"
 hover-col: "#ff0066"
-footer-col: "#000000"
+footer-col: "#111111"
 footer-text-col: "#ffffff"
 footer-link-col: "#111111"
 
