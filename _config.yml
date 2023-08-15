@@ -40,7 +40,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-title-img: "/assets/img/corticalstack_logo_small.jpg"
+title-img: "/assets/img/corticalstack_logo_small.JPG"
 
 
 # --- Footer options --- #
