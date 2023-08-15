@@ -40,7 +40,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-title-img: "/assets/img/cs-logo.png"
+title-img: "/assets/img/cs-logo.jpg"
 
 
 # --- Footer options --- #
@@ -101,13 +101,13 @@ excerpt_length: 30
 #footer-text-col: "#777777"
 #footer-link-col: "#404040"
 
-navbar-col: "#636878"
+navbar-col: "#000000"
 navbar-text-col: "#ffffff"
 navbar-border-col: "#EAEAEA"
 page-col: "#111111"
 link-col: "#ff0066"
 hover-col: "#ff0066"
-footer-col: "#636878"
+footer-col: "#000000"
 footer-text-col: "#ffffff"
 footer-link-col: "#111111"
 
