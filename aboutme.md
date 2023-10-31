@@ -8,14 +8,15 @@ subtitle: The Essentials
     <img src="/assets/img/me.png" style="width: 50%; height: 50%; margin-left: auto; margin-right: auto; display: block">
     <p class="about-text">
         <span class="fa fa-briefcase about-icon"></span>
-            My name is <strong>Jon-Paul Boyd. I am an experienced lead software engineer and technical architect 
+            My name is <strong>Jon-Paul Boyd. I am an experienced NLP & software engineer, and Azure solution architect, 
             with a successful track record</strong> providing expertise and delivering complex solutions for large enterprise. 
 			<br><br>Between November 2014 and December 2017 I worked as a SAP HANA technical architect for Nestle. 
-			<br><br>More recently, I led AC Immune's first exploration of cloud-hosted machine and deep learning technologies. I developed an app to track the highly dynamic COVID-19 vaccine landscape
+			<br><br>Later, I led AC Immune's first exploration of cloud-hosted machine and deep learning technologies. I developed an app to track the highly dynamic COVID-19 vaccine landscape
 			and retrieve highly relevant answers to complex biomedical questions from 4.7M research paper paragraphs using state-of-the-art BERT-based search strategies.
-			
+			<br><br>More recently, I've been leading Lufthansa's One Data Platform squad responsible for providing AI & ML infrastructure and expertise for several data science teams across the group. I have hands-on developed solutions for provisioning Azure AI/ML services at scale, infrastructure monitoring, MLOps, and a GenAI powered destination recommender.
 			<br><br>Please check my 
-            <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cv/Jon-Paul Boyd Resume.pdf">resume</a> and 
+            <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cv/Jon-Paul Boyd Resume.pdf">resume</a>, 
+            <a href="https://www.linkedin.com/in/jonpaulboyd/">LinkedIn profile</a>, and
 			<a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/project/Jon-Paul Boyd Masters Thesis Report COVID-LEAP state-of-the-art information retrieval.pdf">Master's Degree Thesis paper</a> 
             for more.
             <br><br>
@@ -52,9 +53,6 @@ subtitle: The Essentials
             <strong>My 2 children are my world</strong>, I love being a Dad, it's the most rewarding and difficult job 
             I've ever had!<br><br>
             <strong>Kiteboarding is my passion</strong>, I feel so alive and at one with nature when skimming over the water with the 
-            power of wind at my fingertips.<br><br>
-            I also very much enjoy being an <strong>active driver of an eSports sim racing team</strong>, 
-            taking part in endurance races including the Le Mans 24H and Spa. Being individually fast is great, however the 
-            <strong>success of the team really depends on being consistent and reliable</strong>. 
+            power of wind at my fingertips.
     </p>
     
