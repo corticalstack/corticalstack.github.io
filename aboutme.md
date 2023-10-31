@@ -13,7 +13,7 @@ subtitle: The Essentials
 			<br><br>Between November 2014 and December 2017 I worked as a SAP HANA technical architect for Nestle. 
 			<br><br>Later, I led AC Immune's first exploration of cloud-hosted machine and deep learning technologies. I developed an app to track the highly dynamic COVID-19 vaccine landscape
 			and retrieve highly relevant answers to complex biomedical questions from 4.7M research paper paragraphs using state-of-the-art BERT-based search strategies.
-			<br><br>More recently, I've been leading Lufthansa's One Data Platform squad responsible for providing AI & ML infrastructure and expertise for several data science teams across the group. I have hands-on developed solutions for provisioning Azure AI/ML services at scale, infrastructure monitoring, MLOps, and a GenAI powered destination recommender.
+			<br><br>More recently, I've been leading Lufthansa's One Data Platform squad responsible for providing AI/ML infrastructure and expertise for several data science teams across the group. I have hands-on developed solutions for provisioning Azure AI/ML services at scale, infrastructure monitoring, MLOps, and a GenAI powered destination recommender. In addition working directly with data scientists and engineers to solve complex issues, I've run MLOps hackathons and supported the CTO in GenAI strategy and communications.
 			<br><br>Please check my 
             <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cv/Jon-Paul Boyd Resume.pdf">resume</a>, 
             <a href="https://www.linkedin.com/in/jonpaulboyd/">LinkedIn profile</a>, and
