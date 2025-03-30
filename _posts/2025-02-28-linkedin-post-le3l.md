@@ -7,7 +7,7 @@ tags: [personal, customerfirst, customersuccess, careerjourney]
 ---
 <!-- Original LinkedIn post: https://www.linkedin.com/posts/activity-7301155182069907456-le3l -->
 
-Today is my last with Nordcloud, an IBM Company. Thank you for the wonderful opportunities to support Yarowa AG, Transcality, Logmind & domo.health on their hashtag#Azure AI journey.
+Today is my last with Nordcloud, an IBM Company. Thank you for the wonderful opportunities to support Yarowa AG, Transcality, Logmind & domo.health on their Azure AI journey.
 
 However, my heart is full when I think back on my time with Lufthansa. Thank you Ganesh Swaminathan for bringing me into the One Data Platform team, & Sandra Ohmayer for the chance to pursue my AI passion with OneAI. 
 
@@ -19,5 +19,8 @@ Life takes unexpected turns. Several years ago, I was rejected for a position at
 
 ![](../assets/img/supplier-tech-day.jpg)
 
+![](../assets/img/supplier-tech-day-2.jpg)
 
+![](../assets/img/odp-team.jpg)
 
+![](../assets/img/msft-ai-tour-berlin-2024.jpg)

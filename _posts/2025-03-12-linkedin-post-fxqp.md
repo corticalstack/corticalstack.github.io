@@ -19,3 +19,5 @@ Thanks to John Savill for sharing this tip in his [excellent hashtag#Azure AI Fo
 
 ![](../assets/img/github-marketplace.jpg)
 
+![](../assets/img/github-marketplace-2.jpg)
+
