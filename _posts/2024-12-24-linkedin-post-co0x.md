@@ -17,17 +17,13 @@ Perfect for simple use cases (KISS).
 𝐏𝐫𝐨𝐬
 
 ↳ Simple integration of specific, well-defined functions with a schema.
-
 ↳ Low code.
-
 ↳ Easily extensible.
-
 ↳ Best for simple, real-time assistants without high latency & token cost of multi-agent, multi-step inner monologues.
 
 𝐂𝐨𝐧𝐬
 
 ↳ Single model agent.
-
 ↳ Requires own agentic loop & function calling implementation.
 
 🔍𝐋𝐥𝐚𝐦𝐚𝐈𝐧𝐝𝐞𝐱
@@ -36,7 +32,6 @@ Optimized for multi-doc retrieval & intelligence, so ideal for knowledge managem
 𝐏𝐫𝐨𝐬
 
 ↳ Easy multi data source integration.
-
 ↳ High control over agent & tool integration.
 
 𝐂𝐨𝐧𝐬
@@ -49,13 +44,11 @@ Built for complex agentic AI systems needing granular control & customization.
 𝐏𝐫𝐨𝐬
 
 ↳ Advanced workflow controls, human interrupts for critical actions.
-
 ↳ LangSmith integration for AgentOps.
 
 𝐂𝐨𝐧𝐬
 
 ↳ Code intensive.
-
 ↳ Steeper learning curve, requires graph-based thinking.
 
 🧠𝐌𝐞𝐦𝐆𝐩𝐭 (𝐋𝐞𝐭𝐭𝐚)
@@ -64,11 +57,8 @@ Optimized for multi-agent conversational orchestration with shared memory & pers
 𝐏𝐫𝐨𝐬
 
 ↳ Easy to define blocks of LLM context for structured state & information sharing between agents.
-
 ↳ Multi-session long-term memory retention.
-
 ↳ Agents can autonomously update their memory to learn over time & provide more contextually aware, immersive responses.
-
 ↳ Powerful feature to evict older context to persistent memory, retrieving later in compressed format for no information loss.
 
 𝐂𝐨𝐧𝐬
@@ -81,13 +71,9 @@ Optimized for multi-agent, roles-based group conversation.
 𝐏𝐫𝐨𝐬
 
 ↳ Clear delegation between specialized agents to coordinate efforts.
-
 ↳ Simple orchestration.
-
 ↳ Easy multi-model setup.
-
 ↳ Highly configurable inter-agent interactions.
-
 ↳ Workflow allows human oversight.
 
 𝐂𝐨𝐧𝐬
@@ -100,13 +86,9 @@ Optimized for simplified multi-agent orchestration to handle different parts of 
 𝐏𝐫𝐨𝐬
 
 ↳ Intuitive, clear boundaries between tasks, agents, & crews.
-
 ↳ Structured Pydantic output for consistency & robustness.
-
 ↳ Easy external tool integration, including hashtag#LangChain.
-
 ↳ Multi-model support.
-
 ↳ Allows human interrupts for feedback to agent execution output.
 
 𝐂𝐨𝐧𝐬
