@@ -7,7 +7,7 @@ tags: [learning, personal, microsoft, lufthansa, genai, travel]
 ---
 <!-- Original LinkedIn post: https://www.linkedin.com/posts/activity-7260597763950743552-3JYt -->
 
-✈️ Excited to be speaking at hashtag#DCC2024 next Friday 15th November.
+✈️ Excited to be speaking at [DCC2024](https://discover.swiss/events/dcc24-4-digital-competence-circle) next Friday 15th November.
 
 📍Microsoft, The Circle, Zurich Airport.
 

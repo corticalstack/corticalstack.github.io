@@ -15,7 +15,7 @@ The little angels said SOCKS! When asked why, they said "Daddy's feet need love 
 
 But these are no ordinary socks. They are foot-hugging symbols of positive change, providing paid employment opportunities for individuals with Down Syndrome ❤️
 
-For a next corporate or personal gift to warm feet AND hearts, go check out Stand Out Socks ✌️🧡🧦
+For a next corporate or personal gift to warm feet AND hearts, go check out [Stand Out Socks](standoutsocks.co.uk) ✌️🧡🧦
 
 (P.S. NVIDIA, JP's DMs remain open)
 

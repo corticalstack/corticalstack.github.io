@@ -11,8 +11,7 @@ tags: [learning, personal, opensource, genai, llm]
 
 🐢 However, fine-tuning can be slow & memory hungry. 
 
-🦥 Unsloth AI created an open source Python package making fine tuning of LLMs up to 2x faster, & reducing training memory by 50%.
-https://lnkd.in/e6mYUztP
+🦥 [Unsloth AI]](https://github.com/unslothai/unsloth) created an open source Python package making fine tuning of LLMs up to 2x faster, & reducing training memory by 50%.
 
 🖥️ How? Unsloth AI took the entire backpropogation algorithm and rewrote the CUDA kernels in OpenAI's triton language, along with maths optimisation, for better performance & efficiency without accuracy loss.
 
@@ -27,7 +26,6 @@ https://lnkd.in/e6mYUztP
 🗜️ Unsloth can also merge your fine-tuned adapter layers back with the base model & quantise (compress) to formats including GGUF and GPTQ. 
 
 ⭐ Daniel Han is working hard on unsloth, adding new features & compatibility with more base models. Go check the repo for fab collection of fine-tuning colab notebook examples, & while there, give the repo a ⭐. Thanks Eric Hartford for the Unsloth AI tip!
-https://lnkd.in/e6mYUztP
 
 ![](../assets/img/unsloth.jpg)
 
