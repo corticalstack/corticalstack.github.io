@@ -8,12 +8,13 @@ subtitle: The Essentials
     <img src="/assets/img/me.png" style="width: 50%; height: 50%; margin-left: auto; margin-right: auto; display: block">
     <p class="about-text">
         <span class="fa fa-briefcase about-icon"></span>
-            My name is <strong>Jon-Paul Boyd. I am an experienced NLP & software engineer, and Azure solution architect, 
+            My name is <strong>Jon-Paul Boyd. I am an experienced Azure AI Engineer and solution architect, 
             with a successful track record</strong> providing expertise and delivering complex solutions for large enterprise. 
 			<br><br>Between November 2014 and December 2017 I worked as a SAP HANA technical architect for Nestle. 
 			<br><br>Later, I led AC Immune's first exploration of cloud-hosted machine and deep learning technologies. I developed an app to track the highly dynamic COVID-19 vaccine landscape
 			and retrieve highly relevant answers to complex biomedical questions from 4.7M research paper paragraphs using state-of-the-art BERT-based search strategies.
 			<br><br>More recently, I've been leading Lufthansa's One Data Platform squad responsible for providing AI/ML infrastructure and expertise for several data science teams across the group. I have hands-on developed solutions for provisioning Azure AI/ML services at scale, infrastructure monitoring, MLOps, and a GenAI powered destination recommender. In addition working directly with data scientists and engineers to solve complex issues, I've run MLOps hackathons and supported the CTO in GenAI strategy and communications.
+            <br><br>As a technical specialist within the enterprise GenAI team, I've driven innovation across the entire GenAI lifecycle - from ideation and feasibility studies to implementation, evaluation, and compliance. Notable projects include developing an avatar assistant for a leading European airline (demoed to Satya Nadella at the A.I. Tour Berlin), creating intelligent feedback funneling services using NLP for customer feedback classification, building shared summarization services with pre-engineered prompts, and developing GPT-4-powered destination recommendation systems with constitutional oversight for content alignment. I'm passionate about educating teams on appropriate GenAI use cases and best practices for prompting and fine-tuning large language models.
 			<br><br>Please check my 
             <a href="https://docs.google.com/viewer?url=https://github.com/corticalstack/corticalstack.github.io/raw/master/docs/cv/Jon-Paul Boyd Resume.pdf">resume</a>, 
             <a href="https://www.linkedin.com/in/jonpaulboyd/">LinkedIn profile</a>, and
