@@ -14,11 +14,17 @@ This holiday I tested the latest v3 release of hashtag#Cline, a vscode extension
 To test, I tasked Cline to build a family personal assistant app for Q&A over resume, medical, and contractual documents.
 
 ✅ Nailed the backend: Developed and deployed RAG solution, based on the Qdrant vector dB, as instructed, with the following all autonomously done. 
+
 ↳ Creation of the environment requirements.txt.
+
 ↳ Installation of docker-compose & creation of the docker-compose.yaml.
+
 ↳ Fixed missing dependencies.
+
 ↳ Chunking and embedding a test set of mixed French/English docs using SentenceTransformer for multilingual embeddings.
+
 ↳ Spinning up the container & testing the health endpoint.
+
 ↳ Search query unit tests.
 
 🤯 Mind-blown! Completed the above in 5 minutes. Would typically take a skilled developer at least 2-3 focused hours.
