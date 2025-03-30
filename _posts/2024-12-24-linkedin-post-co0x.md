@@ -14,6 +14,7 @@ Over the last weeks, I've deep dived into agentic tooling. They empower LLMs to 
 🔧𝐎𝐩𝐞𝐧𝐀𝐈 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧 𝐂𝐚𝐥𝐥𝐢𝐧𝐠
 
 Perfect for simple use cases (KISS).  
+
 𝐏𝐫𝐨𝐬  
 ↳ Simple integration of specific, well-defined functions with a schema.  
 ↳ Low code.  
@@ -27,6 +28,7 @@ Perfect for simple use cases (KISS).
 🔍𝐋𝐥𝐚𝐦𝐚𝐈𝐧𝐝𝐞𝐱
 
 Optimized for multi-doc retrieval & intelligence, so ideal for knowledge management systems.  
+
 𝐏𝐫𝐨𝐬  
 ↳ Easy multi data source integration.  
 ↳ High control over agent & tool integration.  
@@ -37,6 +39,7 @@ Optimized for multi-doc retrieval & intelligence, so ideal for knowledge managem
 📈𝐋𝐚𝐧𝐠𝐆𝐫𝐚𝐩𝐡
 
 Built for complex agentic AI systems needing granular control & customization.  
+
 𝐏𝐫𝐨𝐬  
 ↳ Advanced workflow controls, human interrupts for critical actions.  
 ↳ LangSmith integration for AgentOps.  
@@ -48,6 +51,7 @@ Built for complex agentic AI systems needing granular control & customization.
 🧠𝐌𝐞𝐦𝐆𝐩𝐭 (𝐋𝐞𝐭𝐭𝐚)
 
 Optimized for multi-agent conversational orchestration with shared memory & persistent memory for context over time & restarts.  
+
 𝐏𝐫𝐨𝐬  
 ↳ Easy to define blocks of LLM context for structured state & information sharing between agents.  
 ↳ Multi-session long-term memory retention.  
@@ -60,6 +64,7 @@ Optimized for multi-agent conversational orchestration with shared memory & pers
 🤖 𝐀𝐮𝐭𝐨𝐠𝐞𝐧
 
 Optimized for multi-agent, roles-based group conversation.  
+
 𝐏𝐫𝐨𝐬  
 ↳ Clear delegation between specialized agents to coordinate efforts.  
 ↳ Simple orchestration.  
@@ -73,6 +78,7 @@ Optimized for multi-agent, roles-based group conversation.
 🛠️ 𝐂𝐫𝐞𝐰𝐀𝐈
 
 Optimized for simplified multi-agent orchestration to handle different parts of a task.  
+
 𝐏𝐫𝐨𝐬  
 ↳ Intuitive, clear boundaries between tasks, agents, & crews.  
 ↳ Structured Pydantic output for consistency & robustness.  
