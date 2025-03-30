@@ -21,6 +21,6 @@ Life takes unexpected turns. Several years ago, I was rejected for a position at
 
 ![](../assets/img/supplier-tech-day-2.jpg)
 
-![](../assets/img/odp-team.jpg)
+![](../assets/img/odp-team-1.jpg)
 
 ![](../assets/img/msft-ai-tour-berlin-2024.jpg)
