@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post _ADN
-subtitle: LinkedIn Post
+title: Beyond Lab Breakthroughs - Seeking Real-World AI Impact Stories
+subtitle: Looking for examples of AI transforming healthcare, communities, and wellbeing amid the technical innovation
 cover-img: /assets/img/forest_path.jpg
 tags: [linkedin]
 ---

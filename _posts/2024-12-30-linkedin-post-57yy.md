@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post 57Yy
-subtitle: LinkedIn Post
+title: Cline v3 - The Power and Pitfalls of Autonomous Coding Assistants
+subtitle: Building a RAG application in minutes instead of hours — but beware the token monster
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, ai, genai, coding, softwareengineering, developertools]
 ---

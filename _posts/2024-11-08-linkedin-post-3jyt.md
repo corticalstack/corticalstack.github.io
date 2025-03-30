@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post 3JYt
-subtitle: LinkedIn Post
+title: AI-Powered Travel Content in 24 Hours
+subtitle: Join us at DCC2024 to discover how Lufthansa transformed travel guides using Azure OpenAI
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, personal, microsoft, lufthansa, genai, travel]
 ---

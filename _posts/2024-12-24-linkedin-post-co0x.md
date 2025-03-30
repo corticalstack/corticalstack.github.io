@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post cO0X
-subtitle: LinkedIn Post
+title: AI Agentic Tooling - A Hands-On Comparison of Leading Frameworks
+subtitle: From simple function calls to complex multi-agent systems — choosing the right tool for your AI workflow
 cover-img: /assets/img/forest_path.jpg
 tags: [linkedin]
 ---

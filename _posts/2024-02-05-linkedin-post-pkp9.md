@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post PKp9
-subtitle: LinkedIn Post
+title: Unsloth AI - Supercharging LLM Fine-Tuning with Half the Memory and Double the Speed
+subtitle: How rewritten CUDA kernels are making open-source model customization accessible on consumer hardware
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, personal, opensource, genai, llm]
 ---

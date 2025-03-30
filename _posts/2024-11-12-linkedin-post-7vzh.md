@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post 7vZh
-subtitle: LinkedIn Post
+title: The Joy of Human Connection - A Day of Tech Collaboration at Lufthansa
+subtitle: When stepping away from the keyboard leads to shared inspiration, recognition, and unexpected community
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, personal, strongertogether, customerfirst, azure]
 ---

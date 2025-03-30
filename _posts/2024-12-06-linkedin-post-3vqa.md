@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post 3vqa
-subtitle: LinkedIn Post
+title: YC's Agentic AI Revolution - 5 Design Principles for Effective AI Teams
+subtitle: From clear roles to strategic cooperation, what startups are getting right about building useful AI agents
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, agenticai, agents, aiengineering]
 ---

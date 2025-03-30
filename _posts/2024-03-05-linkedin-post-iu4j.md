@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post iU4J
-subtitle: LinkedIn Post
+title: Azure GenAI Resources - A Living Repository for the Fast-Moving Ecosystem
+subtitle: Curated knowledge and tools to help you navigate Microsoft's AI platform developments
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, personal, azure, genai, llm]
 ---

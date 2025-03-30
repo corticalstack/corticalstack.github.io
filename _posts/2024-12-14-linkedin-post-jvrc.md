@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post jVRc
-subtitle: LinkedIn Post
+title: Santa's Sock Dilemma - Kids Choose Heart-Warming Gifts Over GPUs!
+subtitle: How Stand Out Socks is creating positive change while saving fathers from technology temptation
 cover-img: /assets/img/forest_path.jpg
 tags: [personal, downsyndromeawareness, standoutsocks, meaningfulemployment, dadlife]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post JVkh
-subtitle: LinkedIn Post
+title: When AI Takes a Backseat - The Quiet Heroism of Working Parents
+subtitle: Behind every colleague is a midnight warrior with superpowers of empathy, resilience, and unconditional love
 cover-img: /assets/img/forest_path.jpg
 tags: [personal, workingparents, parentlife, life, human]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post ypXN
-subtitle: LinkedIn Post
+title: AI Coding Assistants for VS Code - A Developer's Comparison
+subtitle: Finding the right balance of functionality, cost, and flexibility in the evolving landscape of AI pair programming
 cover-img: /assets/img/forest_path.jpg
 tags: [developertools, softwareengineering, techproductivity, genai]
 ---

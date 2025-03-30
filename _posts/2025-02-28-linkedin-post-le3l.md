@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post le3l
-subtitle: LinkedIn Post
+title: Farewell Nordcloud, Hello Microsoft - What a journey!
+subtitle: Reflecting on invaluable experiences at Lufthansa and the path that led to my next chapter
 cover-img: /assets/img/forest_path.jpg
 tags: [personal, customerfirst, customersuccess, careerjourney]
 ---

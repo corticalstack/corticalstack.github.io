@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post _SVC
-subtitle: LinkedIn Post
+title: Using Open Source LLMs as Coding Co-Pilots in VS Code
+subtitle: How continue.dev enables self-hosted AI assistance with models like DeepSeek-Coder on your local hardware
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, personal, developer, opensource]
 ---

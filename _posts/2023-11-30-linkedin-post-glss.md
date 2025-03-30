@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post GlSs
-subtitle: LinkedIn Post
+title: Azure Solution Architect Expert - Achievement Unlocked!
+subtitle: Grateful for the support of Lufthansa, Nordcloud, and family on this certification journey
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, personal, azure]
 ---

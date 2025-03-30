@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post QmL6
-subtitle: LinkedIn Post
+title: When Traditional ML Outshines LLMs - A Case for Algorithmic Humility
+subtitle: XGBoost proves faster, cheaper, and more accurate than GPT-4 for multi-label text classification
 cover-img: /assets/img/forest_path.jpg
 tags: [linkedin]
 ---

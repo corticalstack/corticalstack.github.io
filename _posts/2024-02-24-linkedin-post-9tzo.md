@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post 9tZO
-subtitle: LinkedIn Post
+title: Model Merging Magic: Creating SOTA Models Without Advanced Skills or GPUs
+subtitle: How combining three strong base models led to a top-ranked LLM on the Hugging Face leaderboard
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, personal, llm, opensource, genai]
 ---

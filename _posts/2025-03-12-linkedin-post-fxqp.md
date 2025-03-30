@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post FxQp
-subtitle: LinkedIn Post
+title: GitHub Marketplace - Test GenAI Models with Your Own Prompts
+subtitle: Compare models side-by-side and customize parameters for intuitive evaluation
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, genai, github, azure]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LinkedIn Post NjJ5
-subtitle: LinkedIn Post
+title: Open Source AI Creates Personalized Travel Content on Consumer Hardware
+subtitle: From LLM-generated prompts to stable diffusion animations - crafting a Tokyo travel experience for Max
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, personal, opensource, genai, travel]
 ---
