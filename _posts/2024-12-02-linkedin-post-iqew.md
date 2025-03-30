@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Future of Agentic AI: Memory and Multi-Agent Collaboration
+title: The Future of Agentic AI - Memory and Multi-Agent Collaboration
 subtitle: How context management and agent orchestration will transform LLM applications in 2025
 cover-img: /assets/img/forest_path.jpg
 tags: [learning, agentic, genai, automation]
