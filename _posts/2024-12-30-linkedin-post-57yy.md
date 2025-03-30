@@ -9,7 +9,7 @@ tags: [learning, ai, genai, coding, softwareengineering, developertools]
 
 🔥 Hands-on with Cline v3: The Autonomous Coding Assistant
 
-This holiday I tested the latest v3 release of hashtag#Cline, a vscode extension that can autonomously build entire applications. It can do everything, from creating and editing development artefacts to executing terminal commands and browser interactions. There are however customizable safety controls to tweak what Cline can do without explicit human approval.
+This holiday I tested the latest v3 release of Cline, a vscode extension that can autonomously build entire applications. It can do everything, from creating and editing development artefacts to executing terminal commands and browser interactions. There are however customizable safety controls to tweak what Cline can do without explicit human approval.
 
 To test, I tasked Cline to build a family personal assistant app for Q&A over resume, medical, and contractual documents.
 
