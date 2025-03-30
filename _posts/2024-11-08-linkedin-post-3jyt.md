@@ -19,7 +19,7 @@ tags: [learning, personal, microsoft, lufthansa, genai, travel]
 
 🎯 Validated generated content at scale with AI + human expertise.
 
-A real, in production hashtag#GenAI use case with real results, using Microsoft Azure OpenAI + AI Search.
+A real, in production GenAI use case with real results, using Microsoft Azure OpenAI + AI Search.
 
 Join us to see how we're transforming travel content creation! 🚀
 

@@ -13,7 +13,7 @@ My feed usually full of AI innovation, VCs, the startup hustle. Today I'm thinki
 
 Quietly moved her to the spare room, letting my wife (full time worker) and other daughter sleep. Propped daughter up on pillows. Opened windows for humidity. Fetched cough syrup, water, and tissues for the night ahead.
 
-I wrapped my arms around her. She coughed in my face. I didn't care. "I love you," she whispered.
+I wrapped my arms around her. She coughed in my face. I didn't care. "*I love you*" she whispered.
 
 2AM - She's finally asleep. Job done. I held her hand. She doesn't know it, but she comforts me more than I comfort her.
 

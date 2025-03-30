@@ -16,7 +16,7 @@ tags: [learning, personal, opensource, genai, travel]
 
 🎬 Used [Stable Diffusion](https://github.com/AUTOMATIC1111) and deforum extension to create the animation. Provided the prompts from the LLM, and added settings for camera movement. Deforum takes care of the tweening (“inbetween”), or creating, the images from one keyframe to the next which are described by the prompts.
 
-🎤 [Tortoise TTS]](https://github.com/rsxdalv/tts-generation-webui) for text-to-speech voice over intro welcoming Max to Tokyo.
+🎤 [Tortoise TTS](https://github.com/rsxdalv/tts-generation-webui) for text-to-speech voice over intro welcoming Max to Tokyo.
 
 All tools self-hosted on consumer hardware (RTX3090), using less than 10Gb VRAM, video rendered in 1 hour.
 

@@ -15,7 +15,7 @@ Even works with multi-modal models.
 
 You can adjust and sync the system prompts and parameters.
 
-Thanks to John Savill for sharing this tip in his [excellent hashtag#Azure AI Foundry overview](https://www.youtube.com/watch?v=Sq8Cq7RZM2o).
+Thanks to John Savill for sharing this tip in his [excellent Azure AI Foundry overview](https://www.youtube.com/watch?v=Sq8Cq7RZM2o).
 
 ![](../assets/img/github-marketplace.jpg)
 

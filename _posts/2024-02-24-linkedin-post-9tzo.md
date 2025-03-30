@@ -20,10 +20,10 @@ tags: [learning, personal, llm, opensource, genai]
 
 ❓ As an aside, is merging merges becoming a way to game eval leaderboards?
 
-[Neurotic-crown-clown](https://huggingface.co/CorticalStack/neurotic-crown-clown-7b-ties)
-[Neurotic-crown-clown GGUF quantise](https://huggingface.co/CorticalStack/neurotic-crown-clown-7b-ties-gguf)
-[Neurotic-crown-clown AWQ quantised](https://huggingface.co/CorticalStack/neurotic-crown-clown-7b-ties-awq)
-[Neurotic-crown-clown EXL2 quantised](https://huggingface.co/CorticalStack/neurotic-crown-clown-7b-ties-6.5bpw-exl2)
-[HF open LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+[Neurotic-crown-clown](https://huggingface.co/CorticalStack/neurotic-crown-clown-7b-ties)  
+[Neurotic-crown-clown GGUF quantise](https://huggingface.co/CorticalStack/neurotic-crown-clown-7b-ties-gguf)  
+[Neurotic-crown-clown AWQ quantised](https://huggingface.co/CorticalStack/neurotic-crown-clown-7b-ties-awq)  
+[Neurotic-crown-clown EXL2 quantised](https://huggingface.co/CorticalStack/neurotic-crown-clown-7b-ties-6.5bpw-exl2)  
+[HF open LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)  
 
 ![](../assets/img/clown.jpg)
