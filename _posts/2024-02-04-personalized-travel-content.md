@@ -22,4 +22,6 @@ All tools self-hosted on consumer hardware (RTX3090), using less than 10Gb VRAM,
 
 I'm curious how the above could be stitched together in an automated pipeline to scale presenting the output in-flight to passengers nearing arrival time.
 
-https://www.youtube.com/watch?v=CLUbBg42he4
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CLUbBg42he4" allowfullscreen></iframe>
+</div>
