@@ -16,10 +16,10 @@ Over the last weeks, I've deep dived into agentic tooling. They empower LLMs to 
 Perfect for simple use cases (KISS).
 𝐏𝐫𝐨𝐬
 
-↳ Simple integration of specific, well-defined functions with a schema.
-↳ Low code.
-↳ Easily extensible.
-↳ Best for simple, real-time assistants without high latency & token cost of multi-agent, multi-step inner monologues.
+↳ Simple integration of specific, well-defined functions with a schema.  
+↳ Low code.  
+↳ Easily extensible.  
+↳ Best for simple, real-time assistants without high latency & token cost of multi-agent, multi-step inner monologues.  
 
 𝐂𝐨𝐧𝐬
 
