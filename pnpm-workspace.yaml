@@ -1,0 +1,6 @@
+# pnpm 11 reads settings from this file (not the "pnpm" key in package.json).
+# Approve native postinstall scripts so installs are non-interactive and
+# deterministic locally and in CI.
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
