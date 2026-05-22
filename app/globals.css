@@ -168,3 +168,52 @@
   font-weight: var(--font-body-weight);
   letter-spacing: var(--font-body-tracking);
 }
+
+/* Transmission (MDX post) body. rehype-pretty-code owns code-block colors. */
+@layer components {
+  .transmission-body {
+    @apply text-base leading-relaxed text-foreground/90;
+  }
+  .transmission-body > * + * {
+    @apply mt-5;
+  }
+  .transmission-body h2 {
+    @apply mt-12 mb-4 font-display text-2xl tracking-tight;
+  }
+  .transmission-body h3 {
+    @apply mt-8 mb-3 font-display text-xl;
+  }
+  .transmission-body a {
+    @apply text-primary underline underline-offset-4 transition-opacity hover:opacity-80;
+  }
+  .transmission-body ul {
+    @apply list-disc space-y-2 pl-6;
+  }
+  .transmission-body ol {
+    @apply list-decimal space-y-2 pl-6;
+  }
+  .transmission-body blockquote {
+    @apply border-l-2 border-primary/50 pl-4 text-muted-foreground italic;
+  }
+  .transmission-body img {
+    @apply my-8 w-full rounded border border-border;
+  }
+  .transmission-body hr {
+    @apply my-10 border-border;
+  }
+  .transmission-body strong {
+    @apply font-semibold text-foreground;
+  }
+  .transmission-body :not(pre) > code {
+    @apply rounded bg-muted px-1.5 py-0.5 font-mono text-sm text-primary;
+  }
+  .transmission-body pre {
+    @apply my-6 overflow-x-auto rounded border border-border p-4 font-mono text-sm;
+  }
+  .transmission-body figure[data-rehype-pretty-code-figure] {
+    @apply my-6;
+  }
+  .transmission-body [data-rehype-pretty-code-title] {
+    @apply rounded-t border border-b-0 border-border bg-muted px-4 py-2 font-mono text-xs text-muted-foreground;
+  }
+}

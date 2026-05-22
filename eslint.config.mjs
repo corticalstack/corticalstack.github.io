@@ -13,6 +13,9 @@ const eslintConfig = defineConfig([
         "error",
         { props: "never", children: "never" },
       ],
+      // The cyber-HUD "// ..." labels throughout the UI are intentional literal
+      // text, not commented-out code.
+      "react/jsx-no-comment-textnodes": "off",
     },
   },
   // Override default ignores of eslint-config-next.

@@ -54,7 +54,8 @@ Gotchas:
 - `lib/utils.ts` (`cn`); `@/` path alias = repo root.
 - `public/` - static assets, `CNAME`, `cv.pdf`.
 - Preserved from the Jekyll site for migration: `_posts/` (81 posts; source for the MDX transmissions), `assets/img/`, `docs/` (CV + project PDFs).
-- `content/transmissions/` (MDX posts) does NOT exist yet - it arrives in Phase 2. Don't assume it's present.
+- `content/transmissions/` - blog posts as MDX (4 migrated). Read/sorted by `lib/transmissions.ts` (chronological hex IDs, reading time); rendered via `next-mdx-remote/rsc` (+ `remark-gfm`, `rehype-pretty-code`) in the `[slug]` route.
+- `components/site-header.tsx` + `components/site-footer.tsx` - shared chrome used by the homepage and the transmissions routes.
 
 ## Theme / palette
 
@@ -66,7 +67,7 @@ sparingly. Change the theme here, not in component classes.
 ## Build phases (see site_rebuild.md)
 
 - **Phase 1 (DONE):** foundation - scaffold, static-export config, cyan palette, JP rebrand, staged deploy workflow.
-- **Phase 2 (next):** MDX pipeline + `/transmissions` and `/transmissions/[slug]` routes, wire homepage Transmissions to MDX, add Academic Archive (9 projects: MT/ACI/CIO/ANN/AIP/DM/FL/MR/RM) and Dossier sections; finalize nav to `transmissions / archives / dossier / comms`.
+- **Phase 2 (in progress):** MDX pipeline DONE - `content/transmissions/*.mdx`, `lib/transmissions.ts`, `/transmissions` + `/transmissions/[slug]` routes, shared header/footer, homepage wired to the collection. Remaining: Academic Archive (9 projects: MT/ACI/CIO/ANN/AIP/DM/FL/MR/RM) and Dossier sections; finalize nav to `transmissions / archives / dossier / comms`.
 - **Phase 3:** Bunny-CDN video layer (hero ambient loop + project hover clips).
 - **Phase 4 (deferred):** cyber theatrics. **Phase 5:** SEO / RSS / sitemap / perf.
 

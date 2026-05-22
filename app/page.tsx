@@ -21,9 +21,12 @@ import {
   Terminal,
 } from "lucide-react";
 import { Container } from "@/components/zippystarter/container";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ProjectImage } from "@/components/project-image";
+import { getAllTransmissions } from "@/lib/transmissions";
 
 const GITHUB_URL = "https://github.com/corticalstack";
 const LINKEDIN_URL = "https://www.linkedin.com/in/jonpaulboyd/";
@@ -32,19 +35,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/jonpaulboyd/";
 const yearsOnline = Math.floor(
   (Date.now() - new Date("2017-09-14").getTime()) / 31_557_600_000,
 );
-// TODO(phase2): derive from the content/transmissions MDX collection.
-const transmissionsCount = 81;
 const archivesCount = 9;
-
-const telemetry = [
-  { label: "SYS.STATUS", value: "NORMAL" },
-  { label: "UPTIME", value: `${yearsOnline}Y` },
-  {
-    label: "TRANSMISSIONS",
-    value: String(transmissionsCount).padStart(3, "0"),
-  },
-  { label: "ARCHIVES", value: String(archivesCount).padStart(2, "0") },
-];
 
 // TODO(phase2): replace with JP's canonical project list + real links.
 const projects = [
@@ -92,46 +83,6 @@ const skills = [
   { category: "Tooling", items: ["GitHub", "VS Code", "Cline", "Claude Code"] },
 ];
 
-// Phase 1 seed: the 4 most recent posts. Wired to MDX in phase 2.
-const transmissions = [
-  {
-    id: "0x0051",
-    date: "2025.03.12",
-    classification: "LEARNING",
-    title: "GitHub Marketplace: Test GenAI Models with Your Own Prompts",
-    excerpt:
-      "Compare models side-by-side and customize parameters for intuitive evaluation, beyond benchmark scores.",
-    readTime: "3 MIN",
-  },
-  {
-    id: "0x0050",
-    date: "2025.02.28",
-    classification: "PERSONAL",
-    title: "Farewell Nordcloud, Hello Microsoft: What a journey",
-    excerpt:
-      "Reflecting on invaluable experiences at Lufthansa and the path that led to my next chapter.",
-    readTime: "4 MIN",
-  },
-  {
-    id: "0x004F",
-    date: "2024.12.30",
-    classification: "LEARNING",
-    title: "Cline v3: The Power and Pitfalls of Autonomous Coding Assistants",
-    excerpt:
-      "Building a RAG application in minutes instead of hours, but beware the token monster.",
-    readTime: "6 MIN",
-  },
-  {
-    id: "0x004E",
-    date: "2024.12.24",
-    classification: "AI",
-    title: "AI Agentic Tooling: A Hands-On Comparison of Leading Frameworks",
-    excerpt:
-      "From simple function calls to complex multi-agent systems, choosing the right tool for your AI workflow.",
-    readTime: "7 MIN",
-  },
-];
-
 const stackPillars = [
   { icon: Brain, label: "AI_ML" },
   { icon: Cloud, label: "CLOUD" },
@@ -140,52 +91,25 @@ const stackPillars = [
 ];
 
 export default function Home() {
+  const transmissions = getAllTransmissions();
+  const transmissionsCount = transmissions.length;
+
+  const telemetry = [
+    { label: "SYS.STATUS", value: "NORMAL" },
+    { label: "UPTIME", value: `${yearsOnline}Y` },
+    {
+      label: "TRANSMISSIONS",
+      value: String(transmissionsCount).padStart(3, "0"),
+    },
+    { label: "ARCHIVES", value: String(archivesCount).padStart(2, "0") },
+  ];
+
   return (
     <div
       id="top"
       className="min-h-screen overflow-x-hidden bg-background text-foreground selection:bg-primary selection:text-primary-foreground"
     >
-      {/* Navigation / Header */}
-      <Container
-        component="header"
-        wrapperClassName="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border"
-        className="mx-auto flex h-16 max-w-7xl items-center justify-between"
-      >
-        <Link
-          href="#top"
-          className="font-mono text-xl font-bold tracking-tighter"
-        >
-          corticalstack<span className="text-primary">_</span>
-        </Link>
-        <nav className="hidden gap-8 font-mono text-sm text-muted-foreground md:flex">
-          <Link
-            href="#transmissions"
-            className="transition-colors hover:text-primary"
-          >
-            transmissions
-          </Link>
-          <Link href="#works" className="transition-colors hover:text-primary">
-            works
-          </Link>
-          <Link href="#stack" className="transition-colors hover:text-primary">
-            stack
-          </Link>
-          <Link href="#comms" className="transition-colors hover:text-primary">
-            comms
-          </Link>
-        </nav>
-        <Link
-          href="/cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(
-            buttonVariants({ variant: "outline" }),
-            "border-primary/50 font-mono text-xs hover:border-primary hover:bg-primary/10 hover:text-primary",
-          )}
-        >
-          cv.pdf
-        </Link>
-      </Container>
+      <SiteHeader />
 
       {/* Hero Section */}
       <Container
@@ -461,24 +385,26 @@ export default function Home() {
         <div className="mb-12 flex items-end justify-between gap-4">
           <h2 className="font-display text-4xl uppercase">Transmissions</h2>
           <span className="font-mono text-xs text-muted-foreground">
-            // {String(transmissionsCount).padStart(3, "0")} ARCHIVED
+            {`// ${String(transmissionsCount).padStart(3, "0")} ARCHIVED`}
           </span>
         </div>
 
         <div className="grid gap-8">
-          {transmissions.map((post) => (
-            // TODO(phase2): link to /transmissions/[slug]
-            <Link href="#" key={post.id} className="group block">
+          {transmissions.slice(0, 4).map((post) => (
+            <Link
+              href={`/transmissions/${post.slug}`}
+              key={post.slug}
+              className="group block"
+            >
               <div className="mb-2 font-mono text-xs text-primary">
-                &gt; TRANSMISSION {post.id} // {post.date} // CLASSIFICATION:{" "}
-                {post.classification}
+                {`> TRANSMISSION ${post.id} // ${post.dateLabel} // CLASSIFICATION: ${post.classification}`}
               </div>
               <div className="mb-2 grid items-baseline justify-between gap-4 md:grid-cols-[1fr_auto]">
                 <h3 className="text-balance font-display text-2xl transition-colors group-hover:text-primary">
                   {post.title}
                 </h3>
                 <span className="font-mono text-xs whitespace-nowrap text-muted-foreground">
-                  {post.readTime}
+                  {post.readingTime}
                 </span>
               </div>
               <p className="mb-4 max-w-2xl text-muted-foreground">
@@ -490,9 +416,8 @@ export default function Home() {
         </div>
 
         <div className="mt-12 text-center">
-          {/* TODO(phase2): link to /transmissions archive route */}
           <Link
-            href="#"
+            href="/transmissions"
             className={cn(buttonVariants({ variant: "outline" }), "font-mono")}
           >
             [ view all transmissions -&gt; ]
@@ -583,46 +508,7 @@ export default function Home() {
         </div>
       </Container>
 
-      {/* Footer */}
-      <Container
-        component="footer"
-        className="mx-auto max-w-7xl border-t border-border bg-background py-8 text-center"
-      >
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <div className="font-mono text-xs text-muted-foreground">
-            © 2026 JON-PAUL BOYD // build_v0.1.0
-          </div>
-          <div className="flex gap-6 font-mono text-xs text-muted-foreground">
-            <Link
-              href={GITHUB_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-primary"
-            >
-              GITHUB
-            </Link>
-            <Link
-              href={LINKEDIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-primary"
-            >
-              LINKEDIN
-            </Link>
-            <Link
-              href="https://github.com/corticalstack/corticalstack.github.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-primary"
-            >
-              REPO
-            </Link>
-          </div>
-          <div className="font-mono text-xs text-primary/70">
-            // end of transmission_
-          </div>
-        </div>
-      </Container>
+      <SiteFooter />
     </div>
   );
 }
