@@ -1,8 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Pause,
+  Play,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useAudioBed } from "@/components/audio-bed-provider";
 import { cn } from "@/lib/utils";
 
 interface Project {
@@ -17,24 +25,30 @@ interface SelectedWorksConsoleProps {
   projects: Project[];
 }
 
-const ROTATION_INTERVAL_MS = 10_000;
-
 /**
  * Console-style single-card carousel for Selected Works.
  *
- * - Full-width 16:9 video, autoplay + loop, always muted - audio is the
- *   section bed (lives in layout via AudioBedProvider, persists across routes).
+ * - Full-width 16:9 video, autoplay, always muted - audio is the section bed
+ *   (lives in layout via AudioBedProvider, persists across routes).
  * - One project visible at a time.
  * - Prev/next buttons + dot indicators + ArrowLeft/ArrowRight keys.
- * - Auto-rotates through cards every ROTATION_INTERVAL_MS, pauses while the
- *   user hovers the carousel, and can be toggled off via the AUTO pill.
- *   Manual nav (PREV/NEXT/dots/arrows) does not toggle rotation - the user
- *   is just skipping; rotation resumes from the new position when hover ends.
+ * - Rotation is event-driven, not time-driven: each clip plays through once
+ *   and the `ended` event decides what's next - advance if rotation is on
+ *   and the user isn't hovering, otherwise restart the current clip in place.
+ *   This keeps rotation aligned to actual clip length (no partial replays from
+ *   a fixed-interval timer racing the loop).
+ * - The AUTO_ON / AUTO_OFF pill toggles rotation. Manual nav (PREV/NEXT/dots
+ *   /arrows) does not toggle rotation; the user is just skipping.
  */
 export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
   const [index, setIndex] = useState(0);
   const [rotating, setRotating] = useState(true);
   const [hovered, setHovered] = useState(false);
+  const {
+    available: audioAvailable,
+    audioOn,
+    toggle: toggleAudio,
+  } = useAudioBed();
 
   const total = projects.length;
 
@@ -62,15 +76,18 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
     return () => window.removeEventListener("keydown", handleKey);
   }, [total]);
 
-  useEffect(() => {
-    if (!rotating || hovered || total <= 1) return;
-    const id = setInterval(() => {
-      setIndex((i) => (i + 1) % total);
-    }, ROTATION_INTERVAL_MS);
-    return () => clearInterval(id);
-  }, [rotating, hovered, total]);
-
   if (total === 0) return null;
+
+  const handleVideoEnded = (event: React.SyntheticEvent<HTMLVideoElement>) => {
+    if (rotating && !hovered && total > 1) {
+      setIndex((i) => (i + 1) % total);
+      return;
+    }
+    // Paused or hovered: restart the current clip in place.
+    const el = event.currentTarget;
+    el.currentTime = 0;
+    el.play().catch(() => {});
+  };
 
   const project = projects[index];
   const position = `${(index + 1).toString().padStart(2, "0")} / ${total
@@ -89,22 +106,42 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
       {/* Status bar */}
       <div className="flex items-baseline justify-between gap-4 border-b border-border pb-3 font-mono text-xs">
         <span className="text-primary">{`// OPERATION ${position}`}</span>
-        {total > 1 ? (
-          <button
-            type="button"
-            onClick={() => setRotating((r) => !r)}
-            className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
-            aria-label={rotating ? "Pause auto-rotation" : "Resume auto-rotation"}
-            aria-pressed={rotating}
-          >
-            {rotating ? (
-              <Pause className="size-3.5 text-primary" />
-            ) : (
-              <Play className="size-3.5" />
-            )}
-            <span>{rotating ? "// AUTO_ON" : "// AUTO_OFF"}</span>
-          </button>
-        ) : null}
+        <div className="flex items-center gap-4">
+          {audioAvailable ? (
+            <button
+              type="button"
+              onClick={toggleAudio}
+              className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+              aria-label={audioOn ? "Pause audio bed" : "Play audio bed"}
+              aria-pressed={audioOn}
+            >
+              {audioOn ? (
+                <Volume2 className="size-3.5 text-primary" />
+              ) : (
+                <VolumeX className="size-3.5" />
+              )}
+              <span>{audioOn ? "// AUDIO_ON" : "// AUDIO_OFF"}</span>
+            </button>
+          ) : null}
+          {total > 1 ? (
+            <button
+              type="button"
+              onClick={() => setRotating((r) => !r)}
+              className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+              aria-label={
+                rotating ? "Pause auto-rotation" : "Resume auto-rotation"
+              }
+              aria-pressed={rotating}
+            >
+              {rotating ? (
+                <Pause className="size-3.5 text-primary" />
+              ) : (
+                <Play className="size-3.5" />
+              )}
+              <span>{rotating ? "// AUTO_ON" : "// AUTO_OFF"}</span>
+            </button>
+          ) : null}
+        </div>
       </div>
 
       {/* Video frame with HUD corner brackets */}
@@ -121,12 +158,12 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
             poster={project.image}
             autoPlay
             muted
-            loop
             playsInline
             preload="metadata"
             disablePictureInPicture
             disableRemotePlayback
             controlsList="nodownload noplaybackrate noremoteplayback"
+            onEnded={handleVideoEnded}
             className="h-full w-full object-cover"
           />
         ) : (
