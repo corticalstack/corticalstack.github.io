@@ -206,18 +206,21 @@ export default function Home() {
         wrapperClassName="py-24 border-t border-border"
         className="mx-auto max-w-7xl flex-1"
       >
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <h2 className="mb-6 font-display text-4xl tracking-tighter">
+        <div className="mb-16 grid items-end justify-between gap-4">
+          <div>
+            <div className="mb-3 font-mono text-xs text-primary">// LOADOUT</div>
+            <h2 className="mb-4 font-display text-4xl tracking-tighter md:text-6xl">
               TECH
             </h2>
-            <p className="mb-8 text-muted-foreground">
-              Instruments of the trade. Applied machine learning, cloud
-              platforms, and the data plumbing that makes them production-grade.
-            </p>
+            <div className="h-1 w-24 bg-primary"></div>
           </div>
+          <p className="max-w-sm text-left text-muted-foreground">
+            Instruments of the trade. Applied machine learning, cloud
+            platforms, and the data plumbing that makes them production-grade.
+          </p>
+        </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 md:col-span-8 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {skills.map((skillGroup, idx) => (
               <div key={idx} className="space-y-6">
                 <h3 className="inline-block border-b border-primary/30 pb-2 font-display text-xl">
@@ -239,8 +242,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </Container>
+        </Container>
 
       <AcademicArchive />
 
@@ -251,11 +253,17 @@ export default function Home() {
         wrapperClassName="py-24 border-t border-border"
         className="mx-auto max-w-7xl"
       >
-        <div className="mb-12 flex items-end justify-between gap-4">
-          <h2 className="font-display text-4xl uppercase">Transmissions</h2>
-          <span className="font-mono text-xs text-muted-foreground">
-            {`// ${String(transmissionsCount).padStart(3, "0")} ARCHIVED`}
-          </span>
+        <div className="mb-16 grid items-end justify-between gap-4">
+          <div>
+            <div className="mb-3 font-mono text-xs text-primary">// FIELD NOTES</div>
+            <h2 className="mb-4 font-display text-4xl tracking-tighter md:text-6xl">
+              TRANSMISSIONS
+            </h2>
+            <div className="h-1 w-24 bg-primary"></div>
+          </div>
+          <p className="max-w-sm text-left text-muted-foreground">
+            Recent dispatches on applied AI, machine learning, and field operations.
+          </p>
         </div>
 
         <div className="grid gap-8">
