@@ -1,0 +1,21 @@
+---
+title: "Day 19 of 100 days of large language models"
+date: "2023-09-16"
+excerpt: "API response streaming for reducing perceived LLM latency"
+tags: [learning, personal, 100 days of large language models, natural language processing, machine learning, artificial intelligence]
+classification: "LEARNING"
+---
+
+🐢 LLMs can be slow. Working on a recommender solution, beautiful output but oh my, the latency of API batch!
+
+🚀 Step in API response streaming for reducing perceived latency, as the user sees near real-time LLM progress. Just like the #chatgpt you know.
+
+🛠️ Knocked this streaming demo app up. A basic Streamlit front-end, with #FastAPI (backend), LangChain (LLM orchestration), and #Azure OpenAI (LLM model) all configured with callback handlers and streaming enabled to send partial message deltas back to the client via WebSocket.
+
+🥇 Looking forward to baking this into my recommender for a better customer experience!
+
+📝 Demo backend is a boiled-down version of main py in Langchain's [chat-langchain repo](https://github.com/langchain-ai/chat-langchain).
+
+📦 Demo app code [here](https://github.com/corticalstack/streaming-streamlit-fastapi-langchain-azureopenai).
+
+<video src="/assets/img/Streamlit%20stream.mp4" autoPlay loop muted playsInline className="w-full" />
