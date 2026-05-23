@@ -4,10 +4,12 @@ import { Container } from "@/components/zippystarter/container";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/#transmissions", label: "transmissions" },
-  { href: "/#archives", label: "archives" },
+  { href: "/#operations", label: "operations" },
   { href: "/#dossier", label: "dossier" },
-  { href: "/#comms", label: "comms" },
+  { href: "/#tech", label: "tech" },
+  { href: "/#archives", label: "archives" },
+  { href: "/#transmissions", label: "transmissions" },
+  { href: "/#comms", label: "contact" },
 ];
 
 export function SiteHeader() {

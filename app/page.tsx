@@ -1,16 +1,7 @@
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  ArrowRight,
-  Brain,
-  Cloud,
-  Database,
-  Terminal,
-} from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { Container } from "@/components/zippystarter/container";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -86,13 +77,6 @@ const skills = [
   { category: "Tooling", items: ["GitHub", "VS Code", "Cline", "Claude Code"] },
 ];
 
-const stackPillars = [
-  { icon: Brain, label: "AI_ML" },
-  { icon: Cloud, label: "CLOUD" },
-  { icon: Database, label: "DATA" },
-  { icon: Terminal, label: "TOOLING" },
-];
-
 export default function Home() {
   const transmissions = getAllTransmissions();
   const transmissionsCount = transmissions.length;
@@ -155,19 +139,10 @@ export default function Home() {
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <Link
-              href="#transmissions"
+              href="#comms"
               className={cn(buttonVariants({ size: "lg" }), "font-mono")}
             >
-              [ view transmissions ] <ArrowRight className="size-4" />
-            </Link>
-            <Link
-              href="#comms"
-              className={cn(
-                buttonVariants({ variant: "outline", size: "lg" }),
-                "font-mono",
-              )}
-            >
-              [ initiate contact ]
+              [ initiate contact ] <ArrowRight className="size-4" />
             </Link>
             <div className="flex gap-2">
               <Link
@@ -202,7 +177,7 @@ export default function Home() {
 
       {/* Selected Works */}
       <Container
-        id="works"
+        id="operations"
         component="section"
         wrapperClassName="py-24 border-t border-border"
         className="mx-auto max-w-7xl flex-1"
@@ -210,15 +185,12 @@ export default function Home() {
         <div className="mb-16 grid items-end justify-between gap-4">
           <div>
             <h2 className="mb-4 font-display text-4xl tracking-tighter md:text-6xl">
-              SELECTED
-              <br />
-              WORKS
+              OPERATIONS
             </h2>
             <div className="h-1 w-24 bg-primary"></div>
           </div>
           <p className="max-w-sm text-left text-muted-foreground">
-            Selected operations from the field: applied GenAI, ML platforms, and
-            information retrieval at enterprise scale.
+            Field-deployed systems and platforms at scale.
           </p>
         </div>
 
@@ -229,7 +201,7 @@ export default function Home() {
 
       {/* Tech Stack */}
       <Container
-        id="stack"
+        id="tech"
         component="section"
         wrapperClassName="py-24 border-t border-border"
         className="mx-auto max-w-7xl flex-1"
@@ -237,23 +209,12 @@ export default function Home() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
             <h2 className="mb-6 font-display text-4xl tracking-tighter">
-              TECH_STACK
+              TECH
             </h2>
             <p className="mb-8 text-muted-foreground">
               Instruments of the trade. Applied machine learning, cloud
               platforms, and the data plumbing that makes them production-grade.
             </p>
-            <div className="grid grid-cols-2 gap-4">
-              {stackPillars.map(({ icon: Icon, label }) => (
-                <div
-                  key={label}
-                  className="flex aspect-square flex-col items-center justify-center border border-border bg-background p-4 transition-colors hover:border-primary"
-                >
-                  <Icon className="mb-2 h-8 w-8 text-primary" />
-                  <span className="font-mono text-xs">{label}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 md:col-span-8 lg:grid-cols-4">
