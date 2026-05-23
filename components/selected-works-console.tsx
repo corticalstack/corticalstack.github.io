@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -20,23 +20,40 @@ interface Project {
 
 interface SelectedWorksConsoleProps {
   projects: Project[];
+  /** Section-wide audio bed (Bunny URL). Plays muted by default; user toggles on. */
+  audioSrc?: string;
 }
 
 /**
  * Console-style single-card carousel for Selected Works.
  *
- * - Full-width 16:9 video, autoplay + loop, no native controls.
- * - One project visible at a time; mute toggle pinned to the video frame
- *   so audio only ever comes from the displayed card.
+ * - Full-width 16:9 video, autoplay + loop, always muted - audio is the
+ *   section bed, not per-clip.
+ * - One project visible at a time. The audio bed persists across navigation.
  * - Prev/next buttons + dot indicators + ArrowLeft/ArrowRight keys.
- * - Starts muted (required by browser autoplay policy); after the user has
- *   interacted (any button click), unmuted state survives navigation.
- *
- * TODO(phase3): replace placeholder URLs with cdn.corticalstack.ai Bunny URLs.
+ * - Audio defaults paused (browser autoplay-with-sound policy); one click on
+ *   the AUDIO_ON pill starts the loop.
  */
-export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
+export function SelectedWorksConsole({
+  projects,
+  audioSrc,
+}: SelectedWorksConsoleProps) {
   const [index, setIndex] = useState(0);
-  const [muted, setMuted] = useState(true);
+  const [audioOn, setAudioOn] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const toggleAudio = () => {
+    const el = audioRef.current;
+    if (!el) return;
+    if (audioOn) {
+      el.pause();
+      setAudioOn(false);
+    } else {
+      el.play()
+        .then(() => setAudioOn(true))
+        .catch(() => setAudioOn(false));
+    }
+  };
 
   const total = projects.length;
 
@@ -76,12 +93,39 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
 
   return (
     <div className="space-y-6">
+      {audioSrc ? (
+        <audio
+          ref={audioRef}
+          src={audioSrc}
+          loop
+          preload="metadata"
+          aria-hidden="true"
+        />
+      ) : null}
+
       {/* Status bar */}
       <div className="flex items-baseline justify-between gap-4 border-b border-border pb-3 font-mono text-xs">
         <span className="text-primary">{`// OPERATION ${position}`}</span>
-        <span className="hidden truncate text-muted-foreground md:block">
-          {project.title.toUpperCase()}
-        </span>
+        {audioSrc ? (
+          <button
+            type="button"
+            onClick={toggleAudio}
+            className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+            aria-label={audioOn ? "Pause audio bed" : "Play audio bed"}
+            aria-pressed={audioOn}
+          >
+            {audioOn ? (
+              <Volume2 className="size-3.5 text-primary" />
+            ) : (
+              <VolumeX className="size-3.5" />
+            )}
+            <span>{audioOn ? "// AUDIO_ON" : "// AUDIO_OFF"}</span>
+          </button>
+        ) : (
+          <span className="hidden truncate text-muted-foreground md:block">
+            {project.title.toUpperCase()}
+          </span>
+        )}
       </div>
 
       {/* Video frame with HUD corner brackets */}
@@ -97,10 +141,13 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
             src={project.video}
             poster={project.image}
             autoPlay
-            muted={muted}
+            muted
             loop
             playsInline
             preload="metadata"
+            disablePictureInPicture
+            disableRemotePlayback
+            controlsList="nodownload noplaybackrate noremoteplayback"
             className="h-full w-full object-cover"
           />
         ) : (
@@ -111,23 +158,6 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
             role="img"
           />
         )}
-
-        {project.video ? (
-          <button
-            type="button"
-            onClick={() => setMuted((m) => !m)}
-            className="absolute right-4 bottom-4 z-20 inline-flex items-center gap-2 border border-border bg-background/80 px-3 py-1.5 font-mono text-xs text-muted-foreground backdrop-blur-sm transition-colors hover:border-primary hover:text-primary"
-            aria-label={muted ? "Unmute audio" : "Mute audio"}
-            aria-pressed={!muted}
-          >
-            {muted ? (
-              <VolumeX className="size-3.5" />
-            ) : (
-              <Volume2 className="size-3.5 text-primary" />
-            )}
-            <span>{muted ? "MUTED" : "AUDIO ON"}</span>
-          </button>
-        ) : null}
       </div>
 
       {/* Project metadata below the video */}

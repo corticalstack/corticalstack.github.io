@@ -51,3 +51,9 @@ dist
 # editor / local
 .idea/
 .claude/
+
+# Bunny-served videos: keep local copies for iteration, never commit them.
+public/assets/video/*.mp4
+
+# Kling seed images: keep local for iteration, don't commit.
+tools/seeds/

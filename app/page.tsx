@@ -21,8 +21,9 @@ const yearsOnline = Math.floor(
 const archivesCount = 9;
 
 // TODO(phase2): replace with JP's canonical project list + real links.
-// TODO(phase3): swap placeholder video URLs (Google gtv-videos-bucket samples
-// for testing) for cdn.corticalstack.ai/<clip>.mp4 once Bunny is configured.
+// TODO(phase3): swap remaining placeholder video URLs for ${VIDEO_CDN}/<clip>.mp4 as Kling clips are produced.
+const VIDEO_CDN = "https://cdn.corticalstack.ai";
+
 const projects = [
   {
     title: "GenAI Destination Recommender",
@@ -30,8 +31,7 @@ const projects = [
       "GPT-4 powered destination recommendation system with constitutional oversight for content alignment, built for the Lufthansa group.",
     tags: ["GPT-4", "Azure", "RAG", "LLMOps"],
     image: "/project-placeholder-1.jpg",
-    video:
-      "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4",
+    video: `${VIDEO_CDN}/kling_1.mp4`,
   },
   {
     title: "Airline Avatar Assistant",
@@ -39,8 +39,7 @@ const projects = [
       "Conversational avatar assistant for a leading European airline. Demoed to Satya Nadella at the Microsoft AI Tour, Berlin.",
     tags: ["GenAI", "Azure", "Avatar"],
     image: "/project-placeholder-2.jpg",
-    video:
-      "https://test-videos.co.uk/vids/sintel/mp4/h264/720/Sintel_720_10s_1MB.mp4",
+    video: `${VIDEO_CDN}/kling_2.mp4`,
   },
   {
     title: "Feedback Funnelling NLP",
@@ -48,8 +47,7 @@ const projects = [
       "NLP service that classifies and routes high-volume customer feedback into actionable streams.",
     tags: ["NLP", "Classification", "Azure"],
     image: "/project-placeholder-3.jpg",
-    video:
-      "https://test-videos.co.uk/vids/jellyfish/mp4/h264/720/Jellyfish_720_10s_1MB.mp4",
+    video: `${VIDEO_CDN}/kling_3.mp4`,
   },
   {
     title: "COVID-LEAP",
@@ -194,7 +192,10 @@ export default function Home() {
           </p>
         </div>
 
-        <SelectedWorksConsole projects={projects} />
+        <SelectedWorksConsole
+          projects={projects}
+          audioSrc={`${VIDEO_CDN}/corticalstack-ai-audio.mp3`}
+        />
       </Container>
 
       <Dossier />
