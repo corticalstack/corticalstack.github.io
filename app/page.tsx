@@ -116,19 +116,10 @@ export default function Home() {
 
       {/* Hero Section */}
       <Container
-        wrapperClassName="relative min-h-screen flex items-center pt-16 overflow-hidden"
-        className="mx-auto max-w-7xl flex-1"
+        wrapperClassName="pt-32 pb-24"
+        className="mx-auto max-w-7xl"
       >
-        {/* Ambient background. Phase 3 swaps in a low-opacity hero video here;
-            static gradient + image is the fallback. */}
-        <div className="absolute inset-0 z-0">
-          <div className="relative h-screen w-screen overflow-hidden bg-background">
-            <div className="absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-primary before:mix-blend-color-dodge dark:before:mix-blend-color" />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
-        </div>
-
-        <div className="relative z-10 space-y-8">
+        <div className="space-y-8">
           {/* Top status bar - one wide row of pills */}
           <div className="flex flex-wrap items-center gap-3 font-mono text-xs">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-primary">
