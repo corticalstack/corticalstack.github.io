@@ -79,6 +79,14 @@ const projects = [
     image: "/project-placeholder-1.jpg",
     video: `${VIDEO_CDN}/kling_7.mp4`,
   },
+  {
+    title: "Vision-Language Pipelines",
+    description:
+      "Multi-modal AI pipelines pairing vision encoders with language models. Production patterns for document understanding, image captioning, and visual question answering across enterprise deployments.",
+    tags: ["Vision", "Multi-modal", "GenAI", "Azure"],
+    image: "/project-placeholder-2.jpg",
+    video: `${VIDEO_CDN}/kling_8.mp4`,
+  },
 ];
 
 // TODO(phase2): confirm canonical stack with JP.
