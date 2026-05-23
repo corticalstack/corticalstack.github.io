@@ -150,6 +150,12 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Set by the inline gate script in layout.tsx for return visitors. Hides the
+     boot overlay before React mounts so there is no flash. */
+  html.cs-no-boot [data-boot-overlay] {
+    display: none !important;
+  }
 }
 
 @utility px-safe {

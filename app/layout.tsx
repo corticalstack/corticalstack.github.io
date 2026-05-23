@@ -44,6 +44,15 @@ export default function RootLayout({
       suppressHydrationWarning
       className="scroll-smooth shadcn dark"
     >
+      <head>
+        {/* Runs before paint so return visitors never see the boot overlay flash. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var s=localStorage.getItem('cs:boot-seen')==='1';var f=location.search.indexOf('boot=')!==-1;if(s&&!f)document.documentElement.classList.add('cs-no-boot');}catch(e){}})();",
+          }}
+        />
+      </head>
       <body
         className={`font-body antialiased ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
       >

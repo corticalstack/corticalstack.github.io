@@ -15,14 +15,38 @@ const BOOT_DURATION_MS = 5400;
  * progress bar, corner brackets, decorative grid, CRT scanline drift -
  * all themed for Cortical Stack (cyan palette, cyber HUD copy).
  */
+const STORAGE_KEY = "cs:boot-seen";
+
 export function BootSequence() {
-  // DIAGNOSTIC: gate removed; boot runs on every full page load while we
-  // confirm it renders correctly for JP. Once verified, re-add the
-  // `cs:boot-seen` localStorage gate + `?boot=1` force-override.
+  // SSR + first paint render the overlay. The inline gate script in layout.tsx
+  // hides it via CSS (.cs-no-boot) for return visitors before React mounts,
+  // so there is no flash. This effect then short-circuits the timer for those
+  // visitors and persists the flag on first-visit completion.
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(false), BOOT_DURATION_MS);
+    const force = new URLSearchParams(window.location.search).has("boot");
+    let seen = false;
+    try {
+      seen = window.localStorage.getItem(STORAGE_KEY) === "1";
+    } catch {
+      // localStorage unavailable (private mode, quota): treat as first visit.
+    }
+
+    if (seen && !force) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setVisible(false);
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setVisible(false);
+      try {
+        window.localStorage.setItem(STORAGE_KEY, "1");
+      } catch {
+        // ignore - flag failing to persist just replays the boot next visit
+      }
+    }, BOOT_DURATION_MS);
     return () => clearTimeout(timer);
   }, []);
 
@@ -33,6 +57,7 @@ export function BootSequence() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
+          data-boot-overlay
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden bg-background"
           aria-hidden="true"
         >

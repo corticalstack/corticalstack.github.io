@@ -1,4 +1,5 @@
 import { Container } from "@/components/zippystarter/container";
+import { ReplayBoot } from "@/components/replay-boot";
 
 export function SiteFooter() {
   return (
@@ -10,8 +11,9 @@ export function SiteFooter() {
         <div className="font-mono text-xs text-muted-foreground">
           © 2026 JON-PAUL BOYD // build_v0.1.0
         </div>
-        <div className="font-mono text-xs text-primary/70">
-          // end of transmission_
+        <div className="flex items-center gap-4 font-mono text-xs">
+          <ReplayBoot />
+          <span className="text-primary/70">// end of transmission_</span>
         </div>
       </div>
     </Container>
