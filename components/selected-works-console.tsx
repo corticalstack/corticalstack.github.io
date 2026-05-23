@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -28,22 +28,28 @@ interface SelectedWorksConsoleProps {
 /**
  * Console-style single-card carousel for Selected Works.
  *
- * - Full-width 16:9 video, autoplay, always muted - audio is the section bed
- *   (lives in layout via AudioBedProvider, persists across routes).
- * - One project visible at a time.
- * - Prev/next buttons + dot indicators + ArrowLeft/ArrowRight keys.
- * - Rotation is event-driven, not time-driven: each clip plays through once
- *   and the `ended` event decides what's next - advance if rotation is on
- *   and the user isn't hovering, otherwise restart the current clip in place.
- *   This keeps rotation aligned to actual clip length (no partial replays from
- *   a fixed-interval timer racing the loop).
- * - The AUTO_ON / AUTO_OFF pill toggles rotation. Manual nav (PREV/NEXT/dots
- *   /arrows) does not toggle rotation; the user is just skipping.
+ * - Always-muted 16:9 video (audio is the section bed in AudioBedProvider).
+ * - Two persistent <video> slots alternate: one is visible+playing, the other
+ *   is hidden with `src` already pointed at the next clip and preloaded. On
+ *   advance we just flip visibility - the new active slot starts instantly
+ *   because the browser already has the bytes and a decoded first frame.
+ *   No remount, no poster-flicker between cards.
+ * - Rotation is event-driven via the active slot's `ended` event. Pausing
+ *   (AUTO_OFF) or hovering restarts the current clip in place instead of
+ *   advancing. Manual nav (PREV/NEXT/dots/arrow keys) flips the slots too
+ *   but the destination clip won't always be pre-loaded (PREV especially),
+ *   so manual nav can occasionally show a brief load - the common forward
+ *   path stays seamless.
  */
 export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
   const [index, setIndex] = useState(0);
+  const [activeSlot, setActiveSlot] = useState<0 | 1>(0);
   const [rotating, setRotating] = useState(true);
   const [hovered, setHovered] = useState(false);
+  const slotRefs = [
+    useRef<HTMLVideoElement>(null),
+    useRef<HTMLVideoElement>(null),
+  ];
   const {
     available: audioAvailable,
     audioOn,
@@ -67,20 +73,65 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
       if (event.key === "ArrowLeft") {
         event.preventDefault();
         setIndex((i) => (i - 1 + total) % total);
+        setActiveSlot((s) => (s === 0 ? 1 : 0));
       } else if (event.key === "ArrowRight") {
         event.preventDefault();
         setIndex((i) => (i + 1) % total);
+        setActiveSlot((s) => (s === 0 ? 1 : 0));
       }
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [total]);
 
+  // Whenever the active slot changes, play the newly-active video from frame 0
+  // and pause the other (it stays hidden, holding its preloaded src ready).
+  useEffect(() => {
+    slotRefs.forEach((ref, i) => {
+      const el = ref.current;
+      if (!el) return;
+      if (i === activeSlot) {
+        el.currentTime = 0;
+        el.play().catch(() => {});
+      } else {
+        el.pause();
+      }
+    });
+    // slotRefs identity is stable across renders; activeSlot drives the swap.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeSlot, index]);
+
   if (total === 0) return null;
+
+  /**
+   * Map a slot to the project it should hold. The active slot shows the
+   * current `index`; the inactive slot holds the next clip in the forward
+   * direction so it's preloaded for the most common transition path.
+   */
+  const projectForSlot = (slot: 0 | 1) =>
+    projects[slot === activeSlot ? index : (index + 1) % total];
+
+  const advance = () => {
+    setIndex((i) => (i + 1) % total);
+    setActiveSlot((s) => (s === 0 ? 1 : 0));
+  };
+
+  const goPrev = () => {
+    setIndex((i) => (i - 1 + total) % total);
+    setActiveSlot((s) => (s === 0 ? 1 : 0));
+  };
+
+  const goNext = advance;
+
+  const jumpTo = (target: number) => {
+    if (target === index) return;
+    setIndex(target);
+    setActiveSlot((s) => (s === 0 ? 1 : 0));
+  };
 
   const handleVideoEnded = (event: React.SyntheticEvent<HTMLVideoElement>) => {
     if (rotating && !hovered && total > 1) {
-      setIndex((i) => (i + 1) % total);
+      advance();
       return;
     }
     // Paused or hovered: restart the current clip in place.
@@ -94,8 +145,6 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
     .toString()
     .padStart(2, "0")}`;
 
-  const prev = () => setIndex((i) => (i - 1 + total) % total);
-  const next = () => setIndex((i) => (i + 1) % total);
 
   return (
     <div
@@ -152,20 +201,30 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
         <div className="pointer-events-none absolute right-0 bottom-0 z-10 size-4 border-r-2 border-b-2 border-primary"></div>
 
         {project.video ? (
-          <video
-            key={project.video}
-            src={project.video}
-            poster={project.image}
-            autoPlay
-            muted
-            playsInline
-            preload="metadata"
-            disablePictureInPicture
-            disableRemotePlayback
-            controlsList="nodownload noplaybackrate noremoteplayback"
-            onEnded={handleVideoEnded}
-            className="h-full w-full object-cover"
-          />
+          ([0, 1] as const).map((slot) => {
+            const p = projectForSlot(slot);
+            const isActive = slot === activeSlot;
+            return (
+              <video
+                key={slot}
+                ref={slotRefs[slot]}
+                src={p.video}
+                poster={p.image}
+                autoPlay={isActive}
+                muted
+                playsInline
+                preload="auto"
+                disablePictureInPicture
+                disableRemotePlayback
+                controlsList="nodownload noplaybackrate noremoteplayback"
+                onEnded={isActive ? handleVideoEnded : undefined}
+                className={cn(
+                  "absolute inset-0 h-full w-full object-cover",
+                  isActive ? "opacity-100" : "opacity-0",
+                )}
+              />
+            );
+          })
         ) : (
           <div
             className="h-full w-full bg-cover bg-center"
@@ -200,7 +259,7 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
       <div className="flex items-center justify-between gap-4 border-t border-border pt-4">
         <button
           type="button"
-          onClick={prev}
+          onClick={goPrev}
           className="inline-flex items-center gap-2 border border-border px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
           aria-label="Previous project"
         >
@@ -213,7 +272,7 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
             <button
               key={i}
               type="button"
-              onClick={() => setIndex(i)}
+              onClick={() => jumpTo(i)}
               className={cn(
                 "h-2 w-2 transition-colors",
                 i === index
@@ -228,7 +287,7 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
 
         <button
           type="button"
-          onClick={next}
+          onClick={goNext}
           className="inline-flex items-center gap-2 border border-border px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
           aria-label="Next project"
         >
