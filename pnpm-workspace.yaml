@@ -4,3 +4,10 @@
 allowBuilds:
   sharp: true
   unrs-resolver: true
+
+# Force the latest postcss everywhere. Next.js 16.2.x still pins postcss@8.4.31
+# transitively, which Dependabot flags for a stringifier XSS - not exploitable
+# in a static export (we never process untrusted CSS) but we update anyway since
+# postcss@8.5.x is API-compatible with 8.4.x.
+overrides:
+  postcss: ^8.5.15
