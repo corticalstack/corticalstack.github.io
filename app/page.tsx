@@ -20,8 +20,7 @@ const yearsOnline = Math.floor(
 );
 const archivesCount = 9;
 
-// TODO(phase2): replace with JP's canonical project list + real links.
-// TODO(phase3): swap remaining placeholder video URLs for ${VIDEO_CDN}/<clip>.mp4 as Kling clips are produced.
+// TODO(phase2): replace with JP's canonical project list + real links + per-card poster images.
 const VIDEO_CDN = "https://cdn.corticalstack.ai";
 
 const projects = [
@@ -55,8 +54,7 @@ const projects = [
       "Cloud-hosted knowledge base with BERT semantic search across 4.7M coronavirus research paragraphs. Master's thesis, graded distinction.",
     tags: ["BERT", "Azure", "Info Retrieval", "NLP"],
     image: "/project-placeholder-1.jpg",
-    video:
-      "https://www.w3schools.com/html/mov_bbb.mp4",
+    video: `${VIDEO_CDN}/kling_4.mp4`,
   },
 ];
 
@@ -194,7 +192,11 @@ export default function Home() {
 
         <SelectedWorksConsole
           projects={projects}
-          audioSrc={`${VIDEO_CDN}/corticalstack-ai-audio.mp3`}
+          audioPlaylist={[
+            `${VIDEO_CDN}/corticalstack-ai-audio-01.mp3`,
+            `${VIDEO_CDN}/corticalstack-ai-audio-02.mp3`,
+            `${VIDEO_CDN}/corticalstack-ai-audio-03.mp3`,
+          ]}
         />
       </Container>
 

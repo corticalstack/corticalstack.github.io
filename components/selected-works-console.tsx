@@ -20,8 +20,8 @@ interface Project {
 
 interface SelectedWorksConsoleProps {
   projects: Project[];
-  /** Section-wide audio bed (Bunny URL). Plays muted by default; user toggles on. */
-  audioSrc?: string;
+  /** Section-wide audio playlist (Bunny URLs). Plays sequentially, then wraps. */
+  audioPlaylist?: string[];
 }
 
 /**
@@ -31,16 +31,34 @@ interface SelectedWorksConsoleProps {
  *   section bed, not per-clip.
  * - One project visible at a time. The audio bed persists across navigation.
  * - Prev/next buttons + dot indicators + ArrowLeft/ArrowRight keys.
- * - Audio defaults paused (browser autoplay-with-sound policy); one click on
- *   the AUDIO_ON pill starts the loop.
+ * - Audio: a playlist plays sequentially and wraps back to track 0 on end.
+ *   Defaults paused (browser autoplay-with-sound policy); one click on the
+ *   AUDIO_ON pill starts it.
  */
 export function SelectedWorksConsole({
   projects,
-  audioSrc,
+  audioPlaylist,
 }: SelectedWorksConsoleProps) {
   const [index, setIndex] = useState(0);
   const [audioOn, setAudioOn] = useState(false);
+  const [trackIndex, setTrackIndex] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const playlist = audioPlaylist ?? [];
+  const currentTrack = playlist[trackIndex];
+
+  // When the track src changes while audio is on, autoplay the new track.
+  // This is downstream of a user-initiated play(), so browsers accept it.
+  useEffect(() => {
+    const el = audioRef.current;
+    if (!el || !audioOn) return;
+    el.play().catch(() => {});
+  }, [trackIndex, audioOn]);
+
+  const handleTrackEnded = () => {
+    if (playlist.length === 0) return;
+    setTrackIndex((i) => (i + 1) % playlist.length);
+  };
 
   const toggleAudio = () => {
     const el = audioRef.current;
@@ -93,12 +111,12 @@ export function SelectedWorksConsole({
 
   return (
     <div className="space-y-6">
-      {audioSrc ? (
+      {currentTrack ? (
         <audio
           ref={audioRef}
-          src={audioSrc}
-          loop
+          src={currentTrack}
           preload="metadata"
+          onEnded={handleTrackEnded}
           aria-hidden="true"
         />
       ) : null}
@@ -106,7 +124,7 @@ export function SelectedWorksConsole({
       {/* Status bar */}
       <div className="flex items-baseline justify-between gap-4 border-b border-border pb-3 font-mono text-xs">
         <span className="text-primary">{`// OPERATION ${position}`}</span>
-        {audioSrc ? (
+        {currentTrack ? (
           <button
             type="button"
             onClick={toggleAudio}
