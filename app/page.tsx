@@ -1,13 +1,4 @@
 import { Button, buttonVariants } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -27,7 +18,7 @@ import { AcademicArchive } from "@/components/academic-archive";
 import { Dossier } from "@/components/dossier";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ProjectImage } from "@/components/project-image";
+import { SelectedWorksConsole } from "@/components/selected-works-console";
 import { getAllTransmissions } from "@/lib/transmissions";
 
 const GITHUB_URL = "https://github.com/corticalstack";
@@ -40,6 +31,8 @@ const yearsOnline = Math.floor(
 const archivesCount = 9;
 
 // TODO(phase2): replace with JP's canonical project list + real links.
+// TODO(phase3): swap placeholder video URLs (Google gtv-videos-bucket samples
+// for testing) for cdn.corticalstack.ai/<clip>.mp4 once Bunny is configured.
 const projects = [
   {
     title: "GenAI Destination Recommender",
@@ -47,6 +40,8 @@ const projects = [
       "GPT-4 powered destination recommendation system with constitutional oversight for content alignment, built for the Lufthansa group.",
     tags: ["GPT-4", "Azure", "RAG", "LLMOps"],
     image: "/project-placeholder-1.jpg",
+    video:
+      "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4",
   },
   {
     title: "Airline Avatar Assistant",
@@ -54,6 +49,8 @@ const projects = [
       "Conversational avatar assistant for a leading European airline. Demoed to Satya Nadella at the Microsoft AI Tour, Berlin.",
     tags: ["GenAI", "Azure", "Avatar"],
     image: "/project-placeholder-2.jpg",
+    video:
+      "https://test-videos.co.uk/vids/sintel/mp4/h264/720/Sintel_720_10s_1MB.mp4",
   },
   {
     title: "Feedback Funnelling NLP",
@@ -61,6 +58,8 @@ const projects = [
       "NLP service that classifies and routes high-volume customer feedback into actionable streams.",
     tags: ["NLP", "Classification", "Azure"],
     image: "/project-placeholder-3.jpg",
+    video:
+      "https://test-videos.co.uk/vids/jellyfish/mp4/h264/720/Jellyfish_720_10s_1MB.mp4",
   },
   {
     title: "COVID-LEAP",
@@ -68,6 +67,8 @@ const projects = [
       "Cloud-hosted knowledge base with BERT semantic search across 4.7M coronavirus research paragraphs. Master's thesis, graded distinction.",
     tags: ["BERT", "Azure", "Info Retrieval", "NLP"],
     image: "/project-placeholder-1.jpg",
+    video:
+      "https://www.w3schools.com/html/mov_bbb.mp4",
   },
 ];
 
@@ -283,44 +284,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] grid-rows-[repeat(3,auto)] gap-6">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="group grid grid-rows-subgrid row-span-3 content-start items-start overflow-hidden rounded-none border-border bg-card pt-0 transition-all duration-300 hover:border-primary/50"
-            >
-              <ProjectImage src={project.image} alt={project.title} />
-              <div className="grid gap-4">
-                <CardHeader className="grid gap-4">
-                  <CardTitle className="font-display text-2xl transition-colors group-hover:text-primary">
-                    {project.title}
-                  </CardTitle>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="secondary"
-                        className="font-mono text-xs"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {project.description}
-                  </CardDescription>
-                </CardContent>
-              </div>
-              <CardFooter className="pt-0">
-                <span className="font-mono text-xs text-muted-foreground">
-                  // CASE FILE // LINKS PENDING
-                </span>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+        <SelectedWorksConsole projects={projects} />
       </Container>
 
       <AcademicArchive />
