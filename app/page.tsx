@@ -1,6 +1,5 @@
-import { Button, buttonVariants } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { buttonVariants } from "@/components/ui/button";
+import { ContactForm } from "@/components/contact-form";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { Container } from "@/components/zippystarter/container";
 import { SiteHeader } from "@/components/site-header";
@@ -324,51 +323,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* TODO(phase2): wire to Formspree (action + method="POST"). Inert for now. */}
-          <form className="grid gap-6">
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="space-y-2">
-                <label
-                  htmlFor="name"
-                  className="font-mono text-xs text-muted-foreground"
-                >
-                  NAME
-                </label>
-                <Input id="name" name="name" placeholder="operative name" />
-              </div>
-              <div className="space-y-2">
-                <label
-                  htmlFor="email"
-                  className="font-mono text-xs text-muted-foreground"
-                >
-                  EMAIL
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="you@domain.com"
-                />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <label
-                htmlFor="message"
-                className="font-mono text-xs text-muted-foreground"
-              >
-                MESSAGE
-              </label>
-              <Textarea
-                id="message"
-                name="message"
-                placeholder="Compose transmission..."
-                className="min-h-[150px]"
-              />
-            </div>
-            <Button type="submit" className="w-full font-mono" size="lg">
-              SEND TRANSMISSION
-            </Button>
-          </form>
+          <ContactForm />
 
           <div className="mt-10 flex items-center justify-center gap-6 font-mono text-xs text-muted-foreground">
             <Link
