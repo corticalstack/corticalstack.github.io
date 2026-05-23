@@ -55,6 +55,22 @@ const projects = [
     image: "/project-placeholder-1.jpg",
     video: `${VIDEO_CDN}/kling_4.mp4`,
   },
+  {
+    title: "One Data Platform",
+    description:
+      "Group-wide data and AI platform for the Lufthansa Group. Led the squad delivering the unified ingestion, governance, and consumption layer across business units.",
+    tags: ["Azure", "Databricks", "Data Platform", "Leadership"],
+    image: "/project-placeholder-2.jpg",
+    video: `${VIDEO_CDN}/kling_5.mp4`,
+  },
+  {
+    title: "Agentic Architecture Lab",
+    description:
+      "Hands-on multi-agent research. Tool routing, persistent memory, and constitutional oversight patterns evaluated across LangGraph, AutoGen, and OpenAI Function Calling.",
+    tags: ["Agents", "LangChain", "AutoGen", "GenAI"],
+    image: "/project-placeholder-3.jpg",
+    video: `${VIDEO_CDN}/kling_6.mp4`,
+  },
 ];
 
 // TODO(phase2): confirm canonical stack with JP.
