@@ -227,3 +227,10 @@
   animation-duration: 280ms;
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
+/* Shared keyframe for the persistent ScanlineOverlay + the boot sequence /
+ * ACCESSING CASE FILE overlay CRT scanline drifts. */
+@keyframes cs-scanline-drift {
+  from { background-position: 0 0; }
+  to { background-position: 0 100vh; }
+}

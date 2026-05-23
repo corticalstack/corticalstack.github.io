@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { BootSequence } from "@/components/boot-sequence";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -47,6 +48,7 @@ export default function RootLayout({
         className={`font-body antialiased ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <BootSequence />
           {children}
         </ThemeProvider>
       </body>
