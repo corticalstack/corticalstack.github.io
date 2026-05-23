@@ -9,6 +9,7 @@ import { Dossier } from "@/components/dossier";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { SelectedWorksConsole } from "@/components/selected-works-console";
+import { VIDEO_CDN } from "@/lib/cdn";
 import { getAllTransmissions } from "@/lib/transmissions";
 
 const GITHUB_URL = "https://github.com/corticalstack";
@@ -21,8 +22,6 @@ const yearsOnline = Math.floor(
 const archivesCount = 9;
 
 // TODO(phase2): replace with JP's canonical project list + real links + per-card poster images.
-const VIDEO_CDN = "https://cdn.corticalstack.ai";
-
 const projects = [
   {
     title: "GenAI Destination Recommender",
@@ -190,14 +189,7 @@ export default function Home() {
           </p>
         </div>
 
-        <SelectedWorksConsole
-          projects={projects}
-          audioPlaylist={[
-            `${VIDEO_CDN}/corticalstack-ai-audio-01.mp3`,
-            `${VIDEO_CDN}/corticalstack-ai-audio-02.mp3`,
-            `${VIDEO_CDN}/corticalstack-ai-audio-03.mp3`,
-          ]}
-        />
+        <SelectedWorksConsole projects={projects} />
       </Container>
 
       <Dossier />

@@ -1,5 +1,6 @@
 import { Container } from "@/components/zippystarter/container";
 import { ReplayBoot } from "@/components/replay-boot";
+import { AudioToggleFooter } from "@/components/audio-toggle-footer";
 
 export function SiteFooter() {
   return (
@@ -12,6 +13,7 @@ export function SiteFooter() {
           © 2026 JON-PAUL BOYD // build_v0.1.0
         </div>
         <div className="flex items-center gap-4 font-mono text-xs">
+          <AudioToggleFooter />
           <ReplayBoot />
           <span className="text-primary/70">// end of transmission_</span>
         </div>

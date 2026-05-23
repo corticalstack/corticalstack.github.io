@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -8,6 +8,7 @@ import {
   VolumeX,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useAudioBed } from "@/components/audio-bed-provider";
 import { cn } from "@/lib/utils";
 
 interface Project {
@@ -20,58 +21,24 @@ interface Project {
 
 interface SelectedWorksConsoleProps {
   projects: Project[];
-  /** Section-wide audio playlist (Bunny URLs). Plays sequentially, then wraps. */
-  audioPlaylist?: string[];
 }
 
 /**
  * Console-style single-card carousel for Selected Works.
  *
  * - Full-width 16:9 video, autoplay + loop, always muted - audio is the
- *   section bed, not per-clip.
- * - One project visible at a time. The audio bed persists across navigation.
+ *   section bed (lives in layout via AudioBedProvider, persists across routes).
+ * - One project visible at a time.
  * - Prev/next buttons + dot indicators + ArrowLeft/ArrowRight keys.
- * - Audio: a playlist plays sequentially and wraps back to track 0 on end.
- *   Defaults paused (browser autoplay-with-sound policy); one click on the
- *   AUDIO_ON pill starts it.
+ * - Audio toggle reads from the shared provider; first click starts the playlist.
  */
-export function SelectedWorksConsole({
-  projects,
-  audioPlaylist,
-}: SelectedWorksConsoleProps) {
+export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
   const [index, setIndex] = useState(0);
-  const [audioOn, setAudioOn] = useState(false);
-  const [trackIndex, setTrackIndex] = useState(0);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  const playlist = audioPlaylist ?? [];
-  const currentTrack = playlist[trackIndex];
-
-  // When the track src changes while audio is on, autoplay the new track.
-  // This is downstream of a user-initiated play(), so browsers accept it.
-  useEffect(() => {
-    const el = audioRef.current;
-    if (!el || !audioOn) return;
-    el.play().catch(() => {});
-  }, [trackIndex, audioOn]);
-
-  const handleTrackEnded = () => {
-    if (playlist.length === 0) return;
-    setTrackIndex((i) => (i + 1) % playlist.length);
-  };
-
-  const toggleAudio = () => {
-    const el = audioRef.current;
-    if (!el) return;
-    if (audioOn) {
-      el.pause();
-      setAudioOn(false);
-    } else {
-      el.play()
-        .then(() => setAudioOn(true))
-        .catch(() => setAudioOn(false));
-    }
-  };
+  const {
+    available: audioAvailable,
+    audioOn,
+    toggle: toggleAudio,
+  } = useAudioBed();
 
   const total = projects.length;
 
@@ -111,20 +78,10 @@ export function SelectedWorksConsole({
 
   return (
     <div className="space-y-6">
-      {currentTrack ? (
-        <audio
-          ref={audioRef}
-          src={currentTrack}
-          preload="metadata"
-          onEnded={handleTrackEnded}
-          aria-hidden="true"
-        />
-      ) : null}
-
       {/* Status bar */}
       <div className="flex items-baseline justify-between gap-4 border-b border-border pb-3 font-mono text-xs">
         <span className="text-primary">{`// OPERATION ${position}`}</span>
-        {currentTrack ? (
+        {audioAvailable ? (
           <button
             type="button"
             onClick={toggleAudio}

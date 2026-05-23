@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { BootSequence } from "@/components/boot-sequence";
+import { AudioBedProvider } from "@/components/audio-bed-provider";
+import { AUDIO_PLAYLIST } from "@/lib/cdn";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -58,7 +60,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <BootSequence />
-          {children}
+          <AudioBedProvider playlist={AUDIO_PLAYLIST}>{children}</AudioBedProvider>
         </ThemeProvider>
       </body>
     </html>
