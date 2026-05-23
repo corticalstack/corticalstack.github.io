@@ -148,7 +148,7 @@ export default function Home() {
             <span className="animate-pulse text-primary">_</span>
           </h1>
 
-          <p className="max-w-2xl leading-relaxed text-muted-foreground md:text-xl">
+          <p className="leading-relaxed text-muted-foreground md:text-xl">
             Cyberware storage unit for academic projects, AI experiments, and
             field notes from the edge of practical machine learning.
           </p>
@@ -225,13 +225,13 @@ export default function Home() {
         <SelectedWorksConsole projects={projects} />
       </Container>
 
-      <AcademicArchive />
+      <Dossier />
 
       {/* Tech Stack */}
       <Container
         id="stack"
         component="section"
-        wrapperClassName="py-24 bg-secondary/20 border-t border-border"
+        wrapperClassName="py-24 border-t border-border"
         className="mx-auto max-w-7xl flex-1"
       >
         <div className="grid gap-12 md:grid-cols-12">
@@ -280,6 +280,8 @@ export default function Home() {
           </div>
         </div>
       </Container>
+
+      <AcademicArchive />
 
       {/* Transmissions */}
       <Container
@@ -331,16 +333,14 @@ export default function Home() {
         </div>
       </Container>
 
-      <Dossier />
-
       {/* Initiate Contact */}
       <Container
         id="comms"
         component="section"
-        wrapperClassName="py-24 bg-card border-t border-border"
+        wrapperClassName="py-24 border-t border-border"
         className="mx-auto max-w-7xl"
       >
-        <div className="mx-auto max-w-2xl">
+        <div>
           <div className="mb-12 text-center">
             <h2 className="mb-4 font-display text-4xl">INITIATE_CONTACT</h2>
             <p className="text-muted-foreground">
