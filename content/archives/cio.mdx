@@ -1,0 +1,42 @@
+---
+title: "Computational Intelligence Optimisation"
+code: "CIO"
+slug: "cio"
+year: 2020
+grade: "100%"
+classification: "OPTIMISATION"
+description: "HOP: Python hyper/meta-heuristic platform (SA, GA, PSO, DEA, ES) on the flow-shop scheduling problem and continuous benchmarks."
+order: 3
+---
+
+## Exact Optimisation
+
+Often when we make a choice we face an optimisation problem, such as looking to **minimise** a trip from city A to city B, or **maximise** a profit. Before looking at metaheuristics for approximate, "good enough" solutions, exact methods using calculus to find the global minimum in single and multivariate functions is explored.
+
+**Artifacts**
+
+- [Exact Optimisation paper](</docs/cio/Exact Optimisation.pdf>) - grade 100%
+
+## Testbed Problem Optimisation
+
+Four popular testbed problems (De Jong's Sphere, Schwefel, Rastrigin, Michalewicz) are optimised with a single solution, metaheuristic simulated annealing algorithm.
+
+**Artifacts**
+
+- [Testbed Problem Optimisation paper](</docs/cio/Testbed Problem Optimisation.pdf>) - grade 100%
+- [Source code on GitHub](https://github.com/corticalstack/problem-optimisation-benchmarking)
+
+## Hyper And Meta-Heuristic Optimisation Platform
+
+The Flow Shop Scheduling Problem (FSSP) is a well-known combinatorial optimisation problem where job operations must be processed on a set of machines with the objective of finding the permutation of jobs that minimises the complete processing time of the manufacturing operation, known as the makespan.
+
+Solutions look to optimise the production process and therefore the supply chain as a whole. The FSSP problem is *n!* Given this factorial nature, it becomes prohibitive calculating the makespan for all possible permutations. Taking a 20 job by 10 machine (20*j* x 10*m*) scenario as an example, there are 2,432,902,008,176,640,000 possible permutations of job sequence. Further illustrating the challenge, solving a small 10*j* x 10*m* benchmark instance published by Fisher and Thompson in 1963 took 23 years to solve. Metaheuristic algorithms can be applied to scheduling problems to propose solutions that may only be near-optimal, but considered "good enough", at reasonable computational cost.
+
+This study presents HOP (Heuristic Optimisation Platform), a Python-based framework to address the real-world problem of scheduling optimisation. Five nature-inspired metaheuristic algorithms (Simulated Annealing, Genetic Algorithm, Particle Swarm Optimisation, Differential Evolution Algorithm, and Evolution Strategy) are implemented and evaluated using 3 benchmark instances from Taillard's FSSP problem suite. Supporting the guiding principle of problem and heuristic separation, HOP can also solve continuous problems with the same general metaheuristic pool without code change, tested using Rastrigin's function.
+
+A hyper-heuristic feature dynamically switches between low-level metaheuristics to deterministically use the most appropriate according to current problem state, or select one stochastically.
+
+**Artifacts**
+
+- [Heuristic Optimisation Platform paper](</docs/cio/Heuristic Optimization Platform.pdf>) - grade 100%
+- [Source code on GitHub](https://github.com/corticalstack/heuristic-optimization-platform)

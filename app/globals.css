@@ -217,3 +217,13 @@
     @apply rounded-t border border-b-0 border-border bg-muted px-4 py-2 font-mono text-xs text-muted-foreground;
   }
 }
+
+/* View Transitions API: archive card code prefix morphs into the dossier
+ * header code prefix on click. The browser auto-skips animations under
+ * prefers-reduced-motion; the client wrapper additionally no-ops the
+ * startViewTransition call on unsupporting browsers. */
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-duration: 280ms;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

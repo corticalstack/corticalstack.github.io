@@ -56,7 +56,9 @@ Gotchas:
 - Preserved from the Jekyll site for migration: `_posts/` (81 posts; source for the MDX transmissions), `assets/img/`, `docs/` (CV + project PDFs).
 - `content/transmissions/` - blog posts as MDX (4 migrated). Read/sorted by `lib/transmissions.ts` (chronological hex IDs, reading time); rendered via `next-mdx-remote/rsc` (+ `remark-gfm`, `rehype-pretty-code`) in the `[slug]` route.
 - `components/site-header.tsx` + `components/site-footer.tsx` - shared chrome used by the homepage and the transmissions routes.
-- `components/academic-archive.tsx` + `components/dossier.tsx` - section components for the Academic Archive (9 case-file cards linking to `corticalstack.ai/<slug>/` during staging) and the Dossier (avatar + bio + cv).
+- `components/academic-archive.tsx` + `components/dossier.tsx` - section components for the Academic Archive (9 case-file cards) and the Dossier (avatar + bio + cv).
+- `content/archives/*.mdx` + `lib/archives.ts` + `app/archives/[slug]/page.tsx` - the 9 academic dossier routes (MT/ACI/CIO/ANN/AIP/DM/FL/MR/RM) rendered via the same MDX pipeline. PDFs self-hosted under `public/docs/<slug>/`.
+- `components/case-file-card.tsx` + `components/scramble-text.tsx` - client components for hover text scramble + View Transitions API morph from card code prefix to dossier header.
 
 ## Theme / palette
 
@@ -68,7 +70,8 @@ sparingly. Change the theme here, not in component classes.
 ## Build phases (see site_rebuild.md)
 
 - **Phase 1 (DONE):** foundation - scaffold, static-export config, cyan palette, JP rebrand, staged deploy workflow.
-- **Phase 2 (DONE):** MDX pipeline + `/transmissions` and `/transmissions/[slug]` routes, shared `SiteHeader`/`SiteFooter`, homepage wired to the MDX collection, `AcademicArchive` (9 case-file cards: MT/ACI/CIO/ANN/AIP/DM/FL/MR/RM) and `Dossier` sections, nav finalized to `transmissions / archives / dossier / comms`.
+- **Phase 2 (DONE):** MDX pipeline + `/transmissions[/slug]` routes, shared `SiteHeader`/`SiteFooter`, homepage wired to MDX, `AcademicArchive` + `Dossier` sections, nav finalized to `transmissions / archives / dossier / comms`.
+- **Phase 2.5 (DONE):** Academic dossier migration - `/archives/[slug]` routes for all 9 projects (full content migrated from Jekyll, PDFs self-hosted in `public/docs/`). View Transitions API morphs the card code prefix into the dossier header; hover triggers a rAF text-scramble effect on card descriptions (both respect prefers-reduced-motion).
 - **Phase 3:** Bunny-CDN video layer (hero ambient loop + project hover clips).
 - **Phase 4 (deferred):** cyber theatrics. **Phase 5:** SEO / RSS / sitemap / perf.
 
