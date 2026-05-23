@@ -13,10 +13,8 @@ interface CaseFileCardProps {
   grade: string;
 }
 
-type StartViewTransition = (cb: () => void) => unknown;
-
-const TYPE_INTERVAL_MS = 18;
-const POST_TYPE_PAUSE_MS = 220;
+const TYPE_INTERVAL_MS = 23;
+const POST_TYPE_PAUSE_MS = 900;
 
 export function CaseFileCard({
   code,
@@ -41,16 +39,7 @@ export function CaseFileCard({
       if (i >= text.length) {
         clearInterval(interval);
         setTimeout(() => {
-          const startVT = (
-            document as Document & {
-              startViewTransition?: StartViewTransition;
-            }
-          ).startViewTransition;
-          if (typeof startVT === "function") {
-            startVT.call(document, () => router.push(href));
-          } else {
-            router.push(href);
-          }
+          router.push(href);
         }, POST_TYPE_PAUSE_MS);
       }
     }, TYPE_INTERVAL_MS);
@@ -82,20 +71,7 @@ export function CaseFileCard({
         className="group relative block border border-border bg-card/40 p-5 transition-colors hover:border-primary/70 hover:bg-card/70"
       >
         <div className="mb-3 flex items-baseline justify-between">
-          <span
-            className="font-mono text-3xl font-bold tracking-tight text-primary"
-            // Only the clicked card claims the view-transition name. Otherwise
-            // every code span (MT/ACI/CIO/...) becomes its own named pseudo
-            // above the overlay during the transition - they briefly flash
-            // visible while the dossier fades in. Naming just the active card
-            // keeps the other eight under the root pseudo (covered by the
-            // overlay).
-            style={{
-              viewTransitionName: accessing
-                ? `archive-code-${slug}`
-                : undefined,
-            }}
-          >
+          <span className="font-mono text-3xl font-bold tracking-tight text-primary">
             {code}
           </span>
           <span className="font-mono text-xs text-muted-foreground">
@@ -127,14 +103,6 @@ export function CaseFileCard({
             className="fixed inset-0 z-[80] flex items-center justify-center bg-background px-6"
             aria-hidden="true"
           >
-            <div
-              className="pointer-events-none absolute inset-0 opacity-[0.08]"
-              style={{
-                backgroundImage:
-                  "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(96, 220, 246, 0.5) 2px, rgba(96, 220, 246, 0.5) 3px)",
-                animation: "cs-scanline-drift 8s linear infinite",
-              }}
-            />
             <div className="pointer-events-none absolute top-6 left-6 size-6 border-t-2 border-l-2 border-primary"></div>
             <div className="pointer-events-none absolute top-6 right-6 size-6 border-t-2 border-r-2 border-primary"></div>
             <div className="pointer-events-none absolute bottom-6 left-6 size-6 border-b-2 border-l-2 border-primary"></div>

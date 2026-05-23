@@ -59,10 +59,7 @@ export default async function ArchivePage({
             {`> ARCHIVE // CLASSIFICATION: ${meta.classification} // ${meta.year} // GRADE ${meta.grade}`}
           </div>
           <div className="mt-5 flex flex-wrap items-baseline gap-x-6 gap-y-2">
-            <span
-              className="font-mono text-6xl font-bold tracking-tight text-primary md:text-7xl"
-              style={{ viewTransitionName: `archive-code-${meta.slug}` }}
-            >
+            <span className="font-mono text-6xl font-bold tracking-tight text-primary md:text-7xl">
               {meta.code}
             </span>
             <h1 className="text-balance font-display text-3xl leading-tight tracking-tighter md:text-4xl">

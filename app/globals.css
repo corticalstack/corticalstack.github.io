@@ -218,19 +218,3 @@
   }
 }
 
-/* View Transitions API: archive card code prefix morphs into the dossier
- * header code prefix on click. The browser auto-skips animations under
- * prefers-reduced-motion; the client wrapper additionally no-ops the
- * startViewTransition call on unsupporting browsers. */
-::view-transition-old(*),
-::view-transition-new(*) {
-  animation-duration: 280ms;
-  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-/* Shared keyframe for the persistent ScanlineOverlay + the boot sequence /
- * ACCESSING CASE FILE overlay CRT scanline drifts. */
-@keyframes cs-scanline-drift {
-  from { background-position: 0 0; }
-  to { background-position: 0 100vh; }
-}
