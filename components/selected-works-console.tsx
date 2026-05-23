@@ -1,14 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Volume2,
-  VolumeX,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { useAudioBed } from "@/components/audio-bed-provider";
 import { cn } from "@/lib/utils";
 
 interface Project {
@@ -23,6 +17,8 @@ interface SelectedWorksConsoleProps {
   projects: Project[];
 }
 
+const ROTATION_INTERVAL_MS = 10_000;
+
 /**
  * Console-style single-card carousel for Selected Works.
  *
@@ -30,15 +26,15 @@ interface SelectedWorksConsoleProps {
  *   section bed (lives in layout via AudioBedProvider, persists across routes).
  * - One project visible at a time.
  * - Prev/next buttons + dot indicators + ArrowLeft/ArrowRight keys.
- * - Audio toggle reads from the shared provider; first click starts the playlist.
+ * - Auto-rotates through cards every ROTATION_INTERVAL_MS, pauses while the
+ *   user hovers the carousel, and can be toggled off via the AUTO pill.
+ *   Manual nav (PREV/NEXT/dots/arrows) does not toggle rotation - the user
+ *   is just skipping; rotation resumes from the new position when hover ends.
  */
 export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
   const [index, setIndex] = useState(0);
-  const {
-    available: audioAvailable,
-    audioOn,
-    toggle: toggleAudio,
-  } = useAudioBed();
+  const [rotating, setRotating] = useState(true);
+  const [hovered, setHovered] = useState(false);
 
   const total = projects.length;
 
@@ -66,6 +62,14 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
     return () => window.removeEventListener("keydown", handleKey);
   }, [total]);
 
+  useEffect(() => {
+    if (!rotating || hovered || total <= 1) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % total);
+    }, ROTATION_INTERVAL_MS);
+    return () => clearInterval(id);
+  }, [rotating, hovered, total]);
+
   if (total === 0) return null;
 
   const project = projects[index];
@@ -77,30 +81,30 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
   const next = () => setIndex((i) => (i + 1) % total);
 
   return (
-    <div className="space-y-6">
+    <div
+      className="space-y-6"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       {/* Status bar */}
       <div className="flex items-baseline justify-between gap-4 border-b border-border pb-3 font-mono text-xs">
         <span className="text-primary">{`// OPERATION ${position}`}</span>
-        {audioAvailable ? (
+        {total > 1 ? (
           <button
             type="button"
-            onClick={toggleAudio}
+            onClick={() => setRotating((r) => !r)}
             className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
-            aria-label={audioOn ? "Pause audio bed" : "Play audio bed"}
-            aria-pressed={audioOn}
+            aria-label={rotating ? "Pause auto-rotation" : "Resume auto-rotation"}
+            aria-pressed={rotating}
           >
-            {audioOn ? (
-              <Volume2 className="size-3.5 text-primary" />
+            {rotating ? (
+              <Pause className="size-3.5 text-primary" />
             ) : (
-              <VolumeX className="size-3.5" />
+              <Play className="size-3.5" />
             )}
-            <span>{audioOn ? "// AUDIO_ON" : "// AUDIO_OFF"}</span>
+            <span>{rotating ? "// AUTO_ON" : "// AUTO_OFF"}</span>
           </button>
-        ) : (
-          <span className="hidden truncate text-muted-foreground md:block">
-            {project.title.toUpperCase()}
-          </span>
-        )}
+        ) : null}
       </div>
 
       {/* Video frame with HUD corner brackets */}

@@ -71,6 +71,14 @@ const projects = [
     image: "/project-placeholder-3.jpg",
     video: `${VIDEO_CDN}/kling_6.mp4`,
   },
+  {
+    title: "Biotech ML Platform",
+    description:
+      "First cloud-hosted machine learning platform at AC Immune. Foundations for compound discovery, protein structure analysis, and screening pipelines.",
+    tags: ["Azure", "MLOps", "Biotech"],
+    image: "/project-placeholder-1.jpg",
+    video: `${VIDEO_CDN}/kling_7.mp4`,
+  },
 ];
 
 // TODO(phase2): confirm canonical stack with JP.
