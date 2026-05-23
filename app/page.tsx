@@ -23,6 +23,8 @@ import {
 import { Container } from "@/components/zippystarter/container";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { AcademicArchive } from "@/components/academic-archive";
+import { Dossier } from "@/components/dossier";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ProjectImage } from "@/components/project-image";
@@ -321,6 +323,8 @@ export default function Home() {
         </div>
       </Container>
 
+      <AcademicArchive />
+
       {/* Tech Stack */}
       <Container
         id="stack"
@@ -424,6 +428,8 @@ export default function Home() {
           </Link>
         </div>
       </Container>
+
+      <Dossier />
 
       {/* Initiate Contact */}
       <Container
