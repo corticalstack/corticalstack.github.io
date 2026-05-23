@@ -98,13 +98,13 @@ export default function Home() {
   const transmissionsCount = transmissions.length;
 
   const telemetry = [
-    { label: "SYS.STATUS", value: "NORMAL" },
-    { label: "UPTIME", value: `${yearsOnline}Y` },
+    { label: "// NEURAL LINK", value: "ENGAGED" },
+    { label: "// UPTIME", value: `${yearsOnline}Y` },
     {
-      label: "TRANSMISSIONS",
+      label: "// TRANSMISSIONS",
       value: String(transmissionsCount).padStart(3, "0"),
     },
-    { label: "ARCHIVES", value: String(archivesCount).padStart(2, "0") },
+    { label: "// ARCHIVES", value: String(archivesCount).padStart(2, "0") },
   ];
 
   return (
@@ -128,135 +128,82 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
         </div>
 
-        <div className="relative z-10 grid items-center gap-12 md:grid-cols-2">
-          <div className="space-y-6">
-            <div className="flex flex-wrap items-center gap-3">
-              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 font-mono text-xs text-primary">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
-                </span>
-                // SYSTEM ONLINE
-              </div>
-              <div className="inline-flex items-center rounded-full border border-border bg-card/40 px-3 py-1 font-mono text-xs text-muted-foreground">
-                // STATUS: ENGAGED
-              </div>
-            </div>
-
-            <h1 className="font-display text-6xl leading-[0.9] tracking-tighter md:text-8xl">
-              CORTICAL
-              <br />
-              <span className="bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent">
-                STACK
+        <div className="relative z-10 space-y-8">
+          {/* Top status bar - one wide row of pills */}
+          <div className="flex flex-wrap items-center gap-3 font-mono text-xs">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-primary">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
               </span>
-              <span className="animate-pulse text-primary">_</span>
-            </h1>
-
-            <p className="max-w-md leading-relaxed text-muted-foreground md:text-xl">
-              Cyberware storage unit for academic projects, AI experiments, and
-              field notes from the edge of practical machine learning.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Link
-                href="#transmissions"
-                className={cn(buttonVariants({ size: "lg" }), "font-mono")}
+              // SYSTEM ONLINE
+            </div>
+            {telemetry.map((t) => (
+              <span
+                key={t.label}
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-3 py-1 text-muted-foreground"
               >
-                [ view transmissions ] <ArrowRight className="size-4" />
+                {t.label}: <span className="text-primary">{t.value}</span>
+              </span>
+            ))}
+          </div>
+
+          <h1 className="font-display text-6xl leading-[0.9] tracking-tighter md:text-8xl">
+            CORTICAL
+            <br />
+            <span className="bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent">
+              STACK
+            </span>
+            <span className="animate-pulse text-primary">_</span>
+          </h1>
+
+          <p className="max-w-2xl leading-relaxed text-muted-foreground md:text-xl">
+            Cyberware storage unit for academic projects, AI experiments, and
+            field notes from the edge of practical machine learning.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <Link
+              href="#transmissions"
+              className={cn(buttonVariants({ size: "lg" }), "font-mono")}
+            >
+              [ view transmissions ] <ArrowRight className="size-4" />
+            </Link>
+            <Link
+              href="#comms"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "font-mono",
+              )}
+            >
+              [ initiate contact ]
+            </Link>
+            <div className="flex gap-2">
+              <Link
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
+              >
+                <Github className="h-5 w-5" />
+              </Link>
+              <Link
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
+              >
+                <Linkedin className="h-5 w-5" />
               </Link>
               <Link
                 href="#comms"
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "lg" }),
-                  "font-mono",
-                )}
+                aria-label="Contact"
+                className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
               >
-                [ initiate contact ]
+                <Mail className="h-5 w-5" />
               </Link>
-              <div className="flex gap-2">
-                <Link
-                  href={GITHUB_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
-                >
-                  <Github className="h-5 w-5" />
-                </Link>
-                <Link
-                  href={LINKEDIN_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
-                >
-                  <Linkedin className="h-5 w-5" />
-                </Link>
-                <Link
-                  href="#comms"
-                  aria-label="Contact"
-                  className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
-                >
-                  <Mail className="h-5 w-5" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Telemetry chips */}
-            <div className="flex flex-wrap gap-2 pt-2 font-mono text-[10px] sm:text-xs">
-              {telemetry.map((t) => (
-                <span
-                  key={t.label}
-                  className="inline-flex items-center gap-2 border border-border bg-card/40 px-2 py-1 text-muted-foreground"
-                >
-                  {t.label}: <span className="text-primary">{t.value}</span>
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* HUD telemetry panel */}
-          <div className="relative hidden h-[500px] w-full border border-border/30 bg-card/10 p-8 backdrop-blur-sm md:block">
-            <div className="absolute top-0 left-0 size-4 border-t-2 border-l-2 border-primary"></div>
-            <div className="absolute top-0 right-0 size-4 border-t-2 border-r-2 border-primary"></div>
-            <div className="absolute bottom-0 left-0 size-4 border-b-2 border-l-2 border-primary"></div>
-            <div className="absolute right-0 bottom-0 size-4 border-r-2 border-b-2 border-primary"></div>
-
-            <div className="flex h-full w-full flex-col justify-between font-mono text-xs text-muted-foreground">
-              <div className="flex justify-between">
-                <span>SYS.STATUS: NORMAL</span>
-                <span>UPTIME: {yearsOnline}Y</span>
-              </div>
-              <div className="space-y-2">
-                <div className="h-1 w-full overflow-hidden bg-secondary">
-                  <div className="h-full w-[92%] bg-primary"></div>
-                </div>
-                <div className="flex justify-between">
-                  <span>SIGNAL</span>
-                  <span>92%</span>
-                </div>
-                <div className="h-1 w-full overflow-hidden bg-secondary">
-                  <div className="h-full w-full bg-primary"></div>
-                </div>
-                <div className="flex justify-between">
-                  <span>NEURAL_LINK</span>
-                  <span>STABLE</span>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4 text-right">
-                <div>
-                  <span className="block text-4xl font-bold text-foreground">
-                    {String(transmissionsCount).padStart(3, "0")}
-                  </span>
-                  <span>TRANSMISSIONS</span>
-                </div>
-                <div>
-                  <span className="block text-4xl font-bold text-foreground">
-                    {String(archivesCount).padStart(2, "0")}
-                  </span>
-                  <span>ARCHIVES</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
