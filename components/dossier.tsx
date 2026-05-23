@@ -31,7 +31,7 @@ export function Dossier() {
             <div className="absolute bottom-0 left-0 z-10 size-3 border-b-2 border-l-2 border-primary"></div>
             <div className="absolute right-0 bottom-0 z-10 size-3 border-r-2 border-b-2 border-primary"></div>
             <Image
-              src="/assets/img/me.png"
+              src="/assets/img/jp_profile.jpg"
               alt="Jon-Paul Boyd"
               fill
               sizes="(min-width: 768px) 224px, 192px"

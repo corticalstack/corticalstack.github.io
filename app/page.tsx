@@ -184,6 +184,7 @@ export default function Home() {
       >
         <div className="mb-16 grid items-end justify-between gap-4">
           <div>
+            <div className="mb-3 font-mono text-xs text-primary">// DEPLOYMENTS</div>
             <h2 className="mb-4 font-display text-4xl tracking-tighter md:text-6xl">
               OPERATIONS
             </h2>
@@ -310,11 +311,16 @@ export default function Home() {
         className="mx-auto max-w-7xl"
       >
         <div>
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 font-display text-4xl">INITIATE_CONTACT</h2>
-            <p className="text-muted-foreground">
-              Open a channel. For collaborations, AI engagements, or signal in
-              the noise.
+          <div className="mb-16 grid items-end justify-between gap-4">
+            <div>
+              <div className="mb-3 font-mono text-xs text-primary">// COMMS</div>
+              <h2 className="mb-4 font-display text-4xl tracking-tighter md:text-6xl">
+                CONTACT
+              </h2>
+              <div className="h-1 w-24 bg-primary"></div>
+            </div>
+            <p className="max-w-sm text-left text-muted-foreground">
+              Open a channel. For collaborations, AI engagements, or signal in the noise.
             </p>
           </div>
 
