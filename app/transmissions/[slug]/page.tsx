@@ -4,6 +4,7 @@ import { SfxLink } from "@/components/sfx-link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
+import { MdxLink } from "@/components/mdx-link";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/layout/container";
 import { SiteHeader } from "@/components/site-header";
@@ -80,6 +81,7 @@ export default async function TransmissionPage({
         <div className="transmission-body">
           <MDXRemote
             source={source}
+            components={{ a: MdxLink }}
             options={{
               mdxOptions: {
                 remarkPlugins: [remarkGfm],
