@@ -73,7 +73,7 @@ export function Dossier() {
           </div>
 
           {/* TODO(JP): tighten / replace bio paragraphs to taste. */}
-          <div className="space-y-4 leading-relaxed text-muted-foreground">
+          <div className="space-y-4 leading-relaxed text-foreground/85">
             <p>
               Experienced Azure AI engineer and solution architect, currently
               with Microsoft Switzerland. Joined in early 2025 after leading

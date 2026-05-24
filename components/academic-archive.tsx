@@ -22,7 +22,7 @@ export function AcademicArchive() {
           </h2>
           <div className="h-1 w-24 bg-primary"></div>
         </div>
-        <p className="max-w-sm text-left text-muted-foreground">
+        <p className="max-w-sm text-left text-foreground/85">
           {archives.length} declassified case files from the Master of
           Intelligent Systems program. De Montfort University, 2019-2021.
           Graduated with distinction.

@@ -114,9 +114,10 @@ export default function Home() {
             <span className="animate-pulse text-primary">_</span>
           </h1>
 
-          <p className="leading-relaxed text-muted-foreground md:text-xl">
-            Cyberware storage unit for academic projects, AI experiments, and
-            field notes from the edge of practical machine learning.
+          <p className="leading-relaxed text-foreground/85 md:text-xl">
+            Cyberware storage unit for experiments and field notes, pushing
+            boundaries at the intersection of human creativity, machine
+            intelligence, and agentic systems.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -173,7 +174,7 @@ export default function Home() {
             </h2>
             <div className="h-1 w-24 bg-primary"></div>
           </div>
-          <p className="max-w-sm text-left text-muted-foreground">
+          <p className="max-w-sm text-left text-foreground/85">
             Field-deployed systems and platforms at scale.
           </p>
         </div>
@@ -198,9 +199,8 @@ export default function Home() {
             </h2>
             <div className="h-1 w-24 bg-primary"></div>
           </div>
-          <p className="max-w-sm text-left text-muted-foreground">
-            Instruments of the trade. Applied machine learning, cloud
-            platforms, and the data plumbing that makes them production-grade.
+          <p className="max-w-sm text-left text-foreground/85">
+            Instruments of the trade.
           </p>
         </div>
 
@@ -216,7 +216,7 @@ export default function Home() {
                       key={sIdx}
                       className="group flex items-center justify-between"
                     >
-                      <span className="font-mono text-sm text-muted-foreground transition-colors group-hover:text-foreground">
+                      <span className="font-mono text-sm text-foreground/85 transition-colors group-hover:text-foreground">
                         {skill}
                       </span>
                       <div className="h-[2px] w-12 bg-secondary transition-colors group-hover:bg-primary"></div>
@@ -245,8 +245,8 @@ export default function Home() {
             </h2>
             <div className="h-1 w-24 bg-primary"></div>
           </div>
-          <p className="max-w-sm text-left text-muted-foreground">
-            Recent dispatches on applied AI, machine learning, and field operations.
+          <p className="max-w-sm text-left text-foreground/85">
+            Recent operational dispatches from the field on machine learning, GenAI, and software engineering.
           </p>
         </div>
 
@@ -268,7 +268,7 @@ export default function Home() {
                   {post.readingTime}
                 </span>
               </div>
-              <p className="mb-4 max-w-2xl text-muted-foreground">
+              <p className="mb-4 max-w-2xl leading-relaxed text-foreground/85">
                 {post.excerpt}
               </p>
               <div className="h-px w-full bg-border transition-colors group-hover:bg-primary/50"></div>
@@ -303,7 +303,7 @@ export default function Home() {
               </h2>
               <div className="h-1 w-24 bg-primary"></div>
             </div>
-            <p className="max-w-sm text-left text-muted-foreground">
+            <p className="max-w-sm text-left text-foreground/85">
               Open a channel. For collaborations, AI engagements, or signal in the noise.
             </p>
           </div>
