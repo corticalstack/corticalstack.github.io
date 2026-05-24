@@ -1,6 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
 import { ContactForm } from "@/components/contact-form";
-import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { GithubIcon, LinkedinIcon, Mail, ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -40,18 +40,23 @@ const projects = operationsSource.map((op, i) => ({
   caseFileLink: op.caseFileLink,
 }));
 
-// TODO(phase2): confirm canonical stack with JP.
 const skills = [
   {
     category: "AI / ML",
-    items: ["Python", "PyTorch", "LangChain", "RAG", "LLMs", "AutoGen"],
+    items: ["Python", "LangGraph", "Agents", "RAG", "Fine-Tuning", "LLMs", "Foundry SDK", "MLOps", "GenAIOps", "Prompt Engineering", "Agentic Engineering", "Responsible AI", "LLM-As-A-Judge", "Multi-Modal"],
   },
   {
     category: "Cloud",
-    items: ["Azure", "AWS", "Kubernetes", "Terraform", "Docker"],
+    items: ["Azure", "Bicep", "Terraform", "APIM", "Docker", "CI/CD", "Security"],
   },
-  { category: "Data", items: ["SQL", "Spark", "dbt", "Pipelines"] },
-  { category: "Tooling", items: ["GitHub", "VS Code", "Cline", "Claude Code"] },
+  {
+    category: "Data",
+    items: ["Ontologies", "OWL 2", "Knowledge Graphs", "SPARQL", "Azure ML", "Vector Search", "SQL", "Pandas"],
+  },
+  {
+    category: "Tooling",
+    items: ["Claude Code", "Copilot CLI", "Bash", "Jupyter Notebooks", "VS Code", "Git", "GitHub Actions"],
+  },
 ];
 
 export default function Home() {
@@ -130,7 +135,7 @@ export default function Home() {
                 aria-label="GitHub"
                 className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
               >
-                <Github className="h-5 w-5" />
+                <GithubIcon className="h-5 w-5" />
               </SfxLink>
               <SfxLink
                 href={LINKEDIN_URL}
@@ -139,7 +144,7 @@ export default function Home() {
                 aria-label="LinkedIn"
                 className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
               >
-                <Linkedin className="h-5 w-5" />
+                <LinkedinIcon className="h-5 w-5" />
               </SfxLink>
               <SfxLink
                 href="#comms"
@@ -312,7 +317,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 transition-colors hover:text-primary"
             >
-              <Github className="size-4" /> GITHUB
+              <GithubIcon className="size-4" /> GITHUB
             </SfxLink>
             <SfxLink
               href={LINKEDIN_URL}
@@ -320,7 +325,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 transition-colors hover:text-primary"
             >
-              <Linkedin className="size-4" /> LINKEDIN
+              <LinkedinIcon className="size-4" /> LINKEDIN
             </SfxLink>
           </div>
         </div>
