@@ -66,7 +66,7 @@ export default async function ArchivePage({
               {meta.title}
             </h1>
           </div>
-          <p className="mt-5 max-w-xl text-muted-foreground">
+          <p className="mt-5 max-w-xl text-foreground/85">
             {meta.description}
           </p>
         </header>

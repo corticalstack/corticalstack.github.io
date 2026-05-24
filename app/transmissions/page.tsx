@@ -27,10 +27,8 @@ export default function TransmissionsArchive() {
           <h1 className="font-display text-5xl tracking-tighter md:text-7xl">
             TRANSMISSIONS
           </h1>
-          <p className="mt-4 max-w-xl text-muted-foreground">
-            Full transmission log.{" "}
-            {String(transmissions.length).padStart(3, "0")} archived dispatches
-            on applied AI, machine learning, and field notes.
+          <p className="mt-4 max-w-xl text-foreground/85">
+            Full transmission log of dispatches and field notes.
           </p>
         </div>
 
@@ -52,7 +50,7 @@ export default function TransmissionsArchive() {
                   {post.readingTime}
                 </span>
               </div>
-              <p className="max-w-2xl text-muted-foreground">{post.excerpt}</p>
+              <p className="max-w-2xl leading-relaxed text-foreground/85">{post.excerpt}</p>
             </SfxLink>
           ))}
         </div>
