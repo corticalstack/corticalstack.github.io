@@ -1,0 +1,21 @@
+---
+title: "Karpathy's LLM wiki"
+date: "2026-04-12"
+excerpt: "llm wiki"
+tags: [knowledge, learning]
+classification: "LEARNING"
+---
+
+I've been an Obsidian user for years. A few thousand individual notes, barely cross-referencing, just too much work. Every new thing was one new isolated file. But I'm buzzing after a weekend overhaul.
+
+I was inspired by Karpathy's post on building a personal wiki, for offloading knowledgebase integration and housekeeping effort to LLMs, pre-compiling information relationships ready for agentic components, and compounding a deeper, denser, layered context.
+
+Following Karpathy's post, I pointed graphify at my local Obsidian vault (where incidentally, I use a GitHub plugin to always sync with a remote version of the vault).  It ran deterministic structure extraction, parallel Claude agents for semantic extraction, and Leiden community detection across all my notes. One output, GRAPH_REPORT.md, is a working map of my vault which Claude can use. The map established I have 5 main knowledge domains (AI, Cloud, Data, Engineering, Homelab). A simple Python script walked through the graph, reorganised my notes into the right domain subfolder, and injected structured frontmatter into every one: title, domain, status, and wires documents together by populating "related", "builds on", "contrasts with", and "appears in" links. 
+
+For new content, Claude now does the heavy lifting for me. Every new source markdown I drop into a sub-domain "inbox" subfolder gets pushed to remote and triggers a vault-ingest GitHub Action where Claude reads the new content, decides whether it's a new concept or enriches an existing page, and writes the full frontmatter including wiring related documents, and commits. Nice and simple, using my existing tooling of Claude Code cli sub (not API key), no open claw, and observability with the action logs.
+
+Went further. Another Github action, periodic every 24 hours, doing a nightly scan for novel ideas and concepts from the likes of Karpathy and Steinberger. Filtering hard, new content has to be from the luminaries themselves, not written about them. And the content either has to be new, or solid enrichment of existing. Content written and pushed into the right inbox, to be picked up by the vault-ingest action.
+
+Last piece. A per-repo folder in the vault, to maintain content outline, architectural decisions, trade-offs, mistakes, and lessons learned. Something new learned through development, like OWL ontology as a data engineering concept, I simply ask Claude to push to the vault inbox. I can have knowledge injected into the wiki in real time, with learnings crossing repo boundaries.
+
+Still tinkering, but rather excited where this is going. My vault has become a rich, living knowledgebase not just for me browsing it in Obsidian, but as a pre-compiled context for my LLMs and agents. Frontier thinking from nightly scans. The housekeeping offloaded. It just keeps getting richer.

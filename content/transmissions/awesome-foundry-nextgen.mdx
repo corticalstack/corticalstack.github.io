@@ -1,0 +1,30 @@
+---
+title: "Awesome Foundry Nextgen"
+date: "2026-05-15"
+excerpt: "Awesome Foundry Nextgen"
+tags: [knowledge, learning, azure, genai, agents]
+classification: "LEARNING"
+---
+
+Foundry Nextgen. A big bet on Enterprise AI.
+
+A new portal, with all primitives and features required to scale agents under one roof: models, agents, MCP, fine-tuning, governance, safety, security, and observability.
+
+Inspired by earlier ZeroToHero work by Aymen Furter and Hao Zhang, I've built out an extended lab series I wish had existed when I started with Foundry.
+
+In the labs:
+- Overviews on the different Foundry pages and describing the control plane.
+- "Hub" and spoke foundry account and project deployment patterns.
+- Azure policies to control model deployment.
+- Multiple agent sub-labs for versioning, code interpreter, hosted agents, memory, MCP, eval, observability, and human-in-the-loop.
+- Model fine-tuning.
+- Foundry IQ over 3k arXiv papers.
+- Guardrails, red-teaming, and safety policies - what they are and how to apply them.
+
+My favourite labs? The two MCP examples. The first is a Project Management Office use case, with 37 tools wired to a custom MCP server on Azure Functions, backed by a synthetic knowledgebase of people, projects, minutes of meetings, risks, and distribution lists. Deliberately an anti-pattern showing what you get when you mechanically wrap a REST API with MCP.
+
+The Contoso Private Banking MCP is designed around intent, not REST, adopting principles from Anthropic's "Writing tools for AI agents" doc, and a counterpoint to the PMO one. 6 tools instead of 37. Designed around what a Swiss private-banking relationship manager actually does in their day, not CRUD operations. Collapsing a workflow, more work done backend-side, fewer roundtrips. The agent gets a tool for the job, not a tool for every step of the job.
+
+![Awesome Foundry Nextgen](/assets/img/awesome-foundry-nextgen.jpg)
+
+[Awesome Foundry Nextgen GitHub repo](https://github.com/corticalstack/awesome-foundry-nextgen)

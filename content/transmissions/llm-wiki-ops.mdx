@@ -1,0 +1,25 @@
+---
+title: "LLM wiki ops"
+date: "2026-04-30"
+excerpt: "llm wiki ops"
+tags: [knowledge, learning]
+classification: "LEARNING"
+---
+
+Karpathy's llm-wiki concept. A shift in what's become available to me as an individual; a valuable source of compounding knowledge, with an agent doing the bookkeeping that I abandoned.
+
+My personal knowledgebase of thousands of notes was dying. Not because the thinking was hard, but because the housekeeping was. The cross-linking, the deduplication. Karpathy's LLM-Wiki gist (subject of my last post) inspired me to close that gap and get rid of the tedium. Two weeks into my opinionated implementation, all I now care about is what to read and write; everything downstream like where it goes, what it links to, and how it slots into existing knowledge is handled for me.
+
+What I kept faithful to Karpathy: the constraint. One page per concept. Every page densely cross-linked. The wiki gets richer because the schema is narrow. 
+
+Where I diverged: Karpathy's design is wiki-centric and lossy, everything compounds in. So only for content where compounding is wrong, I created a References/ folder: long-form technical playbooks, certification prep etc. References/ keeps it verbatim; concepts can still be mined into the wiki on demand with my /vault skill.
+
+The other extension: going beyond user-driven ingest. A nightly GitHub Action scans frontier researchers for novel content. Just this week, Simon Willison coined "vegan model" for LLMs trained exclusively on licensed/out-of-copyright data, and Dwarkesh Patel articulated the "RL Verification Gap", about the structural mismatch between RL's rapid feedback loops and science's decade-long validation cycles. Scans don't just add pages; they thicken the connective tissue between existing ones in my wiki. And I hooked up Hermes-Agent to deliver a daily luminary summary to telegram for coffee reading every morning.
+ 
+It's been pretty cool to use daily. Every Claude session shows up already aware of the vault, because the global CLAUDE.md tells it where to look. Always-on for context, on-demand for workflow. A /vault skill handles explicit operations. Those wonderful snippets of knowledge you arrive at through conversation with LLMs, that quietly die as the session ends and you forget? /vault capture drops them into the right inbox. /vault extract mines long-form references for wiki-worthy concepts. And /vault reference places verbatim docs into the right References/ subfolder.
+
+The full replication kit: workflows, the /vault skill, the schema, verify-wiki.py, the day-zero prompts, the claude.md, a README walking through every step, is linked in the comments. It's no plugin, and not for the faint-hearted, designed to tackle a big, brownfield archive, but there you go. 
+
+Curious to know if others are using llm-wiki plugins or crafted their own flavour.
+
+[LLM Wiki Ops repo](github.com/corticalstack/knowledge-vault-ops)
