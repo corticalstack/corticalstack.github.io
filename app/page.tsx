@@ -10,6 +10,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { SelectedWorksConsole } from "@/components/selected-works-console";
 import { VIDEO_CDN } from "@/lib/cdn";
+import operationsSource from "@/tools-operations-source.json";
 import { getAllTransmissions } from "@/lib/transmissions";
 
 const GITHUB_URL = "https://github.com/corticalstack";
@@ -21,170 +22,23 @@ const yearsOnline = Math.floor(
 );
 const archivesCount = 9;
 
-// Operations content sourced from tools-operations-source.md (1:1 with kling_1..kling_20).
-// TODO(phase2): per-card poster images + real external links once they exist.
-const projects = [
-  {
-    title: "Ontology Underwriting Agent",
-    description:
-      "Production OWL 2 ontology and LangGraph underwriting agent for a reinsurer. Five-stage extraction pipeline (rule-based JSON, GPT-4.1 HTML body, rdflib OWL, SHACL gate, GraphDB) collapses thousands of pages of impairment guidance into a 219-node knowledge graph queried over SPARQL through a FastAPI SSE chat UI.",
-    tags: ["OWL 2", "LangGraph", "GraphDB", "SHACL", "GPT-4.1"],
-    image: "/project-placeholder-1.jpg",
-    video: `${VIDEO_CDN}/kling_1.mp4`,
-  },
-  {
-    title: "Foundry Control Plane",
-    description:
-      "Microsoft AI Tour Zurich. Hosted the Foundry Control Plane booth, showing enterprises how to gain trust over a fleet of agents through one place for controls, observability, security, and governance.",
-    tags: ["Azure AI Foundry", "Governance", "Agents", "Microsoft"],
-    image: "/project-placeholder-2.jpg",
-    video: `${VIDEO_CDN}/kling_2.mp4`,
-  },
-  {
-    title: "Azure ML Field Workshop",
-    description:
-      "Hands-on Azure Machine Learning workshop for a global insurance customer covering the full ML lifecycle: data preparation, AutoML, model training, deployment, evaluation, and MLOps best practice.",
-    tags: ["Azure ML", "AutoML", "MLOps", "Workshop"],
-    image: "/project-placeholder-3.jpg",
-    video: `${VIDEO_CDN}/kling_3.mp4`,
-  },
-  {
-    title: "Pharma AI Upskill",
-    description:
-      "Comprehensive AI upskilling series for a global pharma customer. Sessions on GenAI fundamentals, RAG, prompt engineering, fine-tuning, SLMs, Document Intelligence, Content Understanding, Azure AI Search, and responsible AI.",
-    tags: ["GenAI", "RAG", "Fine-Tuning", "Document Intelligence"],
-    image: "/project-placeholder-1.jpg",
-    video: `${VIDEO_CDN}/kling_4.mp4`,
-  },
-  {
-    title: "Service Centre Copilot",
-    description:
-      "CEO-sponsored LangGraph orchestration powering a service centre Copilot. Lets 5,000+ engineers conversationally query 2M+ technical documents. Task parallelism and model optimization cut troubleshooting response time from 1 minute to ~20s.",
-    tags: ["LangGraph", "Copilot", "Azure OpenAI", "Latency"],
-    image: "/project-placeholder-2.jpg",
-    video: `${VIDEO_CDN}/kling_5.mp4`,
-  },
-  {
-    title: "Catalogue Matching Engine",
-    description:
-      "Proof of concept bringing competitor product mapping and price comparison in-house for a nationwide retailer. AI-enabled cleansing, enrichment, and classification orchestrated through Azure Machine Learning; comparable to specialist external vendors, fully automated.",
-    tags: ["Azure ML", "NLP", "Classification", "Retail"],
-    image: "/project-placeholder-3.jpg",
-    video: `${VIDEO_CDN}/kling_6.mp4`,
-  },
-  {
-    title: "Airline Avatar Assistant",
-    description:
-      "Conversational avatar assistant for a leading European airline. Demoed to Satya Nadella at the Microsoft AI Tour Berlin, October 2024. Function-calling into external systems for live organizational and customer data.",
-    tags: ["GenAI", "Avatar", "Azure", "Function Calling"],
-    image: "/project-placeholder-1.jpg",
-    video: `${VIDEO_CDN}/kling_7.mp4`,
-  },
-  {
-    title: "Feedback Funnelling NLP",
-    description:
-      "Intelligent feedback funneling service classifying customer signal into product-specific streams. Evaluated BERT embeddings, XGBoost, prompt engineering, and GPT causal + sequence classifiers to pick the right model per signal type.",
-    tags: ["NLP", "BERT", "XGBoost", "GPT"],
-    image: "/project-placeholder-2.jpg",
-    video: `${VIDEO_CDN}/kling_8.mp4`,
-  },
-  {
-    title: "Summarization Service",
-    description:
-      "Shared GPT-powered summarization service with pre-engineered prompt styles: extractive, abstractive, creative, formal, keyword-based, thematic, and time-series. Drop-in for diverse downstream workflows.",
-    tags: ["GPT", "Summarization", "Prompt Engineering"],
-    image: "/project-placeholder-3.jpg",
-    video: `${VIDEO_CDN}/kling_9.mp4`,
-  },
-  {
-    title: "Destination Recommender",
-    description:
-      "GPT-4 destination recommendation app, hosted as a containerized Azure App Service. Built-in dialogue and API call validation, token consumption tracking, and per-conversation cost calculation.",
-    tags: ["GPT-4", "Azure App Service", "LLMOps"],
-    image: "/project-placeholder-1.jpg",
-    video: `${VIDEO_CDN}/kling_10.mp4`,
-  },
-  {
-    title: "Constitutional Knowledge Base",
-    description:
-      "GPT-4 knowledge base of destination master data with LLM-as-judge oversight. A constitutional rubric continuously evaluates generated content for alignment with safety, accuracy, and bias values before it reaches a user.",
-    tags: ["GPT-4", "LLM-as-Judge", "Constitutional AI", "Safety"],
-    image: "/project-placeholder-2.jpg",
-    video: `${VIDEO_CDN}/kling_11.mp4`,
-  },
-  {
-    title: "Startup Accelerator",
-    description:
-      "Tailored AI and cloud expertise for participants in the Microsoft Startup Accelerator Program. Per-startup mentoring across architecture, scale, and AI adoption choices.",
-    tags: ["Microsoft", "Mentoring", "Azure", "Startup"],
-    image: "/project-placeholder-3.jpg",
-    video: `${VIDEO_CDN}/kling_12.mp4`,
-  },
-  {
-    title: "Startup Architecture Workshops",
-    description:
-      "Led multiple workshops guiding startups through product evolution on Microsoft Azure. Custom technical architecture blueprints with strategic design recommendations for innovation, scalability, and governance.",
-    tags: ["Azure", "Architecture", "Workshop", "Startup"],
-    image: "/project-placeholder-1.jpg",
-    video: `${VIDEO_CDN}/kling_13.mp4`,
-  },
-  {
-    title: "Managed AI Provisioning",
-    description:
-      "Concept and implementation for provisioning Azure managed AI services (Cognitive Services, Cognitive Search, Azure OpenAI) to multiple consumer teams. Covers deployment patterns, data privacy, secure access, usage tracking, compliance, and content moderation.",
-    tags: ["Azure OpenAI", "Governance", "Multi-Tenant", "Compliance"],
-    image: "/project-placeholder-2.jpg",
-    video: `${VIDEO_CDN}/kling_14.mp4`,
-  },
-  {
-    title: "Recommender FinOps Stack",
-    description:
-      "Cost-aware operational layer for the destination recommender. Telemetry hooks for dialogue validation, API call audit, token consumption, and per-conversation cost calculation, surfacing real LLM spend to product owners.",
-    tags: ["FinOps", "Azure App Service", "Telemetry", "Cost"],
-    image: "/project-placeholder-3.jpg",
-    video: `${VIDEO_CDN}/kling_15.mp4`,
-  },
-  {
-    title: "MLOps Reusable Stack",
-    description:
-      "MLOps concept lifting the quality, frequency, and efficiency of ML model changes to production. Implemented with Azure Machine Learning, Azure DevOps YAML CI/CD, and Azure ML Python and CLI SDK templates for reuse by data science teams. Delivered as workshops.",
-    tags: ["MLOps", "Azure ML", "Azure DevOps", "CI/CD"],
-    image: "/project-placeholder-1.jpg",
-    video: `${VIDEO_CDN}/kling_16.mp4`,
-  },
-  {
-    title: "Azure ML PaaS Rollout",
-    description:
-      "Outcome-based roadmap and Terraform IaC rollout of private, network-secured Azure Machine Learning PaaS for global data science teams. Least-privilege access into the data lake; reference notebooks across Python SDK v1 and v2 covering exploratory analysis through inference.",
-    tags: ["Azure ML", "Terraform", "PaaS", "Least Privilege"],
-    image: "/project-placeholder-2.jpg",
-    video: `${VIDEO_CDN}/kling_17.mp4`,
-  },
-  {
-    title: "Data Platform Observability",
-    description:
-      "SRE-guided operational monitoring of a European airline's central data platform. SLI/SLO definitions, Azure Log Analytics diagnostics provisioned via Terraform Azure Policy, Azure Monitor alerts, and KQL queries for root cause analysis.",
-    tags: ["SRE", "Azure Monitor", "Terraform", "KQL"],
-    image: "/project-placeholder-3.jpg",
-    video: `${VIDEO_CDN}/kling_18.mp4`,
-  },
-  {
-    title: "Neuroscience Knowledge Base",
-    description:
-      "Cleansed, digitized, and enriched 30K research articles into a knowledge base serving neuroscience analysts. Sub-second query response; over 10,000x faster than the legacy search it replaced.",
-    tags: ["Knowledge Base", "Search", "Neuroscience", "Azure"],
-    image: "/project-placeholder-1.jpg",
-    video: `${VIDEO_CDN}/kling_19.mp4`,
-  },
-  {
-    title: "Azure Foundations",
-    description:
-      "Hands-on best-practice build, cost, and compliance of Azure services: IaaS, code-free Logic Apps, Python durable Function Apps, containerized App Services, key vaults, event grid, storage. Application Insights telemetry, RBAC + MFA, managed identities, SAS-secured blob access, subscription cost management.",
-    tags: ["Azure", "IaC", "Security", "Cost Management"],
-    image: "/project-placeholder-2.jpg",
-    video: `${VIDEO_CDN}/kling_20.mp4`,
-  },
+// Operations cards are sourced from `tools-operations-source.json`. Edit the
+// JSON to add/remove/reorder/rename cards; the page picks it up at build time
+// (and during `pnpm dev` via Turbopack hot reload). `caseFileLink` is surfaced
+// through to the carousel but not yet rendered as a link.
+const PROJECT_PLACEHOLDERS = [
+  "/project-placeholder-1.jpg",
+  "/project-placeholder-2.jpg",
+  "/project-placeholder-3.jpg",
 ];
+const projects = operationsSource.map((op, i) => ({
+  title: op.title,
+  description: op.description,
+  tags: op.tags,
+  image: PROJECT_PLACEHOLDERS[i % PROJECT_PLACEHOLDERS.length],
+  video: `${VIDEO_CDN}/${op.klingFile}`,
+  caseFileLink: op.caseFileLink,
+}));
 
 // TODO(phase2): confirm canonical stack with JP.
 const skills = [
