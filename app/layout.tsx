@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { BootSequence } from "@/components/boot-sequence";
 import { AudioBedProvider } from "@/components/audio-bed-provider";
+import { ViewportCornerBrackets } from "@/components/viewport-corner-brackets";
 import { AUDIO_PLAYLIST } from "@/lib/cdn";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -46,8 +47,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className="scroll-smooth shadcn dark"
     >
+      {/* TEMP-DEV: pre-paint boot gate disabled so the boot sequence plays on
+          every load while iterating. Restore the <head> + inline script below
+          (and re-enable the gate in components/boot-sequence.tsx) when done.
       <head>
-        {/* Runs before paint so return visitors never see the boot overlay flash. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
@@ -55,12 +58,16 @@ export default function RootLayout({
           }}
         />
       </head>
+      */}
       <body
         className={`font-body antialiased ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          <BootSequence />
-          <AudioBedProvider playlist={AUDIO_PLAYLIST}>{children}</AudioBedProvider>
+          <AudioBedProvider playlist={AUDIO_PLAYLIST}>
+            <BootSequence />
+            {children}
+            <ViewportCornerBrackets />
+          </AudioBedProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -1,4 +1,4 @@
-import { Container } from "@/components/zippystarter/container";
+import { Container } from "@/components/layout/container";
 import { ReplayBoot } from "@/components/replay-boot";
 import { AudioToggleFooter } from "@/components/audio-toggle-footer";
 
@@ -6,7 +6,7 @@ export function SiteFooter() {
   return (
     <Container
       component="footer"
-      className="mx-auto max-w-7xl border-t border-border bg-background py-8 text-center"
+      className="mx-auto max-w-7xl border-t border-border/60 py-8 text-center"
     >
       <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
         <div className="font-mono text-xs text-muted-foreground">

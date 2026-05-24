@@ -147,14 +147,76 @@
     @apply border-border outline-ring/50;
   }
 
+  /* Site-wide layered backdrop. Same stack used inside the boot overlay so
+     when the boot exits there's no shift - the page underneath looks
+     identical. Top to bottom: cyan dot grid (22px tile), hot cyan bloom
+     from bottom edge, wider amber halo from below the viewport for
+     warm/cool contrast, dark-blue base. `background-attachment: fixed` so
+     the bloom always anchors to the viewport rather than scrolling away. */
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background:
+      radial-gradient(
+          circle,
+          rgba(96, 220, 246, 0.15) 1px,
+          transparent 1.4px
+        )
+        0 0 / 22px 22px,
+      radial-gradient(
+        ellipse 130% 95% at 50% 100%,
+        rgba(96, 220, 246, 0.32) 0%,
+        rgba(96, 220, 246, 0.18) 22%,
+        rgba(96, 220, 246, 0.09) 42%,
+        rgba(96, 220, 246, 0.03) 62%,
+        transparent 80%
+      ),
+      radial-gradient(
+        ellipse 170% 115% at 50% 108%,
+        rgba(255, 170, 60, 0.18) 0%,
+        rgba(255, 170, 60, 0.1) 25%,
+        rgba(255, 170, 60, 0.04) 50%,
+        transparent 90%
+      ),
+      linear-gradient(180deg, oklch(0.1 0.02 240) 0%, oklch(0.04 0.01 240) 100%);
+    background-attachment: fixed;
   }
 
   /* Set by the inline gate script in layout.tsx for return visitors. Hides the
      boot overlay before React mounts so there is no flash. */
   html.cs-no-boot [data-boot-overlay] {
     display: none !important;
+  }
+}
+
+/* Boot-sequence console cursor: hard flash through white -> grey -> invisible
+   on a 3-step loop. Tight 2% transition gaps so the color flips read as
+   discrete frames rather than fades. */
+@keyframes cs-cursor-flash {
+  0%, 32% { color: oklch(1 0 0); }
+  34%, 65% { color: oklch(0.65 0 0); }
+  67%, 100% { color: transparent; }
+}
+.cs-cursor-flash {
+  animation: cs-cursor-flash 0.6s linear infinite;
+}
+
+/* Glitchy 4-stop opacity flicker, ported from 2advanced's `book-buy-flicker`
+   (the bar that flashes on hover under their leftnav buttons like MEDIA
+   ANALYSIS). 90ms with `steps(2, end)` rectifies the curve to a hard 2-frame
+   pulse - feels like a struggling signal. Only animates while the parent
+   `.group` is hovered (matches the source); base state stays calm. */
+@keyframes cs-bar-flicker {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.2; }
+  50% { opacity: 0.9; }
+  75% { opacity: 0.35; }
+}
+.group:hover .cs-bar-flicker {
+  animation: cs-bar-flicker 90ms steps(2, end) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .cs-bar-flicker {
+    animation: none;
   }
 }
 

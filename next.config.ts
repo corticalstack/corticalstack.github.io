@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
   // Emit each route as <route>/index.html so GitHub Pages resolves
   // clean URLs without a server.
   trailingSlash: true,
+  // Hide the Next.js dev-tools overlay (the "N" pill in the bottom corner).
+  // Dev-only - has no effect on the production export anyway.
+  devIndicators: false,
 };
 
 export default nextConfig;

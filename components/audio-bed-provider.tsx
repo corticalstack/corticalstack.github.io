@@ -13,12 +13,16 @@ interface AudioBedContextValue {
   available: boolean;
   audioOn: boolean;
   toggle: () => void;
+  /** Start playback if not already playing. Call from a user-gesture handler
+   *  (e.g. a button click) so the browser allows audio with sound. */
+  enable: () => void;
 }
 
 const AudioBedContext = createContext<AudioBedContextValue>({
   available: false,
   audioOn: false,
   toggle: () => {},
+  enable: () => {},
 });
 
 export function useAudioBed() {
@@ -70,9 +74,18 @@ export function AudioBedProvider({ playlist, children }: AudioBedProviderProps) 
     }
   };
 
+  const enable = () => {
+    if (audioOn) return;
+    const el = audioRef.current;
+    if (!el) return;
+    el.play()
+      .then(() => setAudioOn(true))
+      .catch(() => setAudioOn(false));
+  };
+
   return (
     <AudioBedContext.Provider
-      value={{ available: playlist.length > 0, audioOn, toggle }}
+      value={{ available: playlist.length > 0, audioOn, toggle, enable }}
     >
       {currentTrack ? (
         <audio

@@ -1,9 +1,12 @@
 "use client";
 
+import { playSfx } from "@/lib/sfx";
+
 const STORAGE_KEY = "cs:boot-seen";
 
 export function ReplayBoot() {
   const replay = () => {
+    playSfx("press");
     try {
       window.localStorage.removeItem(STORAGE_KEY);
     } catch {
@@ -16,6 +19,7 @@ export function ReplayBoot() {
     <button
       type="button"
       onClick={replay}
+      onMouseEnter={() => playSfx("hover")}
       className="font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
     >
       // replay boot_

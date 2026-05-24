@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { SfxLink } from "@/components/sfx-link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import { Badge } from "@/components/ui/badge";
-import { Container } from "@/components/zippystarter/container";
+import { Container } from "@/components/layout/container";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { getTransmission, getTransmissionSlugs } from "@/lib/transmissions";
@@ -41,19 +41,19 @@ export default async function TransmissionPage({
   const { source, meta } = data;
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen">
       <SiteHeader />
       <Container
         component="main"
         wrapperClassName="pt-28 pb-20"
         className="mx-auto max-w-3xl"
       >
-        <Link
+        <SfxLink
           href="/transmissions"
           className="font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
         >
           ← return to transmissions
-        </Link>
+        </SfxLink>
 
         <header className="mt-8 mb-10 border-b border-border pb-8">
           <div className="font-mono text-xs text-primary">
@@ -95,12 +95,12 @@ export default async function TransmissionPage({
         </div>
 
         <div className="mt-16 border-t border-border pt-8">
-          <Link
+          <SfxLink
             href="/transmissions"
             className="font-mono text-sm text-primary transition-opacity hover:opacity-80"
           >
             ← return to transmissions
-          </Link>
+          </SfxLink>
         </div>
       </Container>
       <SiteFooter />

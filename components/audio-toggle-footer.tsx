@@ -1,6 +1,7 @@
 "use client";
 
 import { useAudioBed } from "@/components/audio-bed-provider";
+import { playSfx } from "@/lib/sfx";
 
 /**
  * Persistent audio mute/unmute affordance for the footer. Mirrors the
@@ -12,7 +13,11 @@ export function AudioToggleFooter() {
   return (
     <button
       type="button"
-      onClick={toggle}
+      onClick={() => {
+        playSfx("press");
+        toggle();
+      }}
+      onMouseEnter={() => playSfx("hover")}
       className="font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
       aria-label={audioOn ? "Mute audio bed" : "Play audio bed"}
       aria-pressed={audioOn}

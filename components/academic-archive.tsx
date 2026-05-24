@@ -1,4 +1,4 @@
-import { Container } from "@/components/zippystarter/container";
+import { Container } from "@/components/layout/container";
 import { CaseFileCard } from "@/components/case-file-card";
 import { getAllArchives } from "@/lib/archives";
 

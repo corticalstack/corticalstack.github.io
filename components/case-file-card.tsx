@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState, type MouseEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ScrambleText } from "@/components/scramble-text";
+import { playSfx } from "@/lib/sfx";
 
 interface CaseFileCardProps {
   code: string;
@@ -58,6 +59,7 @@ export function CaseFileCard({
       return;
     }
     e.preventDefault();
+    playSfx("deephit");
     setAccessing(true);
   };
 
@@ -66,7 +68,10 @@ export function CaseFileCard({
       <a
         href={href}
         onClick={handleClick}
-        onMouseEnter={() => setHoverTrigger((t) => t + 1)}
+        onMouseEnter={() => {
+          playSfx("hover");
+          setHoverTrigger((t) => t + 1);
+        }}
         aria-disabled={accessing || undefined}
         className="group relative block border border-border bg-card/40 p-5 transition-colors hover:border-primary/70 hover:bg-card/70"
       >
@@ -78,7 +83,11 @@ export function CaseFileCard({
             GRADE {grade}
           </span>
         </div>
-        <div className="mb-3 h-px w-10 bg-primary/40"></div>
+        {/* Signal-bar under the abbreviation. Calm at rest (40% opacity);
+            flips into the 90ms steps(2) flicker only when the card is
+            hovered, mirroring 2advanced's `.leftnav-btn:hover
+            .leftnav-btn-block` behavior. */}
+        <div className="cs-bar-flicker mb-3 h-1 w-10 bg-primary opacity-40"></div>
         <h3 className="font-display text-lg leading-tight">{title}</h3>
         <ScrambleText
           text={description}

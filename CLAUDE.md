@@ -25,8 +25,6 @@ source-of-truth spec).
 - Icons: Lucide React (do not add a second icon library)
 - Package manager: pnpm (Node 22)
 
-Forked from Devstarter by Zippystarter (Apache-2.0), extensively customized.
-
 ## Local development
 
 ```bash
@@ -50,7 +48,7 @@ Gotchas:
 ## Content & structure
 
 - `app/` - `layout.tsx` (fonts, metadata, dark-first theme), `page.tsx` (the single scrollable page: nav, hero, Selected Works, Tech Stack, Transmissions, Contact, footer - driven by inline data arrays), `globals.css` (theme tokens).
-- `components/` - `ui/` (shadcn, owned source), `zippystarter/` (Container), `providers/` (theme), plus `project-image.tsx`.
+- `components/` - `ui/` (shadcn, owned source), `layout/` (Container primitive), `providers/` (theme), plus `project-image.tsx`.
 - `lib/utils.ts` (`cn`); `@/` path alias = repo root.
 - `public/` - static assets, `CNAME`, `cv.pdf`.
 - Preserved from the Jekyll site for migration: `_posts/` (81 posts; source for the MDX transmissions), `assets/img/`, `docs/` (CV + project PDFs).

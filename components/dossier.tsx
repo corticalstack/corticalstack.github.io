@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-import { Container } from "@/components/zippystarter/container";
+import { Container } from "@/components/layout/container";
+import { SfxLink } from "@/components/sfx-link";
 import { cn } from "@/lib/utils";
 
 export function Dossier() {
@@ -95,14 +95,15 @@ export function Dossier() {
             </p>
           </div>
 
-          <Link
+          <SfxLink
             href="/cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            prime
             className={cn(buttonVariants({ variant: "outline" }), "font-mono")}
           >
             [ download full dossier → cv.pdf ]
-          </Link>
+          </SfxLink>
         </div>
       </div>
     </Container>

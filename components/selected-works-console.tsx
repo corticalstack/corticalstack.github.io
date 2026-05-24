@@ -11,7 +11,11 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useAudioBed } from "@/components/audio-bed-provider";
+import { playSfx } from "@/lib/sfx";
 import { cn } from "@/lib/utils";
+
+const onHoverSfx = () => playSfx("hover");
+const onPressSfx = () => playSfx("press");
 
 interface Project {
   title: string;
@@ -154,7 +158,11 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
         {audioAvailable ? (
           <button
             type="button"
-            onClick={toggleAudio}
+            onClick={() => {
+              onPressSfx();
+              toggleAudio();
+            }}
+            onMouseEnter={onHoverSfx}
             className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
             aria-label={audioOn ? "Pause audio bed" : "Play audio bed"}
             aria-pressed={audioOn}
@@ -237,7 +245,11 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
       <div className="flex items-start justify-between gap-4 border-t border-border pt-4">
         <button
           type="button"
-          onClick={goPrev}
+          onClick={() => {
+            onPressSfx();
+            goPrev();
+          }}
+          onMouseEnter={onHoverSfx}
           className="inline-flex items-center gap-2 border border-border px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
           aria-label="Previous project"
         >
@@ -249,7 +261,11 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
           {total > 1 ? (
             <button
               type="button"
-              onClick={() => setRotating((r) => !r)}
+              onClick={() => {
+                onPressSfx();
+                setRotating((r) => !r);
+              }}
+              onMouseEnter={onHoverSfx}
               className="inline-flex items-center gap-2 border border-border px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
               aria-label={
                 rotating ? "Pause auto-rotation" : "Resume auto-rotation"
@@ -269,7 +285,10 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
               <button
                 key={i}
                 type="button"
-                onClick={() => jumpTo(i)}
+                onClick={() => {
+                  onPressSfx();
+                  jumpTo(i);
+                }}
                 className={cn(
                   "h-2 w-2 transition-colors",
                   i === index
@@ -285,7 +304,11 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
 
         <button
           type="button"
-          onClick={goNext}
+          onClick={() => {
+            onPressSfx();
+            goNext();
+          }}
+          onMouseEnter={onHoverSfx}
           className="inline-flex items-center gap-2 border border-border px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
           aria-label="Next project"
         >

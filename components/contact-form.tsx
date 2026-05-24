@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { playSfx } from "@/lib/sfx";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mdajdezj";
 
@@ -15,6 +16,7 @@ export function ContactForm() {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    playSfx("press");
     const form = event.currentTarget;
     const data = new FormData(form);
 
@@ -150,6 +152,10 @@ export function ContactForm() {
         className="w-full font-mono"
         size="lg"
         disabled={status === "submitting"}
+        onMouseEnter={() => {
+          playSfx("hover");
+          playSfx("type");
+        }}
       >
         {status === "submitting" ? "> TRANSMITTING..." : "SEND TRANSMISSION"}
       </Button>

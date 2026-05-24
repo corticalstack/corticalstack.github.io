@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Container } from "@/components/zippystarter/container";
+import { Container } from "@/components/layout/container";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { SfxLink } from "@/components/sfx-link";
 import { getAllTransmissions } from "@/lib/transmissions";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function TransmissionsArchive() {
   const transmissions = getAllTransmissions();
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen">
       <SiteHeader />
       <Container
         component="main"
@@ -36,7 +36,7 @@ export default function TransmissionsArchive() {
 
         <div className="grid gap-8">
           {transmissions.map((post) => (
-            <Link
+            <SfxLink
               href={`/transmissions/${post.slug}`}
               key={post.slug}
               className="group block border-b border-border pb-8 last:border-b-0"
@@ -53,7 +53,7 @@ export default function TransmissionsArchive() {
                 </span>
               </div>
               <p className="max-w-2xl text-muted-foreground">{post.excerpt}</p>
-            </Link>
+            </SfxLink>
           ))}
         </div>
       </Container>

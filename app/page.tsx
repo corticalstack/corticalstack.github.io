@@ -1,14 +1,14 @@
 import { buttonVariants } from "@/components/ui/button";
 import { ContactForm } from "@/components/contact-form";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
-import { Container } from "@/components/zippystarter/container";
+import { Container } from "@/components/layout/container";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { AcademicArchive } from "@/components/academic-archive";
 import { Dossier } from "@/components/dossier";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { SelectedWorksConsole } from "@/components/selected-works-console";
+import { SfxLink } from "@/components/sfx-link";
 import { VIDEO_CDN } from "@/lib/cdn";
 import operationsSource from "@/tools-operations-source.json";
 import { getAllTransmissions } from "@/lib/transmissions";
@@ -71,7 +71,7 @@ export default function Home() {
   return (
     <div
       id="top"
-      className="min-h-screen overflow-x-hidden bg-background text-foreground selection:bg-primary selection:text-primary-foreground"
+      className="min-h-screen overflow-x-hidden selection:bg-primary selection:text-primary-foreground"
     >
       <SiteHeader />
 
@@ -115,14 +115,15 @@ export default function Home() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
-            <Link
+            <SfxLink
               href="#comms"
+              prime
               className={cn(buttonVariants({ size: "lg" }), "font-mono")}
             >
               [ initiate contact ] <ArrowRight className="size-4" />
-            </Link>
+            </SfxLink>
             <div className="flex gap-2">
-              <Link
+              <SfxLink
                 href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -130,8 +131,8 @@ export default function Home() {
                 className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
               >
                 <Github className="h-5 w-5" />
-              </Link>
-              <Link
+              </SfxLink>
+              <SfxLink
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -139,14 +140,14 @@ export default function Home() {
                 className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
               >
                 <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link
+              </SfxLink>
+              <SfxLink
                 href="#comms"
                 aria-label="Contact"
                 className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}
               >
                 <Mail className="h-5 w-5" />
-              </Link>
+              </SfxLink>
             </div>
           </div>
         </div>
@@ -246,7 +247,7 @@ export default function Home() {
 
         <div className="grid gap-8">
           {transmissions.slice(0, 4).map((post) => (
-            <Link
+            <SfxLink
               href={`/transmissions/${post.slug}`}
               key={post.slug}
               className="group block"
@@ -266,17 +267,18 @@ export default function Home() {
                 {post.excerpt}
               </p>
               <div className="h-px w-full bg-border transition-colors group-hover:bg-primary/50"></div>
-            </Link>
+            </SfxLink>
           ))}
         </div>
 
         <div className="mt-12 text-center">
-          <Link
+          <SfxLink
             href="/transmissions"
+            prime
             className={cn(buttonVariants({ variant: "outline" }), "font-mono")}
           >
             [ view all transmissions -&gt; ]
-          </Link>
+          </SfxLink>
         </div>
       </Container>
 
@@ -304,22 +306,22 @@ export default function Home() {
           <ContactForm />
 
           <div className="mt-10 flex items-center justify-center gap-6 font-mono text-xs text-muted-foreground">
-            <Link
+            <SfxLink
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 transition-colors hover:text-primary"
             >
               <Github className="size-4" /> GITHUB
-            </Link>
-            <Link
+            </SfxLink>
+            <SfxLink
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 transition-colors hover:text-primary"
             >
               <Linkedin className="size-4" /> LINKEDIN
-            </Link>
+            </SfxLink>
           </div>
         </div>
       </Container>

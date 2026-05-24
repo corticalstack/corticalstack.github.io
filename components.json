@@ -17,8 +17,5 @@
     "ui": "@/components/ui",
     "lib": "@/lib",
     "hooks": "@/hooks"
-  },
-  "registries": {
-    "@zippystarter": "https://zippystarter.com/r/{name}.json"
   }
 }
