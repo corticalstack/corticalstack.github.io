@@ -72,7 +72,7 @@
   {
     "title": "Airline Avatar",
     "caseFileLink": "",
-    "tags": ["GenAI", "Avatar", "Azure", "GenAI"],
+    "tags": ["GenAI", "Avatar", "Azure", "Function Calling"],
     "description": "Demoed to Satya Nadella at the Microsoft AI Tour Berlin, October 2024. Conversational avatar for a leading European airline, function-calling into live organizational and customer systems so flight offers are grounded in real data.",
     "klingFile": "kling_11.mp4"
   },

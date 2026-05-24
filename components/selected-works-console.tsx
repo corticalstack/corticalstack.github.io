@@ -273,12 +273,16 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
         </div>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
-            <Badge key={tag} variant="secondary" className="font-mono text-xs">
+            <Badge
+              key={tag}
+              variant="outline"
+              className="border-primary/30 bg-primary/5 font-mono text-xs text-primary"
+            >
               {tag}
             </Badge>
           ))}
         </div>
-        <p className="text-muted-foreground">{project.description}</p>
+        <p className="max-w-3xl leading-relaxed text-foreground/85">{project.description}</p>
       </div>
 
       {/* Nav controls. items-start so PREV / AUTO / NEXT top-align even when
@@ -291,7 +295,7 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
             goPrev();
           }}
           onMouseEnter={onHoverSfx}
-          className="inline-flex items-center gap-2 border border-border px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+          className="inline-flex items-center gap-2 border border-primary/40 px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
           aria-label="Previous project"
         >
           <ChevronLeft className="size-4" />
@@ -307,7 +311,7 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
                 setRotating((r) => !r);
               }}
               onMouseEnter={onHoverSfx}
-              className="inline-flex items-center gap-2 border border-border px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex items-center gap-2 border border-primary/40 px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
               aria-label={
                 rotating ? "Pause auto-rotation" : "Resume auto-rotation"
               }
@@ -350,7 +354,7 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
             goNext();
           }}
           onMouseEnter={onHoverSfx}
-          className="inline-flex items-center gap-2 border border-border px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+          className="inline-flex items-center gap-2 border border-primary/40 px-4 py-2 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
           aria-label="Next project"
         >
           NEXT
