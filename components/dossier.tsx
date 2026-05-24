@@ -31,7 +31,7 @@ export function Dossier() {
             <div className="absolute bottom-0 left-0 z-10 size-3 border-b-2 border-l-2 border-primary"></div>
             <div className="absolute right-0 bottom-0 z-10 size-3 border-r-2 border-b-2 border-primary"></div>
             <Image
-              src="/assets/img/jp_profile.jpg"
+              src="/assets/img/jp_avatar.jpg"
               alt="Jon-Paul Boyd"
               fill
               sizes="(min-width: 768px) 224px, 192px"
@@ -47,7 +47,7 @@ export function Dossier() {
         <div className="space-y-6">
           <div>
             <div className="mb-1 font-mono text-xs text-muted-foreground">
-              NAME / ALIAS
+              NAME / CALLSIGN
             </div>
             <div className="font-display text-3xl tracking-tight">
               JON-PAUL BOYD{" "}
@@ -72,26 +72,22 @@ export function Dossier() {
             </div>
           </div>
 
-          {/* TODO(JP): tighten / replace bio paragraphs to taste. */}
           <div className="space-y-4 leading-relaxed text-foreground/85">
             <p>
-              Experienced Azure AI engineer and solution architect, currently
-              with Microsoft Switzerland. Joined in early 2025 after leading
-              Lufthansa&apos;s One Data Platform squad and driving GenAI engineering
-              across the Lufthansa Group.
+              Field-deployed AI Engineer for over 6 years. Previous tours
+              included Lufthansa Group, leading the One Data Platform AI squad
+              and driving ML, MLOps, and GenAI engineering across the Group.
             </p>
             <p>
-              Notable operations include a GPT-4 destination recommender with
-              constitutional oversight, an avatar assistant for a major European
-              airline (demoed to Satya Nadella at the Microsoft AI Tour Berlin),
-              and feedback-funnelling NLP at customer scale. Earlier roles: SAP
-              HANA technical architect at Nestle, and AC Immune&apos;s first
-              cloud-hosted machine learning platform.
+              Earlier postings: SAP HANA technical architect at Nestlé, then
+              engineered AC Immune&apos;s first cloud-hosted Azure ML platform.
+              Foundations laid in data engineering, ML, and applied research
+              before the GenAI wave.
             </p>
             <p>
               Master of Intelligent Systems with distinction from De Montfort
               University, 2021. 90% average across modules and thesis. Off-grid:
-              two kids, kiteboarding, a book a week.
+              two beautiful daughters, kiteboarding, a book a week.
             </p>
           </div>
 
