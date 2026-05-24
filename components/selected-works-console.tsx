@@ -114,22 +114,24 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
     return () => window.removeEventListener("keydown", handleKey);
   }, [total]);
 
-  // Whenever the active slot changes, play the newly-active video from frame 0
-  // and pause the other (it stays hidden, holding its preloaded src ready).
+  // Whenever the active slot changes (or the boot-gated rotation opens), play
+  // the newly-active video from frame 0 and pause everything else. While the
+  // gate is closed (boot overlay visible), all slots stay paused so the user
+  // doesn't dismiss boot into a mid-playback video 1.
   useEffect(() => {
     slotRefs.forEach((ref, i) => {
       const el = ref.current;
       if (!el) return;
-      if (i === activeSlot) {
+      if (i === activeSlot && rotatingGate) {
         el.currentTime = 0;
         el.play().catch(() => {});
       } else {
         el.pause();
       }
     });
-    // slotRefs identity is stable across renders; activeSlot drives the swap.
+    // slotRefs identity is stable across renders; the other deps drive playback.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeSlot, index]);
+  }, [activeSlot, index, rotatingGate]);
 
   if (total === 0) return null;
 

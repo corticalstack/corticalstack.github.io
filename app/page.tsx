@@ -175,7 +175,7 @@ export default function Home() {
             <div className="h-1 w-24 bg-primary"></div>
           </div>
           <p className="max-w-sm text-left text-foreground/85">
-            Field-deployed systems and platforms at scale.
+            Field-deployed apps, systems and platforms at scale.
           </p>
         </div>
 
@@ -200,7 +200,7 @@ export default function Home() {
             <div className="h-1 w-24 bg-primary"></div>
           </div>
           <p className="max-w-sm text-left text-foreground/85">
-            Instruments of the trade.
+            Tools of the trade.
           </p>
         </div>
 
