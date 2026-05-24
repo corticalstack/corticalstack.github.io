@@ -1,135 +1,163 @@
 [
   {
+    "title": "Agentic Engineering Coaching",
+    "caseFileLink": "https://github.com/corticalstack/claude-code-flow",
+    "tags": ["Agentic AI", "Claude Code", "Copilot CLI", "Coaching"],
+    "description": "Field-deploying agentic engineering practice with software teams. Disciplined coding-agent workflow staged as research -> plan -> implement -> validate, with context-window hygiene to fight context rot. Productized in a custom Claude Code and GitHub Copilot CLI template that orchestrates the stages through skills, label-driven state, hooks, and a Ralph-style autonomous harness that closes the issue-to-PR loop hands-free.",
+    "klingFile": "kling_14.mp4"
+  },
+  {
+    "title": "Foundry NextGen Labs",
+    "caseFileLink": "https://github.com/corticalstack/awesome-foundry-nextgen",
+    "tags": ["Azure AI Foundry", "Agents", "MCP", "Bicep"],
+    "description": "Live-fire exercises across Microsoft Foundry NextGen, Azure's unified PaaS for enterprise AI. Hub-spoke Bicep stand-up, then every capability put through its paces: agents, MCP tool servers, Foundry IQ knowledge bases, distillation, guardrails, PyRIT red-teaming, deep-research loops, real-time observability.",
+    "klingFile": "kling_18.mp4"
+  },
+  {
     "title": "Ontology Underwriting Agent",
     "caseFileLink": "",
-    "tags": ["OWL 2", "LangGraph", "GraphDB", "SHACL", "GPT-4.1"],
-    "description": "Production OWL 2 ontology and LangGraph underwriting agent for a reinsurer. Five-stage extraction pipeline (rule-based JSON, GPT-4.1 HTML body, rdflib OWL, SHACL gate, GraphDB) collapses thousands of pages of impairment guidance into a 219-node knowledge graph queried over SPARQL through a FastAPI SSE chat UI.",
+    "tags": ["OWL 2", "GraphDB", "SPARQL", "LangGraph"],
+    "description": "Distills HTML impairment guidance into an OWL 2 knowledge graph that returns evidence-backed rating decisions in seconds. Multi-stage extraction pipeline feeds the graph, with a LangGraph agent answering over NL to SPARQL through a FastAPI SSE chat UI.",
     "klingFile": "kling_21.mp4"
   },
   {
-    "title": "Foundry Control Plane",
-    "caseFileLink": "",
+    "title": "Foundry Booth Op",
+    "caseFileLink": "https://www.linkedin.com/posts/activity-7454790021905190912-jIgK",
     "tags": ["Azure AI Foundry", "Governance", "Agents", "Microsoft"],
-    "description": "Microsoft AI Tour Zurich. Hosted the Foundry Control Plane booth, showing enterprises how to gain trust over a fleet of agents through one place for controls, observability, security, and governance.",
+    "description": "Held down the Foundry Control Plane booth at Microsoft AI Tour Zurich. Live demos of the unified Azure surface that tames a fleet of AI agents through one place for controls, observability, security, and governance.",
     "klingFile": "kling_6.mp4"
   },
   {
-    "title": "Azure ML Field Workshop",
+    "title": "Foundry Drop Zone",
+    "caseFileLink": "https://github.com/corticalstack/foundry-nextgen-lz-terraform",
+    "tags": ["Azure AI Foundry", "Terraform", "APIM", "Private Networking"],
+    "description": "Drops a production Foundry NextGen LZ on Azure in a single terraform apply, securing the perimeter with private-network isolation. APIM hub fronts two workload-segmented accounts with isolated capability hosts and subscription-key routing.",
+    "klingFile": "kling_10.mp4"
+  },
+  {
+    "title": "Vault Compiler",
+    "caseFileLink": "https://github.com/corticalstack/knowledge-vault-ops",
+    "tags": ["Knowledge Graph", "Obsidian", "Claude", "GitHub Actions"],
+    "description": "Working build of Andrej Karpathy's LLM-Wiki idea: the LLM does knowledgebase compilation and management so humans and agents get pre-computed structure instead of re-reasoning every query. 4,000+ markdown notes graphified into a compounding knowledge graph; nightly scans pull 43 frontier researchers (Karpathy, LeCun, and others) into a disposable inbox; vault-ingest writes schema-compliant pages; GitHub Actions enforce bidirectional reciprocity and type integrity.",
+    "klingFile": "kling_15.mp4"
+  },
+  {
+    "title": "Azure ML Field Drill",
     "caseFileLink": "",
     "tags": ["Azure ML", "AutoML", "MLOps", "Workshop"],
-    "description": "Hands-on Azure Machine Learning workshop for a global insurance customer covering the full ML lifecycle: data preparation, AutoML, model training, deployment, evaluation, and MLOps best practice.",
+    "description": "Full-lifecycle Azure ML field drill for a global insurer's data team. One hands-on day moves from data prep through AutoML, training, deployment, evaluation, and MLOps wiring; every stage worked at the keyboard.",
     "klingFile": "kling_22.mp4"
   },
   {
-    "title": "Pharma AI Upskill",
+    "title": "Pharma GenAI Drills",
     "caseFileLink": "",
     "tags": ["GenAI", "RAG", "Fine-Tuning", "Document Intelligence"],
-    "description": "Comprehensive AI upskilling series for a global pharma customer. Sessions on GenAI fundamentals, RAG, prompt engineering, fine-tuning, SLMs, Document Intelligence, Content Understanding, Azure AI Search, and responsible AI.",
+    "description": "Multi-session GenAI drill series taking a global pharma's data team from Azure GenAI fundamentals to fine-tuning. RAG, prompt engineering, SLMs, Document Intelligence, Content Understanding, and Azure AI Search threaded together, with responsible AI woven through every session for regulated-industry deployment.",
     "klingFile": "kling_24.mp4"
   },
   {
     "title": "Service Centre Copilot",
     "caseFileLink": "",
     "tags": ["LangGraph", "Copilot", "Azure OpenAI", "Latency"],
-    "description": "CEO-sponsored LangGraph orchestration powering a service centre Copilot. Lets 5,000+ engineers conversationally query 2M+ technical documents. Task parallelism and model optimization cut troubleshooting response time from 1 minute to ~20s.",
+    "description": "Turned a minute of context-switching into less than 20 seconds of single conversational query across 2M+ technical documents for 5,000+ engineers; task parallelism and model optimization for the win.",
     "klingFile": "kling_23.mp4"
   },
   {
-    "title": "Catalogue Matching Engine",
+    "title": "Catalogue Matcher",
     "caseFileLink": "",
     "tags": ["Azure ML", "NLP", "Classification", "Retail"],
-    "description": "Proof of concept bringing competitor product mapping and price comparison in-house for a nationwide retailer. AI-enabled cleansing, enrichment, and classification orchestrated through Azure Machine Learning; comparable to specialist external vendors, fully automated.",
+    "description": "Rivals specialist external vendors with an Azure ML product catalogue pricing matcher for a nationwide retailer. Cleansing, enrichment, and classification pipeline runs attribute-based filtering and similarity lookups across the full product catalogue, hitting vendor-grade accuracy and fully automated.",
     "klingFile": "kling_4.mp4"
   },
   {
-    "title": "Airline Avatar Assistant",
+    "title": "Airline Avatar",
     "caseFileLink": "",
-    "tags": ["GenAI", "Avatar", "Azure", "Function Calling"],
-    "description": "Conversational avatar assistant for a leading European airline. Demoed to Satya Nadella at the Microsoft AI Tour Berlin, October 2024. Function-calling into external systems for live organizational and customer data.",
+    "tags": ["GenAI", "Avatar", "Azure", "GenAI"],
+    "description": "Demoed to Satya Nadella at the Microsoft AI Tour Berlin, October 2024. Conversational avatar for a leading European airline, function-calling into live organizational and customer systems so flight offers are grounded in real data.",
     "klingFile": "kling_11.mp4"
   },
   {
-    "title": "Feedback Funnelling NLP",
+    "title": "Feedback Funnel",
     "caseFileLink": "",
     "tags": ["NLP", "BERT", "XGBoost", "GPT"],
-    "description": "Intelligent feedback funneling service classifying customer signal into product-specific streams. Evaluated BERT embeddings, XGBoost, prompt engineering, and GPT causal + sequence classifiers to pick the right model per signal type.",
+    "description": "Routes customer feedback into product-specific streams by picking the model that wins each signal type. Empirical bake-off across BERT embeddings, XGBoost, prompt engineering, and GPT causal + sequence classifiers settled the architecture choice rather than defaulting to GPT models.",
     "klingFile": "kling_5.mp4"
   },
   {
-    "title": "Summarization Service",
+    "title": "Summary Loadout",
     "caseFileLink": "",
     "tags": ["GPT", "Summarization", "Prompt Engineering"],
-    "description": "Shared GPT-powered summarization service with pre-engineered prompt styles: extractive, abstractive, creative, formal, keyword-based, thematic, and time-series. Drop-in for diverse downstream workflows.",
+    "description": "Serves seven pre-engineered summarization styles to downstream apps from a single shared GPT service: extractive, abstractive, creative, formal, keyword-based, thematic, and time-series. Teams pick the style, the service handles the prompt craft.",
     "klingFile": "kling_12.mp4"
   },
   {
-    "title": "Destination Recommender",
+    "title": "Destination Finder",
     "caseFileLink": "",
-    "tags": ["GPT-4", "Azure App Service", "LLMOps"],
-    "description": "GPT-4 destination recommendation app, hosted as a containerized Azure App Service. Built-in dialogue and API call validation, token consumption tracking, and per-conversation cost calculation.",
+    "tags": ["GPT", "Azure App Service", "LLMOps", "Travel"],
+    "description": "Conversational GPT destination finder for top European airline. Passengers chat their preferences (e.g. 'surfing and architecture'); the system ranks matching destinations from a curated knowledge base against that compound profile.",
     "klingFile": "kling_9.mp4"
   },
   {
-    "title": "Constitutional Knowledge Base",
+    "title": "Constitutional Judge",
     "caseFileLink": "",
-    "tags": ["GPT-4", "LLM-as-Judge", "Constitutional AI", "Safety"],
-    "description": "GPT-4 knowledge base of destination master data with LLM-as-judge oversight. A constitutional rubric continuously evaluates generated content for alignment with safety, accuracy, and bias values before it reaches a user.",
+    "tags": ["GPT", "LLM-as-Judge", "Constitutional AI", "Safety"],
+    "description": "Constitutional LLM-as-judge gating a GenAI-curated destination knowledge base. Every generated answer scored on safety, accuracy, and bias before it reaches the user; failed responses are blocked, not shown.",
     "klingFile": "kling_13.mp4"
   },
   {
-    "title": "Startup Accelerator",
+    "title": "Founder Advisory",
     "caseFileLink": "",
     "tags": ["Microsoft", "Mentoring", "Azure", "Startup"],
-    "description": "Tailored AI and cloud expertise for participants in the Microsoft Startup Accelerator Program. Per-startup mentoring across architecture, scale, and AI adoption choices.",
+    "description": "Embedded as AI and cloud advisor inside the Microsoft Startup Accelerator Program. Per-startup rather than per-cohort: each founder gets architecture, scale, and AI adoption guidance tailored to their actual position.",
     "klingFile": "kling_2.mp4"
   },
   {
-    "title": "Startup Architecture Workshops",
+    "title": "Startup Blueprints",
     "caseFileLink": "",
     "tags": ["Azure", "Architecture", "Workshop", "Startup"],
-    "description": "Led multiple workshops guiding startups through product evolution on Microsoft Azure. Custom technical architecture blueprints with strategic design recommendations for innovation, scalability, and governance.",
+    "description": "Multi-workshop drill turning startup architectures into product-evolution blueprints on Microsoft Azure. Per-company design recommendations balancing innovation, scalability, and governance; the deliverable is a working blueprint, not a slide deck.",
     "klingFile": "kling_19.mp4"
   },
   {
-    "title": "Managed AI Provisioning",
+    "title": "Managed AI Plane",
     "caseFileLink": "",
     "tags": ["Azure OpenAI", "Governance", "Multi-Tenant", "Compliance"],
-    "description": "Concept and implementation for provisioning Azure managed AI services (Cognitive Services, Cognitive Search, Azure OpenAI) to multiple consumer teams. Covers deployment patterns, data privacy, secure access, usage tracking, compliance, and content moderation.",
+    "description": "One central plane safely fans Azure Cognitive Services, Cognitive Search, and Azure OpenAI out to multiple consumer teams. Single pattern locks in deployment, data privacy, secure access, usage tracking, compliance, and content moderation; designed and shipped end-to-end.",
     "klingFile": "kling_20.mp4"
   },
   {
-    "title": "MLOps Reusable Stack",
+    "title": "MLOps Chassis",
     "caseFileLink": "",
     "tags": ["MLOps", "Azure ML", "Azure DevOps", "CI/CD"],
-    "description": "MLOps concept lifting the quality, frequency, and efficiency of ML model changes to production. Implemented with Azure Machine Learning, Azure DevOps YAML CI/CD, and Azure ML Python and CLI SDK templates for reuse by data science teams. Delivered as workshops.",
+    "description": "One MLOps chassis serving many data science teams for top European airline. Azure ML + Azure DevOps YAML CI/CD + Python and CLI SDK templates ship together as a reusable pattern that lifts model-shipping quality, frequency, and efficiency. Adoption workshops included.",
     "klingFile": "kling_7.mp4"
   },
   {
-    "title": "Azure ML PaaS Rollout",
+    "title": "Azure ML Rollout",
     "caseFileLink": "",
     "tags": ["Azure ML", "Terraform", "PaaS", "Least Privilege"],
-    "description": "Outcome-based roadmap and Terraform IaC rollout of private, network-secured Azure Machine Learning PaaS for global data science teams. Least-privilege access into the data lake; reference notebooks across Python SDK v1 and v2 covering exploratory analysis through inference.",
+    "description": "Outcome-based rollout of Azure ML PaaS for global data science teams. Terraform IaC ships network-secured workspaces, least-privilege access wires into the data lake, and reference notebooks (Python SDK v1 + v2) take teams from EDA through inference on day one.",
     "klingFile": "kling_17.mp4"
   },
   {
-    "title": "Data Platform Observability",
+    "title": "Platform Observability",
     "caseFileLink": "",
     "tags": ["SRE", "Azure Monitor", "Terraform", "KQL"],
-    "description": "SRE-guided operational monitoring of a European airline's central data platform. SLI/SLO definitions, Azure Log Analytics diagnostics provisioned via Terraform Azure Policy, Azure Monitor alerts, and KQL queries for root cause analysis.",
+    "description": "SRE-grade observability for a European airline's central data platform. SLI/SLO definitions pin telemetry to system health; Azure Policy auto-provisions diagnostics across every resource so nothing ships dark; Azure Monitor alerts and KQL queries close the loop.",
     "klingFile": "kling_3.mp4"
   },
   {
-    "title": "Neuroscience Knowledge Base",
+    "title": "Neuroscience KB",
     "caseFileLink": "",
     "tags": ["Knowledge Base", "Search", "Neuroscience", "Azure"],
-    "description": "Cleansed, digitized, and enriched 30K research articles into a knowledge base serving neuroscience analysts. Sub-second query response; over 10,000x faster than the legacy search it replaced.",
+    "description": "10,000x faster than the legacy search. 30K cleansed, digitized, and enriched neuroscience research articles in a knowledge base returning sub-second answers to analysts.",
     "klingFile": "kling_8.mp4"
   },
   {
     "title": "Azure Foundations",
     "caseFileLink": "",
     "tags": ["Azure", "IaC", "Security", "Cost Management"],
-    "description": "Hands-on best-practice build, cost, and compliance of Azure services: IaaS, code-free Logic Apps, Python durable Function Apps, containerized App Services, key vaults, event grid, storage. Application Insights telemetry, RBAC + MFA, managed identities, SAS-secured blob access, subscription cost management.",
+    "description": "Best-practice breadth across the Azure stack: IaaS, Python Function Apps, Logic Apps, containerized App Services, key vaults, event grid, storage. Application Insights telemetry, AAD RBAC + MFA + managed identities, SAS-secured blobs, subscription cost management. Built, costed, and compliant from day one.",
     "klingFile": "kling_1.mp4"
   }
 ]

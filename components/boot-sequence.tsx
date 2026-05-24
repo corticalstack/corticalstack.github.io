@@ -124,6 +124,11 @@ export function BootSequence() {
   const dismiss = () => {
     setVisible(false);
     persistSeen();
+    // Signal to downstream surfaces (e.g. the Operations carousel) that the
+    // user is now seeing the page. The carousel uses this to release its
+    // rotation gate so it doesn't auto-advance through cards while invisible
+    // behind the boot overlay.
+    window.dispatchEvent(new CustomEvent("cs:boot-dismissed"));
   };
 
   const handleAccess = () => {

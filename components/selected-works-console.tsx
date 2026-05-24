@@ -23,6 +23,9 @@ interface Project {
   tags: string[];
   image: string;
   video?: string;
+  /** External "case file" link (e.g. a repo, write-up, demo). Empty string
+   *  renders the static `LINKS PENDING` placeholder instead. */
+  caseFileLink?: string;
 }
 
 interface SelectedWorksConsoleProps {
@@ -50,10 +53,33 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
   const [index, setIndex] = useState(0);
   const [activeSlot, setActiveSlot] = useState<0 | 1>(0);
   const [rotating, setRotating] = useState(true);
+  // Auto-advance is gated until the boot dismisses (or, for return visitors
+  // who skip the boot, immediately on mount). Without this gate the carousel
+  // would silently rotate through cards while invisible behind the boot
+  // overlay, so the user would land on card 2 or 3 after dismissal instead
+  // of card 1. Default true keeps SSR/return-visitor render parity; the
+  // mount effect closes the gate on first visit and reopens it on dismiss.
+  const [rotatingGate, setRotatingGate] = useState(true);
   const slotRefs = [
     useRef<HTMLVideoElement>(null),
     useRef<HTMLVideoElement>(null),
   ];
+
+  useEffect(() => {
+    // If the pre-paint gate script set `cs-no-boot`, the boot won't show -
+    // leave the rotation gate open. Otherwise, close it and wait for the
+    // boot's dismissal event.
+    const hasNoBoot =
+      document.documentElement.classList.contains("cs-no-boot");
+    if (hasNoBoot) return;
+    // SSR can't read the html class, so initial state defaults open; this
+    // post-mount narrow closes the gate for first-visit clients only.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setRotatingGate(false);
+    const open = () => setRotatingGate(true);
+    window.addEventListener("cs:boot-dismissed", open, { once: true });
+    return () => window.removeEventListener("cs:boot-dismissed", open);
+  }, []);
   const {
     available: audioAvailable,
     audioOn,
@@ -134,7 +160,7 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
   };
 
   const handleVideoEnded = (event: React.SyntheticEvent<HTMLVideoElement>) => {
-    if (rotating && total > 1) {
+    if (rotating && rotatingGate && total > 1) {
       advance();
       return;
     }
@@ -226,8 +252,23 @@ export function SelectedWorksConsole({ projects }: SelectedWorksConsoleProps) {
           <h3 className="font-display text-3xl leading-tight tracking-tight md:text-4xl">
             {project.title}
           </h3>
-          <div className="shrink-0 self-start font-mono text-xs whitespace-nowrap text-muted-foreground">
-            // CASE FILE // LINKS PENDING
+          <div className="shrink-0 self-start font-mono text-xs whitespace-nowrap">
+            {project.caseFileLink ? (
+              <a
+                href={project.caseFileLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={onHoverSfx}
+                onClick={onPressSfx}
+                className="text-muted-foreground transition-colors hover:text-primary"
+              >
+                // CASE FILE ↗
+              </a>
+            ) : (
+              <span className="text-muted-foreground">
+                // CASE FILE // LINKS PENDING
+              </span>
+            )}
           </div>
         </div>
         <div className="flex flex-wrap gap-2">
