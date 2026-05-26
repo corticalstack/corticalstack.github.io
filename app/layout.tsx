@@ -4,6 +4,7 @@ import { BootSequence } from "@/components/boot-sequence";
 import { AudioBedProvider } from "@/components/audio-bed-provider";
 import { ViewportCornerBrackets } from "@/components/viewport-corner-brackets";
 import { AUDIO_PLAYLIST } from "@/lib/cdn";
+import { SITE_URL } from "@/lib/site";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -17,14 +18,12 @@ const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://corticalstack.ai";
-
 const title = "Cortical Stack // JP Boyd";
 const description =
   "Cyberware storage unit for experiments and field notes, pushing boundaries at the intersection of human creativity, machine intelligence, and agentic systems.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title,
   description,
   openGraph: {
