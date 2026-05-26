@@ -22,6 +22,19 @@ import { useAudioBed } from "@/components/audio-bed-provider";
  */
 const STORAGE_KEY = "cs:boot-seen";
 
+// Per-letter fade-in delay for the boot title + subtitle. Deterministic
+// pseudo-random keyed off (group, index) so the server-rendered and
+// client-rendered delays match (no hydration mismatch). 1.5s pre-roll (aligned
+// to LINE_START_DELAY_MS so the first letter lands with the first character
+// of "CONNECTING TO THE STACK"), then each letter lands at a random point
+// within a 1.5s spread window. Combined with the per-letter 4.5s fade
+// duration the last letter is fully visible at ~7.5s, aligned with the
+// `[ access the network ]` button (which fully lands at ~7.0s).
+function letterDelay(group: number, i: number): number {
+  const x = Math.sin(i * 12.9898 + group * 78.233) * 43758.5453;
+  return 1.5 + (x - Math.floor(x)) * 1.5;
+}
+
 // Each console line is an array of segments. The default color is the
 // container's `text-primary`; segments can override (e.g. dimmer cyan for
 // status tags like `[OK]` or pending markers like `[ AUTH REQUIRED ]`).
@@ -321,11 +334,11 @@ export function BootSequence() {
             {"CORTICAL STACK".split("").map((letter, i) => (
               <motion.span
                 key={i}
-                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{
-                  delay: 1.0 + i * 0.12,
-                  duration: 1.0,
+                  delay: letterDelay(0, i),
+                  duration: 4.5,
                   ease: "easeOut",
                 }}
                 className="font-display text-3xl tracking-[0.4em] uppercase md:text-4xl"
@@ -344,11 +357,11 @@ export function BootSequence() {
             {"CYBERWARE STORAGE UNIT".split("").map((letter, i) => (
               <motion.span
                 key={i}
-                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{
-                  delay: 1.0 + i * 0.12,
-                  duration: 1.0,
+                  delay: letterDelay(1, i),
+                  duration: 4.5,
                   ease: "easeOut",
                 }}
                 className="font-mono text-[10px] tracking-[0.5em] md:text-[11px]"
