@@ -19,10 +19,10 @@ export function AudioToggleFooter() {
       }}
       onMouseEnter={() => playSfx("hover")}
       className="font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
-      aria-label={audioOn ? "Mute audio bed" : "Play audio bed"}
+      aria-label={audioOn ? "Mute track" : "Play track"}
       aria-pressed={audioOn}
     >
-      {audioOn ? "// audio_on" : "// audio_off"}
+      {audioOn ? "// track_on" : "// track_off"}
     </button>
   );
 }

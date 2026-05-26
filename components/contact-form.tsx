@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { ScrambleOnHover } from "@/components/scramble-on-hover";
 import { playSfx } from "@/lib/sfx";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mdajdezj";
@@ -157,7 +158,11 @@ export function ContactForm() {
           playSfx("type");
         }}
       >
-        {status === "submitting" ? "> TRANSMITTING..." : "SEND TRANSMISSION"}
+        <ScrambleOnHover
+          text={
+            status === "submitting" ? "> TRANSMITTING..." : "SEND TRANSMISSION"
+          }
+        />
       </Button>
     </form>
   );

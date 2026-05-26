@@ -220,6 +220,34 @@
   }
 }
 
+/* One-shot CTA flicker, ported verbatim from 2advanced's TRAILER button
+   (their `cta-flicker` keyframes). On hover, the entire element's opacity
+   steps through bright/dim states - so border, text, and background all
+   flicker together as one comms-signal pulse, then settle at the static
+   hover colors declared elsewhere on the element (Tailwind utility
+   classes or other rules). `steps(7, end)` rectifies the curve to hard
+   frames. No `forwards`: opacity ends at 1 naturally and we don't need
+   to lock a final state. */
+@keyframes cs-cta-flicker {
+  0%   { opacity: 1; }
+  10%  { opacity: 0.2; }
+  20%  { opacity: 1; }
+  32%  { opacity: 0.45; }
+  44%  { opacity: 1; }
+  56%  { opacity: 0.3; }
+  68%  { opacity: 1; }
+  82%  { opacity: 0.85; }
+  100% { opacity: 1; }
+}
+.cs-cta-flicker:hover {
+  animation: cs-cta-flicker 500ms steps(7, end);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cs-cta-flicker:hover {
+    animation: none;
+  }
+}
+
 @utility px-safe {
   padding-left: var(--safe-area-left);
   padding-right: var(--safe-area-right);

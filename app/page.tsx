@@ -9,6 +9,7 @@ import { Dossier } from "@/components/dossier";
 import { cn } from "@/lib/utils";
 import { SelectedWorksConsole } from "@/components/selected-works-console";
 import { SfxLink } from "@/components/sfx-link";
+import { ScrambleOnHover } from "@/components/scramble-on-hover";
 import { VIDEO_CDN } from "@/lib/cdn";
 import operationsSource from "@/tools-operations-source.json";
 import { getAllTransmissions } from "@/lib/transmissions";
@@ -126,7 +127,8 @@ export default function Home() {
               prime
               className={cn(buttonVariants({ size: "lg" }), "font-mono")}
             >
-              [ initiate contact ] <ArrowRight className="size-4" />
+              <ScrambleOnHover text="[ initiate contact ]" />{" "}
+              <ArrowRight className="size-4" />
             </SfxLink>
             <div className="flex gap-2">
               <SfxLink
@@ -282,7 +284,7 @@ export default function Home() {
             prime
             className={cn(buttonVariants({ variant: "outline" }), "font-mono")}
           >
-            [ view all transmissions -&gt; ]
+            <ScrambleOnHover text="[ view all transmissions -> ]" />
           </SfxLink>
         </div>
       </Container>

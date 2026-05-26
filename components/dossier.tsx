@@ -2,6 +2,7 @@ import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { SfxLink } from "@/components/sfx-link";
+import { ScrambleOnHover } from "@/components/scramble-on-hover";
 import { cn } from "@/lib/utils";
 
 export function Dossier() {
@@ -98,7 +99,7 @@ export function Dossier() {
             prime
             className={cn(buttonVariants({ variant: "outline" }), "font-mono")}
           >
-            [ download full dossier → cv.pdf ]
+            <ScrambleOnHover text="[ download full dossier → cv.pdf ]" />
           </SfxLink>
         </div>
       </div>

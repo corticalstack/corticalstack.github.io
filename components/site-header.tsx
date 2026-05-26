@@ -4,6 +4,7 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { SfxLink } from "@/components/sfx-link";
+import { ScrambleOnHover } from "@/components/scramble-on-hover";
 import { playSfx } from "@/lib/sfx";
 import { cn } from "@/lib/utils";
 
@@ -54,7 +55,7 @@ export function SiteHeader() {
           "border-primary/50 font-mono text-xs hover:border-primary hover:bg-primary/10 hover:text-primary",
         )}
       >
-        cv.pdf
+        <ScrambleOnHover text="cv.pdf" />
       </SfxLink>
     </Container>
   );
