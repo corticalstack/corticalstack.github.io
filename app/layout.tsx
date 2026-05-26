@@ -21,7 +21,7 @@ const siteUrl = "https://corticalstack.ai";
 
 const title = "Cortical Stack // JP Boyd";
 const description =
-  "Cyberware storage unit for academic projects, AI experiments, and field notes from the edge of practical machine learning.";
+  "Cyberware storage unit for experiments and field notes, pushing boundaries at the intersection of human creativity, machine intelligence, and agentic systems.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,6 +32,12 @@ export const metadata: Metadata = {
     description,
     url: "./",
     siteName: "Cortical Stack",
+    images: "/og.jpg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
     images: "/og.jpg",
   },
 };
