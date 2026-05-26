@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     description,
     url: "./",
     siteName: "Cortical Stack",
-    images: "/og.jpg",
+    images: "/og.jpg?v=2",
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: "/og.jpg",
+    images: "/og.jpg?v=2",
   },
 };
 
