@@ -22,7 +22,7 @@ export function ReplayBoot() {
       onMouseEnter={() => playSfx("hover")}
       className="font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
     >
-      // replay boot_
+      // reboot_
     </button>
   );
 }

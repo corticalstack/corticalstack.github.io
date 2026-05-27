@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { SelectedWorksConsole } from "@/components/selected-works-console";
 import { SfxLink } from "@/components/sfx-link";
 import { ScrambleOnHover } from "@/components/scramble-on-hover";
+import { DecryptText } from "@/components/decrypt-text";
 import { VIDEO_CDN } from "@/lib/cdn";
 import operationsSource from "@/tools-operations-source.json";
 import { getAllTransmissions } from "@/lib/transmissions";
@@ -83,7 +84,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <Container
-        wrapperClassName="pt-32 pb-24"
+        wrapperClassName="pt-32 pb-12"
         className="mx-auto max-w-7xl"
       >
         <div className="space-y-8">
@@ -106,11 +107,20 @@ export default function Home() {
             ))}
           </div>
 
-          <h1 className="font-display text-6xl leading-[0.9] tracking-tighter md:text-8xl">
-            CORTICAL
-            <br />
+          <h1 className="font-display text-4xl leading-[0.9] tracking-tighter whitespace-nowrap md:text-6xl xl:text-8xl">
+            <DecryptText
+              text="CORTICAL "
+              waitForBoot
+              startDelayMs={1000}
+              charMs={140}
+            />
             <span className="bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent">
-              STACK
+              <DecryptText
+                text="STACK"
+                waitForBoot
+                startDelayMs={2260}
+                charMs={140}
+              />
             </span>
             <span className="animate-pulse text-primary">_</span>
           </h1>
@@ -165,7 +175,7 @@ export default function Home() {
       <Container
         id="operations"
         component="section"
-        wrapperClassName="py-24 border-t border-border"
+        wrapperClassName="pt-12 pb-24 border-t border-border"
         className="mx-auto max-w-7xl flex-1"
       >
         <div className="mb-16 grid items-end justify-between gap-4">
