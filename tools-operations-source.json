@@ -1,7 +1,7 @@
 [
   {
     "title": "Agentic Engineering Coaching",
-    "caseFileLink": "https://github.com/corticalstack/claude-code-flow",
+    "caseFileLink": "/case-files/agentic-engineering-coaching/",
     "tags": ["Agentic AI", "Claude Code", "Copilot CLI", "Coaching"],
     "description": "Field-deploying agentic engineering practice with software teams. Disciplined coding-agent workflow staged as research -> plan -> implement -> validate, with context-window hygiene to fight context rot. Productized in a custom Claude Code and GitHub Copilot CLI template that orchestrates the stages through skills, label-driven state, hooks, and a Ralph-style autonomous harness that closes the issue-to-PR loop hands-free.",
     "klingFile": "kling_14.mp4"
