@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Foundry - The Agent Control Plane</title>
+
+  <!-- Reveal.js 5.1.0 (CDN, no build step) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme">
+  <!-- highlight.js 11.9.0 atom-one-dark theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/atom-one-dark.min.css">
+
+  <!-- Fonts: Space Grotesk + JetBrains Mono (matches corticalstack.ai) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+
+  <style>
+    /* ========== Theme / brand overrides (cyber-teal, matched to corticalstack.ai) ========== */
+    :root {
+      --c-accent: #60dcf6;
+      --c-accent-bright: #8fe9ff;
+      --c-bg: #010203;
+      --c-bg-soft: #060e15;
+      --c-fg: #eaf2f5;
+      --c-muted: #8aa0a9;
+      --c-line: rgba(96, 220, 246, 0.16);
+      --c-green: #5ad19a;
+      --c-amber: #ffaa3c;
+      --c-amber-bright: #ffbf66;
+      --c-violet: #a48cff;
+      --c-pink: #e58cb5;
+      --c-sans: "Space Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --c-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, "Courier New", monospace;
+    }
+
+    html, body { background: var(--c-bg); }
+
+    .reveal {
+      font-family: var(--c-sans);
+      color: var(--c-fg);
+      background: radial-gradient(circle at 28% -10%, #0b1c25 0%, #060e15 52%, #010203 100%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Thin accent rule pinned to the top of every slide */
+    .reveal::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--c-accent) 0%, var(--c-accent-bright) 100%);
+      z-index: 60;
+    }
+
+    /* Persistent brand mark, bottom-left */
+    .brandmark {
+      position: fixed;
+      left: 26px; bottom: 18px;
+      z-index: 55;
+      font-family: var(--c-mono);
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--c-muted);
+      pointer-events: none;
+    }
+    .brandmark b { color: var(--c-fg); font-weight: 600; }
+    .brandmark .dot { color: var(--c-accent); }
+
+    .reveal .slides { text-align: left; }
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: var(--c-sans);
+      text-transform: none;
+      color: var(--c-fg);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.04;
+      margin: 0;
+    }
+    .reveal p { line-height: 1.4; }
+    .reveal .accent { color: var(--c-accent-bright); }
+
+    /* ========== Shared content-slide scaffold ========== */
+    /* Reveal sets the present slide's display inline to block; re-assert flex on the
+       visible slide only (non-present slides stay display:none, so nothing stacks). */
+    .reveal .slides > section.present { display: flex !important; }
+
+    .reveal section.content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 8px 0 58px;
+      box-sizing: border-box;
+    }
+    .kicker {
+      font-family: var(--c-mono);
+      font-size: 18px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--c-accent-bright);
+      margin-bottom: 10px;
+      flex: 0 0 auto;
+    }
+    .kicker .num { color: var(--c-muted); }
+    .reveal section.content h2 {
+      font-size: 44px;
+      max-width: 94%;
+      flex: 0 0 auto;
+      margin-bottom: 28px; /* breathing room between strapline and content */
+    }
+    .reveal section.content h2 .q { color: var(--c-muted); }
+    .subcap { font: 500 15px var(--c-mono); color: var(--c-muted); margin: -18px 0 0; }
+    .subcap b { color: var(--c-accent-bright); font-weight: 600; }
+
+    /* Generic hero wrapper: takes remaining space, centers its diagram */
+    .canvas {
+      flex: 1 1 auto; min-height: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 16px; margin: 4px 0;
+    }
+
+    /* Takeaway bar */
+    .takeaway {
+      flex: 0 0 auto;
+      font-size: 23px;
+      color: var(--c-fg);
+      max-width: 96%;
+      padding-left: 18px;
+      border-left: 4px solid var(--c-accent);
+      margin: 0;
+    }
+    .takeaway b { color: var(--c-accent-bright); font-weight: 600; }
+    /* clearance so the takeaway never collides with a tall hero; scoped, not global */
+    .reveal section.content:has(.canvas) .takeaway { margin-top: 28px; }
+
+    /* ========== Title slide ========== */
+    .reveal section.title { display: flex; flex-direction: column; justify-content: center; height: 100%; }
+    .title-mark {
+      font-family: var(--c-mono);
+      font-size: 18px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--c-muted);
+      margin-bottom: 26px;
+    }
+    .title-mark .dot { color: var(--c-accent); }
+    .reveal section.title h1 { font-size: 100px; letter-spacing: -0.035em; line-height: 0.94; }
+    .reveal section.title .subtitle { font-size: 28px; color: var(--c-muted); margin-top: 28px; max-width: 82%; }
+    .title-foot { margin-top: 50px; font-family: var(--c-mono); font-size: 16px; letter-spacing: 0.06em; color: var(--c-muted); }
+    .title-foot .accent { color: var(--c-accent-bright); }
+    .title-foot .who { color: var(--c-fg); font-weight: 600; }
+    .title-repo { margin-top: 36px; font-family: var(--c-mono); font-size: 15px; color: var(--c-muted); line-height: 1.7; }
+    .title-repo a { color: var(--c-accent-bright); text-decoration: none; border-bottom: 1px solid rgba(96, 220, 246, 0.45); }
+
+
+    /* ========== Code blocks (atom-one-dark via highlight.js) ========== */
+    .reveal pre { width: 100%; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.5); margin: 0; }
+    .reveal pre code {
+      font-family: var(--c-mono);
+      font-size: 16px; line-height: 1.5;
+      border-radius: 10px;
+      border: 1px solid var(--c-line);
+      border-top: 3px solid var(--c-accent);
+      padding: 18px 20px;
+    }
+
+    /* Slide numbers + nav, tuned to brand */
+    .reveal .slide-number { font-family: var(--c-mono); background: transparent; color: var(--c-muted); font-size: 14px; right: 22px; bottom: 16px; }
+    .reveal .controls { right: 110px; bottom: 6px; }
+    .reveal .controls .navigate-left, .reveal .controls .navigate-right { bottom: 0; }
+    .reveal .progress { color: var(--c-accent); height: 4px; }
+
+    /* ========== Reusable primitives ========== */
+    /* simple "vs" divider used by compare slides */
+    .vs { flex: 0 0 46px; align-self: stretch; position: relative; display: flex; align-items: center; justify-content: center; }
+    .vs::before { content: ""; position: absolute; top: 6%; bottom: 6%; left: 50%; border-left: 1px dashed rgba(255, 255, 255, 0.16); }
+    .vs span {
+      position: relative; z-index: 1; width: 34px; height: 34px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font: 700 11px var(--c-mono); text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--c-muted); background: var(--c-bg-soft); border: 1px solid var(--c-line);
+    }
+
+    /* ========== LIVE DEMO marker slide ========== */
+    .reveal section.demo { height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    .demo-badge {
+      font: 700 14px var(--c-mono); letter-spacing: 0.3em; text-transform: uppercase; color: #04222b;
+      background: linear-gradient(135deg, var(--c-accent-bright), #2b8fa6);
+      padding: 8px 22px; border-radius: 99px; display: inline-flex; align-items: center; gap: 11px;
+      box-shadow: 0 0 0 1px rgba(96, 220, 246, 0.25), 0 16px 40px rgba(0, 0, 0, 0.5);
+    }
+    .demo-badge .rec { width: 11px; height: 11px; border-radius: 50%; background: #04222b; animation: recpulse 1.6s ease-in-out infinite; }
+    @keyframes recpulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+    .reveal section.demo h2 { font-size: 52px; margin: 22px 0 8px; max-width: 86%; }
+    .reveal section.demo .demo-sub { font-size: 20px; color: var(--c-muted); max-width: 64%; margin: 0 auto; line-height: 1.4; }
+    .demo-where { margin-top: 18px; font: 600 12px var(--c-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-muted); }
+    .demo-where b { color: var(--c-accent-bright); }
+    @media (prefers-reduced-motion: reduce) { .demo-badge .rec { animation: none; } }
+
+    /* ========== Act 0: audience map + agenda arc ========== */
+    .audience { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; width: 100%; }
+    .aud-card { border: 1px solid var(--c-line); border-radius: 14px; background: rgba(255, 255, 255, 0.03); padding: 20px 22px; display: flex; flex-direction: column; gap: 12px; border-top: 3px solid var(--c-accent); }
+    .aud-card.dev { border-top-color: var(--c-green); }
+    .aud-card.it { border-top-color: var(--c-amber); }
+    .aud-card.sec { border-top-color: var(--c-pink); }
+    .aud-tag { align-self: flex-start; font: 700 10px var(--c-mono); letter-spacing: 0.18em; color: var(--c-accent); border: 1px solid currentColor; border-radius: 6px; padding: 2px 8px; }
+    .aud-card.dev .aud-tag { color: var(--c-green); }
+    .aud-card.it .aud-tag { color: var(--c-amber); }
+    .aud-card.sec .aud-tag { color: var(--c-pink); }
+    .aud-role { font: 700 19px var(--c-sans); color: var(--c-fg); letter-spacing: -0.01em; }
+    .aud-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .aud-card li { font-size: 14px; color: var(--c-muted); line-height: 1.3; padding-left: 16px; position: relative; }
+    .aud-card li::before { content: ""; position: absolute; left: 0; top: 7px; width: 7px; height: 7px; border-radius: 2px; background: var(--c-accent); }
+    .aud-card.dev li::before { background: var(--c-green); }
+    .aud-card.it li::before { background: var(--c-amber); }
+    .aud-card.sec li::before { background: var(--c-pink); }
+    .arc { display: flex; gap: 7px; flex-wrap: wrap; justify-content: center; align-items: center; }
+    .arc-chip { font: 600 12px var(--c-mono); color: var(--c-muted); border: 1px solid var(--c-line); border-radius: 99px; padding: 6px 13px; background: rgba(255, 255, 255, 0.02); }
+    .arc-chip b { color: var(--c-accent-bright); }
+    .arc-sep { color: var(--c-line); }
+
+    /* ========== Act 1: platform overview map ========== */
+    .ovw { width: 100%; max-width: 1220px; }
+    .ovw-frame { border: 1px solid var(--c-line); border-radius: 16px; padding: 18px 16px 16px; background: rgba(96, 220, 246, 0.03); position: relative; display: flex; flex-direction: column; gap: 11px; }
+    .ovw-brand { position: absolute; top: -14px; left: 26px; background: var(--c-bg-soft); padding: 3px 14px; font: 700 13px var(--c-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-accent-bright); border: 1px solid var(--c-line); border-radius: 99px; }
+    .ovw-ns { position: absolute; top: -13px; right: 22px; font: 500 11px var(--c-mono); color: var(--c-muted); background: var(--c-bg-soft); padding: 3px 10px; }
+    .ovw-row { display: flex; gap: 11px; }
+    .obox { flex: 1 1 0; border: 1px solid var(--c-line); border-radius: 11px; background: rgba(255, 255, 255, 0.03); padding: 10px 14px; display: flex; flex-direction: column; gap: 4px; border-top: 3px solid var(--c-line); min-width: 0; }
+    .obox h4 { font: 700 14px var(--c-sans); margin: 0 0 2px; color: var(--c-fg); }
+    .obox span { font: 500 11.5px var(--c-mono); color: var(--c-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .obox .svc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px 14px; }
+    .obox.obs { border-top-color: var(--c-violet); }
+    .obox.dev { border-top-color: var(--c-green); }
+    .obox.svc { border-top-color: var(--c-accent); background: rgba(96, 220, 246, 0.06); }
+    .obox.models, .obox.kt, .obox.integ { border-top-color: #60a5fa; }
+    .obox.kt { flex-grow: 1.7; }
+    .obox.base { border-top-color: var(--c-amber); background: rgba(255, 170, 60, 0.05); }
+
+    /* ========== Act 1: Assistants -> Responses terminology map ========== */
+    .tmap { width: min(840px, 96%); display: flex; flex-direction: column; gap: 9px; font-family: var(--c-mono); }
+    .tmap-head { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 4px; }
+    .tmap-head .old { color: var(--c-amber-bright); text-decoration: line-through; font-size: 16px; opacity: 0.85; }
+    .tmap-head .arr { color: var(--c-muted); font-size: 18px; }
+    .tmap-head .new { color: var(--c-accent-bright); font-weight: 700; font-size: 18px; }
+    .tmap-row { display: grid; grid-template-columns: 1fr 44px 1fr; align-items: center; gap: 10px; border: 1px solid var(--c-line); border-radius: 9px; background: rgba(255, 255, 255, 0.02); padding: 9px 16px; }
+    .tmap-row .o { color: var(--c-muted); text-align: right; font-size: 14px; }
+    .tmap-row .o s { color: var(--c-amber-bright); opacity: 0.8; }
+    .tmap-row .a { color: var(--c-accent); text-align: center; }
+    .tmap-row .n { color: var(--c-fg); font-size: 14px; }
+    .tmap-row .n b { color: var(--c-accent-bright); }
+    .tmap-note { text-align: center; border: 1px dashed rgba(255, 170, 60, 0.5); background: rgba(255, 170, 60, 0.06); color: #ffce8a; border-radius: 10px; padding: 10px 16px; font-size: 13px; margin-top: 4px; }
+    .tmap-note b { color: var(--c-amber-bright); }
+
+    /* ========== Act 1: capabilities ribbon (build / operate) ========== */
+    .caps { display: flex; gap: 12px; width: 100%; max-width: 1220px; }
+    .capgrp { flex: 1; display: flex; align-items: center; flex-wrap: wrap; gap: 5px 9px; border: 1px solid var(--c-line); border-top-width: 2px; border-radius: 10px; padding: 7px 13px; background: rgba(255, 255, 255, 0.02); font: 500 12px var(--c-mono); color: var(--c-muted); }
+    .capgrp .capk { font: 700 9.5px var(--c-mono); letter-spacing: 0.14em; padding: 2px 8px; border-radius: 5px; border: 1px solid currentColor; }
+    .capgrp.build { border-top-color: var(--c-green); }
+    .capgrp.build .capk { color: var(--c-green); }
+    .capgrp.operate { border-top-color: var(--c-amber); }
+    .capgrp.operate .capk { color: var(--c-amber); }
+
+    /* ========== Act 2: portal browser mockup ========== */
+    .portal { width: min(1080px, 99%); border: 1px solid var(--c-line); border-radius: 12px; overflow: hidden; background: #0a0f13; box-shadow: 0 22px 54px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; }
+    .pf-bar { display: flex; align-items: center; gap: 12px; padding: 8px 14px; border-bottom: 1px solid var(--c-line); background: rgba(255, 255, 255, 0.04); font-size: 12px; }
+    .pf-brand { display: flex; align-items: center; gap: 6px; color: var(--c-fg); font-weight: 600; white-space: nowrap; }
+    .pf-brand .logo { color: var(--c-accent); }
+    .pf-crumb { color: var(--c-muted); white-space: nowrap; font-family: var(--c-mono); font-size: 11px; }
+    .pf-search { flex: 0 1 260px; border: 1px solid var(--c-line); border-radius: 7px; padding: 4px 10px; color: var(--c-muted); background: rgba(0, 0, 0, 0.35); font-family: var(--c-mono); font-size: 10.5px; }
+    .pf-toggle { display: flex; align-items: center; gap: 6px; color: var(--c-accent-bright); font-size: 10.5px; white-space: nowrap; font-family: var(--c-mono); }
+    .pf-toggle .sw { width: 26px; height: 14px; border-radius: 99px; background: var(--c-accent); position: relative; }
+    .pf-toggle .sw::after { content: ""; position: absolute; right: 2px; top: 2px; width: 10px; height: 10px; border-radius: 50%; background: #04222b; }
+    .pf-tabs { display: flex; gap: 16px; margin-left: auto; }
+    .pf-tab { color: var(--c-muted); font-size: 12.5px; }
+    .pf-tab.active { color: var(--c-accent-bright); font-weight: 600; border-bottom: 2px solid var(--c-accent); padding-bottom: 2px; }
+    .pf-icons { color: var(--c-muted); letter-spacing: 3px; font-size: 11px; }
+    .pf-body { padding: 16px 20px; flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; gap: 11px; }
+
+    /* Home: welcome strip + tab purpose cards */
+    .pf-home { display: flex; flex-direction: column; gap: 9px; align-items: center; text-align: center; padding: 4px 0 2px; }
+    .pf-welcome { font: 700 21px var(--c-sans); color: var(--c-fg); }
+    .pf-startbtn { font: 600 11.5px var(--c-mono); color: #04222b; background: var(--c-accent); border-radius: 7px; padding: 6px 16px; }
+    .pf-meta { display: flex; gap: 9px; justify-content: center; flex-wrap: wrap; }
+    .pf-meta .m { font-family: var(--c-mono); font-size: 10px; color: var(--c-muted); border: 1px solid var(--c-line); border-radius: 6px; padding: 4px 9px; }
+    .pf-meta .m b { color: var(--c-fg); }
+    .tabmap { display: grid; grid-template-columns: repeat(5, 1fr); gap: 11px; width: 100%; }
+    .tabmap-card { border: 1px solid var(--c-line); border-radius: 11px; background: rgba(255, 255, 255, 0.03); padding: 12px 13px; border-top: 3px solid var(--c-accent); display: flex; flex-direction: column; gap: 5px; }
+    .tabmap-card .tm-t { font: 700 14px var(--c-sans); color: var(--c-accent-bright); }
+    .tabmap-card .tm-d { font-size: 12.5px; color: var(--c-muted); line-height: 1.3; }
+
+    /* Discover: providers + leaderboard */
+    .disc-head { display: flex; align-items: baseline; gap: 12px; }
+    .disc-head .dh-t { font: 700 16px var(--c-sans); color: var(--c-fg); }
+    .disc-head .dh-s { font: 500 11px var(--c-mono); color: var(--c-muted); }
+    .disc-providers { display: flex; gap: 7px; flex-wrap: wrap; }
+    .disc-providers .p { font-family: var(--c-mono); font-size: 11px; color: var(--c-fg); border: 1px solid var(--c-line); border-radius: 8px; padding: 5px 11px; background: rgba(255, 255, 255, 0.03); }
+    .lb { width: 100%; border-collapse: collapse; font-family: var(--c-mono); font-size: 11.5px; }
+    .lb th { text-align: right; color: var(--c-muted); font-weight: 600; font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.07em; padding: 5px 10px; border-bottom: 1px solid var(--c-line); }
+    .lb th:first-child { text-align: left; }
+    .lb td { padding: 5px 10px; color: var(--c-fg); border-bottom: 1px solid rgba(96, 220, 246, 0.07); text-align: right; }
+    .lb td:first-child { text-align: left; color: var(--c-accent-bright); }
+    .lb .win { color: var(--c-amber-bright); }
+    .disc-tools { font-size: 11.5px; color: var(--c-muted); border-left: 3px solid var(--c-accent); padding-left: 10px; }
+    .disc-tools b { color: var(--c-accent-bright); }
+
+    /* Build: left nav building blocks */
+    .build-wrap { display: flex; gap: 16px; flex: 1 1 auto; min-height: 0; }
+    .build-nav { flex: 0 0 150px; display: flex; flex-direction: column; gap: 3px; border-right: 1px solid var(--c-line); padding-right: 12px; }
+    .build-nav .n { font-family: var(--c-mono); font-size: 11.5px; color: var(--c-muted); padding: 5px 9px; border-radius: 6px; }
+    .build-nav .n.active { color: var(--c-accent-bright); background: rgba(96, 220, 246, 0.08); border-left: 2px solid var(--c-accent); }
+    .build-main { flex: 1 1 auto; display: flex; flex-direction: column; gap: 9px; min-width: 0; }
+    .build-note { font-size: 11px; color: #ffce8a; border: 1px dashed rgba(255, 170, 60, 0.5); border-radius: 8px; padding: 7px 12px; background: rgba(255, 170, 60, 0.05); }
+    .build-note b { color: var(--c-amber-bright); }
+    .build-actions { display: flex; gap: 8px; }
+    .build-btn { font: 600 11px var(--c-mono); border-radius: 7px; padding: 6px 13px; }
+    .build-btn.primary { background: var(--c-accent); color: #04222b; }
+    .build-btn.ghost { border: 1px solid var(--c-line); color: var(--c-fg); }
+    .agtbl { width: 100%; border-collapse: collapse; font-family: var(--c-mono); font-size: 11.5px; }
+    .agtbl th { text-align: left; color: var(--c-muted); font-weight: 600; font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.07em; padding: 5px 9px; border-bottom: 1px solid var(--c-line); }
+    .agtbl td { padding: 6px 9px; color: var(--c-fg); border-bottom: 1px solid rgba(96, 220, 246, 0.07); }
+    .agtbl td:first-child { color: var(--c-accent-bright); }
+    .agtbl .ver { color: var(--c-muted); }
+
+    /* Reusable pillar cards (control plane teaser + deep dive) */
+    .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; width: 100%; }
+    .pillar { border: 1px solid var(--c-line); border-radius: 12px; background: rgba(255, 255, 255, 0.03); padding: 15px 16px; border-top: 3px solid var(--c-accent); display: flex; flex-direction: column; gap: 7px; }
+    .pillar .pl-n { font: 700 9px var(--c-mono); letter-spacing: 0.18em; color: var(--c-muted); }
+    .pillar .pl-t { font: 700 17px var(--c-sans); color: var(--c-fg); letter-spacing: -0.01em; }
+    .pillar .pl-d { font-size: 12.5px; color: var(--c-muted); line-height: 1.32; }
+    .pillar.ctrl { border-top-color: var(--c-accent); }
+    .pillar.obs { border-top-color: var(--c-green); }
+    .pillar.sec { border-top-color: var(--c-pink); }
+    .pillar.flt { border-top-color: var(--c-amber); }
+    .pillars.g2 { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .pillars.g2 .pillar { padding: 24px 28px; gap: 10px; justify-content: center; }
+    .pillars.g2 .pl-n { font-size: 10px; }
+    .pillars.g2 .pl-t { font-size: 24px; }
+    .pillars.g2 .pl-d { font-size: 15px; }
+
+    /* ========== Act 3: resource model (1:1 vs 1:N) ========== */
+    .resmodel { width: 100%; display: flex; flex-direction: column; gap: 18px; align-items: center; }
+    .hier { display: flex; align-items: center; justify-content: center; gap: 7px; font-family: var(--c-mono); font-size: 12px; flex-wrap: wrap; }
+    .hier .h { border: 1px solid var(--c-line); border-radius: 8px; padding: 6px 12px; color: var(--c-muted); }
+    .hier .h.foundry { border-color: var(--c-accent); color: var(--c-accent-bright); }
+    .hier .h.proj { border-color: rgba(90, 209, 154, 0.5); color: var(--c-green); }
+    .hier .ha { color: var(--c-muted); }
+    .twocol { display: flex; gap: 18px; align-items: stretch; width: 100%; }
+    .rm-panel { flex: 1 1 0; border: 1px solid var(--c-line); border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 11px; }
+    .rm-panel.one { border-top: 3px solid var(--c-amber); }
+    .rm-panel.many { border-top: 3px solid var(--c-green); }
+    .rm-h { font: 700 17px var(--c-sans); color: var(--c-fg); }
+    .rm-h small { color: var(--c-muted); font-weight: 400; font-size: 12px; display: block; margin-top: 2px; }
+    .acct { border: 1px solid var(--c-line); border-radius: 10px; background: rgba(96, 220, 246, 0.05); padding: 11px 12px; }
+    .acct-label { font: 600 11px var(--c-mono); color: var(--c-accent-bright); margin-bottom: 8px; }
+    .projrow { display: flex; gap: 7px; flex-wrap: wrap; }
+    .proj { font: 600 10.5px var(--c-mono); color: var(--c-fg); border: 1px solid var(--c-line); border-radius: 6px; padding: 5px 9px; background: rgba(255, 255, 255, 0.04); }
+    .proj.cap { color: var(--c-violet); border-color: rgba(164, 140, 255, 0.4); }
+    .rm-note { font-size: 12.5px; color: var(--c-muted); line-height: 1.35; }
+    .rm-note b { color: var(--c-fg); }
+
+    /* ========== Act 3: hub-and-spoke architecture ========== */
+    .arch { width: min(1080px, 99%); display: flex; flex-direction: column; align-items: center; gap: 11px; font-family: var(--c-mono); }
+    .arch-label { font: 600 9.5px var(--c-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--c-muted); }
+    .arch-hubs { display: flex; gap: 12px; justify-content: center; }
+    .hub { border: 1px solid var(--c-line); border-top: 3px solid var(--c-violet); border-radius: 10px; background: rgba(164, 140, 255, 0.06); padding: 8px 13px; text-align: center; min-width: 168px; }
+    .hub .hb-n { font: 700 12.5px var(--c-mono); color: var(--c-fg); }
+    .hub .hb-r { font-size: 9.5px; color: var(--c-muted); margin: 2px 0 6px; }
+    .hub .hb-m { display: flex; gap: 5px; justify-content: center; flex-wrap: wrap; }
+    .hub .m { font-size: 9px; color: var(--c-violet); border: 1px solid rgba(164, 140, 255, 0.4); border-radius: 5px; padding: 2px 6px; }
+    .arch-arrow { color: var(--c-muted); font-size: 10px; display: flex; align-items: center; gap: 10px; }
+    .arch-arrow .ar { color: var(--c-accent); font-size: 13px; }
+    .apim { width: 84%; border: 1px solid var(--c-accent); border-radius: 10px; background: rgba(96, 220, 246, 0.08); box-shadow: 0 0 0 1px rgba(96, 220, 246, 0.12); padding: 9px 14px; text-align: center; }
+    .apim .ap-n { font: 700 13px var(--c-mono); color: var(--c-accent-bright); }
+    .apim .ap-d { font-size: 9.5px; color: var(--c-muted); margin-top: 3px; }
+    .arch-spokes { display: flex; gap: 14px; justify-content: center; width: 100%; }
+    .spoke { flex: 1 1 0; border: 1px solid var(--c-line); border-radius: 10px; padding: 9px 13px; }
+    .spoke.one { border-top: 3px solid var(--c-amber); }
+    .spoke.many { border-top: 3px solid var(--c-green); }
+    .spoke .sp-h { font: 700 12px var(--c-sans); color: var(--c-fg); display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .spoke .badge { font-size: 8px; color: var(--c-amber-bright); border: 1px solid rgba(255, 170, 60, 0.5); border-radius: 99px; padding: 1px 7px; white-space: nowrap; }
+    .spoke .sp-acct { font-size: 10.5px; color: var(--c-accent-bright); margin: 5px 0; }
+    .spoke .projrow { gap: 5px; }
+    .spoke .proj { font-size: 9px; padding: 2px 7px; }
+    .spoke .sp-conn { font-size: 9px; color: var(--c-muted); margin-top: 6px; }
+    .spoke .sp-conn b { color: var(--c-green); }
+    .arch-foot { font: 500 9px var(--c-mono); color: var(--c-muted); text-align: center; max-width: 92%; line-height: 1.4; }
+
+    /* ========== Act 3: deny policy ========== */
+    .policy { display: flex; gap: 20px; align-items: stretch; width: 100%; }
+    .policy .pcode { flex: 1.25 1 0; display: flex; flex-direction: column; justify-content: center; }
+    .policy .pside { flex: 1 1 0; display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+    .scope { display: flex; flex-direction: column; gap: 7px; }
+    .scope-row { display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--c-line); border-radius: 8px; padding: 9px 13px; font-family: var(--c-mono); font-size: 12.5px; }
+    .scope-row .rg { color: var(--c-fg); }
+    .scope-row .st { font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 99px; letter-spacing: 0.05em; }
+    .scope-row .st.deny { color: var(--c-amber-bright); border: 1px solid rgba(255, 170, 60, 0.5); }
+    .scope-row .st.exempt { color: var(--c-green); border: 1px solid rgba(90, 209, 154, 0.5); }
+    .policy-err { font-family: var(--c-mono); font-size: 12px; color: var(--c-amber-bright); border-left: 3px solid var(--c-amber); padding: 6px 0 6px 12px; line-height: 1.4; }
+    .policy-err b { color: var(--c-fg); }
+
+    /* ========== Act 4: deployment types ========== */
+    .dep { width: 100%; display: flex; flex-direction: column; gap: 14px; }
+    .dep-types { display: flex; gap: 16px; }
+    .dep-card { flex: 1 1 0; border: 1px solid var(--c-line); border-radius: 13px; padding: 15px 17px; display: flex; flex-direction: column; gap: 8px; }
+    .dep-card.std { border-top: 3px solid var(--c-accent); }
+    .dep-card.ptu { border-top: 3px solid var(--c-violet); }
+    .dep-card .dc-t { font: 700 17px var(--c-sans); color: var(--c-fg); }
+    .dep-card .dc-t small { color: var(--c-muted); font-weight: 400; font-size: 12.5px; display: block; margin-top: 1px; }
+    .dep-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+    .dep-card li { font-size: 12.5px; color: var(--c-muted); padding-left: 15px; position: relative; line-height: 1.3; }
+    .dep-card li::before { content: "+"; position: absolute; left: 0; color: var(--c-accent); font-weight: 700; }
+    .dep-card.ptu li::before { color: var(--c-violet); }
+    .dep-scope { display: flex; gap: 9px; }
+    .dep-chip { flex: 1 1 0; border: 1px solid var(--c-line); border-radius: 9px; padding: 9px 12px; text-align: center; background: rgba(255, 255, 255, 0.02); }
+    .dep-chip .ds-t { font: 700 12px var(--c-mono); color: var(--c-accent-bright); }
+    .dep-chip .ds-d { font-size: 10.5px; color: var(--c-muted); margin-top: 2px; }
+    .dep-note { font-size: 12px; color: #ffce8a; border: 1px dashed rgba(255, 170, 60, 0.5); border-radius: 9px; padding: 8px 13px; background: rgba(255, 170, 60, 0.05); }
+    .dep-note b { color: var(--c-amber-bright); }
+
+    /* ========== Act 4: inference paths ========== */
+    .infer { width: min(1040px, 99%); display: flex; flex-direction: column; gap: 15px; align-items: center; }
+    .inf-paths { display: flex; gap: 16px; width: 100%; }
+    .inf-path { flex: 1 1 0; box-sizing: border-box; border: 1px solid var(--c-line); border-top: 3px solid var(--c-accent); border-radius: 12px; background: rgba(255, 255, 255, 0.03); padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+    .inf-path.fdry { border-top-color: var(--c-green); }
+    .inf-path .ip-t { font: 700 15px var(--c-sans); color: var(--c-fg); display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .inf-path .ip-badge { font: 700 8.5px var(--c-mono); letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid currentColor; border-radius: 99px; padding: 2px 8px; white-space: nowrap; }
+    .inf-path.direct .ip-badge { color: var(--c-accent-bright); }
+    .inf-path.fdry .ip-badge { color: var(--c-green); }
+    .inf-path .ip-code { font: 500 11px var(--c-mono); color: var(--c-accent-bright); background: rgba(96, 220, 246, 0.06); border: 1px solid var(--c-line); border-radius: 6px; padding: 5px 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .inf-path .ip-d { font-size: 12px; color: var(--c-muted); line-height: 1.35; }
+    .inf-gw { font: 600 10.5px var(--c-mono); letter-spacing: 0.04em; color: var(--c-accent-bright); border: 1px dashed rgba(96, 220, 246, 0.45); border-radius: 8px; padding: 6px 16px; background: rgba(96, 220, 246, 0.05); }
+    .inf-path .ip-surfs { display: flex; flex-wrap: wrap; gap: 5px; }
+    .inf-path .ip-chip { font: 600 9.5px var(--c-mono); border: 1px solid var(--c-line); border-radius: 99px; padding: 2px 9px; color: var(--c-muted); white-space: nowrap; }
+    .inf-path.direct .ip-chip { color: var(--c-accent-bright); border-color: rgba(96, 220, 246, 0.4); }
+    .inf-path.fdry .ip-chip { color: var(--c-green); border-color: rgba(90, 209, 154, 0.4); }
+    .inf-path .ip-d b { color: var(--c-fg); }
+
+    /* ========== Act 5: agent components ========== */
+    .agentdiag { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .agt-row { display: flex; align-items: center; gap: 16px; justify-content: center; }
+    .agt-box { border: 1px solid var(--c-line); border-radius: 14px; padding: 13px 16px; background: rgba(255, 255, 255, 0.03); }
+    .agt-box .ab-h { font: 700 15px var(--c-sans); color: var(--c-fg); text-align: center; margin-bottom: 8px; }
+    .agt-box.agent { border-color: var(--c-accent); box-shadow: 0 0 0 1px var(--c-accent), 0 0 26px rgba(96, 220, 246, 0.18); }
+    .agt-box.agent .ab-h { color: var(--c-accent-bright); }
+    .agt-slots { display: flex; flex-direction: column; gap: 6px; min-width: 200px; }
+    .agt-slot { font: 600 12px var(--c-mono); color: var(--c-fg); background: rgba(96, 220, 246, 0.1); border-radius: 7px; padding: 7px 0; text-align: center; }
+    .agt-items { display: flex; flex-direction: column; gap: 7px; min-width: 132px; }
+    .agt-items.horiz { flex-direction: row; gap: 10px; justify-content: center; }
+    .agt-item { font: 600 11.5px var(--c-mono); color: var(--c-muted); text-align: center; border: 1px solid var(--c-line); border-radius: 7px; padding: 6px 10px; }
+    .agt-arrow { color: var(--c-accent); font-size: 24px; }
+    .agt-bidir { font: 600 11px var(--c-mono); letter-spacing: 0.08em; color: var(--c-accent); text-align: center; }
+
+    /* ========== Act 5: 6-stage ring (SVG) ========== */
+    .ringwrap { display: flex; align-items: center; justify-content: center; width: 100%; }
+    .ring { width: 100%; max-width: 760px; max-height: 52vh; }
+    .ring .rg-ring { fill: none; stroke: rgba(96, 220, 246, 0.25); stroke-width: 1.5; }
+    .ring .rg-core { fill: rgba(255, 255, 255, 0.04); stroke: var(--c-line); stroke-width: 1.5; }
+    .ring .rg-core-t { fill: var(--c-fg); font: 700 17px var(--c-sans); text-anchor: middle; }
+    .ring .rg-logo { fill: var(--c-accent); font-size: 26px; text-anchor: middle; }
+    .ring .rg-lab { fill: var(--c-fg); font: 600 15px var(--c-sans); }
+    .ring .rg-num { fill: #04222b; font: 700 13px var(--c-mono); text-anchor: middle; }
+    .ring .disc { fill: var(--c-accent); }
+    .ring .disc.hot { fill: var(--c-pink); }
+    .ring .arc { fill: none; stroke: var(--c-violet); stroke-width: 1.5; opacity: 0.6; }
+
+    /* ========== Act 5: Agent Service runtime flow ========== */
+    .svcflow { width: min(1010px, 99%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: var(--c-mono); }
+    .svc-node { border: 1px solid var(--c-line); border-radius: 10px; padding: 8px 14px; text-align: center; background: rgba(255, 255, 255, 0.03); font-size: 12px; color: var(--c-fg); }
+    .svc-node.code { border-color: rgba(90, 209, 154, 0.5); color: var(--c-green); }
+    .svc-node b { color: var(--c-accent-bright); }
+    .svc-core { border: 1px solid var(--c-accent); border-radius: 12px; background: rgba(96, 220, 246, 0.06); box-shadow: 0 0 0 1px rgba(96, 220, 246, 0.12); padding: 11px 14px; width: 100%; box-sizing: border-box; }
+    .svc-core .sc-h { font: 700 12.5px var(--c-mono); color: var(--c-accent-bright); text-align: center; margin-bottom: 9px; }
+    .svc-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .svc-step { border: 1px solid var(--c-line); border-radius: 8px; padding: 8px 11px; font-size: 11px; color: var(--c-muted); background: rgba(255, 255, 255, 0.02); line-height: 1.3; }
+    .svc-step b { color: var(--c-fg); }
+    .svc-step .n { color: var(--c-accent); font-weight: 700; margin-right: 5px; }
+    .svc-arrow { color: var(--c-accent); font-size: 14px; }
+
+    /* ========== Act 5: knowledge & tools catalog ========== */
+    .cat3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; }
+    .catcol { border: 1px solid var(--c-line); border-radius: 12px; padding: 13px 16px; border-top: 3px solid var(--c-accent); display: flex; flex-direction: column; }
+    .catcol.k { border-top-color: var(--c-green); }
+    .catcol.c { border-top-color: var(--c-violet); }
+    .catcol h4 { font: 700 14px var(--c-sans); color: var(--c-fg); margin: 0 0 8px; }
+    .catrow { display: flex; justify-content: space-between; align-items: center; gap: 8px; font: 600 12.5px var(--c-mono); padding: 5px 0; border-bottom: 1px solid rgba(96, 220, 246, 0.07); }
+    .catrow:last-child { border-bottom: none; }
+    .catrow .nm { color: var(--c-fg); }
+    .catrow .nm a { color: var(--c-accent-bright); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* ========== Act 5: hosted agents ========== */
+    .hosted { width: 100%; display: flex; flex-direction: column; gap: 14px; }
+    .hosted-cmp { display: flex; gap: 16px; align-items: stretch; }
+    .hc-card { flex: 1 1 0; border: 1px solid var(--c-line); border-radius: 13px; padding: 14px 17px; position: relative; }
+    .hc-card.prompt { border-top: 3px solid var(--c-accent); }
+    .hc-card.host { border-top: 3px solid var(--c-violet); }
+    .hc-h { font: 700 16px var(--c-sans); color: var(--c-fg); }
+    .hc-h small { display: block; color: var(--c-muted); font-weight: 400; font-size: 12.5px; margin-top: 2px; }
+    .hc-card ul { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+    .hc-card li { font-size: 12.5px; color: var(--c-muted); padding-left: 14px; position: relative; line-height: 1.3; }
+    .hc-card li::before { content: "+"; position: absolute; left: 0; color: var(--c-accent); font-weight: 700; }
+    .hc-card a { color: var(--c-accent-bright); text-decoration: underline; text-underline-offset: 2px; }
+    .hc-card.host li::before { color: var(--c-violet); }
+    .frameworks { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; align-items: center; }
+    .fw-label { font: 700 10px var(--c-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-muted); margin-right: 4px; }
+    .fw { font: 600 11px var(--c-mono); color: var(--c-fg); border: 1px solid var(--c-line); border-radius: 99px; padding: 5px 12px; background: rgba(164, 140, 255, 0.06); }
+
+    /* ========== Act 5: nested two-loop (Copilot SDK hosted) ========== */
+    .nest { width: min(980px, 99%); font-family: var(--c-mono); }
+    .nest-cap { font: 700 9.5px var(--c-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-muted); margin-bottom: 7px; }
+    .nest-l1 { border: 1px solid var(--c-line); border-radius: 14px; padding: 12px 14px; background: rgba(255, 255, 255, 0.02); }
+    .nest-l2 { border: 1px solid var(--c-accent); border-radius: 12px; padding: 11px 13px; background: rgba(96, 220, 246, 0.05); }
+    .nest-l2 > .nest-cap { color: var(--c-accent-bright); }
+    .nest-l3 { border: 1px dashed rgba(164, 140, 255, 0.6); border-radius: 10px; padding: 10px 12px; background: rgba(164, 140, 255, 0.07); margin-top: 8px; }
+    .nest-l3 > .nest-cap { color: var(--c-violet); }
+    .nest-loop { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 10.5px; color: var(--c-fg); flex-wrap: wrap; }
+    .nest-loop .step { border: 1px solid var(--c-line); border-radius: 7px; padding: 5px 10px; background: rgba(0, 0, 0, 0.25); }
+    .nest-loop .ar { color: var(--c-violet); }
+    .byok { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 9px; font-size: 11px; color: var(--c-muted); flex-wrap: wrap; }
+    .byok .b-model { border: 1px solid var(--c-violet); border-radius: 8px; padding: 6px 11px; color: var(--c-violet); background: rgba(164, 140, 255, 0.07); }
+    .byok .ar { color: var(--c-accent); }
+
+    /* ========== Act 6: Foundry IQ overview ========== */
+    .iq { width: 100%; display: flex; flex-direction: column; gap: 15px; }
+    .iq-flow { display: flex; align-items: stretch; gap: 12px; }
+    .iq-col-h { font: 700 9.5px var(--c-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-muted); margin-bottom: 6px; }
+    .iq-sources { flex: 0 0 25%; display: flex; flex-direction: column; gap: 6px; }
+    .iq-src { font: 600 11px var(--c-mono); color: var(--c-fg); border: 1px solid var(--c-line); border-radius: 7px; padding: 6px 10px; background: rgba(255, 255, 255, 0.03); }
+    .iq-arrow { display: flex; align-items: center; color: var(--c-accent); font-size: 20px; }
+    .iq-kb { flex: 1 1 0; border: 1px solid var(--c-accent); border-radius: 12px; background: rgba(96, 220, 246, 0.06); box-shadow: 0 0 0 1px rgba(96, 220, 246, 0.12); padding: 14px 16px; display: flex; flex-direction: column; gap: 7px; justify-content: center; }
+    .iq-kb .kb-h { font: 700 16px var(--c-sans); color: var(--c-accent-bright); }
+    .iq-kb .kb-d { font-size: 12px; color: var(--c-muted); line-height: 1.35; }
+    .iq-kb .kb-eng { font: 600 11px var(--c-mono); color: var(--c-fg); border-top: 1px solid var(--c-line); padding-top: 8px; }
+    .iq-kb .kb-eng b { color: var(--c-accent-bright); }
+    .iq-right { flex: 0 0 24%; display: flex; flex-direction: column; gap: 8px; justify-content: center; }
+    .iq-agent { border: 1px solid var(--c-line); border-radius: 8px; padding: 8px 11px; font: 600 11px var(--c-mono); color: var(--c-fg); text-align: center; background: rgba(255, 255, 255, 0.03); }
+    .iq-fam { display: flex; gap: 8px; justify-content: center; }
+    .iq-fam .f { font: 600 11px var(--c-mono); border: 1px solid var(--c-line); border-radius: 99px; padding: 4px 13px; color: var(--c-muted); }
+    .iq-fam .f.on { color: var(--c-accent-bright); border-color: var(--c-accent); background: rgba(96, 220, 246, 0.06); }
+
+    /* ========== Act 6: agentic-retrieval data flow ========== */
+    .flowlane { width: min(1030px, 99%); display: flex; flex-direction: column; gap: 20px; }
+    .lane { border: 1px solid var(--c-line); border-radius: 12px; padding: 11px 14px; }
+    .lane.ingest { border-left: 3px solid var(--c-violet); }
+    .lane-h { font: 700 11px var(--c-mono); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 9px; }
+    .lane.ingest .lane-h { color: var(--c-violet); }
+    .lane-steps { display: flex; align-items: center; gap: 7px; justify-content: center; }
+    .lstep { border: 1px solid var(--c-line); border-radius: 8px; padding: 7px 10px; font: 600 11px var(--c-mono); color: var(--c-fg); background: rgba(255, 255, 255, 0.03); text-align: center; }
+    .lstep small { display: block; color: var(--c-muted); font-weight: 400; font-size: 8.5px; margin-top: 1px; }
+    .lstep.emb { border-color: rgba(164, 140, 255, 0.5); color: var(--c-violet); background: rgba(164, 140, 255, 0.07); }
+    .larrow { color: var(--c-muted); font-size: 13px; }
+    .iqkb { display: flex; flex-direction: column; gap: 16px; align-items: center; width: 100%; }
+    .iqkb-src { font: 600 12.5px var(--c-mono); color: var(--c-accent-bright); border: 1px solid rgba(96, 220, 246, 0.4); border-radius: 8px; padding: 5px 14px; background: rgba(96, 220, 246, 0.05); }
+    .iqkb-src small { color: var(--c-muted); font-weight: 400; }
+    .iqkb-cards { display: flex; gap: 14px; width: 100%; }
+    .iqkb-card { flex: 1 1 0; box-sizing: border-box; border: 1px solid var(--c-line); border-radius: 11px; padding: 10px 15px; display: flex; flex-direction: column; gap: 3px; }
+    .iqkb-card.fast { border-top: 3px solid var(--c-green); }
+    .iqkb-card.std { border-top: 3px solid var(--c-accent); }
+    .iqkb-card .kbc-h { font: 700 14px var(--c-mono); margin-bottom: 2px; }
+    .iqkb-card.fast .kbc-h { color: var(--c-green); }
+    .iqkb-card.std .kbc-h { color: var(--c-accent-bright); }
+    .iqkb-card .kbc-r { font-size: 12.5px; color: var(--c-fg); line-height: 1.3; }
+    .iqkb-card .kbc-r.muted { color: var(--c-muted); font-size: 12.5px; }
+    .iqkb-card .kbc-r b { color: var(--c-accent-bright); }
+    .iqkb-card.fast .kbc-r b { color: var(--c-green); }
+    .iqkb-note { font: 500 10px var(--c-mono); color: var(--c-muted); text-align: center; line-height: 1.4; }
+    .iqkb-note b { color: var(--c-accent-bright); }
+
+
+    /* ========== Act 7: data plane vs control plane ========== */
+    .cpwhat { width: 100%; display: flex; flex-direction: column; gap: 14px; }
+    .plane-split { display: flex; gap: 14px; align-items: stretch; }
+    .plane { flex: 1 1 0; border: 1px solid var(--c-line); border-radius: 12px; padding: 14px 17px; }
+    .plane.data { border-top: 3px solid var(--c-muted); }
+    .plane.ctrl { border-top: 3px solid var(--c-accent); background: rgba(96, 220, 246, 0.05); }
+    .plane .pn-k { font: 700 9.5px var(--c-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-muted); }
+    .plane .pn-h { font: 700 18px var(--c-sans); color: var(--c-fg); margin-top: 3px; }
+    .plane.ctrl .pn-h { color: var(--c-accent-bright); }
+    .plane .pn-d { font-size: 12.5px; color: var(--c-muted); margin-top: 5px; line-height: 1.35; }
+    .fails { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .fail { border: 1px solid rgba(255, 170, 60, 0.4); border-radius: 10px; background: rgba(255, 170, 60, 0.05); padding: 11px 14px; }
+    .fail .fl-t { font: 700 13.5px var(--c-sans); color: var(--c-amber-bright); }
+    .fail .fl-d { font-size: 11.5px; color: var(--c-muted); margin-top: 3px; line-height: 1.32; }
+
+    /* ========== Act 7: generic 3-card row (observability, security) ========== */
+    .cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; width: 100%; }
+    .card3 { border: 1px solid var(--c-line); border-radius: 12px; padding: 16px 18px; border-top: 3px solid var(--c-accent); display: flex; flex-direction: column; gap: 9px; }
+    .card3.g { border-top-color: var(--c-green); }
+    .card3.v { border-top-color: var(--c-violet); }
+    .card3.p { border-top-color: var(--c-pink); }
+    .card3 .c3-t { font: 700 17px var(--c-sans); color: var(--c-fg); }
+    .card3 .c3-d { font-size: 13px; color: var(--c-muted); line-height: 1.35; }
+    .card3 ul { list-style: none; margin: 2px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+    .card3 li { font-size: 12.5px; color: var(--c-muted); padding-left: 14px; position: relative; line-height: 1.3; }
+    .card3 li::before { content: "\2022"; position: absolute; left: 2px; color: var(--c-accent); font-weight: 700; }
+
+    /* ========== Act 7: guardrail pipeline ========== */
+    .gpipe { width: min(760px, 96%); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 5px; }
+    .gp-node { width: 60%; text-align: center; border: 1px solid var(--c-line); border-radius: 9px; padding: 8px; font: 600 12px var(--c-mono); color: var(--c-fg); background: rgba(255, 255, 255, 0.03); }
+    .gp-gate { width: 100%; box-sizing: border-box; text-align: center; border: 1px solid var(--c-accent); border-radius: 9px; padding: 8px 12px; font: 700 12.5px var(--c-mono); letter-spacing: 0.06em; color: var(--c-accent-bright); background: rgba(96, 220, 246, 0.07); }
+    .gp-gate small { color: var(--c-muted); font-weight: 400; letter-spacing: 0; display: block; font-size: 12.5px; margin-top: 3px; }
+    .gp-gate.pv { border-color: rgba(255, 170, 60, 0.5); color: var(--c-amber-bright); background: rgba(255, 170, 60, 0.06); }
+    .gp-arr { color: var(--c-muted); font-size: 11px; }
+
+    /* ========== Act 7: controls vs policies strip ========== */
+    .cvp { display: flex; gap: 14px; width: 100%; }
+    .cvp-card { flex: 1 1 0; border: 1px solid var(--c-line); border-radius: 11px; padding: 12px 16px; }
+    .cvp-card.ctrl { border-left: 3px solid var(--c-accent); }
+    .cvp-card.pol { border-left: 3px solid var(--c-pink); }
+    .cvp-card .cv-t { font: 700 14px var(--c-sans); color: var(--c-fg); }
+    .cvp-card .cv-t b { color: var(--c-accent-bright); }
+    .cvp-card.pol .cv-t b { color: var(--c-pink); }
+    .cvp-card .cv-d { font-size: 12.5px; color: var(--c-muted); margin-top: 4px; line-height: 1.35; }
+
+    /* ========== Act 7: red-team loop ========== */
+    .asr { display: flex; gap: 18px; width: 100%; align-items: stretch; }
+    .rt-loop { flex: 1 1 0; border: 1px solid var(--c-line); border-radius: 12px; padding: 16px 20px; display: flex; flex-direction: column; gap: 13px; justify-content: center; }
+    .rt-head { font: 700 14.5px var(--c-sans); color: var(--c-accent-bright); line-height: 1.3; }
+    .rt-loop .rt-steps { list-style: none; counter-reset: rt; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+    .rt-steps li { counter-increment: rt; font-size: 12.5px; color: var(--c-muted); line-height: 1.3; padding-left: 25px; position: relative; }
+    .rt-steps li::before { content: counter(rt); position: absolute; left: 0; top: 1px; width: 17px; height: 17px; box-sizing: border-box; border-radius: 50%; border: 1px solid var(--c-accent); color: var(--c-accent-bright); font: 700 9.5px var(--c-mono); display: flex; align-items: center; justify-content: center; }
+    .rt-steps li b { color: var(--c-fg); }
+    .asr-side { flex: 1 1 0; display: flex; flex-direction: column; gap: 10px; }
+    .asr-box { border: 1px solid var(--c-line); border-radius: 10px; padding: 11px 14px; }
+    .asr-box h5 { font: 700 11px var(--c-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent-bright); margin: 0 0 6px; }
+    .asr-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+    .asr-chip { font: 600 10px var(--c-mono); color: var(--c-fg); border: 1px solid var(--c-line); border-radius: 6px; padding: 3px 8px; background: rgba(255, 255, 255, 0.03); }
+
+    /* ========== Act 7: fleet dashboard ========== */
+    .fleet { display: flex; gap: 16px; width: 100%; align-items: stretch; }
+    .fleet-todo { flex: 0 0 38%; border: 1px solid var(--c-line); border-radius: 12px; padding: 12px 15px; }
+    .fleet-todo h4 { font: 700 12px var(--c-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-amber-bright); margin: 0 0 9px; }
+    .todo { display: flex; align-items: flex-start; gap: 8px; font-size: 11.5px; color: var(--c-fg); padding: 6px 0; border-bottom: 1px solid rgba(96, 220, 246, 0.07); line-height: 1.3; }
+    .todo:last-child { border-bottom: none; }
+    .todo .dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 4px; flex: 0 0 auto; }
+    .todo .dot.r { background: var(--c-amber); }
+    .todo .dot.b { background: var(--c-pink); }
+    .todo .dot.y { background: var(--c-accent); }
+    .fleet-assets { flex: 1 1 0; border: 1px solid var(--c-line); border-radius: 12px; padding: 12px 15px; }
+    .fleet-assets h4 { font: 700 12px var(--c-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-accent-bright); margin: 0 0 6px; }
+    .atbl { width: 100%; border-collapse: collapse; font-family: var(--c-mono); font-size: 10px; }
+    .atbl th { text-align: left; color: var(--c-muted); font-weight: 600; font-size: 8px; text-transform: uppercase; letter-spacing: 0.03em; padding: 4px 6px; border-bottom: 1px solid var(--c-line); white-space: nowrap; }
+    .atbl td { padding: 3.5px 6px; color: var(--c-fg); border-bottom: 1px solid rgba(96, 220, 246, 0.06); white-space: nowrap; }
+    .atbl td.name { color: var(--c-accent-bright); }
+    .atbl td.src, .atbl td.proj { color: var(--c-muted); }
+    .atbl td.num { color: var(--c-muted); }
+    .atbl .st { display: inline-flex; align-items: center; gap: 5px; }
+    .atbl .st::before { content: ""; width: 6px; height: 6px; border-radius: 50%; flex: 0 0 auto; }
+    .atbl .st.run { color: var(--c-green); }
+    .atbl .st.run::before { background: var(--c-green); }
+    .atbl .st.unk { color: var(--c-muted); }
+    .atbl .st.unk::before { background: rgba(255, 255, 255, 0.35); }
+    .atbl .st.blk { color: var(--c-amber-bright); }
+    .atbl .st.blk::before { background: var(--c-amber); }
+    .atbl td.err.hi { color: var(--c-amber-bright); }
+
+    /* ========== Act 7: provisioning quick-ref ========== */
+    .refgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; width: 100%; }
+    .refcard { border: 1px solid var(--c-line); border-radius: 12px; padding: 13px 16px; border-top: 3px solid var(--c-accent); }
+    .refcard h4 { font: 700 14px var(--c-sans); color: var(--c-fg); margin: 0 0 7px; }
+    .refcard .rc-row { font: 600 12.5px var(--c-mono); color: var(--c-muted); padding: 3px 0; }
+    .refcard .rc-row b { color: var(--c-fg); }
+    .refcard .rc-row .ac { color: var(--c-accent-bright); }
+
+    /* ========== Act 8: recap ========== */
+    .recap { display: flex; gap: 44px; width: 100%; }
+    .recap-col { flex: 1 1 0; }
+    .recap-col h4 { font: 700 13px var(--c-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-accent-bright); margin: 0 0 14px; }
+    .recap-col.op h4 { color: var(--c-pink); }
+    .recap-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+    .recap-col li { font-size: 17px; color: var(--c-fg); padding-left: 28px; position: relative; line-height: 1.25; }
+    .recap-col li::before { content: "\2713"; position: absolute; left: 0; top: 1px; color: var(--c-accent); font-weight: 700; }
+    .recap-col.op li::before { color: var(--c-pink); }
+
+
+    /* ========== Act 4: endpoints & SDKs ========== */
+    .endp { width: min(1080px, 99%); display: flex; flex-direction: column; gap: 14px; align-items: center; }
+    .endp-row { display: flex; gap: 14px; width: 100%; }
+    .endp-card { flex: 1 1 0; box-sizing: border-box; border: 1px solid var(--c-line); border-top: 3px solid var(--c-accent); border-radius: 12px; background: rgba(255, 255, 255, 0.03); padding: 13px 15px; display: flex; flex-direction: column; gap: 6px; }
+    .endp-card.fdry { border-top-color: var(--c-green); }
+    .endp-card.tools { border-top-color: var(--c-violet); }
+    .endp-card .ec-sdk { font: 700 13.5px var(--c-sans); color: var(--c-fg); }
+    .endp-card .ec-host { font: 600 10px var(--c-mono); color: var(--c-accent-bright); background: rgba(96, 220, 246, 0.06); border: 1px solid var(--c-line); border-radius: 6px; padding: 4px 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .endp-card.fdry .ec-host { color: var(--c-green); }
+    .endp-card.tools .ec-host { color: var(--c-violet); }
+    .endp-card .ec-d { font-size: 12.5px; color: var(--c-muted); line-height: 1.35; flex: 1; }
+    .endp-card .ec-auth { font: 600 12.5px var(--c-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-muted); }
+    .endp-note { font: 600 11px var(--c-mono); color: var(--c-accent-bright); border: 1px dashed rgba(96, 220, 246, 0.45); border-radius: 8px; padding: 6px 16px; background: rgba(96, 220, 246, 0.05); text-align: center; }
+
+    /* ========== DEMO: attack-classes blocked list (trip the guardrails) ========== */
+    .demo-attacks { margin-top: 10px; width: min(760px, 88%); }
+    .demo-attacks .da-h { font: 700 13px var(--c-mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-accent-bright); text-align: center; margin-bottom: 16px; }
+    .demo-attacks ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .demo-attacks li { display: flex; align-items: center; justify-content: space-between; gap: 18px; border: 1px solid var(--c-line); border-radius: 9px; padding: 10px 18px; background: rgba(255, 255, 255, 0.03); }
+    .demo-attacks .da-k { font: 600 16px var(--c-sans); color: var(--c-fg); text-align: left; }
+    .demo-attacks .da-by { font: 500 13px var(--c-mono); color: var(--c-accent-bright); text-align: right; white-space: nowrap; }
+
+    /* ======= APPEND COMPONENT CSS ABOVE THIS LINE ======= */
+  </style>
+</head>
+<body>
+  <div class="brandmark"><b>Microsoft Foundry Control Plane</b></div>
+
+  <div class="reveal">
+    <div class="slides">
+
+
+      <!-- TITLE -->
+      <section class="title">
+        <div class="title-mark">Cloud Governance</div>
+        <h1>Microsoft<br><span class="accent">Foundry Control Plane</span></h1>
+        <p class="subtitle">What Foundry is, what an agent is, and the control plane that governs a fleet of them.</p>
+        <div class="title-foot"><span class="who">Jon-Paul Boyd</span> <span class="accent">&middot;</span> June 2026</div>
+        <aside class="notes">
+          Welcome. This session is for cloud governance. We start with a short orientation, what Microsoft Foundry is and
+          what an agent is, because that is the thing we are governing, then deep-dive the control plane: guardrails,
+          observability, agent identity, red teaming and fleet operations, each with a live demo. We close with the
+          deployment architecture we enforce: a centralised AI gateway, the Azure Policy that locks the pattern in, and the
+          deployment types that decide data residency. The product was called Azure AI Foundry until Microsoft dropped the
+          "Azure" at Ignite in November 2025; the portal is still ai.azure.com.
+        </aside>
+      </section>
+
+      <!-- 01 - WHAT IT IS (one platform) -->
+      <section class="content">
+        <div class="kicker"><span class="num">01</span> &middot; What it is</div>
+        <h2>One platform</h2>
+        <div class="canvas">
+          <div class="ovw">
+            <div class="ovw-frame">
+              <span class="ovw-brand">&#9670; Microsoft Foundry</span>
+              <div class="ovw-row">
+                <div class="obox obs">
+                  <h4>Observability</h4>
+                  <span>Tracing &middot; Monitoring</span>
+                  <span>Evaluation &middot; Experimentation</span>
+                </div>
+                <div class="obox dev">
+                  <h4>Frameworks &amp; SDKs</h4>
+                  <div class="svc-grid">
+                    <span>Foundry SDK</span><span>Agent Framework</span>
+                    <span>LangGraph</span><span>LangChain</span>
+                    <span>LlamaIndex</span><span>CrewAI</span>
+                    <span style="grid-column: span 2;">GitHub Copilot SDK</span>
+                  </div>
+                </div>
+              </div>
+              <div class="obox svc">
+                <h4>Foundry Agent Service <span style="font-weight:400;color:var(--c-muted);font-size:11px;">the runtime</span></h4>
+                <div class="svc-grid">
+                  <span>Managed orchestration</span><span>Conversations + state</span>
+                  <span>Network isolation</span><span>OBO auth</span>
+                </div>
+              </div>
+              <div class="ovw-row">
+                <div class="obox models">
+                  <h4>Models</h4>
+                  <span>Microsoft &amp; partners</span>
+                  <span>Fine-tuned</span>
+                  <span>Bring your own</span>
+                </div>
+                <div class="obox kt">
+                  <h4>Knowledge &amp; Tools</h4>
+                  <div class="svc-grid">
+                    <span>Azure AI Search</span><span>Bing</span>
+                    <span>SharePoint</span><span>Fabric</span>
+                    <span>Functions</span><span>Logic Apps</span>
+                    <span>OpenAPI</span><span>MCP</span>
+                  </div>
+                </div>
+                <div class="obox integ">
+                  <h4>Agent integrations</h4>
+                  <div class="svc-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <span>Foundry SDK</span><span>REST</span>
+                    <span>Responses API</span><span>A2A protocol</span>
+                  </div>
+                </div>
+              </div>
+              <div class="obox base">
+                <h4>Guardrails, security &amp; governance</h4>
+                <div class="svc-grid">
+                  <span>Prompt Shields</span><span>Content filters</span>
+                  <span>PII detection</span><span>Custom blocklists</span>
+                  <span>Protected material</span><span>Policy &amp; compliance</span>
+                  <span>Cost management</span><span>Entra &middot; Defender &middot; Purview</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caps">
+            <div class="capgrp build"><span class="capk">BUILD</span> Multi-agent &middot; 1,400+ tools &middot; Agent memory &middot; Foundry IQ</div>
+            <div class="capgrp operate"><span class="capk">OPERATE</span> Observability &middot; Agent 365 identity &middot; Fleet ops</div>
+          </div>
+        </div>
+        <p class="takeaway">Unified breadth: <b>build</b> with agents, tools, memory and knowledge, then <b>operate</b> them with identity, observability and fleet governance, all behind <b>one resource</b>.</p>
+        <aside class="notes">
+          This is the whole platform on one slide, and it is a faithful redraw of Microsoft's own architecture diagram with
+          two corrections baked in. Foundry unifies three jobs, running AI in production, building models, and building apps,
+          under a single Azure resource-provider namespace, so RBAC, networking and policy are shared rather than stitched
+          together. Reading the stack: observability and your choice of framework on top; the Foundry Agent Service runtime in
+          the middle; models, knowledge and tools, and integration protocols beneath; guardrails, security and governance as
+          the base. Two corrections from the original Microsoft slide: the integration surface is the Responses API now, not
+          the Assistants API, which is retiring, and Semantic Kernel plus AutoGen have merged into the Microsoft Agent
+          Framework. The ribbon under the diagram is the why-it-matters: the headline capabilities split into build
+          (multi-agent orchestration, a catalogue of over fourteen hundred tools and agent memory, both in preview, and
+          Foundry IQ for grounded knowledge) and operate (real-time observability, an Agent 365 Entra identity per agent,
+          and fleet governance in the Operate hub). The deck follows that shape: build first, then govern. We unpack each
+          layer over the next two hours.
+        </aside>
+      </section>
+
+      <!-- 02 - AGENTS (what an agent is) -->
+      <section class="content">
+        <div class="kicker"><span class="num">02</span> &middot; Agents</div>
+        <h2>An agent is a model, instructions and tools</h2>
+        <div class="canvas">
+          <div class="agentdiag">
+            <div class="agt-row">
+              <div class="agt-box">
+                <div class="ab-h">Input</div>
+                <div class="agt-items">
+                  <div class="agt-item">User messages</div>
+                  <div class="agt-item">System events</div>
+                  <div class="agt-item">Agent messages</div>
+                </div>
+              </div>
+              <span class="agt-arrow">&rarr;</span>
+              <div class="agt-box agent">
+                <div class="ab-h">Agent</div>
+                <div class="agt-slots">
+                  <div class="agt-slot">LLM</div>
+                  <div class="agt-slot">Instructions</div>
+                  <div class="agt-slot">Tools</div>
+                </div>
+              </div>
+              <span class="agt-arrow">&rarr;</span>
+              <div class="agt-box">
+                <div class="ab-h">Output</div>
+                <div class="agt-items">
+                  <div class="agt-item">Agent messages</div>
+                  <div class="agt-item">Structured output</div>
+                </div>
+              </div>
+            </div>
+            <div class="agt-bidir">&darr; tool call &nbsp;&nbsp;&nbsp; &uarr; result</div>
+            <div class="agt-box">
+              <div class="ab-h">Tool calls</div>
+              <div class="agt-items horiz">
+                <div class="agt-item">Retrieval</div>
+                <div class="agt-item">Actions</div>
+                <div class="agt-item">Memory</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="takeaway">It takes unstructured input, <b>reasons</b> with the model under your instructions, calls <b>tools</b> mid-flight to retrieve or act, and returns a message or structured output.</p>
+        <aside class="notes">
+          Strip away the hype and an agent is three things: a model for reasoning and language, instructions that set its
+          goals and constraints, and tools that let it retrieve knowledge or take action. It receives unstructured inputs,
+          user messages, system events, even messages from other agents, and produces outputs, either a message or structured
+          output. The important bit is the loop at the bottom: mid-flight the agent calls tools, retrieval to fetch knowledge,
+          actions to do something in the world, memory to recall, then folds the result back into its reasoning. This three-part
+          model is the mental picture for everything in this act.
+        </aside>
+      </section>
+
+      <!-- 03 - LIFECYCLE (assembly line) -->
+      <section class="content">
+        <div class="kicker"><span class="num">03</span> &middot; Lifecycle</div>
+        <h2>Foundry is an assembly line for agents</h2>
+        <div class="canvas">
+          <div class="ringwrap">
+            <svg viewBox="0 0 900 410" class="ring" role="img" aria-label="Six stages of the Microsoft Foundry agent lifecycle: models, customizability, knowledge and tools, orchestration, observability, trust">
+              <defs>
+                <marker id="rh" markerWidth="9" markerHeight="9" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#a48cff"/></marker>
+              </defs>
+              <circle cx="450" cy="215" r="130" class="rg-ring"/>
+              <path class="arc" d="M 470 88 A 128 128 0 0 1 568 150" marker-end="url(#rh)"/>
+              <path class="arc" d="M 430 342 A 128 128 0 0 1 332 280" marker-end="url(#rh)"/>
+              <circle cx="450" cy="215" r="86" class="rg-core"/>
+              <text x="450" y="188" class="rg-logo">&#9670;</text>
+              <text x="450" y="214" class="rg-core-t">Microsoft</text>
+              <text x="450" y="236" class="rg-core-t">Foundry</text>
+              <g><circle cx="450" cy="85" r="16" class="disc"/><text x="450" y="90" class="rg-num">1</text><text x="450" y="56" class="rg-lab" text-anchor="middle">Models</text></g>
+              <g><circle cx="562.6" cy="150" r="16" class="disc"/><text x="562.6" y="155" class="rg-num">2</text><text x="586" y="155" class="rg-lab">Customizability</text></g>
+              <g><circle cx="562.6" cy="280" r="16" class="disc"/><text x="562.6" y="285" class="rg-num">3</text><text x="586" y="285" class="rg-lab">Knowledge and tools</text></g>
+              <g><circle cx="450" cy="345" r="16" class="disc hot"/><text x="450" y="350" class="rg-num">4</text><text x="450" y="380" class="rg-lab" text-anchor="middle">Orchestration</text></g>
+              <g><circle cx="337.4" cy="280" r="16" class="disc"/><text x="337.4" y="285" class="rg-num">5</text><text x="314" y="285" class="rg-lab" text-anchor="end">Observability</text></g>
+              <g><circle cx="337.4" cy="150" r="16" class="disc"/><text x="337.4" y="155" class="rg-num">6</text><text x="314" y="155" class="rg-lab" text-anchor="end">Trust</text></g>
+            </svg>
+          </div>
+        </div>
+        <p class="takeaway">Six stages, secure and testable end to end: <b>models</b> &rarr; <b>customization</b> &rarr; <b>knowledge and tools</b> &rarr; <b>orchestration</b> &rarr; <b>observability</b> &rarr; <b>trust</b>.</p>
+        <aside class="notes">
+          Microsoft frames Foundry as an assembly line for intelligent agents, six stages that take you from idea to
+          production-ready. One, models, the raw intelligence. Two, customizability, fine-tuning, domain prompts, your own
+          data. Three, knowledge and tools, enterprise knowledge like Bing, SharePoint and Azure AI Search plus actions like
+          Logic Apps and Functions. Four, orchestration, the workflow layer that manages tool calls, conversation state,
+          retries and logging, that is the magenta node because it is the part that ties everything together. Five,
+          observability, logs, traces and evaluations. Six, trust, identity, RBAC, content filters, encryption and network
+          isolation. The deck has already touched models and tools; this act is mostly stages three and four, and the control
+          plane act is stages five and six.
+        </aside>
+      </section>
+
+      <!-- 04 - THE PILLARS -->
+      <section class="content">
+        <div class="kicker"><span class="num">04</span> &middot; The pillars</div>
+        <h2>What the control plane brings together</h2>
+        <div class="canvas">
+          <div class="pillars g2">
+            <div class="pillar ctrl"><span class="pl-n">CONTROLS</span><span class="pl-t">Guardrails</span><span class="pl-d">Prompt Shields, content filters and blocklists, validated by red teaming.</span></div>
+            <div class="pillar obs"><span class="pl-n">OBSERVABILITY</span><span class="pl-t">See inside</span><span class="pl-d">Tracing, continuous evaluation on live traffic, per-agent cost.</span></div>
+            <div class="pillar sec"><span class="pl-n">SECURITY</span><span class="pl-t">Identity &amp; data</span><span class="pl-d">Entra Agent ID, Microsoft Defender, Microsoft Purview.</span></div>
+            <div class="pillar flt"><span class="pl-n">FLEET OPS</span><span class="pl-t">At scale</span><span class="pl-d">One inventory and to-do list across projects, frameworks and clouds.</span></div>
+          </div>
+        </div>
+        <p class="takeaway">The control plane brings four essentials into one surface: runtime <b>guardrails</b>, <b>observability</b>, agent <b>security</b> and <b>fleet operations</b>, across every project, framework and cloud.</p>
+        <aside class="notes">
+          The control plane brings together four essentials. Controls: runtime guardrails not just on prompts and responses
+          but on tool calls and tool responses too. Observability: tracing, continuous evaluation on live traffic, and
+          per-agent cost. Security: a durable Entra identity per agent, plus Defender and Purview. And fleet-wide operations:
+          one inventory and to-do list across projects, frameworks and clouds. We will walk each pillar with a demo.
+        </aside>
+      </section>
+
+      <!-- 05 - CONTROLS (guardrails) -->
+      <section class="content">
+        <div class="kicker"><span class="num">05</span> &middot; Controls</div>
+        <h2>Guardrails on inputs, outputs and tool traffic</h2>
+        <div class="canvas">
+          <div class="gpipe">
+            <div class="gp-node">User input</div>
+            <div class="gp-arr">&darr;</div>
+            <div class="gp-gate">INPUT <small>Prompt Shields (jailbreak + indirect) &middot; content filters &middot; custom blocklists</small></div>
+            <div class="gp-arr">&darr;</div>
+            <div class="gp-node">Agent + model</div>
+            <div class="gp-arr">&darr;</div>
+            <div class="gp-gate pv">TOOL CALL / RESPONSE <small>task adherence on the call &middot; indirect injection on the response</small></div>
+            <div class="gp-arr">&darr;</div>
+            <div class="gp-gate">OUTPUT <small>content filters &middot; protected material &middot; groundedness &middot; sensitive data / PII &middot; custom blocklists</small></div>
+            <div class="gp-arr">&darr;</div>
+            <div class="gp-node">Response</div>
+          </div>
+        </div>
+        <p class="takeaway">A guardrail is a set of <b>controls</b> at four points: input, tool call, tool response, and output. The <b>tool-call and tool-response</b> checks are the agent-specific part, catching indirect prompt injection before the agent acts.</p>
+        <aside class="notes">
+          Controls, the first pillar. A guardrail is a named set of controls; each control is a risk, an intervention point and
+          an action. Guardrails fire at four points in a turn, in order. On the user input: Prompt Shields for jailbreak and
+          indirect attacks, content filters, and custom blocklists. At the
+          tool call, before the tool runs: task adherence, checking the planned call and its arguments match the user's intent.
+          At the tool response, when data comes back: Prompt Shields for indirect, cross-prompt injection, the genuinely new
+          defence, malicious instructions hidden in a document, web page or tool result, caught before the agent acts on them.
+          And on the output: content filters, protected material, groundedness against the retrieved context, and sensitive
+          data or PII detection. Note that groundedness is currently model-level and not yet enabled for
+          agents. In the demo we paste an injection and a fake SSN into the bank agent; the input shield blocks the injection
+          before the model ever sees it, at zero token cost.
+        </aside>
+      </section>
+
+      <!-- DEMO - trip the guardrails -->
+      <section class="demo">
+        <span class="demo-badge"><span class="rec"></span> Live demo</span>
+        <h2>Trip the guardrails</h2>
+        <div class="demo-attacks">
+          <div class="da-h">Attack classes blocked</div>
+          <ul>
+            <li><span class="da-k">Jailbreak</span> <span class="da-by">Prompt Shields</span></li>
+            <li><span class="da-k">Harmful content</span> <span class="da-by">Safety filters</span></li>
+            <li><span class="da-k">Copyrighted text &amp; code</span> <span class="da-by">Protected Material</span></li>
+            <li><span class="da-k">PII &amp; financial data</span> <span class="da-by">Info-protection filters + blocklist</span></li>
+            <li><span class="da-k">Codenames &amp; competitors</span> <span class="da-by">Custom blocklist</span></li>
+          </ul>
+        </div>
+        <aside class="notes">
+          Live: a fictional bank customer-service agent on a dedicated deployment with one custom RAI policy,
+          bank-guardrails-policy. Send a clean banking question first to set the baseline, then walk five classes of attack.
+          Prompt injection ("ignore all previous instructions", "you are now DAN") is caught by Prompt Shields before the
+          model ever sees it. A hate, violence or self-harm request trips the content filters at Medium. A request for
+          copyrighted lyrics or licensed source code is caught by Protected Material on the completion. PII and financial
+          identifiers (SSN, credit card, bank account, IBAN, email) are caught by the built-in financial-data protection
+          filters and the custom PII regex blocklist. Internal codenames (Project Falcon, SecureCore) and competitor names
+          (Acme Bank, Globex, Initech) are caught by the custom string blocklist, which is attached on both prompt and
+          completion. Input-side blocks cost zero tokens, and the agent's own system prompt has no defensive language: the
+          guardrails are the perimeter.
+        </aside>
+      </section>
+
+      <!-- 06 - RED TEAMING -->
+      <section class="content">
+        <div class="kicker"><span class="num">06</span> &middot; Red teaming</div>
+        <h2>Attack your own agents, on purpose</h2>
+        <div class="canvas">
+          <div class="asr">
+            <div class="rt-loop">
+              <div class="rt-head">Find the holes before someone else does</div>
+              <ul class="rt-steps">
+                <li><b>Probe</b>: automated attacks, every category and strategy</li>
+                <li><b>Score</b>: an Attack Success Rate baseline, by technique</li>
+                <li><b>Harden</b>: add or tighten guardrails where attacks land</li>
+                <li><b>Re-scan</b>: the same suite, and watch the ASR fall</li>
+                <li><b>Gate</b>: re-run on every release, in CI/CD</li>
+              </ul>
+            </div>
+            <div class="asr-side">
+              <div class="asr-box">
+                <h5>Attack strategies (PyRIT)</h5>
+                <div class="asr-chips"><span class="asr-chip">Base64</span><span class="asr-chip">ROT13</span><span class="asr-chip">Unicode confusables</span><span class="asr-chip">Crescendo</span><span class="asr-chip">multi-language</span></div>
+              </div>
+              <div class="asr-box">
+                <h5>Risk categories</h5>
+                <div class="asr-chips"><span class="asr-chip">Hate</span><span class="asr-chip">Violence</span><span class="asr-chip">Sexual</span><span class="asr-chip">Self-harm</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="takeaway">The <b>AI Red Teaming Agent</b> (built on PyRIT, preview) runs automated adversarial scans and scores an <b>Attack Success Rate</b>, so you can prove a guardrail policy actually moved the needle.</p>
+        <aside class="notes">
+          Guardrails are defence; red teaming is offence, and you want both. The AI Red Teaming Agent, in preview, is built on
+          Microsoft's open-source PyRIT. It runs automated adversarial scans against a model or agent endpoint, scores each
+          attack-response pair, and produces a scorecard with Attack Success Rate as the headline metric, broken down by attack
+          technique and risk category. Strategies include obfuscation like Base64, ROT13 and Unicode confusables, the
+          multi-turn Crescendo attack, and multi-language prompts; categories are the four content-safety harms: hate, violence,
+          sexual and self-harm. The powerful move, shown in the demo, is running the same scan
+          before and after attaching a guardrail policy: the attack-success-rate drop is your evidence the control works. The
+          bars here are illustrative; your numbers depend on your agent and corpus.
+        </aside>
+      </section>
+
+      <!-- DEMO - attack suite -->
+      <section class="demo">
+        <span class="demo-badge"><span class="rec"></span> Live demo</span>
+        <h2>Completed red-team scan</h2>
+        <div class="demo-attacks">
+          <div class="da-h">What we'll look at</div>
+          <ul>
+            <li><span class="da-k">Attack strategies</span> <span class="da-by">encodings, multi-language, composite</span></li>
+            <li><span class="da-k">Risk categories</span> <span class="da-by">content harms + agentic risks</span></li>
+            <li><span class="da-k">Where attacks landed</span> <span class="da-by">Sensitive data leakage 31% (20/64)</span></li>
+            <li><span class="da-k">Drill into one pass</span> <span class="da-by">read the conversation that leaked</span></li>
+          </ul>
+        </div>
+        <aside class="notes">
+          No live scan here - we walk the results of a completed run in the Foundry red-team view. The run, redteam-ccy70uww,
+          adversarially attacked the contoso-bank-agent2 agent across nine risk categories: the four content harms (hate,
+          violence, sexual, self-harm) plus the agentic risks - sensitive data leakage, prohibited actions, task adherence,
+          ungrounded attributes and code vulnerability. Open the Attack strategies tab to show how each objective is mutated:
+          encodings like Base64, ROT13 and Unicode confusables, other languages, and composite chains. Then the scorecard,
+          Attack Success Rate per category: most sit at zero, but sensitive data leakage is 31 percent, twenty of sixty-four
+          attacks got through, and sexual is 25 percent. Click into one successful sensitive-data-leakage attack and read the
+          conversation that leaked: that is the concrete evidence a guardrail policy has to close, and the before-and-after you
+          would re-run to prove it.
+        </aside>
+      </section>
+
+      <!-- 07 - OBSERVABILITY -->
+      <section class="content">
+        <div class="kicker"><span class="num">07</span> &middot; Observability</div>
+        <h2>Trace it, evaluate it, cost it</h2>
+        <div class="canvas">
+          <div class="cards3">
+            <div class="card3">
+              <span class="c3-t">Tracing</span>
+              <span class="c3-d">OpenTelemetry traces, prompt to model to tool, into Application Insights.</span>
+              <ul><li>Walk back any run, step by step</li><li>Auto-traced for Agent Framework, LangChain, LangGraph</li></ul>
+            </div>
+            <div class="card3 g">
+              <span class="c3-t">Continuous evaluation</span>
+              <span class="c3-d">Score live production traffic, not just a pre-ship test suite.</span>
+              <ul><li>Set a threshold, alert when quality drops</li><li>Groundedness, task adherence, tool-call accuracy</li></ul>
+            </div>
+            <div class="card3 v">
+              <span class="c3-t">Cost</span>
+              <span class="c3-d">Per-agent token spend across the fleet, near real time.</span>
+              <ul><li>Agents burn tokens fast: watch them</li><li>Sort the fleet by cost or error rate</li></ul>
+            </div>
+          </div>
+        </div>
+        <p class="takeaway">You cannot human-review every step, so you <b>evaluate live traffic against a threshold</b> and trace what crosses it, while watching cost per agent.</p>
+        <aside class="notes">
+          Observability, the second pillar. You cannot put a human on every agent step, that defeats the purpose, so the model
+          is: trace everything, evaluate continuously, and watch cost. Tracing is OpenTelemetry, prompt to model inference to
+          the specific tool call, landing in your Application Insights, and it is automatic for the Microsoft Agent Framework,
+          LangChain and LangGraph. Continuous evaluation runs against real production traffic, not just a pre-ship suite: set a
+          threshold and get alerted when groundedness or task adherence drops, with agent-specific evaluators like tool-call
+          accuracy. And cost: per-agent token spend across the fleet, because agents burn tokens fast. In the demo we open a
+          code-interpreter trace and an evaluation run in the portal.
+        </aside>
+      </section>
+
+      <!-- DEMO - eval run -->
+      <section class="demo">
+        <span class="demo-badge"><span class="rec"></span> Live demo</span>
+        <h2>Observability in the portal</h2>
+        <div class="demo-attacks">
+          <div class="da-h">What we'll look at</div>
+          <ul>
+            <li><span class="da-k">Agent trace</span> <span class="da-by">prompt, model, each tool call</span></li>
+            <li><span class="da-k">Single-agent monitoring view</span> <span class="da-by">tokens, evals, runs, error rates</span></li>
+            <li><span class="da-k">Evaluation run</span> <span class="da-by">various metrics scored</span></li>
+          </ul>
+        </div>
+        <aside class="notes">
+          Live in the Foundry portal. First an agent trace: take one run and walk its span tree top to bottom - the prompt, the
+          model call with its tokens and latency, then each tool call and what it returned, so the whole decision path is
+          visible after the fact (traces flow through to Application Insights). Then a single agent's monitoring view: latency,
+          token spend, error rate and evaluation scores over time, the at-a-glance health of one agent. Finally an evaluation
+          run: continuous evaluation samples production traffic and scores it on groundedness, task adherence and tool-call
+          accuracy against a threshold, the signal that fires an alert when quality drops. One run traced, one agent monitored,
+          live traffic scored.
+        </aside>
+      </section>
+
+      <!-- 08 - SECURITY (agent identity) -->
+      <section class="content">
+        <div class="kicker"><span class="num">08</span> &middot; Security</div>
+        <h2>Every agent gets a real identity</h2>
+        <div class="canvas">
+          <div class="cards3">
+            <div class="card3 p">
+              <span class="c3-t">Entra Agent ID</span>
+              <span class="c3-d">Publish an agent and it gets a Microsoft Entra identity, automatically.</span>
+              <ul><li>Access control like any principal</li><li>Ownership: know who to call at 2am</li><li>Lineage across its lifecycle</li></ul>
+            </div>
+            <div class="card3">
+              <span class="c3-t">Microsoft Defender</span>
+              <span class="c3-d">AI security posture and threat detection extended to agents.</span>
+              <ul><li>Attack-path analysis, gap recommendations</li><li>A jailbreak surfaces as a security alert</li></ul>
+            </div>
+            <div class="card3 v">
+              <span class="c3-t">Microsoft Purview</span>
+              <span class="c3-d">Agent interactions available for audit and compliance.</span>
+              <ul><li>Org-wide content-safety policies</li><li>Sensitivity labels honoured</li></ul>
+            </div>
+          </div>
+          <div class="cvp">
+            <div class="cvp-card ctrl"><div class="cv-t"><b>Controls</b> = each developer configures</div><div class="cv-d">Opt in or out on your own agent, e.g. Prompt Shields, content filters, a PII blocklist.</div></div>
+            <div class="cvp-card pol"><div class="cv-t"><b>Policies</b> = the organisation mandates</div><div class="cv-d">"Every agent must have indirect-injection protection on", scanned continuously.</div></div>
+          </div>
+        </div>
+        <p class="takeaway">Publishing an agent issues an <b>Entra identity</b> (app + object id) for access, ownership and lineage.<br><b>Policies</b> turn a developer's optional control into an org-wide mandate.</p>
+        <aside class="notes">
+          Security, the third pillar, and the headline is identity. The moment you publish an agent it gets a Microsoft Entra
+          identity, an application id and an object id, automatically, with no extra steps. That buys three things: access
+          control, you govern it like any user or service principal; ownership, it is tied to a named team so when it breaks at
+          2am you know who to call; and lineage, the identity follows the agent through its lifecycle. Defender extends to
+          agents with posture management, attack-path analysis and threat detection, so a jailbreak shows up as a security
+          alert with full context. Purview makes agent interactions auditable and honours sensitivity labels. And the key
+          distinction: controls are what each developer configures on their own agent, opt in or out, whereas policies are an
+          organisation-level mandate, every agent in this subscription must have indirect-injection protection on, scanned
+          continuously across every agent in scope.
+        </aside>
+      </section>
+
+      <!-- DEMO - agent identity in entra -->
+      <section class="demo">
+        <span class="demo-badge"><span class="rec"></span> Live demo</span>
+        <h2>Agent identity in Entra</h2>
+        <div class="demo-attacks">
+          <div class="da-h">What we'll look at</div>
+          <ul>
+            <li><span class="da-k">Published agent</span> <span class="da-by">gets an Entra Agent ID, automatically</span></li>
+            <li><span class="da-k">Instance identity</span> <span class="da-by">a principal you RBAC, own, disable</span></li>
+            <li><span class="da-k">Drill in</span> <span class="da-by">agent's principal in Entra</span></li>
+          </ul>
+        </div>
+        <aside class="notes">
+          Live in Entra ID. Publishing an agent issues it a Microsoft Entra identity automatically, with no extra steps. Open
+          Enterprise applications and filter on AgentIdentity: every agent in this project shows up as its own principal -
+          eight agents, eight identities. Open contoso-bank-agent's, the same agent we guardrailed and red-teamed, and show it
+          is a real service principal, enabled, tagged to its project and region, so you govern it like any workload identity:
+          assign RBAC, set an owner, disable it, audit its sign-ins. The point for this room: identity is the unit of
+          governance, and every agent has one whether the developer thought about it or not.
+        </aside>
+      </section>
+
+      <!-- 09 - FLEET OPS -->
+      <section class="content">
+        <div class="kicker"><span class="num">09</span> &middot; Fleet ops</div>
+        <h2>One to-do list for every agent, any cloud</h2>
+        <div class="canvas">
+          <div class="fleet">
+            <div class="fleet-todo">
+              <h4>Fleet to-do</h4>
+              <div class="todo"><span class="dot b"></span> Jailbreak attempt blocked &middot; contoso-bank-agent</div>
+              <div class="todo"><span class="dot y"></span> Eval below threshold &middot; aria-rm-briefing-agent</div>
+              <div class="todo"><span class="dot r"></span> Policy gap: indirect injection off &middot; 2 agents</div>
+              <div class="todo"><span class="dot y"></span> Cost spike &middot; contoso-pmo-agent, +180% today</div>
+              <div class="todo"><span class="dot r"></span> Error rate 100% &middot; contoso-bank-agent</div>
+              <div class="todo"><span class="dot y"></span> 2 agents in Unknown state &middot; github-copilot</div>
+            </div>
+            <div class="fleet-assets">
+              <h4>Assets &middot; Agents</h4>
+              <table class="atbl">
+                <thead><tr><th>Name</th><th>Source</th><th>Project</th><th>Status</th><th>Errors</th><th>Tokens</th><th>Runs</th></tr></thead>
+                <tbody>
+                  <tr><td class="name">github-copilot</td><td class="src">Foundry</td><td class="proj">project-copilot-sdk</td><td><span class="st unk">Unknown</span></td><td class="num err">0.00%</td><td class="num">-</td><td class="num">18</td></tr>
+                  <tr><td class="name">aria-rm-briefing-agent</td><td class="src">Foundry</td><td class="proj">project-admin-c2676f</td><td><span class="st run">Running</span></td><td class="num err">1.92%</td><td class="num">153.8K</td><td class="num">52</td></tr>
+                  <tr><td class="name">contoso-bank-agent</td><td class="src">Foundry</td><td class="proj">project-admin-c2676f</td><td><span class="st run">Running</span></td><td class="num err hi">100.00%</td><td class="num">-</td><td class="num">40</td></tr>
+                  <tr><td class="name">contoso-pmo-agent</td><td class="src">Foundry</td><td class="proj">project-admin-c2676f</td><td><span class="st run">Running</span></td><td class="num err">0.00%</td><td class="num">15.3K</td><td class="num">4</td></tr>
+                  <tr><td class="name">SpaceExpert</td><td class="src">Foundry</td><td class="proj">project-alpha-mesh</td><td><span class="st run">Running</span></td><td class="num err">0.00%</td><td class="num">860</td><td class="num">3</td></tr>
+                  <tr><td class="name">arxiv-nlp-agent</td><td class="src">Foundry</td><td class="proj">iq-project</td><td><span class="st run">Running</span></td><td class="num err">0.00%</td><td class="num">27K</td><td class="num">5</td></tr>
+                  <tr><td class="name">team-beta-agent</td><td class="src">Foundry</td><td class="proj">project-beta-c2676f</td><td><span class="st run">Running</span></td><td class="num err">0.00%</td><td class="num">56</td><td class="num">1</td></tr>
+                  <tr><td class="name">team-delta-agent</td><td class="src">Foundry</td><td class="proj">project-delta-c2676f</td><td><span class="st run">Running</span></td><td class="num err">0.00%</td><td class="num">56</td><td class="num">1</td></tr>
+                  <tr><td class="name">claims-triage</td><td class="src">AI Gateway</td><td class="proj">LangGraph</td><td><span class="st run">Running</span></td><td class="num err">0.00%</td><td class="num">4.1K</td><td class="num">12</td></tr>
+                  <tr><td class="name">legacy-helpdesk</td><td class="src">AI Gateway</td><td class="proj">AWS</td><td><span class="st blk">Blocked</span></td><td class="num err">-</td><td class="num">-</td><td class="num">0</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <p class="takeaway">Operate is a <b>to-do list for the fleet</b>: blocked jailbreaks, evals below threshold, policy gaps. External agents (e.g., AWS) join the same view by routing through the <b>AI Gateway</b>.</p>
+        <aside class="notes">
+          Fleet-wide operations, the fourth pillar. The Operate view is best thought of as a to-do list for the whole fleet:
+          blocked jailbreak attempts, evaluation scores below threshold, policy-compliance gaps, cost spikes, sortable by error
+          rate or token cost across every project. The assets inventory lists every agent with its source, status, cost and
+          risk, and from an alert you jump straight into that agent's build experience to fix it, no context switching. The big
+          one for this room: non-Foundry agents, a LangGraph app, something on AWS, join the exact same view by routing their
+          traffic through the AI Gateway, which is Azure API Management, and you can block or unblock them at the gateway even
+          though Foundry does not run their infrastructure.
+        </aside>
+      </section>
+
+      <!-- DEMO - admin fleet overview -->
+      <section class="demo">
+        <span class="demo-badge"><span class="rec"></span> Live demo</span>
+        <h2>The admin fleet overview</h2>
+        <div class="demo-attacks">
+          <div class="da-h">What we'll look at</div>
+          <ul>
+            <li><span class="da-k">Fleet overview</span> <span class="da-by">to-do list + cost hero stats</span></li>
+            <li><span class="da-k">Assets inventory</span> <span class="da-by">every agent, any cloud</span></li>
+            <li><span class="da-k">Mandate a control</span> <span class="da-by">org-wide policy, scanned continuously</span></li>
+          </ul>
+        </div>
+        <div class="demo-where">portal &middot; <b>Operate</b></div>
+        <aside class="notes">
+          Live in Operate. Start on Overview for the fleet to-do list and cost hero stats. Open Assets to show a Foundry-built
+          agent and an externally-hosted agent, registered through the AI Gateway, in one inventory. Then Compliance: take a
+          control a developer would set on one agent and make it an org-wide rule - create a policy, choose the control type
+          (say indirect-injection protection or a content filter), set the scope to a subscription or resource group with
+          optional exceptions, and activate. From then on the control plane scans every agent in scope continuously and flags
+          any that fall out of compliance. This is the IT and security admin's home base.
+        </aside>
+      </section>
+
+      <!-- 10 - ARCHITECTURE (AI gateway) -->
+      <section class="content">
+        <div class="kicker"><span class="num">10</span> &middot; Architecture</div>
+        <h2>Centralise inference behind one AI gateway</h2>
+        <div class="canvas">
+          <div class="arch">
+            <div class="arch-label">Models live only in the 'hub' Foundry accounts*</div>
+            <div class="arch-hubs">
+              <div class="hub">
+                <div class="hb-n">&#9670; aif-core</div>
+                <div class="hb-r">East US 2 &middot; general</div>
+                <div class="hb-m"><span class="m">gpt-4.1-mini</span><span class="m">embeddings</span></div>
+              </div>
+              <div class="hub">
+                <div class="hb-n">&#9670; aif-research</div>
+                <div class="hb-r">Norway East &middot; reasoning</div>
+                <div class="hb-m"><span class="m">o3-deep-research</span></div>
+              </div>
+              <div class="hub">
+                <div class="hb-n">&#9670; aif-oss</div>
+                <div class="hb-r">West US 3 &middot; open-weights</div>
+                <div class="hb-m"><span class="m">Phi-4</span></div>
+              </div>
+            </div>
+            <div class="arch-arrow"><span class="ar">&uarr;</span> managed identity &middot; routed by URL (most specific wins)</div>
+            <div class="apim">
+              <div class="ap-n">&#8649; APIM gateway &middot; apim-foundry</div>
+              <div class="ap-d">swaps client key &rarr; managed-identity token &middot; per-team rate limits &amp; quota &middot; routes by URL to hubs</div>
+            </div>
+            <div class="arch-arrow"><span class="ar">&uarr;</span> each project: its own connection <b>core-{team}</b> + gateway key</div>
+            <div class="arch-spokes">
+              <div class="spoke one">
+                <div class="sp-h">Spoke 1 : 1 <span class="badge">no models &middot; deny policy</span></div>
+                <div class="sp-acct">&#9670; aif-spoke-alpha</div>
+                <div class="projrow"><span class="proj">project-alpha</span></div>
+                <div class="sp-conn">reaches models via the <b>core-alpha</b> connection</div>
+              </div>
+              <div class="spoke many">
+                <div class="sp-h">Spoke 1 : N <span class="badge">no models &middot; deny policy</span></div>
+                <div class="sp-acct">&#9670; aif-spoke-multi</div>
+                <div class="projrow"><span class="proj">beta</span><span class="proj">delta</span><span class="proj">gamma</span><span class="proj">iq</span><span class="proj">obs</span><span class="proj">cu</span></div>
+                <div class="sp-conn">each project: own key, own quota</div>
+              </div>
+            </div>
+            <div class="arch-foot">* 'Hub' here means the central model-hosting Foundry accounts in this topology, not the legacy Foundry v1 'hub' resource type.</div>
+          </div>
+        </div>
+        <p class="takeaway">One Azure API Management gateway fronts every model. Spokes hold <b>zero deployments</b>: they call the hub through a per-team key, so cost, content filters and observability stay <b>unified</b>.</p>
+        <aside class="notes">
+          This is the reference architecture for running Foundry at scale: a centralised AI gateway. One Azure API Management
+          instance is the single entry point for all model traffic, and it routes by URL to the right regional hub account,
+          general-purpose in East US 2, a reasoning model in Norway East, open-weights in West US 3. The crucial rule: model
+          deployments live only in the hubs. Every spoke, whether a one-to-one dedicated account or the shared one-to-many
+          account, holds zero local deployments and reaches models only through the gateway, using its own APIM subscription
+          key for independent rate limiting and usage tracking. The gateway also swaps the client key for a managed-identity
+          token, so the hub accounts have key auth disabled and only the gateway can call them. Net effect: one place for cost,
+          content filtering, quota and observability, instead of fragmentation across teams.
+        </aside>
+      </section>
+
+      <!-- 11 - GOVERNANCE (Azure Policy) -->
+      <section class="content">
+        <div class="kicker"><span class="num">11</span> &middot; Governance</div>
+        <h2>Make the pattern impossible to break</h2>
+        <div class="canvas">
+          <div class="policy">
+            <div class="pcode">
+<pre><code data-trim data-noescape class="language-json">// Azure Policy: deny-model-deployments
+{
+  "if": {
+    "field": "type",
+    "equals": "Microsoft.CognitiveServices/accounts/deployments"
+  },
+  "then": { "effect": "deny" }
+}</code></pre>
+            </div>
+            <div class="pside">
+              <div class="scope">
+                <div class="scope-row"><span class="rg">rg-foundry-core</span><span class="st exempt">EXEMPT</span></div>
+                <div class="scope-row"><span class="rg">rg-foundry-spoke-alpha</span><span class="st deny">DENIED</span></div>
+                <div class="scope-row"><span class="rg">rg-foundry-multi</span><span class="st deny">DENIED</span></div>
+              </div>
+              <div class="policy-err">Deploy a model into a spoke and Azure returns<br><b>RequestDisallowedByPolicy</b>. Spokes can still <b>use</b> models through the gateway, just never deploy their own.</div>
+            </div>
+          </div>
+        </div>
+        <p class="takeaway">A one-rule Azure Policy denies <b>Microsoft.CognitiveServices/accounts/deployments</b> in spoke resource groups. The hub stays exempt, so the architecture cannot drift.</p>
+        <aside class="notes">
+          Architecture diagrams do not enforce themselves, so this is the governance that does. A custom Azure Policy,
+          deny-model-deployments, blocks the creation of any deployment resource in the spoke resource groups; the hub
+          resource group is exempt because that is where the platform team deploys the shared models. The rule is genuinely
+          this small: if the resource type is a Cognitive Services account deployment, deny. Try to deploy a model into a
+          spoke and you get RequestDisallowedByPolicy. Spokes can still use the models through the gateway, they just cannot
+          deploy their own, which is exactly what keeps cost, content filters and observability from fragmenting. This is the
+          kind of guardrail an IT or platform team sets once at the management-group or subscription level.
+        </aside>
+      </section>
+
+      <!-- 12 - PROVISIONING (admin) -->
+      <section class="content">
+        <div class="kicker"><span class="num">12</span> &middot; Provisioning</div>
+        <h2>The admin essentials</h2>
+        <div class="canvas">
+          <div class="refgrid">
+            <div class="refcard">
+              <h4>Four Foundry roles</h4>
+              <div class="rc-row"><b>Foundry User</b> &middot; build &amp; call: models, agents, evals, data plane</div>
+              <div class="rc-row"><b>Project Manager</b> &middot; manage projects, assign User; full data plane</div>
+              <div class="rc-row"><b>Account Owner</b> &middot; deploy, connections, quota; no data plane</div>
+              <div class="rc-row"><b>Owner</b> &middot; unrestricted: full control + data plane</div>
+              <div class="rc-row"><span class="ac">tip:</span> assign to groups, not people</div>
+            </div>
+            <div class="refcard">
+              <h4>Two-layer RBAC</h4>
+              <div class="rc-row"><b>Layer 1</b> Foundry plane &middot; portal, projects, build</div>
+              <div class="rc-row"><b>Layer 2</b> Cognitive Services plane &middot; content filters, quota, keys</div>
+              <div class="rc-row"><span class="ac">gotcha:</span> the second layer is commonly missed</div>
+            </div>
+            <div class="refcard">
+              <h4>Regions &amp; quota</h4>
+              <div class="rc-row">Pick by <b>model availability</b> + residency</div>
+              <div class="rc-row">Quota is <b>TPM</b> per region + subscription</div>
+            </div>
+            <div class="refcard">
+              <h4>Cost &amp; SDK</h4>
+              <div class="rc-row">Platform is <b>free</b>; pay per deployment</div>
+              <div class="rc-row">No hard spend cutoffs &middot; <b>budget alerts</b></div>
+              <div class="rc-row">SDK: <span class="ac">azure-ai-projects</span> + OpenAI client</div>
+            </div>
+          </div>
+        </div>
+        <p class="takeaway">For platform owners: four roles (assigned to <b>groups</b>), a <b>two-layer</b> RBAC model, TPM quota by region and subscription, and a free platform you meter at the deployment level.</p>
+        <aside class="notes">
+          One reference card for the platform owners in the room. Four built-in Foundry roles, recently renamed: Foundry User
+          to build and call, Project Manager to manage projects, Account Owner for deployment and the control plane, and Owner
+          for unrestricted access, and you assign them to Entra groups, not individuals. RBAC is two layers that are configured
+          separately: the Foundry plane for portal and build, and the underlying Cognitive Services plane for content filters, quota and
+          keys, and the second layer is the one people forget. Regions are chosen by model availability and data residency,
+          quota is tokens per minute per region and subscription. Cost: the platform itself is free, you pay at the deployment level, there are no hard spending cutoffs so
+          you wire up budget alerts, and the SDK story is the unified azure-ai-projects package plus the standard OpenAI client.
+        </aside>
+      </section>
+
+      <!-- 13 - WHY FOUNDRY (close) -->
+      <section class="content">
+        <div class="kicker"><span class="num">13</span> &middot; Why Foundry</div>
+        <h2>One platform, two jobs done well</h2>
+        <div class="canvas">
+          <div class="recap">
+            <div class="recap-col bd">
+              <h4>Build</h4>
+              <ul>
+                <li>Deploy any model behind one governed gateway</li>
+                <li>Agents on the Responses API and one SDK</li>
+                <li>Knowledge and tools by config, MCP-native</li>
+                <li>Hosted runtimes in the framework you choose</li>
+                <li>Grounded, cited answers with Foundry IQ</li>
+              </ul>
+            </div>
+            <div class="recap-col op">
+              <h4>Operate</h4>
+              <ul>
+                <li>A Microsoft Entra identity for every agent</li>
+                <li>Guardrails on inputs, outputs and tool traffic</li>
+                <li>Tracing and continuous evaluation on live traffic</li>
+                <li>Red teaming that measures attack success</li>
+                <li>One fleet view across projects and clouds</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="takeaway">Build with <b>rich primitives</b> and govern them from <b>the same place</b>.</p>
+        <aside class="notes">
+          Pulling it together. The reason Foundry is worth your attention is not any single feature, it is the seam between
+          build and operate. On the build side: deploy any model behind one governed gateway; build agents on the Responses API
+          with one SDK; add knowledge and tools by configuration, MCP-native; host your own runtime in whatever framework you
+          like; and ground answers with Foundry IQ. On the operate side: every agent gets a real Entra identity; guardrails sit
+          on inputs, outputs and tool traffic; you trace and continuously evaluate live traffic; you red-team to measure attack
+          success; and you see the whole fleet, including non-Foundry agents, in one place. Most platforms give you one half.
+          Foundry's bet is that you need both, in the same flow.
+        </aside>
+      </section>
+
+
+
+      <!-- ============ APPEND NEW SECTIONS BELOW ============ -->
+
+    </div>
+  </div>
+
+  <!-- Reveal.js core + plugins (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0.045,
+      hash: true,
+      controls: true,
+      progress: true,
+      center: true,
+      slideNumber: 'c/t',
+      transition: 'fade',
+      transitionSpeed: 'default',
+      plugins: [ RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
+</html>
